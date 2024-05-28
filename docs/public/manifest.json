@@ -1,0 +1,22 @@
+{
+  "name": "知识点的精心归纳",
+  "short_name": "Insight Blog",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#3eaf7c",
+  "start_url": "/",
+  "scope": "/",
+  "description": "知识点的精心归纳",
+  "icons": [
+    {
+      "src": "icons/book.png",
+      "sizes": "52x52",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/book.png",
+      "sizes": "288x288",
+      "type": "image/png"
+    }
+  ]
+}
