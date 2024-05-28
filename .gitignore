@@ -1,0 +1,17 @@
+# --------------------------------------------------------------
+# more gitignore templates see https://github.com/github/gitignore
+# --------------------------------------------------------------
+**/node_modules/
+**/dist/
+**/cache/
+**/.vitepress/cache
+**/logs/
+*.log
+**/.temp
+**/.DS_Store
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr

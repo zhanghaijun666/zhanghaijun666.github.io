@@ -1,0 +1,30 @@
+# EditorConfig 用于在 IDE 中检查代码的基本 Code Style
+# @see: https://editorconfig.org/
+root = true
+
+[*]
+end_of_line = lf
+indent_size = 2
+indent_style = space
+max_line_length = 180
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+quote_type = single
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.{js,jsx,ts,tsx,vue}]
+end_of_line = lf
+
+[*.{conf,ini,json,yml,yaml}]
+end_of_line = lf
+indent_size = 4
+
+[*.{java, gradle, groovy, kt, sh}]
+indent_size = 4
+
+[*.{bat, cmd}]
+end_of_line = crlf
