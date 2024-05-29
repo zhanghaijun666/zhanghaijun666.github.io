@@ -1,7 +1,16 @@
+<template>
+  <!-- https://vitepress.dev/zh/guide/extending-default-theme#layout-slots -->
+  <DefaultTheme.Layout>
+    <template #not-found>
+      <NotFound />
+    </template>
+  </DefaultTheme.Layout>
+</template>
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import { nextTick, provide } from 'vue';
+import NotFound from './NotFound.vue';
 
 const { isDark } = useData();
 
@@ -30,11 +39,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   );
 });
 </script>
-
-<template>
-  <DefaultTheme.Layout />
-</template>
-
 <style>
 ::view-transition-old(root),
 ::view-transition-new(root) {
