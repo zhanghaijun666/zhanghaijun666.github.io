@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import { mdPlugin } from './config/plugins';
 import sidebar from './config/sidebar.json';
 import config from '../../package.json';
 
@@ -72,7 +73,8 @@ export default defineConfig({
     breaks: true,
     headers: { level: [0, 0] },
     // light: #f9fafb, dark: --vp-code-block-bg
-    theme: { light: 'github-light', dark: 'github-dark' },
+    // theme: { light: 'github-light', dark: 'github-dark' },
+    config: (md) => mdPlugin(md),
   },
   vite: {
     resolve: {

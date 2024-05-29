@@ -63,4 +63,26 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 .VPSwitchAppearance .check {
   transform: none !important;
 }
+:deep(.VPDoc .content-container) {
+  max-width: unset;
+}
+/* 基本滚动条样式 */
+/* 滚动条宽度 */
+.VPSidebar::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 6px;
+}
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+/* 鼠标悬停时滚动条滑块样式 */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 </style>
