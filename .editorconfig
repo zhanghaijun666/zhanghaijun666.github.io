@@ -21,7 +21,7 @@ end_of_line = lf
 
 [*.{conf,ini,json,yml,yaml}]
 end_of_line = lf
-indent_size = 4
+indent_size = 2
 
 [*.{java, gradle, groovy, kt, sh}]
 indent_size = 4

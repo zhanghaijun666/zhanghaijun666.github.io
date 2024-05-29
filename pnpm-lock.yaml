@@ -8,12 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@haijunit/components':
-        specifier: workspace:*
-        version: link:packages/components
-      '@haijunit/utils':
-        specifier: workspace:*
-        version: link:packages/utils
       vue:
         specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.5)
@@ -36,12 +30,22 @@ importers:
       vite:
         specifier: ^5.2.11
         version: 5.2.11(sass@1.77.2)
-      vitepress:
-        specifier: ^1.2.2
-        version: 1.2.2(@algolia/client-search@4.23.3)(postcss@8.4.38)(sass@1.77.2)(search-insights@2.14.0)(typescript@5.4.5)
       vue-tsc:
         specifier: ^2.0.19
         version: 2.0.19(typescript@5.4.5)
+
+  docs:
+    dependencies:
+      '@haijunit/components':
+        specifier: workspace:*
+        version: link:../packages/components
+      '@haijunit/utils':
+        specifier: workspace:*
+        version: link:../packages/utils
+    devDependencies:
+      vitepress:
+        specifier: ^1.2.2
+        version: 1.2.2(@algolia/client-search@4.23.3)(postcss@8.4.38)(sass@1.77.2)(search-insights@2.14.0)(typescript@5.4.5)
 
   packages/components: {}
 

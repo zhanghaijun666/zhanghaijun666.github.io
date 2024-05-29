@@ -1,5 +1,5 @@
-import type { Component, App } from "vue";
-import TButton from "./button";
+import type { Component, App } from 'vue';
+import TButton from './button';
 
 // 存储组件列表
 const components: { [propName: string]: Component } = {

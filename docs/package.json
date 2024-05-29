@@ -1,0 +1,22 @@
+{
+    "name": "@haijunit/docs",
+    "version": "5.0.0",
+    "description": "导航|文档|笔记|记录|组件库",
+    "main": "index.js",
+    "private": "true",
+    "scripts": {
+        "dev": "vitepress dev .",
+        "build": "vitepress build .",
+        "preview": "vitepress preview ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@haijunit/components": "workspace:*",
+        "@haijunit/utils": "workspace:*"
+    },
+    "devDependencies": {
+        "vitepress": "^1.2.2"
+    }
+}
