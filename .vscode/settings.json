@@ -1,21 +1,21 @@
 {
-    "editor.fontSize": 14,
-    "terminal.integrated.fontSize": 18,
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "prettier.singleQuote": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    "i18n-ally.displayLanguage": "zh-cn",
-    "i18n-ally.enabledParsers": ["ts"],
-    "i18n-ally.enabledFrameworks": ["vue"],
-    "i18n-ally.editor.preferEditor": true,
-    "i18n-ally.keystyle": "nested",
-    "i18n-ally.localesPaths": ["src/locales/langs"],
-    "cSpell.words": ["haijunit", "persistedstate", "Pinia", "tdesign", "unplugin", "Vite"]
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 18,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "i18n-ally.displayLanguage": "zh-cn",
+  "i18n-ally.enabledParsers": ["ts"],
+  "i18n-ally.enabledFrameworks": ["vue"],
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["src/locales/langs"],
+  "cSpell.words": ["haijunit", "persistedstate", "Pinia", "tdesign", "unplugin", "Vite"]
 }
