@@ -34,8 +34,8 @@ export default defineConfig({
     siteTitle: '知识点的精心归纳',
     nav: [
       { text: '首页', link: '/' },
-      { text: '安装指南', link: '/components/' },
-      { text: '基础组件', link: '/components/TSelect/base.md' },
+      { text: '博文笔记', link: '/blogs/' },
+      { text: '组件指南', link: '/components/' },
     ],
     sidebar: sidebar,
     socialLinks: [{ icon: 'github', link: 'https://gitee.com/haijunit/vitepress-demo' }],

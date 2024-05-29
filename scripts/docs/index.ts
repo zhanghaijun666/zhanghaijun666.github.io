@@ -12,7 +12,7 @@ type FileItem = {
   path: string;
   baseItem: string;
 };
-const files: FileItem[] = fileList<FileItem>(['docs/blog', 'docs/component'], (filePath) => {
+const files: FileItem[] = fileList<FileItem>(['docs/blogs', 'docs/components'], (filePath) => {
   const name = basename(filePath);
   const group: { [key: string]: string } = matchGroup(name, FILE_NAME_REGEX);
   if (!group.order && !group.name) {
