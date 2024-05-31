@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import timeline from 'vitepress-markdown-timeline';
 import { mdPlugin } from './config/plugins';
 import sidebar from './config/sidebar.json';
 import config from '../../package.json';
@@ -13,7 +14,7 @@ console.log(
 export default defineConfig({
   base: '/docs',
   outDir: '../dist/docs',
-  lang: 'cn-ZH',
+  lang: 'zh-CN',
   title: '知识点的精心归纳',
   description: '个人知识点的精心归纳，每一份知识都像是仓库中的一颗宝石，等待着被发掘和利用',
   head: [
@@ -23,12 +24,19 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: '/docs/icons/book.png' }],
-    ['link', { rel: 'mask-icon', href: '/docs/icons/book.svg', color: '#3eaf7c' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/docs/icons/book.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/docs/logo.png' }],
+    ['link', { rel: 'mask-icon', href: '/docs/logo.svg', color: '#3eaf7c' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/docs/logo.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
   lastUpdated: true,
+  //多语言
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'Zh_CN',
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
@@ -40,41 +48,50 @@ export default defineConfig({
     ],
     sidebar: sidebar,
     socialLinks: [{ icon: 'github', link: 'https://gitee.com/haijunit/vitepress-demo' }],
-    outline: {
-      level: [2, 6],
-      label: '目录',
-    },
-    editLink: {
-      pattern: 'https://gitee.com/haijunit/vitepress-demo/edit/main/docs/:path',
-      text: '编辑此页',
-    },
-    lastUpdated: {
-      text: '最后更新',
-    },
-    docFooter: {
-      prev: '上一篇',
-      next: '下一篇',
-    },
+    outline: { level: [2, 6], label: '当前页大纲' },
+    editLink: { text: '编辑此页', pattern: 'https://gitee.com/haijunit/vitepress-demo/edit/main/docs/:path' },
+    lastUpdated: { text: '最后更新' },
+    docFooter: { prev: '上一篇', next: '下一篇' },
     lightModeSwitchTitle: '明亮主题',
     darkModeSwitchTitle: '暗黑主题',
     returnToTopLabel: '返回顶部',
+    sidebarMenuLabel: '目录',
     langMenuLabel: '切换语言',
-    notFound: {
-      title: 'PAGE NOT FOUND',
-      quote: '页面丢失了...',
-      linkText: '回到首页',
-    },
+    notFound: { title: 'PAGE NOT FOUND', quote: '页面丢失了...', linkText: '回到首页' },
     search: {
       provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索文档',
+            buttonAriaLabel: '搜索文档',
+          },
+          modal: {
+            noResultsText: '无法找到相关结果',
+            resetButtonTitle: '清除查询条件',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+            },
+          },
+        },
+      },
     },
   },
   markdown: {
+    //行号显示
     lineNumbers: true,
-    breaks: true,
-    headers: { level: [0, 0] },
+    // 开启图片懒加载
+    image: {
+      lazyLoading: true,
+    },
     // light: #f9fafb, dark: --vp-code-block-bg
     // theme: { light: 'github-light', dark: 'github-dark' },
-    config: (md) => mdPlugin(md),
+    config: (md: any) => {
+      // md.use(timeline);
+      timeline(md, {});
+      mdPlugin(md);
+    },
   },
   vite: {
     resolve: {

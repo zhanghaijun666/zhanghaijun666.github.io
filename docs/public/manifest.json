@@ -9,12 +9,12 @@
   "description": "知识点的精心归纳",
   "icons": [
     {
-      "src": "icons/book.png",
+      "src": "/docs/logo.png",
       "sizes": "52x52",
       "type": "image/png"
     },
     {
-      "src": "icons/book.png",
+      "src": "/docs/logo.png",
       "sizes": "288x288",
       "type": "image/png"
     }

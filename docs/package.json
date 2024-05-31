@@ -22,6 +22,8 @@
   "devDependencies": {
     "markdown-it-container": "^4.0.0",
     "prismjs": "^1.29.0",
-    "vitepress": "^1.2.2"
+    "vitepress": "^1.2.2",
+    "vitepress-markdown-timeline": "^1.2.1",
+    "vitepress-plugin-rss": "^0.2.6"
   }
 }

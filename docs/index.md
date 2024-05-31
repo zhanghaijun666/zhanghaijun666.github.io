@@ -7,7 +7,7 @@ hero:
   text: 导航|文档|笔记|记录|组件库
   tagline: 人生就像一场修行，你不可能一开始就修成正果
   image:
-    src: /logo.png
+    src: /welcome.png
   actions:
     - theme: alt
       text: 导航

@@ -583,6 +583,22 @@
       ]
     }
   ],
+  "/blogs/31.web前端": [
+    {
+      "order": 50,
+      "text": "vitepress搭建",
+      "items": [
+        {
+          "text": "vitepress配置",
+          "link": "blogs/31.web前端/50.vitepress搭建/20.vitepress配置.md"
+        },
+        {
+          "text": "Markdown渲染",
+          "link": "blogs/31.web前端/50.vitepress搭建/30.Markdown渲染.md"
+        }
+      ]
+    }
+  ],
   "/blogs/60.项目管理": [
     {
       "order": 10,

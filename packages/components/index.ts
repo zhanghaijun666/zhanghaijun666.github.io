@@ -7,7 +7,7 @@ const components: { [propName: string]: Component } = {
 };
 
 // - install：每个插件都有一个 install 方法
-const install: any = (app: any): void => {
+const install: any = (app: App): void => {
   for (const key in components) {
     app.component(key, components[key]);
   }
