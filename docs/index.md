@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: alt
       text: 导航
-      link: /nav/
+      link: /navigator/
     - theme: brand
       text: 博客
-      link: /blog/
+      link: /blogs/
     - theme: alt
       text: 桌面
       link: /desktop/
@@ -30,5 +30,3 @@ features:
     title: Vue驱动。
     details: 享受 Vue3 + vite3 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
 ---
-
-

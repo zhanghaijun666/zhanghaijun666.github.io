@@ -21,5 +21,11 @@
     "strict": false // 严格模式
   },
   "include": ["src/**/*.ts", "packages/**/*.vue", "scripts/**/*.ts"],
-  "ts-node": { "esm": true }
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    },
+    "transpileOnly": true,
+    "files": true
+  }
 }

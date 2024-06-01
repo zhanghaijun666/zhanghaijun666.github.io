@@ -595,6 +595,10 @@
         {
           "text": "Markdown渲染",
           "link": "blogs/31.web前端/50.vitepress搭建/30.Markdown渲染.md"
+        },
+        {
+          "text": "自定义组件显示",
+          "link": "blogs/31.web前端/50.vitepress搭建/60.自定义组件显示.md"
         }
       ]
     }
@@ -1365,6 +1369,10 @@
         {
           "text": "button",
           "link": "components/10.基础组件/10.button.md"
+        },
+        {
+          "text": "demo",
+          "link": "components/10.基础组件/20.demo.md"
         }
       ]
     }

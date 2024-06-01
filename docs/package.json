@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "vitepress dev .",
     "build": "vitepress build .",
-    "preview": "vitepress preview ."
+    "preview": "vitepress preview .",
+    "docs:sidebar": "ts-node scripts/index.ts",
+    "docs:matter": "ts-node scripts/matter.ts"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +26,7 @@
     "prismjs": "^1.29.0",
     "vitepress": "^1.2.2",
     "vitepress-markdown-timeline": "^1.2.1",
-    "vitepress-plugin-rss": "^0.2.6"
+    "vitepress-plugin-rss": "^0.2.6",
+    "yaml": "^2.4.2"
   }
 }

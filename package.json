@@ -5,10 +5,9 @@
   "main": "index.js",
   "private": "true",
   "scripts": {
-    "docs:dev": "pnpm docs:generate && pnpm -C docs dev",
+    "docs:dev": "pnpm -C docs dev",
     "docs:build": "pnpm -C docs build",
-    "docs:site": "bash scripts/deploy-docs.sh",
-    "docs:generate": "ts-node scripts/docs/index.ts"
+    "docs:site": "bash scripts/deploy-docs.sh"
   },
   "keywords": [],
   "author": "",
