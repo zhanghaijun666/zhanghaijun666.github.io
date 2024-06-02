@@ -3,8 +3,6 @@ import { relative, basename, sep } from 'path';
 import { fileList, matchGroup } from './utils';
 import { DefaultTheme } from 'vitepress';
 
-// 文件或者文件夹命名规则: [排序号].[文件名称].md
-const FILE_NAME_REGEX = new RegExp(/^(?<order>\d+)\.(?<name>[^.]*)(\.md)?$/);
 type FileItem = {
   order: number;
   text: string;
@@ -14,7 +12,7 @@ type FileItem = {
 };
 const files: FileItem[] = fileList<FileItem>(['blogs', 'components'], (filePath) => {
   const name = basename(filePath);
-  const group: { [key: string]: string } = matchGroup(name, FILE_NAME_REGEX);
+  const group: { [key: string]: string } = matchGroup(name);
   if (!group.order && !group.name) {
     console.error(`错误的文件名格式: ${filePath}`);
     return undefined;
