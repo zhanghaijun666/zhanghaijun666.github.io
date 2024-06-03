@@ -82,7 +82,7 @@ export default defineConfig({
     image: {
       lazyLoading: true,
     },
-    config: MarkdownPlugins,
+    config: (md) => MarkdownPlugins(md),
   },
   vite: {
     resolve: {

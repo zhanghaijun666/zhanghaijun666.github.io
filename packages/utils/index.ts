@@ -1,1 +1,1 @@
-export * from "./fun";
+export * from './src/types';

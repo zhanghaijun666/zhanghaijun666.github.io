@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ES6",
+    "module": "ESNext",
     "sourceMap": true,
     "moduleResolution": "Node",
     "allowJs": false,
@@ -23,7 +23,7 @@
   "include": ["src/**/*.ts", "packages/**/*.vue", "scripts/**/*.ts"],
   "ts-node": {
     "compilerOptions": {
-      "module": "commonjs"
+      "module": "ESNext"
     },
     "transpileOnly": true,
     "files": true

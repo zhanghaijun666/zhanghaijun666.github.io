@@ -2,11 +2,16 @@
   "name": "@haijunit/components",
   "version": "5.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.d.ts",
   "scripts": {
     "dev": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "vue": "^3.4.27"
+  }
 }
