@@ -14,7 +14,6 @@ export function formatDate(d: any, fmt = 'yyyy-MM-dd hh:mm:ss') {
   if (/(y+)/.test(fmt)) {
     fmt = fmt.replace(RegExp.$1, `${d.getFullYear()}`.substr(4 - RegExp.$1.length));
   }
-  // eslint-disable-next-line no-restricted-syntax
   for (const k in o) {
     if (new RegExp(`(${k})`).test(fmt)) fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? o[k] : `00${o[k]}`.substr(`${o[k]}`.length));
   }
@@ -52,6 +51,5 @@ export function formatShowDate(date: Date | string) {
   if (diff < oneWeek) {
     return `${Math.floor(diff / oneDay)}天前`;
   }
-
   return formatDate(new Date(date), 'yyyy-MM-dd');
 }

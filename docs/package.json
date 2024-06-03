@@ -9,7 +9,8 @@
     "build": "vitepress build .",
     "preview": "vitepress preview .",
     "docs:sidebar": "ts-node scripts/sidebar.ts",
-    "docs:matter": "ts-node scripts/matter.ts"
+    "docs:matter": "ts-node scripts/matter.ts",
+    "docs:index": "ts-node .vitepress/config/scripts/index.ts"
   },
   "keywords": [],
   "author": "",
