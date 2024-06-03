@@ -3,5 +3,5 @@
   "compilerOptions": {
     "outDir": "../dist/docs"
   },
-  "include": [".vitepress/**/*", "./**/*.md"]
+  "include": [".vitepress/**/*", "**/src/**/*", "./**/*.md"]
 }

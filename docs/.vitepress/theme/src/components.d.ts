@@ -1,5 +1,5 @@
-import VCode from './vp-demo/index.vue';
-import VLink from './navigator/NavLink.vue';
+import VCode from './components/vp-demo/index.vue';
+import VLink from './components/navigator/NavLink.vue';
 
 declare module 'vue' {
   export interface GlobalComponents {

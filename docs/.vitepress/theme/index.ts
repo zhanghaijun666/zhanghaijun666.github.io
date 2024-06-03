@@ -1,7 +1,7 @@
 // https://vitepress.dev/guide/custom-theme
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
-import Layout from './layout/Layout.vue';
+import Layout from './src/layout/Layout.vue';
 import './style.css';
 
 import ElementPlus from 'element-plus';
@@ -12,7 +12,7 @@ import locale from 'element-plus/es/locale/lang/zh-cn';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 
 import TuiPlus from '@haijunit/components';
-import VComponents from './components';
+import VComponents from './src/index';
 
 // 引入时间线样式
 import 'vitepress-markdown-timeline/dist/theme/index.css';

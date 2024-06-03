@@ -1,0 +1,2726 @@
+[
+  {
+    "order": 0,
+    "title": "index.md",
+    "date": "2024-05-29 17:55:06",
+    "tags": [
+      "components"
+    ],
+    "description": "",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Button 按钮",
+    "date": "2024-05-30 10:12:13",
+    "tags": [
+      "基础组件"
+    ],
+    "description": "常用的操作按钮\n:::tip 组件库搭建\n测试搭建 UI 组件库\n:::\n 基础用法\n:::demo Use `type`, `plain`, `round` and `circle` to defi",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "demo",
+    "date": "2024-06-02 07:24:17",
+    "tags": [
+      "基础组件"
+    ],
+    "description": "",
+    "cover": ""
+  },
+  {
+    "order": 0,
+    "title": "index.md",
+    "date": "2024-05-29 17:55:06",
+    "tags": [
+      "blogs"
+    ],
+    "description": "",
+    "cover": ""
+  },
+  {
+    "order": "00",
+    "title": "关于我",
+    "date": "2023-02-21 00:07:58",
+    "author": "爱做梦的奋斗青年",
+    "tags": [
+      "生活"
+    ],
+    "description": "📑 基本信息\n- 姓名：爱做梦的奋斗青年（化名）\n- 邮箱：zhanghaijun_java@163.com\n- 现居地：北京\n- 职业目标：javaEE全栈&架构\n- 业务领域：云存储 | OA ",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "个人技术博客管理",
+    "date": "2023-05-09 08:00:00",
+    "tags": [
+      "生活"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 前言\n  本篇和大家聊聊如何运营个人技术博客，定位下做技术写作的目的，有哪些交流平台和输出方式，如何把控内容质量，整理了一些写作技巧和自己常用的写作工",
+    "cover": "https://mmbiz.qpic.cn/mmbiz_png/3fmcbamQEpGQAn5icNSfDXnfkKd2byuiansOlLnQCZnbCN2qBcNHMh1EgK3SX75tCscZ1kv59myHqabTX9c6MHEw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1"
+  },
+  {
+    "order": "20",
+    "title": "家庭系统搭建",
+    "date": "2023-07-01 08:00:00",
+    "tags": [
+      "家庭组网"
+    ],
+    "description": "[[toc]]\n 需求\n- 全屋 Wifi\n- 全屋 Wifi-软路由（非必须）\n- 存储中心（例如 NAS、群晖）\n- 存储中心-支持手机图片同步\n- 存储中心-支持电视点播影视作品\n- 存储中心-",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "线性表-栈",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "数据结构"
+    ],
+    "description": "栈是是一种特殊的线性表，仅能够在栈顶操作数据，其特点是先进后出（后进先出）\n&lt;!-- more --\n[[toc]]\n 栈的实现\n```js\n// javascript的栈实现\nfunction",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "线性表-队列",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "数据结构"
+    ],
+    "description": "队列是一种特殊的线性表，其特殊是值允许在队列的头部删除元素，在队列的尾部添加新的元素。\n&lt;!-- more --\n[[toc]]\n 队列的实现\n```js\nfunction Queue() {\n",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "线性表-链表",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "数据结构"
+    ],
+    "description": "链表是物理存储单元上非连续的，非顺序的存储结构，由一系列节点组成。\n&lt;!-- more --\n[[toc]]\n 单向链表的实现\n::: details 实例代码\n```js\nfunction L",
+    "cover": ""
+  },
+  {
+    "order": "13",
+    "title": "线性表-链表-Java",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "数据结构"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n java 实现\n```java\nclass Solution {\n  public static void main(String[] args) {",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "树",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "数据结构"
+    ],
+    "description": "数据结构示例网站：https://www.cs.usfca.edu/~galles/visualization/Algorithms.html\n树是一种非线性的数据结构，是由 n(n\n- 如果 n=0",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "图",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "数据结构"
+    ],
+    "description": "图通常用来表示和存储具有`多对多`关系的数据，是数据结构中非常重要的一种结构。\n\n&lt;!-- more --&gt;\n[[toc]]\n 在图中需要注意\n- 线性表和树可以看做特殊的图。\n- 线性表",
+    "cover": ""
+  },
+  {
+    "order": "09",
+    "title": "设计模式和设计原则",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 设计模式的三个分类\n- 创建型模式：对象实例化的模式，创建型模式用于解耦对象的实例化过程。\n- 结构型模式：把类或对象结合在一起形成一个更大的结构。\n",
+    "cover": "https://static001.geekbang.org/horde/e8/e812cf142371fed874cd5faaa797cc5d.png"
+  },
+  {
+    "order": "10",
+    "title": "单例模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]\n 1、简介\n保证一个类只有一个实例，并提供一个全局访问点。当一个对象在整个系统中都可以用到时，单例模式就比较有用了。客户端不在考虑是否要实例化的问题，而",
+    "cover": "https://img2018.cnblogs.com/blog/993045/201911/993045-20191110221915487-252198249.jpg"
+  },
+  {
+    "order": "11",
+    "title": "抽象工厂",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "工厂方法",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "13",
+    "title": "建造模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "14",
+    "title": "原型模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "迭代器模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "观察者模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "22",
+    "title": "模板方法",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "23",
+    "title": "命令模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "24",
+    "title": "状态模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "25",
+    "title": "策略模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "26",
+    "title": "职责链模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "27",
+    "title": "中介者模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "28",
+    "title": "访问者模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "29",
+    "title": "解释器模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "备忘录模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "40",
+    "title": "组合模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "41",
+    "title": "外观模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "42",
+    "title": "代理模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "43",
+    "title": "适配器模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "44",
+    "title": "装饰模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "45",
+    "title": "桥模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "46",
+    "title": "享元模式",
+    "date": "2021-02-22 04:08:00",
+    "tags": [
+      "设计模式"
+    ],
+    "description": "&lt;!-- more --\n[[TOC]]",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "SQL的执行过程",
+    "date": "2024-05-31 18:19:32",
+    "tags": [
+      "原理进阶"
+    ],
+    "description": "基础篇\n 1. 执行一条select语句，期间发生了什么？\n连接器：建立连接，管理连接、校验用户身份；\n查询缓存：查询语句如果命中查询缓存则直接返回，否则继续往下执行。MySQL 8.0 已删除该模块",
+    "cover": "/..\\00\\sql-execute.png"
+  },
+  {
+    "order": "20",
+    "title": "索引",
+    "date": "2024-05-29 17:55:06",
+    "tags": [
+      "原理进阶"
+    ],
+    "description": "索引篇\n书中的目录，就是充当索引的角色，方便我们快速查找书中内容，是以空间换时间的设计思想。\n换到数据库中，索引的定义就是帮助存储引擎快速获取数据的一种数据结构，形象的说就是索引是数据的目录。索引和数",
+    "cover": "https://baiyunshan.flowus.net.cn/oss/f59cf394-13c9-4f1c-83ec-e99e8fe9b78b/image.png?time=1713609900&token=aae90decbbe9ceef1a35ec2d4ceab2c6&role=sharePaid"
+  },
+  {
+    "order": "09",
+    "title": "常用工具",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 日常工具\n- 代码转图片 &lt;https://carbon.now.sh/&gt;\n- 正则表达式可视化工具 &lt;https://jex.im",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Windows开发环境",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 基础设置\n```bash\n 关闭休眠\npowercfg -h off\n```\n 端口命令\n```bash\nnetstat -nao          ",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "Windows网络配置命令",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 内网映射工具\n- ngrok\n telnet\n&gt; 经常检测用于远程服务器某个服务是否正常\n&gt;\n&gt; 说明：使用的时候需要开启telne",
+    "cover": ""
+  },
+  {
+    "order": "13",
+    "title": "Windows实现端口映射",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "1. 查询端口映射情况\n```bash\nnetsh interface portproxy show v4tov4\n```\n 2. 查询某一个 IP 的所有端口映射情况\n```bash\nnetsh i",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "Windows批量重名文件",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n window 下批量重名脚本\n```shell script\n@echo off\nsetlocal EnableDelayedExpansion\nse",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "bat处理程序的自更新及启动",
+    "date": "2023-05-13 08:00:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "&gt;\n&gt; 编写bat脚本, 实现: 执行出错不关闭执行窗口\n```shell script\n@echo off\ncd /d %~dp0\nset %BIN_FILE%=register.exe",
+    "cover": ""
+  },
+  {
+    "order": "17",
+    "title": "SSH配置多个GIT平台",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "如果之前设置过全局的`user.name`和`user.email`, 需要先删掉，删除命令如下\n```bash\n 查看全局配置\ngit config --global --list\n 删除全局配置的",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "Windows下加速Github访问",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "window",
+      "Windows"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 科学上网\n- v2rayN\n 抓包工具\n burpsuit\n&gt; 需要java环境\n&gt; 下载证书 http://burp/\n Fiddler",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "Windows-vbs脚本编程",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Windows"
+    ],
+    "description": "百度百科 VBS\n百度百科 msgbox\n&lt;!-- more --\n[[toc]]\n 示例代码\n```vb\n' ------ 循环操作示例 ------\nDim j\nDo while j &lt",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "Windows-虚拟机迁移",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "VMware",
+      "Windows"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 导出虚拟机\n```bash\n 导出虚拟机\novftool.exe vi://root@192.168.0.100/CentOS7 D:\\OVF\novf",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "CentOS7系统初始化设置",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 镜像地址\n```bash\n 官方镜像：http://isoredirect.centos.org/centos/\n 官方镜像：http://isore",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "Linux 基础命令",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "Linux 命令大全(手册)：https://www.linuxcool.com/\n&lt;!-- more --\n[[toc]]\n 1、基本操作\n 2、磁盘,文件,目录\n 3、检索相关\n 4、网络相",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "Linux命令 find",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "find 命令是 Linux 命令中最有用的命令之一，它的功能非常强大，且语法复杂。&lt;br/\n命令格式：find path -option [-exec ...]\n&lt;!-- more --",
+    "cover": ""
+  },
+  {
+    "order": "13",
+    "title": "Liunx命令 Tmux",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "Tmux 是一个终端复用器（terminal multiplexer），非常有用，属于常用的开发工具。\n&lt;!-- more --\n[[toc]]\n 安装\n```bash\n Ubuntu 或 De",
+    "cover": ""
+  },
+  {
+    "order": "14",
+    "title": "等保三级检查命令",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 操作系统\n 1、查看文件权限\n```bash\n 查看该文件的权限\nls -la /var/log/audit/audit.log\n 查看如下文件的权限",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "Shell脚本案例",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 获取 ip 地址\n```bash\n!/bin/bash\n 获取本机的IP地址\nip=$((ip addr||ifconfig) |grep -v 25",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "常用命令总结",
+    "date": "2023-03-28 08:00:00",
+    "tags": [
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 1. sed处理\n```bash\n 多个空格只保留一个\nsed '/./,/^$/!d' test\n 删除开头的空白行\nsed '/./,$!d' t",
+    "cover": ""
+  },
+  {
+    "order": "17",
+    "title": "网络配置",
+    "date": "2024-02-04 08:00:00",
+    "tags": [
+      "CentOS"
+    ],
+    "description": "桥接网络\n```bash\n 创建桥接连接\nnmcli connection add type bridge ifname br0 con-name br0\n \n 添加网络接口到桥接连接\nnmcli c",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "内网穿透工具",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n nps\n&gt; nps 是一款轻量级、高性能、功能强大的内网穿透代理服务器。目前支持 tcp、udp 流量转发，可支持任何 tcp、udp 上层协议",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "监控工具",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n netdata\n&gt; 一个面向系统、硬件、容器和应用程序的分布式实时性能和运行状况监控平台，无需配置即可收集数千个有用的指标\n&gt;\n&gt; ",
+    "cover": ""
+  },
+  {
+    "order": "22",
+    "title": "Linux中磁盘管理",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "CentOS"
+    ],
+    "description": "在Linux下，磁盘格式化、分区和挂载的详细步骤如下所示：\n 1.确定磁盘设备\n使用以下命令来查看可用磁盘设备：\n```bash\nfdisk -l\n Disk /dev/mmcblk1: 7456 M",
+    "cover": ""
+  },
+  {
+    "order": "23",
+    "title": "美化Centos的终端",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "CentOS"
+    ],
+    "description": "Centos的终端用起来太单一了。想着换成zsh终端，并配合oh my zsh的主题。从而打造不一样的终端吧。\n&lt;!-- more --\n 安装ZSH\n```bash\n 下载\nwget http",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "iptables详解",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "linux",
+      "CentOS"
+    ],
+    "description": "防火墙相关概念\n- 从逻辑上讲。防火墙可以大体分为主机防火墙和网络防火墙。\n  \n  &gt;\n  &gt; 网络防火墙：往往处于网络入口或边缘，针对于网络入口进行防护，服务于防火墙背后的本地局域网。",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "邮件服务器Postfix",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 邮件队列\nPostfix 有以下四种邮件队列，均由管理队列的进程统一进行管理\n- maildrop：本地邮件放置在 maildrop 中，同时也被拷贝",
+    "cover": ""
+  },
+  {
+    "order": "80",
+    "title": "文件备份",
+    "date": "2021-12-09 04:08:00",
+    "tags": [
+      "Linux",
+      "CentOS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n Duplicati\n&gt; Duplicati 是一个免费的、开源的备份客户端，可以在云存储服务和远程文件服务器上安全地存储加密的、增量的、压缩的备",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "shell脚本语言",
+    "date": "2023-05-12 08:00:00",
+    "tags": [
+      "Shell脚本"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n shell脚本入门\n | shell是什么\n- Shell是一个命令解释器，它在操作系统的最外层，负责直接与用户对话，把用户的输入解释给操作系统，并处",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "常用脚本",
+    "date": "2023-04-23 08:00:00",
+    "tags": [
+      "Shell脚本"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 批量检测网站是否异常并邮件通知\n```bash\n!/bin/bash  \nURL_LIST=\"www.baidu.com www.ctnrs.com ",
+    "cover": ""
+  },
+  {
+    "order": "61",
+    "title": "系统运维脚本",
+    "date": "2023-04-24 08:00:00",
+    "tags": [
+      "Shell脚本"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 根据PID过滤进程所有信息\n```bash\n! /bin/bash\n Function: 根据用户输入的PID，过滤出该PID所有的信息\nread -",
+    "cover": ""
+  },
+  {
+    "order": "80",
+    "title": "制作RPM包",
+    "date": "2023-05-23 08:00:00",
+    "tags": [
+      "Shell脚本"
+    ],
+    "description": "rpmbuid是用于制作rpm格式包的工具。\nrpm 4.4.x版本之前，rpmbuid工具默认的工作车间为/usr/src/redhat，所以造成普通用户不能制作rpm包。\nrpm 4.5.x版本开",
+    "cover": ""
+  },
+  {
+    "order": "81",
+    "title": "制作RPM包之FPM",
+    "date": "2023-05-22 08:00:00",
+    "tags": [
+      "Shell脚本"
+    ],
+    "description": "FPM工具\n- 官网: &lt;https://github.com/jordansissel/fpm\n- FPM-dockerfile: &lt;https://github.com/aosolao",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "常用的正则表达式",
+    "date": "2023-04-18 08:00:00",
+    "tags": [
+      "编程基础"
+    ],
+    "description": "[[toc]]\n 消除注释\n```bash\n 删除注释 /* */\n/\\*(.|[\\r\\n])*?\\*/\n 删除注释 //\n^\\s+//[\\s\\S]*?\\n\n 删除xml注释\n&lt;!-[\\s\\S]",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "数据传输Protobuf",
+    "date": "2023-05-13 08:00:00",
+    "tags": [
+      "编程基础"
+    ],
+    "description": "GitHub：&lt;https://github.com/protocolbuffers/protobuf\n官方文档：&lt;https://protobuf.dev/overview/&gt;\n ",
+    "cover": "https://mmbiz.qpic.cn/mmbiz_jpg/4lfok2icUkibTvB5v6uBDUaom2VOkdxu9AicLVta92lVH6AcIEGxdFfnFkA2g7hbrFPDULx4jIiaZOUiaibFZQ5APKiaA/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1"
+  },
+  {
+    "order": "20",
+    "title": "head标签提升网站速度",
+    "date": "2023-05-13 08:00:00",
+    "tags": [
+      "HTML"
+    ],
+    "description": "在所有HTML标签中中，`&lt;head\n 一、用于优化的标签类型\n 1、`preload`\n使用`&lt;link rel=\"preload\"&gt;`可以在页面加载前预加载指定的资源，如CSS、",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "输入框实现@提及项目",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "HTML"
+    ],
+    "description": "先看demo: &lt;https://zhangxinxu.gitee.io/okr-at-mention/\n&gt; 项目地址\n项目地址: &lt;https://gitee.com/zhangx",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "CSS技巧",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "CSS",
+      "CSSS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 浏览器的兼容性\n- 网络上已经有成熟的css代码库为我们解决浏览器不一致问题，例如normalize.css、minireset和ress，你可以在你",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "CSS布局",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "CSS",
+      "CSSS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 1. 实现水平居中和垂直居中\n&gt;\n&gt; 源码地址：https://codepen.io/una/pen/YzyYbBx\n```css\n.pa",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "CSS悬浮",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "CSS",
+      "CSSS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 1. 发送效果\n::: normal-demo [vanilla]\n```html\n&lt;html&gt;\n&lt;div id=\"send-btn",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "CSS命名规范",
+    "date": "2023-11-22 08:00:00",
+    "tags": [
+      "CSSS"
+    ],
+    "description": "CSS 的命名，采用 BEM 命名规范，可以有效的避免组件间样式的相互污染，减少嵌套层级。具体规则如下：\n BEM 是什么?\nBEM 使用分隔符将类名区隔成三个部分：\n[prefix]-[block]",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "CSS的BEM规范",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "CSS",
+      "CSSS"
+    ],
+    "description": "Css中BEM书写规范\n\n&gt; BEM是Block（块）、Element（元素）、Modifier（修饰符）的简写，是一种组件化的 CSS 命名方法和规范\n&gt;\n&gt; BEM是基于组件的w",
+    "cover": ""
+  },
+  {
+    "order": "40",
+    "title": "canvas效果",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "JavaScript",
+      "CSSS"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 时钟\n::: normal-demo [vanilla]\n```html\n&lt;html&gt;\n&lt;div&gt;&lt;canvas id=",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "高逼格的JS插件",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "要开始编写插件就得先了解JS模块化，早期的模块化是利用了函数自执行来实现的，在单独的函数作用域中执行代码可以避免插件中定义的变量污染到全局变量，举个栗子🌰，以下代码实现了一个简单随机数生成的插件：\n",
+    "cover": "https://mmbiz.qpic.cn/mmbiz_png/EFMcFLSf0WhoUMUbnliaE4hkqznVjlbOgUZ6Go1I6Sq7I3iaiapxg8ZgYjiaQ5hBsthibGKsplGdwdkrndEuLfSETRw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1"
+  },
+  {
+    "order": "20",
+    "title": "JavaScript工具函数",
+    "date": "2023-04-22 08:00:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "1、生成随机颜色\n```JavaScript\nconst generateRandomHexColor = () =\nconsole.log(generateRandomHexColor())\n```",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "JavaScript设计模式",
+    "date": "2023-05-16 08:00:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "01、Abstract Factory\n&gt; Abstract Factory创建由共同主题相关的对象。在面向对象编程中，工厂是创建其他对象的对象。抽象工厂抽象出新创建的对象共享的主题。\n```j",
+    "cover": ""
+  },
+  {
+    "order": "50",
+    "title": "JS站点",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 工具库\n- utils-lan：js工具类\n JavaScript表单验证库\n- ApproveJS-官网\n- ApproveJS-Github\n- ",
+    "cover": ""
+  },
+  {
+    "order": "51",
+    "title": "JS技巧",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n ------ 数组 ------\n 填充数组\n```javascript\nconsole.log(new Array(5).fill(\"1\")); /",
+    "cover": ""
+  },
+  {
+    "order": "52",
+    "title": "JS工具函数",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n slice,splice,split的区别\n- slice\n  用法：array.slice(start,end)，含头不含尾\n  解释：该方法是对数",
+    "cover": ""
+  },
+  {
+    "order": "53",
+    "title": "JS防抖与节流",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n&gt; 防抖（debounce）和节流/限频（throttle）的作用都是在高频事件中防止函数被多次调用，提高用户体验，是一种性能优化的方案。\n&gt",
+    "cover": "https://images2017.cnblogs.com/blog/1094893/201711/1094893-20171120172217415-1848957105.png"
+  },
+  {
+    "order": "60",
+    "title": "JS表白",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "JavaScript"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 你喜欢我吗?\n::: normal-demo [vanilla]\n```html\n&lt;html&gt;\n&lt;div class=\"demo-d",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "TypeScript介绍",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "TypeScript"
+    ],
+    "description": "优势\n和JavaScript做个对比，TypeScript 的优势显而易见：\n- TypeScript 的开发快速、简单，并且容易学习。\n- TypeScript 支持面向对象的编程特性，比如类、接口",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "TypeScript技巧-类型",
+    "date": "2023-04-22 08:00:00",
+    "tags": [
+      "TypeScript"
+    ],
+    "description": "01、Uppercase （大写）\n\n```TypeScript\ntype Role = \"admin\" | \"user\" | \"guest\";\n// 原始写法 \ntype UppercaseRole",
+    "cover": ""
+  },
+  {
+    "order": "09",
+    "title": "VUE代码风格指南",
+    "date": "2023-05-09 08:00:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 一、命名规范\n市面上常用的命名规范：\n- `camelCase`（小驼峰式命名法 —— 首字母小写）\n- `PascalCase`（大驼峰式命名法 —",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "VUE笔记",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "VUE",
+      "VUE应用"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n vueJs简介\n- vue官网地址：https://cn.vuejs.org/\n- vue-v2官网地址：https://cn.vuejs.org/v",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "VUE笔记",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "VUE",
+      "VUE应用"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 计算属性（computed）\n 监视属性（侦听器watch）\n 绑定样式\n- class样式\n&gt; 写法:class=\"xxx\" xxx可以是字符",
+    "cover": ""
+  },
+  {
+    "order": "13",
+    "title": "用proxy改造你的console",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "方案一，通过ast解析console 将变量名放在console后面，奈何esbuild不支持ast操作(不是我不会 哈哈哈哈), 故放弃。\n方案二，既然vue能代理对象，那么console是不是也能",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "vue3的优质UI库",
+    "date": "2023-04-22 08:00:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "PC端UI库\n 1. element-plus\n- (饿了么团队) 基于 Vue 3，面向设计师和开发者的组件库 。\n- 文档地址：&lt;https://element-plus.org/zh-CN",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "VUE2技巧",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "VUE",
+      "VUE应用"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n node-sass\n 不对应应修改成对应版本号\n- https://www.npmjs.com/package/node-sass\n```text\ns",
+    "cover": ""
+  },
+  {
+    "order": "50",
+    "title": "VuePress入门",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "VUE",
+      "vuepress",
+      "VUE应用"
+    ],
+    "description": "Vuepress 官网\nVuePress 由两部分组成：一个以 Vue 驱动的主题系统的简约静态网站生成工具，和一个为编写技术文档而优化的默认主题。它是为了支持 Vue 子项目的文档需求而创建的。\n&",
+    "cover": ""
+  },
+  {
+    "order": "51",
+    "title": "修改配置",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "&lt;!-- more --\n 配置文件说明\n vuepress 相关\n:::tip\n详细说明见每个配置文件注释部分\n:::\n- `docs/.vuepress/config.ts`: 配置文件入口",
+    "cover": ""
+  },
+  {
+    "order": "52",
+    "title": "VuePress主题",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "VUE",
+      "vuepress",
+      "VUE应用"
+    ],
+    "description": "::: cardList\n```yaml\n- name: vdoing\n  desc: 知识管理&博客 主题\n  avatar: https://cdn.jsdelivr.net/gh/xugaoyi",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "Vite介绍",
+    "date": "2023-05-16 08:00:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "1.1、什么是Vite\n\nVite由两个主要部分组成：\n1. `dev server`：利用浏览器的ESM能力来提供源文件，具有丰富的内置功能并具有高效的HMR\n2. 生产构建：生产环境利用Rollu",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "布过npm包",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "注册npm账号\n&gt; 官网地址：&lt;https://www.npmjs.com/&gt;\n 查看npm镜像，如果之前更换过，需要重置\n```bash\nnpm config get regist",
+    "cover": ""
+  },
+  {
+    "order": "70",
+    "title": "VUE组件Props参数验证",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "Vue 要求将传递给组件的任何数据显式声明为 props。此外，它还提供了一个强大的内置机制来验证这些数据。这就像组件和消费者之间的合同一样，确保组件按预期使用。\n让我们来探讨一下这个强大的工具，它可",
+    "cover": ""
+  },
+  {
+    "order": "71",
+    "title": "Vue3之组件间传值避坑指南",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "VUE应用"
+    ],
+    "description": "- 一、是父组件传递过来的值不能修改\n- 二、是父组件使用“-”分隔符定义属性传递值到子组件，子组件接收时需要将属性名改为驼峰命名方式\n 坑一、父组件传递过来的值是只读的\n```html\n&lt;!D",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "java8之stream",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "Stream 是 Java8 中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作，可以执行非常复杂的查找、过滤和映射数据等操作\n&lt;!-- more --\n[[toc]]\n 创建方法\n``",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "java8之optional",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "主要用处：防止空指针（NPE）、简化if...else...判断、减少代码的复杂度\n&lt;!-- more --\n[[toc]]\n 常用方法举例\n 1. 创建空的Optional：`empty()`",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "JVM调优",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n JVM 调优本质和原则\n- JVM 调优本质就是 gc , 垃圾回收，及时释放内存空间\n- gc 的时间足够小（堆内存设置足够小）\n- gc 的次数足",
+    "cover": "https://s3.ax1x.com/2021/01/29/yCY9iV.png"
+  },
+  {
+    "order": "30",
+    "title": "Maven基础",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n maven 初始化项目\n```bash\n 创建一个名为 maven-demo 的 Maven 项目，请参考 Maven创建项目。\n​mvn arche",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "插入式注解",
+    "date": "2024-02-04 08:00:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "需求\n 背景\n\n&gt; 这有利于我们做版本兼容，必要的时候可以对古早版本使用者溯源。\n 问题\n&gt; 需求似乎很简单，但真要获取自身的jar版本号还是挺麻烦的，有个比较简单但阴间的办法，就是给每一",
+    "cover": ""
+  },
+  {
+    "order": "50",
+    "title": "Jar瘦身实例",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "1、依赖拆分配置\n只需要在项目pom.xml文件中添加下面的配置：\n```xml\n &lt;build\n  &lt;plugins&gt;\n    &lt;plugin&gt;\n    &lt;gro",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "Netty介绍",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "一、Netty 简介\nNetty 是由 Jboss 提供的一个 Java 开源框架，现为 Github 上的独立项目。Netty 提供异步的、时间驱动的网络应用程序框架和工具，用以快速开发高性能、高可",
+    "cover": ""
+  },
+  {
+    "order": "81",
+    "title": 20230815,
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "Java"
+    ],
+    "description": "1、Redis 的单机、哨兵、集群的区别和选型？\n 单机模式\n\n- 缺点\n  - 单点故障：如果 Redis 实例出现故障，数据可能会丢失。\n  - 有限的容量：内存容量受到物理服务器的限制。\n  -",
+    "cover": ""
+  },
+  {
+    "order": "09",
+    "title": "Python基础",
+    "date": "2023-05-16 08:00:00",
+    "tags": [
+      "Python"
+    ],
+    "description": "[[toc]]\n 1、数据类型\n数据类型是可以存储在变量中的数据规范。解释器根据变量的类型为变量分配内存。\n| 文本类型：   | `str`                             ",
+    "cover": "https://mmbiz.qpic.cn/mmbiz_png/y0SBuxfLhanU7icBXaZQdN5czaN6ibcvUMQImUuhxBapaQ8vEXkwTyYeN6oHc4qcRj4gYzLNZQbgzJs64VDxsJrQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1"
+  },
+  {
+    "order": "10",
+    "title": "Windows使用Python",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "python",
+      "Python"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n python 安装\n```python\n 升级pip版本\npython -m pip install --upgrade pip\n```\n jupyt",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "Python远程执行命令",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "python",
+      "Python"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 脚本文件内容\n```python\nimport paramiko\nimport sys\ndef pl_ssh(ip,password,username",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "Python代码实现蚂蚁森林自动偷能量",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "python",
+      "Python"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n```python\nimport uiautomator2 as u2\nimport time\nimport random\n d = u2.connec",
+    "cover": ""
+  },
+  {
+    "order": "22",
+    "title": "图片九宫格处理",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "python",
+      "Python"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 图片九宫格处理\n&gt; github 地址：https://github.com/yangxuan0928/cut_image\n```python\n",
+    "cover": ""
+  },
+  {
+    "order": "23",
+    "title": "python爬百度图片",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "python",
+      "Python"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n python 爬虫百度图片\n```shell script\n -*- coding: utf-8 -*-\nimport re\nimport reque",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "python表白程序",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "python",
+      "Python"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 效果图\n&lt;img src=\"https://img-blog.csdnimg.cn/20201211095153346.png\" width=\"",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "简单的人事系统",
+    "date": "2023-02-27 08:00:00",
+    "tags": [
+      "Python"
+    ],
+    "description": "[[toc]]\n 脚本\n```python\nimport streamlit as st\nimport pandas as pd\n 创建员工类\nclass Employee:\n    def __in",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Go语言安装",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "GO",
+      "GoLang"
+    ],
+    "description": "&lt;!-- more --&gt;\n[[toc]]\n Go 语言特色\n- 简洁、快速、安全\n- 并行、有趣、开源\n- 内存管理、数组安全、编译迅速\n Go 语言用途\n&gt; 对于高性能分布式系统",
+    "cover": "https://pkslow.oss-cn-shenzhen.aliyuncs.com/images/2020/08/go-setup.download-page.png"
+  },
+  {
+    "order": "10",
+    "title": "C++初识",
+    "date": "2021-03-08 04:08:00",
+    "tags": [
+      "C++"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n C 语言学习网站\n- C++ 参考手册\n- c++标准库\n 工具下载\n- visualstudio 最新版本\n- visualstudio 2019\n",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "C++虚函数",
+    "date": "2023-05-14 08:00:00",
+    "tags": [
+      "C++"
+    ],
+    "description": "&gt;\n&gt; 虚函数的作用是实现多态性，当我们使用基类指针或引用来调用虚函数时，程序会根据实际的对象类型来调用相应的派生类函数。\n&gt;\n&gt; 我们可以将一个成员函数声明为虚函数，只需要在",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "vitepress配置",
+    "date": "2024-06-02 07:24:17",
+    "tags": [
+      "vitepress搭建"
+    ],
+    "description": "参考\n- 演示地址\n- 文档地址\n vitepress-plugin-rss\nEnglish | 简体中文\n 使用\n```sh\npnpm add vitepress-plugin-rss -D --f",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "Markdown渲染",
+    "date": "2024-05-31 18:19:32",
+    "tags": [
+      "vitepress搭建"
+    ],
+    "description": "时间轴渲染\n 安装\n::: code-group\n```sh [pmpm]\npnpm install vitepress-markdown-timeline\n```\n```sh [yarn]\nyarn",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "自定义组件显示",
+    "date": "2024-06-02 07:24:17",
+    "tags": [
+      "vitepress搭建"
+    ],
+    "description": "图片加载\n&lt;v-picture src=\"/docs/logo.png\"/\n 需求墙\n&lt;v-wish-panel/&gt;\n 博客\n```ts\nexport function getArt",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "JAVA代码命名规范",
+    "date": "2023-05-13 08:00:00",
+    "tags": [
+      "代码规范"
+    ],
+    "description": "日常编码中，代码的命名是个大的学问。能快速的看懂开源软件的代码结构和意图，也是一项必备的能力。那它们有什么规律呢？\nJava项目的代码结构，能够体现它的设计理念。Java采用长命名的方式来规范类的命名",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "JAVA格式化模板+注释模板",
+    "date": "2023-05-13 08:00:00",
+    "tags": [
+      "代码规范"
+    ],
+    "description": "- 本文意在将idea中的`代码格式`和`注释格式`进行统一化。\n- 研发团队的成员的代码格式和注释格式`建议统一化`。\n- 统一的`代码格式`和`注释格式`，能给代码阅读上带来极大的便利，给代码改动",
+    "cover": "https://mmbiz.qpic.cn/mmbiz_png/7OPxOA8ic5mibdA1yL8uFDeGiaZcibAWNMb7SAy85gRkMmJg6JrTM75apacx7iaz0Y3VD5f7y503Omg5jWgaxDVgibyg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1"
+  },
+  {
+    "order": "20",
+    "title": "UI组件规范",
+    "date": "2023-05-23 08:00:00",
+    "tags": [
+      "代码规范"
+    ],
+    "description": "&lt;!-- more --&gt;\n[[toc]]\n 意识\n&gt; 首先在意识层面，我们需要站在使用组件的开发者角度来观察这个组件，所以下面几点需要在组件开发过程中种在意识里面：\n1. 我应该注",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "组件的命名",
+    "date": "2023-11-22 08:00:00",
+    "tags": [
+      "代码规范"
+    ],
+    "description": "| 基础(Basic) | 布局(Layout) | 导航(Navigations) | 数据类(Data) | 沟通类（Notice）  | 输入类(Input)     | 其他 Others |",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "架构设计要点",
+    "date": "2023-05-23 08:00:00",
+    "tags": [
+      "代码规范"
+    ],
+    "description": "工欲善其事，必先利其器；士欲宣其义，必先读其书。后台开发作为互联网技术领域的掌上明珠，一直都是开发者们的追逐的高峰。\n&lt;!-- more --\n[[toc]]\n 系统开发\n 1. 高内聚/低耦合",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "代码检查工具",
+    "date": "2023-02-28 08:00:00",
+    "tags": [
+      "代码质量"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n sonarqube（代码检查工具）\n&gt; SonarQube 是一种自动代码审查工具，用于检测代码中的错误、漏洞和代码异味。它可以与您现有的工作流",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "权限模型设计方案详解",
+    "date": "2023-02-28 08:00:00",
+    "tags": [
+      "代码质量"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 1 为什么需要权限管理\n日常工作中权限的问题时时刻刻伴随着我们，程序员新入职一家公司需要找人开通各种权限，比如网络连接的权限、编码下载提交的权限、监控",
+    "cover": "/library\\10-01.png"
+  },
+  {
+    "order": "10",
+    "title": "测试资源下载",
+    "date": "2021-03-09 04:08:00",
+    "tags": [
+      "测试",
+      "WEB测试"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 浏览器版本下载\n- 火狐浏览器下载\n  &gt; https://ftp.mozilla.org/pub/firefox/releases/\n- 谷歌",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Docker介绍",
+    "date": "2023-02-27 08:00:00",
+    "tags": [
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 讲个故事\n&gt;\n&gt; 为了更好的理解 Docker 是什么，我们先来讲个故事：\n&gt;\n&gt; 我需要盖一个房子，于是我搬石头、砍木头、画",
+    "cover": ""
+  },
+  {
+    "order": "100",
+    "title": "Containerd安装",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 安装\n```bash\nyum install -y yum-utils device-mapper-persistent-data lvm2\nyum-",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "Docker安装-Linux",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 在线安装\n 脚本安装（推荐）\n```bash\n 下载Docker安装脚本\nsudo curl -fsSL https://get.docker.com",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "Docker安装-Windows",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Docker",
+      "Windows"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n window下安装docker\n官方toolbox_install_windows，下载docker toolbox，链接地址：https://mir",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "Docker常用命令",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n Docker容器信息\n``` bash\n 查看docker容器版本\ndocker version\n 查看docker容器信息\ndocker info\n",
+    "cover": ""
+  },
+  {
+    "order": "22",
+    "title": "docker容器实战",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n docker安装nginx\n```bash\n 拉取镜像\ndocker pull nginx:1.14.0\ndocker images\n 运行容器\ndo",
+    "cover": ""
+  },
+  {
+    "order": "23",
+    "title": "减少Docker镜像大小",
+    "date": "2023-06-02 08:00:00",
+    "tags": [
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 为什么要减小 docker 镜像大小？\n1. 安装不必要的软件包会增加攻击面，从而增加安全风险。\n2. 镜像传输需要更多时间。\n3. 部署大镜像需要更",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "DockerCompose安装",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "harbor",
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 在线安装DockerCompose（推荐）\n``` bash\n 配置Docker Compose\nwget https://github.com/do",
+    "cover": ""
+  },
+  {
+    "order": "32",
+    "title": "DockerCompose",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "harbor",
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 安装wordpress\n&gt;\n&gt; 官方地址：&lt;https://cn.wordpress.org/&gt;\n&gt;\n&gt; Word",
+    "cover": ""
+  },
+  {
+    "order": "40",
+    "title": "DockerSwarm介绍",
+    "date": "2023-02-27 08:00:00",
+    "tags": [
+      "Docker"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 相关地址\n- &lt;https://github.com/docker-archive/classicswarm&gt;\n- &lt;https:/",
+    "cover": "/library\\swarm%E6%9E%B6%E6%9E%84%E5%9B%BE.png"
+  },
+  {
+    "order": "41",
+    "title": "DockerSwarm实战",
+    "date": "2023-02-28 08:00:00",
+    "tags": [
+      "Docker"
+    ],
+    "description": "[[toc]]\n 实战\n 1、初始化节点\n```bash\n 防火墙设置\nfirewall-cmd --permanent --add-rich-rule=\"rule family=\"ipv4\" sou",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Portainer容器管理",
+    "date": "2023-05-16 08:00:00",
+    "tags": [
+      "DockerSwarm"
+    ],
+    "description": "Portainer是一款开源的容器管理平台，支持多种容器技术，如Docker、Kubernetes和Swarm等。它提供了一个易于使用的Web UI界面，可用于管理和监控容器和集群。Portainer",
+    "cover": "https://mmbiz.qpic.cn/mmbiz/2KFeibOwsJRLCzXGicAoCsNedXsJC4ZSU7XncZnQvQOibn7hR6KXY5Ljkmiaic7QT1E41MBYibrHUWJEpAiaNuUdibpPVQ/640?wx_fmt=other&wxfrom=5&wx_lazy=1&wx_co=1"
+  },
+  {
+    "order": "10",
+    "title": "私有仓库-Registry",
+    "date": "2023-02-27 08:00:00",
+    "tags": [
+      "镜像仓库"
+    ],
+    "description": "[[toc]]\n 仓库部署\n 1、Docker部署\n```bash\ndocker run -d -p 5000:5000 --restart always --name registry regist",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "安装Harbor",
+    "date": "2023-02-24 08:00:00",
+    "tags": [
+      "Harbor",
+      "镜像仓库"
+    ],
+    "description": "[[toc]]\n 前置准备\n\n 下载harbor安装包\n```bash\n 下载Docker Harbor安装包\nwget https://ghproxy.com/https://github.com/",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "kubernetes入门介绍",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "云原生",
+      "kubernetes介绍"
+    ],
+    "description": "文章地址：&lt;https://www.cnblogs.com/jhno1/p/15269065.html\n&lt;!-- more --&gt;\n[[toc]]\n Kubernetes基本概述\n-",
+    "cover": "/library\\k8s-cluter.png"
+  },
+  {
+    "order": "13",
+    "title": "kubernetes集群介绍",
+    "date": "2023-02-23 08:00:00",
+    "tags": [
+      "kubernetes介绍"
+    ],
+    "description": "官网地址：https://kubernetes.io/zh/docs/home/\n&lt;!-- more --\n[[toc]]\n 图形化管理 Rancher\nRancher 是一个开源的企业级容器管",
+    "cover": ""
+  },
+  {
+    "order": "14",
+    "title": "k8s安装-集群搭建",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes介绍"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 环境准备\n- 节点 CPU 核数必须是 ：&gt;= 2 核 ，否则 k8s 无法启动\n- DNS 网络： 最好设置为 本地网络连通的 DNS,否则网",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "k8s安装-kubeadm",
+    "date": "2023-02-21 00:07:59",
+    "author": "张海军",
+    "tags": [
+      "kubernetes",
+      "kubernetes介绍"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 官网地址\n- Kubernetes 官网\n- Kubernetes 官网文档\n- Kubernetes github\n- kubesphere\n- k",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "k8s安装-kubeKey",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Kubernetes",
+      "kubesphere",
+      "kubernetes介绍"
+    ],
+    "description": "&gt;\n&gt; 官网地址：https://kubesphere.io/zh/\n&gt;\n&gt; 文档地址：https://www.bookstack.cn/read/kubesphere-3.3",
+    "cover": "/library\\kubesphere-federation.png"
+  },
+  {
+    "order": "20",
+    "title": "kubernetes资源",
+    "date": "2023-02-23 08:00:00",
+    "tags": [
+      "kubernetes介绍"
+    ],
+    "description": "日常节点运维\n```bash\n 列出集群中的所有节点\nkubectl get nodes\nkubectl get nodes -o wide\nkubectl get nodes -o wide --s",
+    "cover": "/library\\endpoint.png"
+  },
+  {
+    "order": "21",
+    "title": "kubernetes无状态",
+    "date": "2023-02-23 08:00:00",
+    "tags": [
+      "kubernetes介绍"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 无状态\n&gt; 就是没有特殊状态的服务,各个请求对于服务器来说统一无差别处理,请求自身携带了所有服务端所需要的所有参数。没有要实时保存的数据。\n P",
+    "cover": "/library\\pod.png"
+  },
+  {
+    "order": "25",
+    "title": "kubernetes有状态",
+    "date": "2023-02-23 08:00:00",
+    "tags": [
+      "kubernetes介绍"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 无状态\n&gt; 与无状态相反,有状态服务在服务端保留之前请求的信息,用以处理当前请求。例如：MySQL\n Volume\n&gt; K8s 抽象的数据",
+    "cover": "https://s3.ax1x.com/2021/01/21/sfzUjU.png"
+  },
+  {
+    "order": "26",
+    "title": "Kubernetes存储机制",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes介绍"
+    ],
+    "description": "Kubernetes 存储系统有几个重要概念：Volume、PV(PersistentVolume )、PVC(PersistentVolumeClaim)、StorageClass。\n&lt;!--",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "kubernetes守护进程",
+    "date": "2023-02-23 08:00:00",
+    "tags": [
+      "kubernetes介绍"
+    ],
+    "description": "DaemonSet 简介\n\n&gt; 服务守护进程，它的主要作用是在Kubernetes集群的所有节点中运行我们部署的守护进程，相当于在集群节点上分别部署Pod副本，如果有新节点加入集群，`Daemo",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "kubernetes-pod",
+    "date": "2023-02-28 08:00:00",
+    "tags": [
+      "kubernetes介绍"
+    ],
+    "description": "[[toc]]\n Pod 排错\n 常用命令\n- 查看 Pod 状态: `kubectl get pod &lt;POD_NAME\n- 查看 Pod 的 yaml 配置: `kubectl get po",
+    "cover": ""
+  },
+  {
+    "order": "09",
+    "title": "kubernetes常用命令",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes建设"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n Node\n```bash\n k8s-master2节点需要去污点，允许pod调度，命令如下。\nkubectl taint node k8s-maste",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "kubernetes中的DNS",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Kubernetes",
+      "kubesphere",
+      "kubernetes建设"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n CoreDns\n&gt; 官网地址：&lt;https://coredns.io/&gt;\n&gt;\n&gt; Kubernetes DNS 服务: ",
+    "cover": "/library\\kubernetes-dns.png"
+  },
+  {
+    "order": "15",
+    "title": "负载均衡器OpenELB",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Kubernetes",
+      "kubesphere",
+      "kubernetes建设"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 1、OpenELB 介绍\n&gt;\n&gt; 官网地址：&lt;https://openelb.io/&gt;\n&gt;\n&gt; GitHub 地址",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "kubernates中的DevOps平台",
+    "date": "2023-06-06 08:00:00",
+    "tags": [
+      "kubernetes建设"
+    ],
+    "description": "[[toc]]\n Harbor\n```bash\n https://artifacthub.io/packages/helm/harbor/harbor\ncat \nexpose:\n  type: ing",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "helm打包工具",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes建设"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n Helm 介绍\n- `Helm` 是 `Kubernetes` 的包管理器，可以帮我们简化 `kubernetes` 的操作，一键部署应用。\n- 官网",
+    "cover": "https://mmbiz.qpic.cn/mmbiz_png/y2S9bsiaVEGpWaP6w4esgvU8ib3vicyS8rxXcFtlHmc4ia8FV8Syl8ibV1VBFUia6PwJseHsg1QqTWyFXOxRqgBAib7pw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1"
+  },
+  {
+    "order": "40",
+    "title": "高效技巧-kubectl",
+    "date": "2023-02-28 08:00:00",
+    "tags": [
+      "kubernetes建设"
+    ],
+    "description": "[[toc]]\n k 命令\n\n```bash\nfunction k() {\n cmdline=$(HISTTIMEFORMAT=\"\" history | awk '$2 == \"kubectl\" &&",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "kubernetes备份和恢复",
+    "date": "2023-04-23 08:00:00",
+    "tags": [
+      "kubernetes建设"
+    ],
+    "description": "安装MinIO\n```bash\ndocker pull minio/minio:latest\ndocker run -p 9000:9000 -p 9090:9090 \\\n--net=host \\\n-",
+    "cover": ""
+  },
+  {
+    "order": "09",
+    "title": "Kubernets使用工具",
+    "date": "2023-02-27 08:00:00",
+    "tags": [
+      "kubernetes实战"
+    ],
+    "description": "[[toc]]\n Windowns工具\n kui\n- &lt;https://kui.tools/\n- &lt;https://github.com/kubernetes-sigs/kui/relea",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "SpringBoot零宕机发布",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes实战"
+    ],
+    "description": "&lt;!-- more --&gt;\n[[toc]]\n 1、健康检查\n&gt; 健康检查类型：就绪探针（readiness）+ 存活探针（liveness）\n&gt;\n&gt; 探针类型：exec（",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "Argo CD",
+    "date": "2023-06-02 08:00:00",
+    "tags": [
+      "kubernetes实战"
+    ],
+    "description": "&lt;!-- more --&gt;\n[[toc]]\n 部署 ArgoCD\n yaml部署\n```bash\nkubectl create namespace argo\nkubectl apply -",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "Helm安装Redis",
+    "date": "2023-02-24 08:00:00",
+    "tags": [
+      "kubernetes实战"
+    ],
+    "description": "[[toc]]\n Redis 1主2从3哨兵\n\n 1、添加仓库\n```bash\nhelm repo add bitnami https://charts.bitnami.com/bitnami\n 更新",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "Helm安装Mysql",
+    "date": "2023-02-24 08:00:00",
+    "tags": [
+      "kubernetes实战"
+    ],
+    "description": "MySQL（1主2从）\n 1、添加仓库\n```bash\nhelm repo add bitnami https://charts.bitnami.com/bitnami\nhelm repo updat",
+    "cover": ""
+  },
+  {
+    "order": "22",
+    "title": "Helm安装RabbitMQ",
+    "date": "2023-02-24 08:00:00",
+    "tags": [
+      "kubernetes实战"
+    ],
+    "description": "RabbitMQ集群\n 添加仓库\n```bash\nhelm repo add bitnami https://charts.bitnami.com/bitnami\nhelm repo update\nh",
+    "cover": ""
+  },
+  {
+    "order": "23",
+    "title": "Helm安装MinIO",
+    "date": "2023-02-24 08:00:00",
+    "tags": [
+      "kubernetes实战"
+    ],
+    "description": "1、添加仓库\n```bash\n 添加 minio 的仓库\nhelm repo add bitnami https://charts.bitnami.com/bitnami\nhelm repo upda",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "MySQL主从",
+    "date": "2023-02-24 08:00:00",
+    "tags": [
+      "kubernetes实战"
+    ],
+    "description": "[[toc]]\n\n ConfigMap\n&gt; cat mysql-master-cnf.yaml\n```yaml\nmaster--my.cnf\napiVersion: v1\nkind: Confi",
+    "cover": ""
+  },
+  {
+    "order": "40",
+    "title": "K8S核心组件",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes实战"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 文档地址\n- kubernetes 官网\n- 文档\n- 中文文档\n Deployment\n&gt; 一个 Deployment 为 Pods 和 Re",
+    "cover": ""
+  },
+  {
+    "order": "50",
+    "title": "K8S实战",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes实战"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 快速入门\n- 无状态服务：&lt;br/&gt;\n  就是没有特殊状态的服务,各个请求对于服务器来说统一无差别处理,请求自身携带了所有服务端所需要的所",
+    "cover": ""
+  },
+  {
+    "order": "60",
+    "title": "K8S部署实战",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes实战"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 部署 demo 应用\n 部署 MySQL\n- 官网例子\n::: details mysql-deployment.yaml\n```bash\napiVe",
+    "cover": ""
+  },
+  {
+    "order": "61",
+    "title": "kubernets应用",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "kubernetes",
+      "kubernetes实战"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 使用 Ceph 做持久化存储创建 MySQL 集群\nhttps://jimmysong.io/kubernetes-handbook/practice",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Jenkins模板文件",
+    "date": "2023-04-22 08:00:00",
+    "tags": [
+      "集成构建"
+    ],
+    "description": "Jenkinsfile声明模板\n```JavaScript\n// Jenkinsfile声明模板\npipeline {\n  // Agent: 表示整个流水线或特定阶段中的步骤和命令执行的位置\n  /",
+    "cover": ""
+  },
+  {
+    "order": "01",
+    "title": "springboot构建清单",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "SpringBoot 中很重要的一个概念就是，「约定优于配置」，通过特定方式的配置，可以减少很多步骤来实现想要的功能。\n&lt;!-- more --\n[[toc]]\n一、引入依赖\n二、配置 Swag",
+    "cover": ""
+  },
+  {
+    "order": "02",
+    "title": "SpringBoot应用",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 项目搭建\n1. 生成 maven 项目\n```bash\nmvn archetype:generate -DinteractiveMode=false ",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "基础知识复习手册",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "本文设计的知识包括：配置常用注解、Spring Boot 自动配置、配置原理、如何修改默认配置、静态资源处理、Rest 映射、Spring Boot 常用注解、文件上传、拦截器、错误处理、数据层整合：",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "SpringBoot-MySQL读写分离",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "首先思考一个问题:在高并发的场景中,关于数据库都有哪些优化的手段？\n&lt;!-- more --\n[[toc]]\n常用的有以下的实现方法:\n- 读写分离\n- 加缓存\n- 主从架构集群\n- 分库分表\n",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "springboot+FastDFS",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n FastDFS\n```bash\ndocker pull qbanxiaoli/fastdfs\n 启动容器 注意端口（WEB_PORT）和IP地址（IP",
+    "cover": ""
+  },
+  {
+    "order": "13",
+    "title": "springboot+bizlog日志",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "&gt;\n&gt; 此组件解决的问题是： 「谁」在「什么时间」对「什么」做了「什么事」\n&gt;\n&gt; github地址：&lt;https://github.com/mouzt/mzt-biz-",
+    "cover": ""
+  },
+  {
+    "order": "14",
+    "title": "Springboot启动扩展点总结",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n ApplicationContextInitializer\n&gt; org.springframework.context.ApplicationC",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "SpringBoot性能",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 异步执行\n- 使用异步注解 @aysnc、启动类：添加 @EnableAsync 注解\n- JDK 8 本身有一个非常好用的 Future 类——Co",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "MyBatis",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "MyBatis",
+      "SpringBoot"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n {}和${}的区别是什么？\n1. {}是预编译处理，${}是字符串替换。\n2. Mybatis 在处理{}时，会将 sql 中的{}替换为?号，调用 ",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "zookeeper安装",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\nZooKeeper 是一个分布式的，开放源码的分布式应用程序协调服务，ZooKeeper 是以 Fast Paxos 算法为基础，实现同步服务，配置维护",
+    "cover": ""
+  },
+  {
+    "order": "50",
+    "title": "dubbo安装部署",
+    "date": "2022-03-09 04:08:00",
+    "tags": [
+      "SpringBoot"
+    ],
+    "description": "Dubbo 官网为 http://dubbo.apache.org。该官网是 Dubbo 正式进入 Apache 开源孵化器后改的。Dubbo 原官网为：http://dubbo.io\nDubbo 官",
+    "cover": "https://dubbo.apache.org/imgs/user/dubbo-architecture.jpg"
+  },
+  {
+    "order": "10",
+    "title": "MyBatis中xml写法",
+    "date": "2023-03-27 08:00:00",
+    "tags": [
+      "MyBatis"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n concat模糊查询\n```xml\n&lt;select id=\"queryById\" resultMap=\"BascResultMap\" param",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "MybatisPlus更新Null字段",
+    "date": "2023-05-16 08:00:00",
+    "tags": [
+      "MyBatis"
+    ],
+    "description": "一、问题描述\n&gt; 在日常项目开发过程中，经常会使用MybatisPlus的`updateById()`方法，快速将接收到的参数或者查询结果中原本不为null的字段更新为null，并且该字段在数据",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Redis初识",
+    "date": "2022-06-09 04:08:00",
+    "tags": [
+      "Redis",
+      "缓存Reids"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n Redis 官网\n- 官网地址：http://redis.io/\n- 官网地址（中文）：http://www.redis.cn/\n- 下载地址： ht",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "一键安装Redis的任意版本",
+    "date": "2022-06-09 04:08:00",
+    "tags": [
+      "Redis",
+      "缓存Reids"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 执行脚本\n```bash\n 脚本内容如下\nchmod 755 redis-install.sh && sh redis-install.sh 6.0.",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "Redis命令",
+    "date": "2022-06-09 04:08:00",
+    "tags": [
+      "Redis",
+      "缓存Reids"
+    ],
+    "description": "&lt;!-- more --&gt;\n[[toc]]\n 数据类型\n| 数据类型    | 简单描述                                                  ",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "Redis常见延迟问题定位与分析",
+    "date": "2022-06-09 04:08:00",
+    "tags": [
+      "Redis",
+      "缓存Reids"
+    ],
+    "description": "Redis 越来越慢？常见延迟问题定位与分析\nRedis 作为内存数据库，拥有非常高的性能，单个实例的 QPS 能够达到 10W 左右。但我们在使用 Redis 时，经常时不时会出现访问延迟很大的情况",
+    "cover": ""
+  },
+  {
+    "order": "22",
+    "title": "雪崩、穿透、击穿",
+    "date": "2023-05-13 08:00:00",
+    "tags": [
+      "缓存Reids"
+    ],
+    "description": "缓存雪崩的事前事中事后的解决方案如下：\n- 事前：redis 高可用，主从+哨兵，redis cluster，避免全盘崩溃。\n- 事中：本地 ehcache 缓存 + hystrix 限流&降级，避免",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "Redis内存模型",
+    "date": "2022-06-09 04:08:00",
+    "tags": [
+      "Redis",
+      "缓存Reids"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 缓存通识\n- 缓存(Cache) 和 缓冲(Buﬀer) 的分别？\n  &gt; 缓存：一般是为了数据多次读取。\n  &gt;\n  &gt; 缓冲：比",
+    "cover": ""
+  },
+  {
+    "order": "40",
+    "title": "Redis高并发应用",
+    "date": "2022-06-09 04:08:00",
+    "tags": [
+      "Redis",
+      "缓存Reids"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 主从配置\n```shell\nvi redis.conf\n 设置端口\nport 6380\n replicaof &lt;masterip&gt; &lt",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "AMQP",
+    "date": "2022-09-09 04:08:00",
+    "tags": [
+      "AMQP",
+      "中间件MQ"
+    ],
+    "description": "&gt;\n&gt; 它是应用层协议的一个开放标准，为面向消息的中间件设计，基于此协议的客户端与消息中间件可传递消息，并不受产品、开发语言等条件的限制。\n&lt;!-- more --&gt;\n[[to",
+    "cover": ""
+  },
+  {
+    "order": "01",
+    "title": "nginx的安装",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "Nginx (engine x) 是一个轻量级的、高性能的、基于 Http 的、反向代理服务器，静态 web 服务器。\n- Nginx 的官网： &lt;http://nginx.org\n- ngin",
+    "cover": ""
+  },
+  {
+    "order": "02",
+    "title": "nginx核心配置",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "代理服务器：\n- Nginx 的特点：高并发 / 低消耗 / 热部署 / 高可用 / 高扩展\n- 正向代理：隐藏 / 翻墙 / 提速 / 缓存 / 授权\n- 反向代理：保护隐藏 / 分布式路由 / 负",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Nginx实战配置",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "官方配置：http://nginx.org/en/docs/http/ngx_http_upstream_module.htmlupstream\n&lt;!-- more --\n[[toc]]\n 配置",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "Nginx参数配置",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 主模块\n```text\n 配置用户或者组，默认为nobody nobody。\nuser www www;\nNginx开启的worker进程数，建议为C",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "Nginx模块配置",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 基础模块\n HTTP Access（白名单）\n&gt; 此模块提供了一个简易的基于主机的访问控制.\n```text\n 仅允许网段 192.168.1.",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "nginx高可用",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 安装 nginx\n```bash\nrpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/ng",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "Keepalived脑裂的解决和预防",
+    "date": "2023-05-16 08:00:00",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "```bash\n!/bin/bash\nexport PATH=$PATH:/usr/sbin\n 脑裂检查及控制：第三方仲裁机制，使用ping网关ip方式\n 循环次数\nCHECK_TIME=3\n 虚拟i",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "openrest的安装",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "&gt;\n&gt; 用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。\n- openresty 官网地址：http://openresty.org/cn/down",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "Nginx监控",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "Nginx"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 时序数据库 InfluxDB\n- 官网地址：influxdata\n- 官方文档：influxdb 文档\n- 参考：InfluxDB 系列教程\n Tel",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "自动封禁IP",
+    "date": "2023-02-24 08:00:00",
+    "tags": [
+      "nginx",
+      "Nginx"
+    ],
+    "description": "```bash\n AWK统计access.log，记录每分钟访问超过60次的ip\nawk '{print $1}' access.log | sort | uniq -cd | awk '{if($1",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Elasticsearch安装",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "ES",
+      "Elasticsearch"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 网址\n- 官网：http://elasticsearch.co/\n- 中文社区：https://elasticsearch.cn/\n- 官网下载地址：",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "ES基于Restful的API",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "ES",
+      "Elasticsearch"
+    ],
+    "description": "&lt;!-- more --&gt;\n[[toc]]\n ------ 服务状态 ------\n 查询状态\n&gt; GET /_cat/health\n 查看分词器分词结果\n```\nPOST /_an",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "Elaticsearch客户端",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "ES",
+      "Elasticsearch"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n java客户端\n&gt; https://www.elastic.co/cn/elasticsearch/\n```xml\n&lt;dependency",
+    "cover": ""
+  },
+  {
+    "order": "50",
+    "title": "ELK应用",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "ES",
+      "Elasticsearch"
+    ],
+    "description": "ELK，是Elasticsearch（搜索引擎）, Logstash（日志收集），Kibana（可视化的Web界面）的组合。\n&lt;!-- more --\n[[toc]]\n ELK的简介\n&gt; ",
+    "cover": "/library\\elk.jpg"
+  },
+  {
+    "order": "09",
+    "title": "文件存储方案",
+    "date": "2023-02-28 08:00:00",
+    "tags": [
+      "文件系统"
+    ],
+    "description": "[[TOC]]\n 主要考虑\n1. 分布式系统文件存储。\n2. 文件分块的能力。断电续传、妙传等。\n3. 可扩展、\n4. 平滑迁移（可以不影响业务的情况下可以平滑迁移）\n5. 隔离性，产品应用的隔离性。",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "MinIO初始",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "OSS",
+      "MinIO",
+      "文件系统"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 简介\n- MinIO 官网-中文\n- MinIO 官网-github\n 安装部署 - 单机\n```bash\n 二进制安装 - MacOS\nwget h",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "Ceph初始",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "OSS",
+      "Ceph",
+      "文件系统"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 简介\n- ceph 官网-英文\n- Red Hat Ceph Storage 架构指南\n&gt; Ceph 是一个统一的分布式存储系统，设计初衷是提供",
+    "cover": ""
+  },
+  {
+    "order": "21",
+    "title": "Ceph安装-deploy",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "OSS",
+      "Ceph",
+      "文件系统"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 节点规划\n| 主机名 | public-ip     | cluster-ip    | 磁盘                            ",
+    "cover": ""
+  },
+  {
+    "order": "22",
+    "title": "Ceph安装-docker",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "OSS",
+      "Ceph",
+      "文件系统"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n docker 运行 ceph\n```bash\n 参考文档：https://www.codenong.com/cs106379205/\n启动mon\ndo",
+    "cover": "/library\\ceph.png"
+  },
+  {
+    "order": "30",
+    "title": "FastFS初始",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "OSS",
+      "FastDFS",
+      "文件系统"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 简介\n&gt; FastDFS 是一个开源的高性能分布式文件系统（DFS）。\n&gt;\n&gt; 它的主要功能包括：文件存储，文件同步和文件访问，以及",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Ubuntu定制",
+    "date": "2023-12-13 08:00:00",
+    "tags": [
+      "系统镜像"
+    ],
+    "description": "相关地址\n- 从零制作 Ubuntu LiveCD\n- https://help.ubuntu.com/community/LiveCDCustomizationFromScratch\n 镜像制作\n ",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "集群管理-Pacemaker",
+    "date": "2023-12-13 08:00:00",
+    "tags": [
+      "集群搭建"
+    ],
+    "description": "&gt;\n&gt; 主要用于构建高可用性的集群服务，确保在节点或服务出现故障时能够保持系统的稳定性和可用性。它被广泛应用于企业环境中的关键业务应用和服务，如数据库、Web 服务器、应用服务器等。\n 主",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Ansible使用",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Ansible",
+      "运维工具"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 介绍\n&gt; Ansible 是一个配置管理和应用部署工具。\n- Ansible 中文权威指南: &lt;https://ansible-tran.",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "docker搭建Asible测试环境",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "运维工具"
+    ],
+    "description": "宿主机需要安装Docker和Docker-compose\n创建3个容器：\n主机名分别为host1、host2和ansible2.11\nhost1和host2安装python3.7、openssh se",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "多路径软件",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "运维工具"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n```bash\n 多路径软件服务\nyum install -y device-mapper-multipath\n 设置服务自启动\nsystemctl e",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "防范暴力破解攻击",
+    "date": "2024-02-02 08:00:00",
+    "tags": [
+      "运维工具"
+    ],
+    "description": "Fail2Ban\n\n以下是Fail2Ban的一些关键特性和工作原理：\n- 监视日志文件： Fail2Ban通过分析系统的日志文件，特别是包含安全相关信息的文件，来检测潜在的入侵尝试。\n- 定义规则： ",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "自建yum仓库",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "运维工具"
+    ],
+    "description": "安装\n```bash\nyum install -y epel-release\n createrepo和httpd用于创建内网仓库和提供http协议访问\nyum install -y createrep",
+    "cover": ""
+  },
+  {
+    "order": "09",
+    "title": "搭建Tomcat",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Tomcat",
+      "开发搭建"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n```bash\n 下载对应的tomcat版本\n https://archive.apache.org/dist/tomcat/tomcat-8/v8.5",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "搭建Ldap",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Ldap",
+      "开发搭建"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n docker 搭建 Ldap 相关服务\n::: details docker-compose.yml\n```yml\nversion: \"3\"\nserv",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "搭建Cas单点认证",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "CAS",
+      "开发搭建"
+    ],
+    "description": "CAS 全称为 Central Authentication Service 即中央认证服务，是一个企业多语言单点登录的解决方案，并努力去成为一个身份验证和授权需求的综合平台。\nCAS 是由 Yale",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "搭建Gitlab",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "GitLab",
+      "开发搭建"
+    ],
+    "description": "GitLab 是一个用于仓库管理系统的开源项目，使用 Git 作为代码管理工具，并在此基础上搭建起来的 web 服务。\n&lt;!-- more --\n[[toc]]\n CentOS7 安装 gitl",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "Gitlab配置",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "GitLab",
+      "开发搭建"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n gitlab 修改用户密码\n```bash\n 等待进入数据库\ngitlab-rails console -e production\n 查询用户\nirb",
+    "cover": ""
+  },
+  {
+    "order": "17",
+    "title": "Gitlab的Runner机制",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "GitLab",
+      "开发搭建"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n centos7 安装\n```bash\n runner官网：https://docs.gitlab.com/runner/install/bleedin",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "搭建Nexus",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Nexus",
+      "开发搭建"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 文档\n CentOS7 安装 Nexus\n```bash\n Nexus的下载地址：https://www.sonatype.com/download-",
+    "cover": ""
+  },
+  {
+    "order": "25",
+    "title": "搭建Jenkins",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Jenkins",
+      "开发搭建"
+    ],
+    "description": "Jenkins 是一个广泛用于持续构建的可视化 web 工具，可用于自动化与构建、测试、交付或部署软件相关的各种任务。\n&lt;!-- more --\n[[toc]]\n CentOS7 安装 jenk",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "搭建Harbor",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Docker",
+      "Harbor",
+      "开发搭建"
+    ],
+    "description": "harbor 是一个 docker 私有镜像仓库。\nHarbor 的优势：\n- 图形管理界面、\n- 按项目管理镜像、\n- 独立的用户管理，不同用户可以操作不同镜像，细粒度的权限控制，包含 create",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "搭建高可用Harbor",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Harbor",
+      "开发搭建"
+    ],
+    "description": "在实际生产使用中，主从复制十分的不靠谱！！所以这里推荐使用多实例共享后端存储的高可用方案。\n本次搭建以 NFS 作为共享存储存放 Harbor 相关 data，并分离 PostgreSQL 与 Red",
+    "cover": "https://s3.ax1x.com/2021/03/01/6PgoEF.png"
+  },
+  {
+    "order": "35",
+    "title": "搭建Jira",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Jira",
+      "开发搭建"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n CentOS7 安装\n```bash\n 官网:  https://www.atlassian.com/software/jira/update\n 源码",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "数据加密与数字签名",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "加密技术",
+      "证书认证"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 一、数据加密\n 1.对称加密\n- 采用单密钥的加密算法，我们称为`对称加密`。\n- 整个系统由如下几部分构成：需要加密的明文、加密算法、密钥。\n- 在",
+    "cover": "https://img2020.cnblogs.com/blog/727485/202107/727485-20210722112719321-1021243829.png"
+  },
+  {
+    "order": "20",
+    "title": "JDK 自签证书",
+    "date": "2022-12-09 04:08:00",
+    "tags": [
+      "Java",
+      "证书认证"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n Certbot\n```bash\n 安装\nyum install epel-release -y\nyum install certbot -y\n win",
+    "cover": "https://markdown-1258124344.cos.ap-guangzhou.myqcloud.com/%20image/202210171724790.png"
+  },
+  {
+    "order": "10",
+    "title": "systemd管理服务",
+    "date": "2023-05-23 08:00:00",
+    "tags": [
+      "服务管理"
+    ],
+    "description": "[[toc]]\n systemd 简介\nLinux 从关闭到运行, 完整的启动和启动过程有三个主要部分:\n- 硬件启动(Hardware boot): 初始化系统硬件\n- Linux 引导(Linux",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "Prometheus+Grafana可视化监控",
+    "date": "2024-02-06 08:00:00",
+    "tags": [
+      "服务管理"
+    ],
+    "description": "[[toc]]\n 主机准备\n```bash\n 时间同步\nimedatectl set-timezone Asia/Shanghai\nyum -y install ntpdate\n/usr/sbin/n",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "SQL语句",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "数据库",
+      "SQL"
+    ],
+    "description": "::: tip\nSQL 是一种声明式语言，声明了一个你想从原始数据中获得什么样的结果的一个范例。\n:::\n&lt;!-- more --\n[[toc]]\n 基础\n```sql\n-- 创建数据库\nCRE",
+    "cover": ""
+  },
+  {
+    "order": "08",
+    "title": "MySQL安装",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n CentOS7 yum 安装 MySQL5.7\n```bash\n 检查MySQL是否安装\nyum list installed | grep mysq",
+    "cover": ""
+  },
+  {
+    "order": "09",
+    "title": "MySQL配置",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n MySQL 密码安全策略\n```sql\n-- 查看MySQL密码策略\nSHOW VARIABLES LIKE 'validate_password%'",
+    "cover": ""
+  },
+  {
+    "order": "11",
+    "title": "mysql基础",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n DDL（Data Definition Language）\n```sql\n-- 创建数据库\ncreate database 数据库名 characte",
+    "cover": ""
+  },
+  {
+    "order": "12",
+    "title": "MySQL架构",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 日志文件（顺序 IO）\n- 错误日志（errorlog）\n  ```bash {4,6}\n  mysql&gt; show variables lik",
+    "cover": ""
+  },
+  {
+    "order": "13",
+    "title": "MySQL事务",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n数据库事务具有 ACID 四大特性。\n- 原子性(atomicity) ：事务最小工作单元，要么全成功，要么全失败 。\n- 一致性(consistenc",
+    "cover": ""
+  },
+  {
+    "order": "14",
+    "title": "MySQL索引",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n索引：是帮助 MySQL`高效获取数据`的`数据结构`，一般默认都是使用 B+树结构组织的索引。\n&lt;!-- more --&gt;\n 索引的类型\n",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "MySQL锁",
+    "date": "2023-02-21 00:07:58",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n按照锁的粒度来说，MySQL 主要包含三种类型（级别）的锁定机制：\n- 全局锁：锁的是整个 database。由 MySQL 的 SQL layer 层",
+    "cover": ""
+  },
+  {
+    "order": "16",
+    "title": "MySQL性能优化",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 慢查询日志\nMySQL 的慢查询日志功能默认是关闭的，需要手动开启。\n```sql\n-- 查询是否开启了慢查询，默认是关闭\nshow variable",
+    "cover": ""
+  },
+  {
+    "order": "17",
+    "title": "MySQL的高可用",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 基于 binlog 的主从同步\n&gt; 主 master : 192.16.18.101 : MySQL5.7  \n&gt; 从 slave : 1",
+    "cover": ""
+  },
+  {
+    "order": "18",
+    "title": "MySQL分库分表",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "一旦数据量朝着千万以上趋势增长，其他优化效果已经不是太明显了，为了减少数据库的负担，提升数据库响应速度，缩短查询时间，这时候就需要进行`分库分表`。\n&lt;!-- more --\n[[toc]]\n ",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "MySQL数据类型-日期",
+    "date": "2023-04-28 08:00:00",
+    "tags": [
+      "MySQL"
+    ],
+    "description": "数据库教程: &lt;https://www.sjkjc.com/mysql/select/\n&lt;!-- more --&gt;\n[[toc]]\n 时间类型\n| 类型      | 字节 | 格式",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "达梦数据库安装",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "达梦数据库"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 介绍\n- 官网地址：&lt;https://eco.dameng.com/download/&gt;\n centos 安装\n```bash\nmkdir",
+    "cover": ""
+  },
+  {
+    "order": "15",
+    "title": "达梦数据库配置",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "达梦数据库"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 配置案例\n```sql\n-- 案例1：创建一个用户TEST_USER，有属于自己的存储空间，并且赋予dba的权限。\nCREATE TABLESPACE",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "搭建InfluxDB",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "InfluxDB"
+    ],
+    "description": "在性能测试过程中，对测试结果以及的实时监控与展示也是很重要的一部分。这篇博客，介绍下linux环境下InfluxDB的安装以及功能特点。\n- 官网地址：influxdata\n- 官方文档：influx",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "Alist",
+    "date": "2023-06-18 08:00:00",
+    "tags": [
+      "文件存储"
+    ],
+    "description": "安装\nalist的安装很简单。官方提供了多种安装方式，有一键安装、docker安装、手动安装等多种安装方式供你选择。\n- 文档：&lt;https://alist.nn.ci/zh/\n```bash\n",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "高并发&高可用系统",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "高可用高并发架构"
+    ],
+    "description": "架构目标：快速响应，高可用，可升缩，可扩展，安全性，敏捷开发。\n&lt;!-- more --\n[[toc]]\n 架构策略\n- 分层：分层拆分（表现层，业务层，持久层）\n- 分割：连接池分割，机房，进",
+    "cover": "https://s3.ax1x.com/2021/01/22/sIFyNT.png"
+  },
+  {
+    "order": "30",
+    "title": "多级缓存",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "高可用高并发架构"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 在系统架构中应该使用那些缓存\n1. 浏览器缓存\n2. CDN 缓存（静态资源：js,css,视频，文件）\n3. 接入层 nginx/openresty",
+    "cover": ""
+  },
+  {
+    "order": "31",
+    "title": "锁的问题",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "高可用高并发架构"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 锁和事务的区别\n- 锁：为了在高并发（多线程）模式下，防止共享资源出现并发修改的情况，锁为多线程而生。\n- 事务：一次会话，一个线程的原子操作，保证一",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "数据库树形结构设计",
+    "date": "2023-02-21 00:07:59",
+    "tags": [
+      "商城项目"
+    ],
+    "description": "理想中树形结构应该具备如下特征：\n1. 数据存储冗余度⼩、直观性强；\n2. 检索遍历过程简单⾼效；\n3. 节点增删改查 CRUD 操作⾼效\n&lt;!-- more --\n[[toc]]\n 继承关系驱",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "云盘高可用",
+    "date": "2023-03-23 08:00:00",
+    "tags": [
+      "云盘服务"
+    ],
+    "description": "&lt;!-- more --\n[[toc]]\n 目的\n- 云盘的高可用\n- 云盘服务整体不依赖单一节点\n 云盘服务\n 1. web 服务( Nginx )\n&gt; 主要完成静态资源和服务代理\n 2",
+    "cover": "/library\\服务列表.png"
+  },
+  {
+    "order": "20",
+    "title": "邮件配置",
+    "date": "2023-10-18 08:00:00",
+    "tags": [
+      "云盘服务"
+    ],
+    "description": "测试邮件\n```bash\n 安装依赖\nyum install -y sendemail mailx\n 发送测试邮件\nsendemail -f dev@bjtxra.com -t zhanghaijun",
+    "cover": ""
+  },
+  {
+    "order": "50",
+    "title": "文档的操作",
+    "date": "2023-11-29 08:00:00",
+    "tags": [
+      "云盘服务"
+    ],
+    "description": "Stirling-PDF\n- https://github.com/Frooodle/Stirling-PDF\n\n```bash\nversion: '3.3'\nservices:\n  stirling",
+    "cover": ""
+  }
+]

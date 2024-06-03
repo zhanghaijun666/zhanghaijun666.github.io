@@ -1,0 +1,5 @@
+[
+  { "text": "首页", "link": "/" },
+  { "text": "博文笔记", "link": "/blogs/" },
+  { "text": "组件指南", "link": "/components/" }
+]

@@ -34,10 +34,10 @@ for (let level1 of level1s) {
   sidebar['/' + level1] = [...new Set(files.filter((item) => item.path == level1).map((item) => item.baseItem))]
     .map((level2): { items: DefaultTheme.SidebarItem[]; text: string; order: number } => {
       const items = files.filter((item) => item.path == level1 && item.baseItem == level2).sort((a, b) => a.order - b.order);
-      const group = matchGroup(level2, FILE_NAME_REGEX);
+      const group = matchGroup(level2);
       return { order: Number(group.order || 0), text: group.name || level2, items: items.map((item) => ({ text: item.text, link: item.link })) };
     })
     .sort((a, b) => a.order - b.order);
 }
-fs.mkdirSync('./.vitepress/config', { recursive: true });
-fs.writeFileSync('./.vitepress/config/sidebar.json', JSON.stringify(sidebar, null, 2));
+fs.mkdirSync('./.vitepress/config/data/', { recursive: true });
+fs.writeFileSync('./.vitepress/config/data/sidebar.json', JSON.stringify(sidebar, null, 2));

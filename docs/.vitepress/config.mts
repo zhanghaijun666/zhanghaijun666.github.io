@@ -1,15 +1,16 @@
 import { defineConfig } from 'vitepress';
-import timeline from 'vitepress-markdown-timeline';
-import { mdPlugin } from './config/plugins';
-import sidebar from './config/sidebar.json';
-import config from '../../package.json';
+import MarkdownPlugins from './config/plugins';
+import data from './config/data';
 
-console.log(
-  `\n %c ${config.name} - ${config.version} %c https://haijunit.top \n\n`,
-  'background: #35495e; padding: 1px; border-radius: 3px 0 0 3px; color: #fff',
-  'background: #fadfa3; padding: 1px; border-radius: 0 3px 3px 0; color: #fff'
-);
+// import { sidebar, nav } from './config/data';
+// import config from '../../package.json';
 
+// console.log(
+//   `\n %c ${config.name} - ${config.version} %c https://haijunit.top \n\n`,
+//   'background: #35495e; padding: 1px; border-radius: 3px 0 0 3px; color: #fff',
+//   'background: #fadfa3; padding: 1px; border-radius: 0 3px 3px 0; color: #fff'
+// );
+const { sidebar, nav } = data;
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/docs',
@@ -41,15 +42,11 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
     siteTitle: '知识点的精心归纳',
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '博文笔记', link: '/blogs/' },
-      { text: '组件指南', link: '/components/' },
-    ],
+    nav: nav,
     sidebar: sidebar,
     socialLinks: [{ icon: 'github', link: 'https://gitee.com/haijunit/vitepress-demo' }],
     outline: { level: [2, 6], label: '当前页大纲' },
-    editLink: { text: '编辑此页', pattern: 'https://gitee.com/haijunit/vitepress-demo/edit/main/docs/:path' },
+    editLink: { text: '编辑此页', pattern: 'https://gitee.com/haijunit/vitepress-demo/edit/repo/docs/:path' },
     lastUpdated: { text: '最后更新' },
     docFooter: { prev: '上一篇', next: '下一篇' },
     lightModeSwitchTitle: '明亮主题',
@@ -85,13 +82,7 @@ export default defineConfig({
     image: {
       lazyLoading: true,
     },
-    // light: #f9fafb, dark: --vp-code-block-bg
-    // theme: { light: 'github-light', dark: 'github-dark' },
-    config: (md: any) => {
-      // md.use(timeline);
-      timeline(md, {});
-      mdPlugin(md);
-    },
+    config: MarkdownPlugins,
   },
   vite: {
     resolve: {

@@ -85,5 +85,5 @@ for (let file of files) {
 }
 // 将页面数据存储到文件中
 const rootDir: string = cwd();
-fs.mkdirSync(`${rootDir}/.vitepress/config`, { recursive: true });
-fs.writeFileSync(`${rootDir}/.vitepress/config/pageData.json`, JSON.stringify(pageData, null, 2));
+fs.mkdirSync(`${rootDir}/.vitepress/config/data/`, { recursive: true });
+fs.writeFileSync(`${rootDir}/.vitepress/config/data/page.json`, JSON.stringify(pageData, null, 2));

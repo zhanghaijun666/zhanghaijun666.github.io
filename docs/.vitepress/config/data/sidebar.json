@@ -1367,8 +1367,8 @@
       "text": "基础组件",
       "items": [
         {
-          "text": "button",
-          "link": "components/10.基础组件/10.button.md"
+          "text": "Button 按钮",
+          "link": "components/10.基础组件/10.Button 按钮.md"
         },
         {
           "text": "demo",

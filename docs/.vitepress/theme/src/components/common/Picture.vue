@@ -1,8 +1,8 @@
 <template>
   <p class="action">
-    <a href="/"
-      ><ElButton type="success" round size="large">戳我 {{ '6' }}</ElButton></a
-    >
+    <a href="/">
+      <el-button type="success" round size="large">戳我 {{ '6' }}</el-button>
+    </a>
   </p>
   <el-image :src="src" :preview-src-list="[src]" hide-on-click-modal />
 </template>

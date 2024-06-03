@@ -8,7 +8,7 @@
     "dev": "vitepress dev .",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
-    "docs:sidebar": "ts-node scripts/index.ts",
+    "docs:sidebar": "ts-node scripts/sidebar.ts",
     "docs:matter": "ts-node scripts/matter.ts"
   },
   "keywords": [],
