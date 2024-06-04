@@ -38,6 +38,9 @@ for (let file of files) {
   const fileContent = fs.readFileSync(file, 'utf-8');
   const dirs: string[] = relative('', file).split(sep).slice(0, -1);
   const { data: frontmatter = {}, excerpt, content } = matter(fileContent, { excerpt: true });
+  if (frontmatter.layout) {
+    continue;
+  }
   const group: { [key: string]: string } = matchGroup(basename(file));
   const { tag, tags, categories } = frontmatter;
   const matterItem: MatterItem = {
@@ -53,14 +56,12 @@ for (let file of files) {
   };
   // 刷新文件的Matter，去掉属性是null或者undefined
   updateFileMatter(file, matterItem, content);
-  if (!matterItem.layout) {
-    const page: PageItem = {
-      ...matterItem,
-      description: frontmatter.description || getTextSummary(content, 100) || excerpt,
-      cover: frontmatter.cover ?? getFirstImagURLFromMD(fileContent, ''),
-    };
-    pageData.push(page);
-  }
+  const page: PageItem = {
+    ...matterItem,
+    description: frontmatter.description || getTextSummary(content, 100) || excerpt,
+    cover: frontmatter.cover ?? getFirstImagURLFromMD(fileContent, ''),
+  };
+  pageData.push(page);
 }
 // 将页面数据存储到文件中
 console.log('----- matter data generate ------');
