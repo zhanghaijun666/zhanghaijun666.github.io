@@ -14,6 +14,8 @@ export const getFileBirthTime = (file: string): Date | undefined => {
     const infoStr = spawnSync('git', ['log', '-1', '--pretty="%ci"', file]).stdout?.toString().replace(/["']/g, '').trim();
     if (infoStr) {
       return new Date(infoStr);
+      // timeZone +8
+      // return new Date(`${new Date(infoStr).toUTCString()}+${new Date().getTimezoneOffset() / -60}`);
     }
   } catch (error) {
     return undefined;
