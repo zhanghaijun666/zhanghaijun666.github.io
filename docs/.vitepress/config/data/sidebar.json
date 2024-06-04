@@ -1,4 +1,16 @@
 {
+  "/components": [
+    {
+      "order": 10,
+      "text": "基础组件",
+      "items": [
+        {
+          "text": "Button 按钮",
+          "link": "components/10.基础组件/10.Button 按钮.md"
+        }
+      ]
+    }
+  ],
   "/blogs/10.随笔记录": [
     {
       "order": 10,
@@ -1357,22 +1369,6 @@
         {
           "text": "文档的操作",
           "link": "blogs/91.天信瑞安/10.云盘服务/50.文档的操作.md"
-        }
-      ]
-    }
-  ],
-  "/components": [
-    {
-      "order": 10,
-      "text": "基础组件",
-      "items": [
-        {
-          "text": "Button 按钮",
-          "link": "components/10.基础组件/10.Button 按钮.md"
-        },
-        {
-          "text": "demo",
-          "link": "components/10.基础组件/20.demo.md"
         }
       ]
     }

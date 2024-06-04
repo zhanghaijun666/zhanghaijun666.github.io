@@ -40,7 +40,7 @@ for (let file of files) {
   const matterItem: MatterItem = {
     order: frontmatter.order ?? group.order ?? 0,
     title: frontmatter.title ?? group.name ?? basename(file),
-    date: dateFormat(frontmatter.date ?? (getFileBirthTime(file) || getBirthtime(file))),
+    date: dateFormat(getFileBirthTime(file) || getBirthtime(file)),
     author: frontmatter.author,
     tags: getTags(dirs, tag, tags, categories),
     categories: frontmatter.categories || undefined,
