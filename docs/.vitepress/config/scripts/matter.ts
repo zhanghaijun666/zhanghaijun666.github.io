@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import { EOL } from 'node:os';
 import { relative, basename, sep, dirname } from 'node:path';
 import matter from 'gray-matter';
-import yaml from 'yaml';
+import YAML from 'json2yaml';
 import glob from 'fast-glob';
 import { PAGE_IGNORE, MatterItem, PAGE_SOURCE, PageItem } from './typings';
 import { dateFormat, matchGroup } from './utils';
@@ -14,21 +14,24 @@ const updateFileMatter = (file: string, matterItem: MatterItem, content: string)
   fs.writeFileSync(
     file,
     [
-      '---',
-      yaml
-        .stringify({
-          ...Object.entries(matterItem)
-            .filter(([key, value]) => !!value)
-            .reduce((item, [key, value]) => ({ ...item, [key]: value }), {}),
-        })
+      YAML.stringify({
+        ...Object.entries(matterItem)
+          .filter(([key, value]) => !!value)
+          .reduce((item, [key, value]) => ({ ...item, [key]: value }), {}),
+      })
         .replace(/\n\s{2}/g, '\n')
         .replace(/"/g, ''),
       '---',
+      EOL,
       content,
-    ].join(EOL)
+    ].join('')
   );
 };
 
+const getDate = (date: Date | undefined) => {
+  if (!date) return undefined;
+  return new Date(Number(date.getTime()) - 8 * 3600 * 1000) ?? undefined;
+};
 const files = glob.sync(PAGE_SOURCE, { ignore: PAGE_IGNORE });
 const pageData: PageItem[] = [];
 for (let file of files) {
@@ -40,7 +43,7 @@ for (let file of files) {
   const matterItem: MatterItem = {
     order: frontmatter.order ?? group.order ?? 0,
     title: frontmatter.title ?? group.name ?? basename(file),
-    date: dateFormat(frontmatter.date ?? (getFileBirthTime(file) || getBirthtime(file))),
+    date: dateFormat(getDate(frontmatter.date) || getFileBirthTime(file) || getBirthtime(file)),
     author: frontmatter.author,
     tags: getTags(dirs, tag, tags, categories),
     categories: frontmatter.categories || undefined,

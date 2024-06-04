@@ -64,6 +64,9 @@ importers:
         specifier: ^3.2.3
         version: 3.2.3
     devDependencies:
+      json2yaml:
+        specifier: ^1.1.0
+        version: 1.1.0
       markdown-it:
         specifier: ^14.1.0
         version: 14.1.0
@@ -82,9 +85,6 @@ importers:
       vitepress-plugin-rss:
         specifier: ^0.2.6
         version: 0.2.6(vitepress@1.2.2(@algolia/client-search@4.23.3)(@types/node@20.14.0)(async-validator@4.2.5)(axios@1.7.2)(postcss@8.4.38)(sass@1.77.4)(search-insights@2.14.0)(typescript@5.4.5))
-      yaml:
-        specifier: ^2.4.2
-        version: 2.4.3
 
   packages/components:
     dependencies:
@@ -987,6 +987,11 @@ packages:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
     hasBin: true
 
+  json2yaml@1.1.0:
+    resolution: {integrity: sha512-/xse+m0SlllfZahQrNOelmLrFNfeZv4QG0QKlvg7VsPSGIxpB3X+ggLkdffwmI1DdQ3o9XjZX+K+EOI1epdKgg==}
+    engines: {node: '>= 0.2.0'}
+    hasBin: true
+
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
@@ -1114,6 +1119,9 @@ packages:
   readdirp@3.6.0:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
+
+  remedial@1.0.8:
+    resolution: {integrity: sha512-/62tYiOe6DzS5BqVsNpH/nkGlX45C/Sp6V+NtiN6JQNS1Viay7cWkazmRkrQrdFj2eshDe96SIQNIoMxqhzBOg==}
 
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
@@ -1298,11 +1306,6 @@ packages:
 
   xml-js@1.6.11:
     resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==}
-    hasBin: true
-
-  yaml@2.4.3:
-    resolution: {integrity: sha512-sntgmxj8o7DE7g/Qi60cqpLBA3HG3STcDA0kO+WfB05jEKhZMbY7umNm2rBpQvsmZ16/lPXCJGW2672dgOUkrg==}
-    engines: {node: '>= 14'}
     hasBin: true
 
   yn@3.1.1:
@@ -2132,6 +2135,10 @@ snapshots:
       argparse: 1.0.10
       esprima: 4.0.1
 
+  json2yaml@1.1.0:
+    dependencies:
+      remedial: 1.0.8
+
   kind-of@6.0.3: {}
 
   linkify-it@5.0.0:
@@ -2231,6 +2238,8 @@ snapshots:
   readdirp@3.6.0:
     dependencies:
       picomatch: 2.3.1
+
+  remedial@1.0.8: {}
 
   reusify@1.0.4: {}
 
@@ -2433,7 +2442,5 @@ snapshots:
   xml-js@1.6.11:
     dependencies:
       sax: 1.4.1
-
-  yaml@2.4.3: {}
 
   yn@3.1.1: {}
