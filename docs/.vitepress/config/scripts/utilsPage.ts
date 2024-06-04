@@ -1,40 +1,8 @@
-import fs from 'node:fs';
+import { spawnSync } from 'child_process';
+import { statSync } from 'fs';
+import { REGEX_IMAGE } from './typings';
+import { isBase64ImageURL, joinPath, matchGroup } from './utils';
 import path from 'path';
-import { spawn, spawnSync } from 'node:child_process';
-
-// 文件或者文件夹命名规则: [排序号].[文件名称].md
-const FILE_NAME_REGEX = new RegExp(/^(?<order>\d+)\.(?<name>[^.]*)(\.md)?$/);
-const imageRegex = /!\[.*?\]\((.*?)\s*(".*?")?\)/;
-
-export const fileList = <T>(roots: string[], convert: (filePath: string, root: string) => T | undefined, level: number = 1): T[] => {
-  const files: T[] = [];
-  for (let i = 0; i < roots.length; i++) {
-    let root = roots[i];
-    const names = fs.readdirSync(root);
-    for (const name of names) {
-      // 检查当前目录是否需要忽略
-      if (['library', 'source'].includes(name)) {
-        continue;
-      }
-      const filePath = path.join(root, name);
-      const stat = fs.statSync(filePath);
-      if (stat.isDirectory()) {
-        files.push(...fileList([filePath], convert, level + 1));
-        continue;
-      } else {
-        const result = convert(filePath, root);
-        result && files.push(result);
-      }
-    }
-  }
-  return files;
-};
-
-// 安装正则规则，获取匹配的项
-export const matchGroup = (str: string, reg: RegExp = FILE_NAME_REGEX): { [key: string]: string } => {
-  const group: { [key: string]: string } | undefined = ((str || '').match(reg) || {}).groups;
-  return group || {};
-};
 
 // 通过文档内容，取一级标题
 export const getDefaultTitle = (content: string) => content.match(/^(#+)\s+(.+)/m)?.[2] || '';
@@ -56,7 +24,7 @@ export const getFileBirthTime = (file: string): Date | undefined => {
 
 // 获取文件创建时间
 export const getBirthtime = (file: string): Date => {
-  const stat = fs.statSync(file);
+  const stat = statSync(file);
   return stat.birthtime.getFullYear() != 1970 ? stat.birthtime : stat.atime;
 };
 // 通过文章内容提取摘要
@@ -84,21 +52,12 @@ export function getTextSummary(text: string, count = 100) {
   );
 }
 
-// 是否是Base64格式的图片
-function isBase64ImageURL(url: string) {
-  // Base64 图片链接的格式为 data:image/[image format];base64,[Base64 编码的数据]
-  const regex = /^data:image\/[a-z]+;base64,/;
-  return regex.test(url);
-}
-export function joinPath(base: string, path: string): string {
-  return `${base}/${path}`.replace(/\/+/g, '/');
-}
 /**
  * 从文档内容中提取封面
  * @param content 文档内容
  */
 export function getFirstImagURLFromMD(content: string, route: string) {
-  const url = content.match(imageRegex)?.[1];
+  const url = content.match(REGEX_IMAGE)?.[1];
   const isHTTPSource = url && url.startsWith('http');
   if (!url) {
     return '';
@@ -111,3 +70,12 @@ export function getFirstImagURLFromMD(content: string, route: string) {
   const relativePath = url.startsWith('/') ? url : path.join(paths.join('/') || '', url);
   return joinPath('/', relativePath);
 }
+// 获取文章的标签
+export const getTags = (dirs: string[], ...items: string[]): string[] => {
+  const dirTags: string[] = [];
+  if (dirs.length > 0) {
+    const group: { [key: string]: string } = matchGroup(dirs[dirs.length - 1]);
+    dirTags.push(group?.name ?? dirs[dirs.length - 1]);
+  }
+  return [...new Set([...items, ...dirTags].flat())].filter((v) => !!v);
+};

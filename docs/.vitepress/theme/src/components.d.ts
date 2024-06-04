@@ -1,4 +1,4 @@
-import VCode from './components/vp-demo/index.vue';
+import VCode from './components/CodeView/index.vue';
 import VLink from './components/navigator/NavLink.vue';
 
 declare module 'vue' {

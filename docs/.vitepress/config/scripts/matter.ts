@@ -1,38 +1,14 @@
-import fs, { Stats } from 'node:fs';
-import { relative, basename, sep } from 'path';
-import os from 'os';
+import fs from 'node:fs';
+import { EOL } from 'node:os';
+import { relative, basename, sep, dirname } from 'node:path';
 import matter from 'gray-matter';
 import yaml from 'yaml';
-import { getFileBirthTime, getBirthtime, matchGroup, getTextSummary, getFirstImagURLFromMD } from './utils';
 import glob from 'fast-glob';
-import { cwd } from 'process';
-import { formatDate } from './utilsDate';
+import { PAGE_IGNORE, MatterItem, PAGE_SOURCE, PageItem } from './typings';
+import { dateFormat, matchGroup } from './utils';
+import { getBirthtime, getFileBirthTime, getFirstImagURLFromMD, getTags, getTextSummary } from './utilsPage';
+import { docRoot } from '../global';
 
-type MatterItem = {
-  order: number; // 排序
-  title: string; // 标题
-  date: string; // 创建时间
-  author?: string; // 作者
-  tags?: string[]; // 标签
-  categories?: string[]; // 分类
-  permalink?: string; // 永久链接 :year/:month/:day/:title/
-  keywords?: string; // 关键字 用于SEO
-  layout?: string; // 页面布局
-};
-type PageItem = MatterItem & {
-  description: string; // 文章摘要
-  cover: string; // 文章封面
-};
-
-// 获取文章的标签
-const getTags = (dirs: string[], ...items: string[]): string[] => {
-  const dirTags: string[] = [];
-  if (dirs.length > 0) {
-    const group: { [key: string]: string } = matchGroup(dirs[dirs.length - 1]);
-    dirTags.push(group?.name ?? dirs[dirs.length - 1]);
-  }
-  return [...new Set([...items, ...dirTags].flat())].filter((v) => !!v);
-};
 // 更新文件内容
 const updateFileMatter = (file: string, matterItem: MatterItem, content: string) => {
   fs.writeFileSync(
@@ -49,11 +25,11 @@ const updateFileMatter = (file: string, matterItem: MatterItem, content: string)
         .replace(/"/g, ''),
       '---',
       content,
-    ].join(os.EOL)
+    ].join(EOL)
   );
 };
 
-const files = glob.sync([`components/**/*.md`, `blogs/**/*.md`], { ignore: ['node_modules/**'] });
+const files = glob.sync(PAGE_SOURCE, { ignore: PAGE_IGNORE });
 const pageData: PageItem[] = [];
 for (let file of files) {
   const fileContent = fs.readFileSync(file, 'utf-8');
@@ -64,7 +40,7 @@ for (let file of files) {
   const matterItem: MatterItem = {
     order: frontmatter.order ?? group.order ?? 0,
     title: frontmatter.title ?? group.name ?? basename(file),
-    date: formatDate(frontmatter.date ?? (getFileBirthTime(file) || getBirthtime(file))),
+    date: dateFormat(frontmatter.date ?? (getFileBirthTime(file) || getBirthtime(file))),
     author: frontmatter.author,
     tags: getTags(dirs, tag, tags, categories),
     categories: frontmatter.categories || undefined,
@@ -84,6 +60,8 @@ for (let file of files) {
   }
 }
 // 将页面数据存储到文件中
-const rootDir: string = cwd();
-fs.mkdirSync(`${rootDir}/.vitepress/config/data/`, { recursive: true });
-fs.writeFileSync(`${rootDir}/.vitepress/config/data/page.json`, JSON.stringify(pageData, null, 2));
+console.log('----- matter data generate ------');
+const pageFile = relative(docRoot, '.vitepress/config/data/page.json');
+fs.mkdirSync(dirname(pageFile), { recursive: true });
+fs.writeFileSync(pageFile, JSON.stringify(pageData, null, 2));
+console.log('------ matter data successfully, number: ' + pageData.length + ', file: ' + pageFile);
