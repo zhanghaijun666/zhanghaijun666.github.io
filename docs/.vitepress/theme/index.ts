@@ -2,7 +2,7 @@
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import Layout from './src/layout/Layout.vue';
-import './style.css';
+import './src/styles/index.css';
 
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "module": "index.ts",
-  "types": "index.d.ts",
+  "types": "components.d.ts",
   "scripts": {
     "dev": "echo \"Error: no test specified\" && exit 1"
   },

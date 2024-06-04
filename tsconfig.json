@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
-    "target": "ES6",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
     "module": "ESNext",
     "sourceMap": true,
     "moduleResolution": "Node",
@@ -15,16 +16,14 @@
     "removeComments": false,
     "rootDir": ".",
     "types": ["node"],
+    "lib": ["ESNext", "DOM"],
     "paths": {
       "@haijunit/*": ["packages/*"]
     },
-    "strict": false // 严格模式
+    "strict": true // 严格模式
   },
   "include": ["src/**/*.ts", "packages/**/*.vue", "scripts/**/*.ts"],
   "ts-node": {
-    "compilerOptions": {
-      "module": "ESNext"
-    },
     "transpileOnly": true,
     "files": true
   }
