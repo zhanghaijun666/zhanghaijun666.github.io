@@ -1,5 +1,4 @@
 import { REGEX_PAGE_NAME } from './typings';
-import path from 'path';
 
 /**
  * 格式化日期为指定格式的字符串
@@ -75,10 +74,3 @@ export function dateFormatAlias(date: Date | string) {
 export const matchGroup = (str: string, reg: RegExp = REGEX_PAGE_NAME): { [key: string]: string } => (str || '').match(reg)?.groups ?? {};
 // 是否是Base64格式的图片
 export const isBase64ImageURL = (url: string): boolean => /^data:image\/[a-z]+;base64,/.test(url);
-
-/**
- * 连接多个路径片段，确保路径之间只有一个路径分隔符
- * @param paths - 待连接的路径片段
- * @returns 连接后的路径字符串
- */
-export const joinPath = (...paths: string[]): string => path.join(...paths).replace(/\\/g, '/');

@@ -10,6 +10,13 @@ export type FileItem = {
   order: number;
   text: string;
   link: string;
+  dirs: string[];
+};
+
+export type SidebarItem = {
+  order: number;
+  text: string;
+  link: string;
   path: string;
   baseItem: string;
 };

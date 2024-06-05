@@ -1,12 +1,24 @@
-import { readFileSync } from 'fs';
-import { dateFormat } from './utils';
-import GrayMatter from 'gray-matter';
+import glob from 'fast-glob';
+import { PAGE_IGNORE } from './typings';
+import { getFileItem, joinPath, listDirectory } from './utilsFile';
+import { mkdirSync, writeFileSync } from 'fs';
 
-const fileContent = readFileSync('blogs/20.结构与算法/10.数据结构/10.线性表-栈.md', 'utf-8');
-const { data: frontmatter = {} } = GrayMatter(fileContent, { excerpt: true });
-
-const getDate = (date: Date | undefined) => {
-  if (!date) return undefined;
-  return new Date(Number(date.getTime()) + 8 * 3600 * 1000 * 2) ?? undefined;
+const generateDirPageData = (dirPath: string) => {
+  const files = glob.sync(dirPath + '/**/*.md', { ignore: PAGE_IGNORE });
+  if (files.length === 0) {
+    return;
+  }
+  console.log('--- 生成目录文章，', dirPath);
+  mkdirSync(dirPath, { recursive: true });
+  writeFileSync(
+    joinPath(dirPath, 'page.json'),
+    JSON.stringify(
+      files.map((item) => getFileItem(item)).sort((a, b) => a.order - b.order),
+      null,
+      2
+    )
+  );
+  listDirectory(dirPath).forEach((item) => generateDirPageData(item));
 };
-console.log(dateFormat(getDate(frontmatter.date) || new Date()));
+
+['blogs'].forEach((item) => generateDirPageData(item));

@@ -3,12 +3,12 @@ import { relative, basename, sep } from 'path';
 import { matchGroup } from './utils';
 import { DefaultTheme } from 'vitepress';
 import glob from 'fast-glob';
-import { FileItem, PAGE_IGNORE, PAGE_SOURCE } from './typings';
+import { SidebarItem, PAGE_IGNORE, PAGE_SOURCE } from './typings';
 import path, { dirname } from 'node:path';
 import { docRoot } from '../global';
 
 const files = glob.sync(PAGE_SOURCE, { ignore: PAGE_IGNORE });
-const fileList: FileItem[] = [];
+const fileList: SidebarItem[] = [];
 for (let file of files) {
   const name = basename(file);
   const group: { [key: string]: string } = matchGroup(name);

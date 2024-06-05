@@ -1,8 +1,9 @@
 import { spawnSync } from 'child_process';
 import { statSync } from 'fs';
 import { REGEX_IMAGE } from './typings';
-import { isBase64ImageURL, joinPath, matchGroup } from './utils';
+import { isBase64ImageURL, matchGroup } from './utils';
 import path from 'path';
+import { joinPath } from './utilsFile';
 
 // 通过文档内容，取一级标题
 export const getDefaultTitle = (content: string) => content.match(/^(#+)\s+(.+)/m)?.[2] || '';
