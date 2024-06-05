@@ -8,7 +8,7 @@ import {NAV_DATA} from './data'
 
 <template v-for="(item,index) in NAV_DATA" :key="index">
 
-## {{item.title}}
+<h2 :id="item.title">{{item.title}}</h2>
 
 > {{item.desc || ''}}
 
