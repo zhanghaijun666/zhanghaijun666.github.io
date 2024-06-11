@@ -1,10 +1,8 @@
 import path from 'path';
 import fs from 'fs';
-import MarkdownIt from 'markdown-it';
-import mdContainer from 'markdown-it-container';
+import MarkdownIt, { Renderer, Token } from 'markdown-it';
 // @ts-ignore
-import type Token from 'markdown-it/lib/token';
-import type Renderer from 'markdown-it/lib/renderer';
+import mdContainer from 'markdown-it-container';
 
 import { highlight } from './highlight';
 import { docRoot } from '../global';

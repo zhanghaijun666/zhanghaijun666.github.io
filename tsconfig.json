@@ -22,7 +22,8 @@
     },
     "strict": true // 严格模式
   },
-  "include": ["src/**/*.ts", "packages/**/*.vue", "scripts/**/*.ts"],
+  "include": ["**/*.vue", "**/*.ts", "**/*.d.ts"],
+  "exclude": ["**/node_modules", "**/dist"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

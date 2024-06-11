@@ -1,8 +1,9 @@
 import MarkdownIt from 'markdown-it';
 import timeline from 'vitepress-markdown-timeline';
-import codeDemo from './plugins/code';
+import { componentPreview, containerPreview } from './plugins/index';
 
 export default (md: MarkdownIt) => {
   timeline(md, {});
-  codeDemo(md);
+  componentPreview(md);
+  containerPreview(md);
 };

@@ -9,9 +9,18 @@
     "docs:build": "pnpm -C docs build",
     "docs:site": "bash scripts/deploy-docs.sh"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zhanghaijun",
+  "homepage": "https://gitee.com/haijunit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitee.com/haijunit/mark-web"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vitepress",
+    "plugins",
+    "component"
+  ],
   "workspaces": [
     "packages/*",
     "docs/"
@@ -39,6 +48,17 @@
         "@algolia/client-search",
         "search-insights"
       ]
+    }
+  },
+  "lint-staged": {
+    "{docs, packages}/**/*.{js,ts,vue,jsx,tsx,md}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
     }
   }
 }
