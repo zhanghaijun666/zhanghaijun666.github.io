@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useData } from 'vitepress';
 const { site, frontmatter } = useData();
 
-const name = computed(() => (frontmatter.value.blog?.name ?? site.value.title) || home?.name || '');
-const motto = computed(() => frontmatter.value.blog?.motto || home?.motto || '');
+const name = computed(() => (frontmatter.value.blog?.name ?? site.value.title) || '');
+const motto = computed(() => frontmatter.value.blog?.motto || '');
 const inspiringList: string[] = [
   '人生就像一场修行，你不可能一开始就修成正果',
   '无论多么沉重的负担，也不要忘记微笑；无论多么漫长的路程，也不要忘记坚持',
@@ -19,7 +20,7 @@ const inspiring = inspiringList[0];
       <span v-show="motto" class="motto">{{ motto }}</span>
     </h1>
     <div class="inspiring-wrapper">
-      <h2 v-show="!!inspiring" @click="changeSlogan">
+      <h2 v-show="!!inspiring">
         {{ inspiring }}
       </h2>
     </div>
