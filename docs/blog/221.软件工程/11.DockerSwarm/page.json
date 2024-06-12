@@ -1,0 +1,12 @@
+[
+  {
+    "order": 10,
+    "text": "Portainer容器管理",
+    "link": "blogs/221.软件工程/11.DockerSwarm/10.Portainer容器管理.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "11.DockerSwarm"
+    ]
+  }
+]

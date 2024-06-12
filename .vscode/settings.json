@@ -17,7 +17,7 @@
   "i18n-ally.editor.preferEditor": true,
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": ["src/locales/langs"],
-  "cSpell.words": ["consola", "haijunit", "ntpq", "persistedstate", "Pinia", "pmpm", "prismjs", "tdesign", "unplugin", "Vite", "vitepress", "vueuse"],
+  "cSpell.words": ["autocrlf", "consola", "haijunit", "ignorecase", "ntpq", "persistedstate", "Pinia", "pmpm", "prismjs", "tdesign", "unplugin", "Vite", "vitepress", "vueuse"],
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,

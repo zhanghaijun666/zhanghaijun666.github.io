@@ -1,0 +1,12 @@
+[
+  {
+    "order": 10,
+    "text": "搭建InfluxDB",
+    "link": "blogs/262.数据库/40.InfluxDB/10.搭建InfluxDB.md",
+    "dirs": [
+      "blogs",
+      "262.数据库",
+      "40.InfluxDB"
+    ]
+  }
+]

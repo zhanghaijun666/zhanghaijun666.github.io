@@ -14,7 +14,7 @@ hero:
       link: /navigator/
     - theme: brand
       text: 博客
-      link: /blogs/
+      link: /blog/
     - theme: alt
       text: 桌面
       link: /desktop/

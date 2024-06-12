@@ -1,0 +1,72 @@
+[
+  {
+    "order": 9,
+    "text": "kubernetes常用命令",
+    "link": "blogs/221.软件工程/61.kubernetes建设/09.kubernetes常用命令.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "61.kubernetes建设"
+    ]
+  },
+  {
+    "order": 10,
+    "text": "kubernetes中的DNS",
+    "link": "blogs/221.软件工程/61.kubernetes建设/10.kubernetes中的DNS.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "61.kubernetes建设"
+    ]
+  },
+  {
+    "order": 15,
+    "text": "负载均衡器OpenELB",
+    "link": "blogs/221.软件工程/61.kubernetes建设/15.负载均衡器OpenELB.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "61.kubernetes建设"
+    ]
+  },
+  {
+    "order": 16,
+    "text": "kubernates中的DevOps平台",
+    "link": "blogs/221.软件工程/61.kubernetes建设/16.kubernates中的DevOps平台.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "61.kubernetes建设"
+    ]
+  },
+  {
+    "order": 30,
+    "text": "helm打包工具",
+    "link": "blogs/221.软件工程/61.kubernetes建设/30.helm打包工具.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "61.kubernetes建设"
+    ]
+  },
+  {
+    "order": 40,
+    "text": "高效技巧-kubectl",
+    "link": "blogs/221.软件工程/61.kubernetes建设/40.高效技巧-kubectl.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "61.kubernetes建设"
+    ]
+  },
+  {
+    "order": 60,
+    "text": "kubernetes备份和恢复",
+    "link": "blogs/221.软件工程/61.kubernetes建设/60.kubernetes备份和恢复.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "61.kubernetes建设"
+    ]
+  }
+]

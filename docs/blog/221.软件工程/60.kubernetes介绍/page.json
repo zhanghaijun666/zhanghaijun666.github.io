@@ -1,0 +1,112 @@
+[
+  {
+    "order": 10,
+    "text": "kubernetes入门介绍",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/10.kubernetes入门介绍.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 13,
+    "text": "kubernetes集群介绍",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/13.kubernetes集群介绍.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 14,
+    "text": "k8s安装-集群搭建",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/14.k8s安装-集群搭建.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 15,
+    "text": "k8s安装-kubeadm",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/15.k8s安装-kubeadm.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 16,
+    "text": "k8s安装-kubeKey",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/16.k8s安装-kubeKey.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 20,
+    "text": "kubernetes资源",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/20.kubernetes资源.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 21,
+    "text": "kubernetes无状态",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/21.kubernetes无状态.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 25,
+    "text": "kubernetes有状态",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/25.kubernetes有状态.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 26,
+    "text": "Kubernetes存储机制",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/26.Kubernetes存储机制.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 30,
+    "text": "kubernetes守护进程",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/30.kubernetes守护进程.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  },
+  {
+    "order": 31,
+    "text": "kubernetes-pod",
+    "link": "blogs/221.软件工程/60.kubernetes介绍/31.kubernetes-pod.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "60.kubernetes介绍"
+    ]
+  }
+]

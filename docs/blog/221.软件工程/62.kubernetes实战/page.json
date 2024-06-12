@@ -1,0 +1,122 @@
+[
+  {
+    "order": 9,
+    "text": "Kubernets使用工具",
+    "link": "blogs/221.软件工程/62.kubernetes实战/09.Kubernets使用工具.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 10,
+    "text": "SpringBoot零宕机发布",
+    "link": "blogs/221.软件工程/62.kubernetes实战/10.SpringBoot零宕机发布.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 15,
+    "text": "Argo CD",
+    "link": "blogs/221.软件工程/62.kubernetes实战/15.Argo CD.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 20,
+    "text": "Helm安装Redis",
+    "link": "blogs/221.软件工程/62.kubernetes实战/20.Helm安装Redis.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 21,
+    "text": "Helm安装Mysql",
+    "link": "blogs/221.软件工程/62.kubernetes实战/21.Helm安装Mysql.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 22,
+    "text": "Helm安装RabbitMQ",
+    "link": "blogs/221.软件工程/62.kubernetes实战/22.Helm安装RabbitMQ.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 23,
+    "text": "Helm安装MinIO",
+    "link": "blogs/221.软件工程/62.kubernetes实战/23.Helm安装MinIO.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 30,
+    "text": "MySQL主从",
+    "link": "blogs/221.软件工程/62.kubernetes实战/30.MySQL主从.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 40,
+    "text": "K8S核心组件",
+    "link": "blogs/221.软件工程/62.kubernetes实战/40.K8S核心组件.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 50,
+    "text": "K8S实战",
+    "link": "blogs/221.软件工程/62.kubernetes实战/50.K8S实战.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 60,
+    "text": "K8S部署实战",
+    "link": "blogs/221.软件工程/62.kubernetes实战/60.K8S部署实战.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  },
+  {
+    "order": 61,
+    "text": "kubernets应用",
+    "link": "blogs/221.软件工程/62.kubernetes实战/61.kubernets应用.md",
+    "dirs": [
+      "blogs",
+      "221.软件工程",
+      "62.kubernetes实战"
+    ]
+  }
+]
