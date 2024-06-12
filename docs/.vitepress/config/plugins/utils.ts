@@ -85,7 +85,6 @@ export const composeComponentName = (path: string) => {
       isFlag = false;
     } else {
       const name = path.substring(lastIndex + 1);
-
       componentList.unshift(name);
       path = path.substring(0, lastIndex);
     }

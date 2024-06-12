@@ -1,16 +1,28 @@
 {
+  "/components": [
+    {
+      "order": 10,
+      "text": "基础组件",
+      "items": [
+        {
+          "text": "Button 按钮",
+          "link": "components/10.基础组件/10.Button 按钮.md"
+        }
+      ]
+    }
+  ],
   "/blogs/10.随笔记录": [
     {
       "order": 10,
       "text": "生活",
       "items": [
         {
-          "text": "关于我",
-          "link": "blogs/10.随笔记录/10.生活/00.关于我.md"
-        },
-        {
           "text": "个人技术博客管理",
           "link": "blogs/10.随笔记录/10.生活/10.个人技术博客管理.md"
+        },
+        {
+          "text": "关于我",
+          "link": "blogs/10.随笔记录/10.生活/11.关于我.md"
         }
       ]
     },
@@ -159,66 +171,50 @@
       ]
     }
   ],
-  "/blogs/231.MySQL": [
-    {
-      "order": 20,
-      "text": "原理进阶",
-      "items": [
-        {
-          "text": "SQL的执行过程",
-          "link": "blogs/231.MySQL/20.原理进阶/10.SQL的执行过程.md"
-        },
-        {
-          "text": "索引",
-          "link": "blogs/231.MySQL/20.原理进阶/20.索引.md"
-        }
-      ]
-    }
-  ],
-  "/blogs/30.编程技巧": [
+  "/blogs/30.系统编程": [
     {
       "order": 5,
       "text": "Windows",
       "items": [
         {
           "text": "常用工具",
-          "link": "blogs/30.编程技巧/05.Windows/09.常用工具.md"
+          "link": "blogs/30.系统编程/05.Windows/09.常用工具.md"
         },
         {
           "text": "Windows开发环境",
-          "link": "blogs/30.编程技巧/05.Windows/10.Windows开发环境.md"
+          "link": "blogs/30.系统编程/05.Windows/10.Windows开发环境.md"
         },
         {
           "text": "Windows网络配置命令",
-          "link": "blogs/30.编程技巧/05.Windows/12.Windows网络配置命令.md"
+          "link": "blogs/30.系统编程/05.Windows/12.Windows网络配置命令.md"
         },
         {
           "text": "Windows实现端口映射",
-          "link": "blogs/30.编程技巧/05.Windows/13.Windows实现端口映射.md"
+          "link": "blogs/30.系统编程/05.Windows/13.Windows实现端口映射.md"
         },
         {
           "text": "Windows批量重名文件",
-          "link": "blogs/30.编程技巧/05.Windows/15.Windows批量重名文件.md"
+          "link": "blogs/30.系统编程/05.Windows/15.Windows批量重名文件.md"
         },
         {
           "text": "bat处理程序的自更新及启动",
-          "link": "blogs/30.编程技巧/05.Windows/16.bat处理程序的自更新及启动.md"
+          "link": "blogs/30.系统编程/05.Windows/16.bat处理程序的自更新及启动.md"
         },
         {
           "text": "SSH配置多个GIT平台",
-          "link": "blogs/30.编程技巧/05.Windows/17.SSH配置多个GIT平台.md"
+          "link": "blogs/30.系统编程/05.Windows/17.SSH配置多个GIT平台.md"
         },
         {
           "text": "Windows下加速Github访问",
-          "link": "blogs/30.编程技巧/05.Windows/20.Windows下加速Github访问.md"
+          "link": "blogs/30.系统编程/05.Windows/20.Windows下加速Github访问.md"
         },
         {
           "text": "Windows-vbs脚本编程",
-          "link": "blogs/30.编程技巧/05.Windows/30.Windows-vbs脚本编程.md"
+          "link": "blogs/30.系统编程/05.Windows/30.Windows-vbs脚本编程.md"
         },
         {
           "text": "Windows-虚拟机迁移",
-          "link": "blogs/30.编程技巧/05.Windows/60.Windows-虚拟机迁移.md"
+          "link": "blogs/30.系统编程/05.Windows/60.Windows-虚拟机迁移.md"
         }
       ]
     },
@@ -228,63 +224,63 @@
       "items": [
         {
           "text": "CentOS7系统初始化设置",
-          "link": "blogs/30.编程技巧/06.CentOS/10.CentOS7系统初始化设置.md"
+          "link": "blogs/30.系统编程/06.CentOS/10.CentOS7系统初始化设置.md"
         },
         {
           "text": "Linux 基础命令",
-          "link": "blogs/30.编程技巧/06.CentOS/11.Linux 基础命令.md"
+          "link": "blogs/30.系统编程/06.CentOS/11.Linux 基础命令.md"
         },
         {
           "text": "Linux命令 find",
-          "link": "blogs/30.编程技巧/06.CentOS/12.Linux命令 find.md"
+          "link": "blogs/30.系统编程/06.CentOS/12.Linux命令 find.md"
         },
         {
           "text": "Liunx命令 Tmux",
-          "link": "blogs/30.编程技巧/06.CentOS/13.Liunx命令 Tmux.md"
+          "link": "blogs/30.系统编程/06.CentOS/13.Liunx命令 Tmux.md"
         },
         {
           "text": "等保三级检查命令",
-          "link": "blogs/30.编程技巧/06.CentOS/14.等保三级检查命令.md"
+          "link": "blogs/30.系统编程/06.CentOS/14.等保三级检查命令.md"
         },
         {
           "text": "Shell脚本案例",
-          "link": "blogs/30.编程技巧/06.CentOS/15.Shell脚本案例.md"
+          "link": "blogs/30.系统编程/06.CentOS/15.Shell脚本案例.md"
         },
         {
           "text": "常用命令总结",
-          "link": "blogs/30.编程技巧/06.CentOS/16.常用命令总结.md"
+          "link": "blogs/30.系统编程/06.CentOS/16.常用命令总结.md"
         },
         {
           "text": "网络配置",
-          "link": "blogs/30.编程技巧/06.CentOS/17.网络配置.md"
+          "link": "blogs/30.系统编程/06.CentOS/17.网络配置.md"
         },
         {
           "text": "内网穿透工具",
-          "link": "blogs/30.编程技巧/06.CentOS/20.内网穿透工具.md"
+          "link": "blogs/30.系统编程/06.CentOS/20.内网穿透工具.md"
         },
         {
           "text": "监控工具",
-          "link": "blogs/30.编程技巧/06.CentOS/21.监控工具.md"
+          "link": "blogs/30.系统编程/06.CentOS/21.监控工具.md"
         },
         {
           "text": "Linux中磁盘管理",
-          "link": "blogs/30.编程技巧/06.CentOS/22.Linux中磁盘管理.md"
+          "link": "blogs/30.系统编程/06.CentOS/22.Linux中磁盘管理.md"
         },
         {
           "text": "美化Centos的终端",
-          "link": "blogs/30.编程技巧/06.CentOS/23.美化Centos的终端.md"
+          "link": "blogs/30.系统编程/06.CentOS/23.美化Centos的终端.md"
         },
         {
           "text": "iptables详解",
-          "link": "blogs/30.编程技巧/06.CentOS/30.iptables详解.md"
+          "link": "blogs/30.系统编程/06.CentOS/30.iptables详解.md"
         },
         {
           "text": "邮件服务器Postfix",
-          "link": "blogs/30.编程技巧/06.CentOS/60.邮件服务器Postfix.md"
+          "link": "blogs/30.系统编程/06.CentOS/60.邮件服务器Postfix.md"
         },
         {
           "text": "文件备份",
-          "link": "blogs/30.编程技巧/06.CentOS/80.文件备份.md"
+          "link": "blogs/30.系统编程/06.CentOS/80.文件备份.md"
         }
       ]
     },
@@ -294,23 +290,23 @@
       "items": [
         {
           "text": "shell脚本语言",
-          "link": "blogs/30.编程技巧/08.Shell脚本/10.shell脚本语言.md"
+          "link": "blogs/30.系统编程/08.Shell脚本/10.shell脚本语言.md"
         },
         {
           "text": "常用脚本",
-          "link": "blogs/30.编程技巧/08.Shell脚本/60.常用脚本.md"
+          "link": "blogs/30.系统编程/08.Shell脚本/60.常用脚本.md"
         },
         {
           "text": "系统运维脚本",
-          "link": "blogs/30.编程技巧/08.Shell脚本/61.系统运维脚本.md"
+          "link": "blogs/30.系统编程/08.Shell脚本/61.系统运维脚本.md"
         },
         {
           "text": "RPM包-rpmbuild",
-          "link": "blogs/30.编程技巧/08.Shell脚本/80.RPM包-rpmbuild.md"
+          "link": "blogs/30.系统编程/08.Shell脚本/80.RPM包-rpmbuild.md"
         },
         {
           "text": "RPM包-fpm",
-          "link": "blogs/30.编程技巧/08.Shell脚本/81.RPM包-fpm.md"
+          "link": "blogs/30.系统编程/08.Shell脚本/81.RPM包-fpm.md"
         }
       ]
     },
@@ -320,55 +316,67 @@
       "items": [
         {
           "text": "常用的正则表达式",
-          "link": "blogs/30.编程技巧/09.编程基础/10.常用的正则表达式.md"
+          "link": "blogs/30.系统编程/09.编程基础/10.常用的正则表达式.md"
         },
         {
           "text": "数据传输Protobuf",
-          "link": "blogs/30.编程技巧/09.编程基础/20.数据传输Protobuf.md"
+          "link": "blogs/30.系统编程/09.编程基础/20.数据传输Protobuf.md"
         }
       ]
     },
+    {
+      "order": 10,
+      "text": "系统镜像",
+      "items": [
+        {
+          "text": "Ubuntu定制",
+          "link": "blogs/30.系统编程/10.系统镜像/10.Ubuntu定制.md"
+        }
+      ]
+    }
+  ],
+  "/blogs/31.web前端": [
     {
       "order": 10,
       "text": "HTML",
       "items": [
         {
           "text": "head标签提升网站速度",
-          "link": "blogs/30.编程技巧/10.HTML/20.head标签提升网站速度.md"
+          "link": "blogs/31.web前端/10.HTML/20.head标签提升网站速度.md"
         },
         {
           "text": "输入框实现@提及项目",
-          "link": "blogs/30.编程技巧/10.HTML/30.输入框实现@提及项目.md"
+          "link": "blogs/31.web前端/10.HTML/30.输入框实现@提及项目.md"
         }
       ]
     },
     {
       "order": 11,
-      "text": "CSSS",
+      "text": "css应用",
       "items": [
         {
           "text": "CSS技巧",
-          "link": "blogs/30.编程技巧/11.CSSS/10.CSS技巧.md"
+          "link": "blogs/31.web前端/11.css应用/10.CSS技巧.md"
         },
         {
           "text": "CSS布局",
-          "link": "blogs/30.编程技巧/11.CSSS/11.CSS布局.md"
+          "link": "blogs/31.web前端/11.css应用/11.CSS布局.md"
         },
         {
           "text": "CSS悬浮",
-          "link": "blogs/30.编程技巧/11.CSSS/20.CSS悬浮.md"
+          "link": "blogs/31.web前端/11.css应用/20.CSS悬浮.md"
         },
         {
           "text": "CSS命名规范",
-          "link": "blogs/30.编程技巧/11.CSSS/30.CSS命名规范.md"
+          "link": "blogs/31.web前端/11.css应用/30.CSS命名规范.md"
         },
         {
           "text": "CSS的BEM规范",
-          "link": "blogs/30.编程技巧/11.CSSS/31.CSS的BEM规范.md"
+          "link": "blogs/31.web前端/11.css应用/31.CSS的BEM规范.md"
         },
         {
           "text": "canvas效果",
-          "link": "blogs/30.编程技巧/11.CSSS/40.canvas效果.md"
+          "link": "blogs/31.web前端/11.css应用/40.canvas效果.md"
         }
       ]
     },
@@ -378,35 +386,35 @@
       "items": [
         {
           "text": "高逼格的JS插件",
-          "link": "blogs/30.编程技巧/12.JavaScript/15.高逼格的JS插件.md"
+          "link": "blogs/31.web前端/12.JavaScript/15.高逼格的JS插件.md"
         },
         {
           "text": "JavaScript工具函数",
-          "link": "blogs/30.编程技巧/12.JavaScript/20.JavaScript工具函数.md"
+          "link": "blogs/31.web前端/12.JavaScript/20.JavaScript工具函数.md"
         },
         {
           "text": "JavaScript设计模式",
-          "link": "blogs/30.编程技巧/12.JavaScript/21.JavaScript设计模式.md"
+          "link": "blogs/31.web前端/12.JavaScript/21.JavaScript设计模式.md"
         },
         {
           "text": "JS站点",
-          "link": "blogs/30.编程技巧/12.JavaScript/50.JS站点.md"
+          "link": "blogs/31.web前端/12.JavaScript/50.JS站点.md"
         },
         {
           "text": "JS技巧",
-          "link": "blogs/30.编程技巧/12.JavaScript/51.JS技巧.md"
+          "link": "blogs/31.web前端/12.JavaScript/51.JS技巧.md"
         },
         {
           "text": "JS工具函数",
-          "link": "blogs/30.编程技巧/12.JavaScript/52.JS工具函数.md"
+          "link": "blogs/31.web前端/12.JavaScript/52.JS工具函数.md"
         },
         {
           "text": "JS防抖与节流",
-          "link": "blogs/30.编程技巧/12.JavaScript/53.JS防抖与节流.md"
+          "link": "blogs/31.web前端/12.JavaScript/53.JS防抖与节流.md"
         },
         {
           "text": "JS表白",
-          "link": "blogs/30.编程技巧/12.JavaScript/60.JS表白.md"
+          "link": "blogs/31.web前端/12.JavaScript/60.JS表白.md"
         }
       ]
     },
@@ -416,11 +424,11 @@
       "items": [
         {
           "text": "TypeScript介绍",
-          "link": "blogs/30.编程技巧/12.TypeScript/10.TypeScript介绍.md"
+          "link": "blogs/31.web前端/12.TypeScript/10.TypeScript介绍.md"
         },
         {
           "text": "TypeScript技巧-类型",
-          "link": "blogs/30.编程技巧/12.TypeScript/15.TypeScript技巧-类型.md"
+          "link": "blogs/31.web前端/12.TypeScript/15.TypeScript技巧-类型.md"
         }
       ]
     },
@@ -430,160 +438,58 @@
       "items": [
         {
           "text": " VUE代码风格指南",
-          "link": "blogs/30.编程技巧/15.VUE应用/09. VUE代码风格指南.md"
+          "link": "blogs/31.web前端/15.VUE应用/09. VUE代码风格指南.md"
         },
         {
           "text": "VUE笔记",
-          "link": "blogs/30.编程技巧/15.VUE应用/10.VUE笔记.md"
+          "link": "blogs/31.web前端/15.VUE应用/10.VUE笔记.md"
         },
         {
           "text": "VUE笔记",
-          "link": "blogs/30.编程技巧/15.VUE应用/12.VUE笔记.md"
+          "link": "blogs/31.web前端/15.VUE应用/12.VUE笔记.md"
         },
         {
           "text": "用proxy改造你的console",
-          "link": "blogs/30.编程技巧/15.VUE应用/13.用proxy改造你的console.md"
+          "link": "blogs/31.web前端/15.VUE应用/13.用proxy改造你的console.md"
         },
         {
           "text": "vue3的优质UI库",
-          "link": "blogs/30.编程技巧/15.VUE应用/15.vue3的优质UI库.md"
+          "link": "blogs/31.web前端/15.VUE应用/15.vue3的优质UI库.md"
         },
         {
           "text": "VUE2技巧",
-          "link": "blogs/30.编程技巧/15.VUE应用/20.VUE2技巧.md"
+          "link": "blogs/31.web前端/15.VUE应用/20.VUE2技巧.md"
         },
         {
           "text": "VuePress入门",
-          "link": "blogs/30.编程技巧/15.VUE应用/50.VuePress入门.md"
+          "link": "blogs/31.web前端/15.VUE应用/50.VuePress入门.md"
         },
         {
           "text": "修改配置",
-          "link": "blogs/30.编程技巧/15.VUE应用/51.修改配置.md"
+          "link": "blogs/31.web前端/15.VUE应用/51.修改配置.md"
         },
         {
           "text": "VuePress主题",
-          "link": "blogs/30.编程技巧/15.VUE应用/52.VuePress主题.md"
+          "link": "blogs/31.web前端/15.VUE应用/52.VuePress主题.md"
         },
         {
           "text": "Vite介绍",
-          "link": "blogs/30.编程技巧/15.VUE应用/60.Vite介绍.md"
+          "link": "blogs/31.web前端/15.VUE应用/60.Vite介绍.md"
         },
         {
           "text": "布过npm包",
-          "link": "blogs/30.编程技巧/15.VUE应用/60.布过npm包.md"
+          "link": "blogs/31.web前端/15.VUE应用/60.布过npm包.md"
         },
         {
           "text": "VUE组件Props参数验证 ",
-          "link": "blogs/30.编程技巧/15.VUE应用/70.VUE组件Props参数验证 .md"
+          "link": "blogs/31.web前端/15.VUE应用/70.VUE组件Props参数验证 .md"
         },
         {
           "text": "Vue3之组件间传值避坑指南",
-          "link": "blogs/30.编程技巧/15.VUE应用/71.Vue3之组件间传值避坑指南.md"
+          "link": "blogs/31.web前端/15.VUE应用/71.Vue3之组件间传值避坑指南.md"
         }
       ]
     },
-    {
-      "order": 20,
-      "text": "Java",
-      "items": [
-        {
-          "text": "java8之stream",
-          "link": "blogs/30.编程技巧/20.Java/10.java8之stream.md"
-        },
-        {
-          "text": "java8之optional",
-          "link": "blogs/30.编程技巧/20.Java/11.java8之optional.md"
-        },
-        {
-          "text": "JVM调优",
-          "link": "blogs/30.编程技巧/20.Java/20.JVM调优.md"
-        },
-        {
-          "text": "Maven基础",
-          "link": "blogs/30.编程技巧/20.Java/30.Maven基础.md"
-        },
-        {
-          "text": "插入式注解",
-          "link": "blogs/30.编程技巧/20.Java/31.插入式注解.md"
-        },
-        {
-          "text": "Jar瘦身实例",
-          "link": "blogs/30.编程技巧/20.Java/50.Jar瘦身实例.md"
-        },
-        {
-          "text": "Netty介绍",
-          "link": "blogs/30.编程技巧/20.Java/60.Netty介绍.md"
-        },
-        {
-          "text": "20230815",
-          "link": "blogs/30.编程技巧/20.Java/81.20230815.md"
-        }
-      ]
-    },
-    {
-      "order": 30,
-      "text": "Python",
-      "items": [
-        {
-          "text": "Python基础",
-          "link": "blogs/30.编程技巧/30.Python/09.Python基础.md"
-        },
-        {
-          "text": "Windows使用Python",
-          "link": "blogs/30.编程技巧/30.Python/10.Windows使用Python.md"
-        },
-        {
-          "text": "Python远程执行命令",
-          "link": "blogs/30.编程技巧/30.Python/20.Python远程执行命令.md"
-        },
-        {
-          "text": "Python代码实现蚂蚁森林自动偷能量",
-          "link": "blogs/30.编程技巧/30.Python/21.Python代码实现蚂蚁森林自动偷能量.md"
-        },
-        {
-          "text": "图片九宫格处理",
-          "link": "blogs/30.编程技巧/30.Python/22.图片九宫格处理.md"
-        },
-        {
-          "text": "python爬百度图片",
-          "link": "blogs/30.编程技巧/30.Python/23.python爬百度图片.md"
-        },
-        {
-          "text": "python表白程序",
-          "link": "blogs/30.编程技巧/30.Python/30.python表白程序.md"
-        },
-        {
-          "text": "简单的人事系统",
-          "link": "blogs/30.编程技巧/30.Python/31.简单的人事系统.md"
-        }
-      ]
-    },
-    {
-      "order": 40,
-      "text": "GoLang",
-      "items": [
-        {
-          "text": "Go语言安装",
-          "link": "blogs/30.编程技巧/40.GoLang/10.Go语言安装.md"
-        }
-      ]
-    },
-    {
-      "order": 50,
-      "text": "C++",
-      "items": [
-        {
-          "text": "C++初识",
-          "link": "blogs/30.编程技巧/50.C++/10.C++初识.md"
-        },
-        {
-          "text": "C++虚函数",
-          "link": "blogs/30.编程技巧/50.C++/20.C++虚函数.md"
-        }
-      ]
-    }
-  ],
-  "/blogs/31.web前端": [
     {
       "order": 50,
       "text": "vitepress搭建",
@@ -599,6 +505,108 @@
         {
           "text": "自定义组件显示",
           "link": "blogs/31.web前端/50.vitepress搭建/60.自定义组件显示.md"
+        }
+      ]
+    }
+  ],
+  "/blogs/32.后端服务": [
+    {
+      "order": 20,
+      "text": "Java",
+      "items": [
+        {
+          "text": "java8之stream",
+          "link": "blogs/32.后端服务/20.Java/10.java8之stream.md"
+        },
+        {
+          "text": "java8之optional",
+          "link": "blogs/32.后端服务/20.Java/11.java8之optional.md"
+        },
+        {
+          "text": "JVM调优",
+          "link": "blogs/32.后端服务/20.Java/20.JVM调优.md"
+        },
+        {
+          "text": "Maven基础",
+          "link": "blogs/32.后端服务/20.Java/30.Maven基础.md"
+        },
+        {
+          "text": "插入式注解",
+          "link": "blogs/32.后端服务/20.Java/31.插入式注解.md"
+        },
+        {
+          "text": "Jar瘦身实例",
+          "link": "blogs/32.后端服务/20.Java/50.Jar瘦身实例.md"
+        },
+        {
+          "text": "Netty介绍",
+          "link": "blogs/32.后端服务/20.Java/60.Netty介绍.md"
+        },
+        {
+          "text": "20230815",
+          "link": "blogs/32.后端服务/20.Java/81.20230815.md"
+        }
+      ]
+    },
+    {
+      "order": 30,
+      "text": "Python",
+      "items": [
+        {
+          "text": "Python基础",
+          "link": "blogs/32.后端服务/30.Python/09.Python基础.md"
+        },
+        {
+          "text": "Windows使用Python",
+          "link": "blogs/32.后端服务/30.Python/10.Windows使用Python.md"
+        },
+        {
+          "text": "Python远程执行命令",
+          "link": "blogs/32.后端服务/30.Python/20.Python远程执行命令.md"
+        },
+        {
+          "text": "Python代码实现蚂蚁森林自动偷能量",
+          "link": "blogs/32.后端服务/30.Python/21.Python代码实现蚂蚁森林自动偷能量.md"
+        },
+        {
+          "text": "图片九宫格处理",
+          "link": "blogs/32.后端服务/30.Python/22.图片九宫格处理.md"
+        },
+        {
+          "text": "python爬百度图片",
+          "link": "blogs/32.后端服务/30.Python/23.python爬百度图片.md"
+        },
+        {
+          "text": "python表白程序",
+          "link": "blogs/32.后端服务/30.Python/30.python表白程序.md"
+        },
+        {
+          "text": "简单的人事系统",
+          "link": "blogs/32.后端服务/30.Python/31.简单的人事系统.md"
+        }
+      ]
+    },
+    {
+      "order": 40,
+      "text": "GoLang",
+      "items": [
+        {
+          "text": "Go语言安装",
+          "link": "blogs/32.后端服务/40.GoLang/10.Go语言安装.md"
+        }
+      ]
+    },
+    {
+      "order": 50,
+      "text": "C++",
+      "items": [
+        {
+          "text": "C++初识",
+          "link": "blogs/32.后端服务/50.C++/10.C++初识.md"
+        },
+        {
+          "text": "C++虚函数",
+          "link": "blogs/32.后端服务/50.C++/20.C++虚函数.md"
         }
       ]
     }
@@ -1087,28 +1095,6 @@
       ]
     }
   ],
-  "/blogs/65.技术积累": [
-    {
-      "order": 10,
-      "text": "系统镜像",
-      "items": [
-        {
-          "text": "Ubuntu定制",
-          "link": "blogs/65.技术积累/10.系统镜像/10.Ubuntu定制.md"
-        }
-      ]
-    },
-    {
-      "order": 20,
-      "text": "集群搭建",
-      "items": [
-        {
-          "text": "集群管理-Pacemaker",
-          "link": "blogs/65.技术积累/20.集群搭建/10.集群管理-Pacemaker.md"
-        }
-      ]
-    }
-  ],
   "/blogs/80.运维技巧": [
     {
       "order": 10,
@@ -1278,25 +1264,39 @@
     },
     {
       "order": 21,
-      "text": "达梦数据库",
+      "text": "MySQL进阶",
       "items": [
         {
-          "text": "达梦数据库安装",
-          "link": "blogs/81.数据库/21.达梦数据库/10.达梦数据库安装.md"
+          "text": "SQL的执行过程",
+          "link": "blogs/81.数据库/21.MySQL进阶/10.SQL的执行过程.md"
         },
         {
-          "text": "达梦数据库配置",
-          "link": "blogs/81.数据库/21.达梦数据库/15.达梦数据库配置.md"
+          "text": "索引",
+          "link": "blogs/81.数据库/21.MySQL进阶/20.索引.md"
         }
       ]
     },
     {
-      "order": 22,
+      "order": 30,
+      "text": "达梦数据库",
+      "items": [
+        {
+          "text": "达梦数据库安装",
+          "link": "blogs/81.数据库/30.达梦数据库/10.达梦数据库安装.md"
+        },
+        {
+          "text": "达梦数据库配置",
+          "link": "blogs/81.数据库/30.达梦数据库/15.达梦数据库配置.md"
+        }
+      ]
+    },
+    {
+      "order": 40,
       "text": "InfluxDB",
       "items": [
         {
           "text": "搭建InfluxDB",
-          "link": "blogs/81.数据库/22.InfluxDB/10.搭建InfluxDB.md"
+          "link": "blogs/81.数据库/40.InfluxDB/10.搭建InfluxDB.md"
         }
       ]
     }
@@ -1331,6 +1331,16 @@
       ]
     },
     {
+      "order": 20,
+      "text": "集群搭建",
+      "items": [
+        {
+          "text": "集群管理-Pacemaker",
+          "link": "blogs/90.实战项目/20.集群搭建/10.集群管理-Pacemaker.md"
+        }
+      ]
+    },
+    {
       "order": 30,
       "text": "商城项目",
       "items": [
@@ -1341,38 +1351,22 @@
       ]
     }
   ],
-  "/blogs/91.天信瑞安": [
+  "/blogs/95.工作笔记": [
     {
       "order": 10,
       "text": "云盘服务",
       "items": [
         {
           "text": "云盘高可用",
-          "link": "blogs/91.天信瑞安/10.云盘服务/10.云盘高可用.md"
+          "link": "blogs/95.工作笔记/10.云盘服务/10.云盘高可用.md"
         },
         {
           "text": "邮件配置",
-          "link": "blogs/91.天信瑞安/10.云盘服务/20.邮件配置.md"
+          "link": "blogs/95.工作笔记/10.云盘服务/20.邮件配置.md"
         },
         {
           "text": "文档的操作",
-          "link": "blogs/91.天信瑞安/10.云盘服务/50.文档的操作.md"
-        }
-      ]
-    }
-  ],
-  "/components": [
-    {
-      "order": 10,
-      "text": "基础组件",
-      "items": [
-        {
-          "text": "Button 按钮",
-          "link": "components/10.基础组件/10.Button 按钮.md"
-        },
-        {
-          "text": "demo",
-          "link": "components/10.基础组件/20.demo.md"
+          "link": "blogs/95.工作笔记/10.云盘服务/50.文档的操作.md"
         }
       ]
     }
