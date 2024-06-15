@@ -1,12 +1,12 @@
 {
-  "name": "知识点的精心归纳",
+  "name": "知识的精心归纳",
   "short_name": "Insight Blog",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#3eaf7c",
   "start_url": "/",
   "scope": "/",
-  "description": "知识点的精心归纳",
+  "description": "知识的精心归纳",
   "icons": [
     {
       "src": "/docs/logo.png",

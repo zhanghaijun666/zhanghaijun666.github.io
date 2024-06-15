@@ -15,10 +15,10 @@ const inspiring = inspiringList[0];
 </script>
 <template>
   <div>
-    <h1>
-      <span class="name">{{ name }}</span>
-      <span v-show="motto" class="motto">{{ motto }}</span>
-    </h1>
+    <div class="box">
+      <div class="name">{{ name }}</div>
+      <div v-show="motto" class="motto">{{ motto }}</div>
+    </div>
     <div class="inspiring-wrapper">
       <h2 v-show="!!inspiring">
         {{ inspiring }}
@@ -28,14 +28,14 @@ const inspiring = inspiringList[0];
 </template>
 
 <style lang="scss" scoped>
-h1 {
+.box {
   text-align: center;
   .name {
     transition: all 0.25s ease-in-out 0.04s;
     transform: translateY(0px);
     opacity: 1;
     font-weight: bold;
-    margin: 0 auto;
+    margin: 2rem;
     font-size: 36px;
   }
 

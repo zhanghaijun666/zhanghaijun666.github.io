@@ -2,11 +2,21 @@
   "/components": [
     {
       "order": 10,
+      "text": "示例UI",
+      "items": [
+        {
+          "text": "色块样式",
+          "link": "components/10.示例UI/10.色块样式.md"
+        }
+      ]
+    },
+    {
+      "order": 50,
       "text": "基础组件",
       "items": [
         {
           "text": "Button 按钮",
-          "link": "components/10.基础组件/10.Button 按钮.md"
+          "link": "components/50.基础组件/10.Button 按钮.md"
         }
       ]
     }

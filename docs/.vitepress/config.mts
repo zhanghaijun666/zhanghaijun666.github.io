@@ -16,8 +16,8 @@ export default defineConfig({
   base: '/docs',
   outDir: '../dist/docs',
   lang: 'zh-CN',
-  title: '知识点的精心归纳',
-  description: '个人知识点的精心归纳，每一份知识都像是仓库中的一颗宝石，等待着被发掘和利用',
+  title: '知识的精心归纳',
+  description: '个人知识的精心归纳，每一份知识都像是仓库中的一颗宝石，等待着被发掘和利用',
   head: [
     ['link', { rel: 'icon', href: '/docs/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
@@ -41,7 +41,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
-    siteTitle: '知识点的精心归纳',
+    siteTitle: '知识的精心归纳',
     nav: nav,
     sidebar: sidebar,
     socialLinks: [{ icon: 'github', link: 'https://gitee.com/haijunit/vitepress-demo' }],
