@@ -11,7 +11,7 @@ const link = site.value.base;
     <h1 class="title">{{ theme.notFound?.title ?? 'PAGE NOT FOUND' }}</h1>
     <div class="divider" />
     <blockquote class="quote">
-      {{ theme.notFound?.quote ?? "But if you don't change your direction, and if you keep looking, you may end up where you are heading." }}
+      {{ '自定义404界面' }}
     </blockquote>
 
     <div class="action">

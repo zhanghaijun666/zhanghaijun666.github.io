@@ -30,6 +30,7 @@ export default defineConfig({
     ['meta', { name: 'msapplication-TileImage', content: '/docs/logo.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
   ],
+  srcExclude: ['**/README.md', '**/TODO.md'],
   lastUpdated: true,
   //多语言
   locales: {

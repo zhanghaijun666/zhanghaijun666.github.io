@@ -1,5 +1,17 @@
 [
   { "text": "首页", "link": "/" },
   { "text": "博文笔记", "link": "/blog/" },
-  { "text": "组件指南", "link": "/components/" }
+  { "text": "组件指南", "link": "/components/" },
+  {
+    "text": "链接",
+    "items": [
+      { "text": "Github", "link": "https://github.com/windlil/vuecomp-starter" },
+      {
+        "items": [
+          { "text": "vue", "link": "https://cn.vuejs.org/" },
+          { "text": "vitepress", "link": "https://vitepress.dev/" }
+        ]
+      }
+    ]
+  }
 ]

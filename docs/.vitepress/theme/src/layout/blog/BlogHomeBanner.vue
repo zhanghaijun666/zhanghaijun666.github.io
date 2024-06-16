@@ -16,7 +16,9 @@ const inspiring = inspiringList[0];
 <template>
   <div>
     <div class="box">
-      <div class="name">{{ name }}</div>
+      <div class="name">
+        <div>{{ name }}</div>
+      </div>
       <div v-show="motto" class="motto">{{ motto }}</div>
     </div>
     <div class="inspiring-wrapper">
@@ -35,8 +37,11 @@ const inspiring = inspiringList[0];
     transform: translateY(0px);
     opacity: 1;
     font-weight: bold;
-    margin: 2rem;
+    height: 5rem;
     font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .motto {

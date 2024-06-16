@@ -259,6 +259,12 @@ export const NAV_DATA = [
     title: 'CSS 相关',
     items: [
       {
+        icon: '',
+        title: 'clippy',
+        desc: '多边形形状设置',
+        link: 'https://bennettfeely.com/clippy/',
+      },
+      {
         icon: 'https://postcss.org/assets/logo-3e39b0aa.svg',
         title: 'PostCSS',
         desc: '一个用 JavaScript 转换 CSS 的工具',

@@ -3,7 +3,7 @@ set -e
 
 REMOTE_REPO=`git remote get-url --push origin`
 COMMIT_INFO=`git describe --all --always --long`
-BUILD_DIR="docs/dist"
+BUILD_DIR="dist"
 REMOTE_BRANCH="gh-pages"
 
 ROOT_DIR=$(cd `dirname $0`/..; pwd)

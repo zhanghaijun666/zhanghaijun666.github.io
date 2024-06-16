@@ -30,6 +30,9 @@ importers:
       esbuild:
         specifier: ^0.21.4
         version: 0.21.4
+      kolorist:
+        specifier: ^1.8.0
+        version: 1.8.0
       minimist:
         specifier: ^1.2.8
         version: 1.2.8
@@ -64,6 +67,12 @@ importers:
         specifier: ^3.2.3
         version: 3.2.3
     devDependencies:
+      '@mdit/plugin-ins':
+        specifier: ^0.12.0
+        version: 0.12.0(markdown-it@14.1.0)
+      '@mdit/plugin-mark':
+        specifier: ^0.12.0
+        version: 0.12.0(markdown-it@14.1.0)
       json2yaml:
         specifier: ^1.1.0
         version: 1.1.0
@@ -91,6 +100,8 @@ importers:
       vue:
         specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.5)
+
+  packages/md-enhance: {}
 
   packages/utils: {}
 
@@ -508,6 +519,24 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
+
+  '@mdit/plugin-ins@0.12.0':
+    resolution: {integrity: sha512-Sd7/cDNGgzfOy9tDPvXs7aYzfwYGh13yjcUWMavr6zgkJqtEiCfqKhq8B0O1YIqbW3I2EGJDxSFbvPztqa9u1w==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
+  '@mdit/plugin-mark@0.12.0':
+    resolution: {integrity: sha512-BDFwbV/tbgUGL8KF2ymYNLEXT2KNBLe8D0rshDrbB4Iko1U2DywACQkmaUbYBJ1VCn7/dff35at9fWrm3QjrwQ==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -995,6 +1024,9 @@ packages:
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
+
+  kolorist@1.8.0:
+    resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
 
   linkify-it@5.0.0:
     resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
@@ -1624,6 +1656,18 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  '@mdit/plugin-ins@0.12.0(markdown-it@14.1.0)':
+    dependencies:
+      '@types/markdown-it': 14.1.1
+    optionalDependencies:
+      markdown-it: 14.1.0
+
+  '@mdit/plugin-mark@0.12.0(markdown-it@14.1.0)':
+    dependencies:
+      '@types/markdown-it': 14.1.1
+    optionalDependencies:
+      markdown-it: 14.1.0
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -2140,6 +2184,8 @@ snapshots:
       remedial: 1.0.8
 
   kind-of@6.0.3: {}
+
+  kolorist@1.8.0: {}
 
   linkify-it@5.0.0:
     dependencies:

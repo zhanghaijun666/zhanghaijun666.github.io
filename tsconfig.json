@@ -1,34 +1,13 @@
-/* Visit https://aka.ms/tsconfig to read more about this file */
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "sourceMap": true,
-    "moduleResolution": "Node",
-    "allowJs": false,
-    "noUnusedLocals": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "removeComments": false,
-    "rootDir": ".",
-    "types": ["node"],
-    "lib": ["ESNext", "DOM"],
+    "baseUrl": "./",
     "paths": {
+      "@/docs/*": ["./docs/*"],
       "@haijunit/*": ["packages/*"]
     },
-    "strict": true // 严格模式
+    "types": ["vite/client", "vitepress", "element-plus/global"]
   },
-  "include": ["**/*.vue", "**/*.ts", "**/*.d.ts"],
-  "exclude": ["**/node_modules", "**/dist"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    },
-    "transpileOnly": true,
-    "files": true
-  }
+  "include": ["**/*.ts", "**/*.vue", "**/.vitepress/**/*.ts", "**/.vitepress/**/*.vue"],
+  "exclude": ["node_modules"]
 }

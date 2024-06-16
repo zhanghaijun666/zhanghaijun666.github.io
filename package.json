@@ -5,9 +5,12 @@
   "main": "index.js",
   "private": "true",
   "scripts": {
+    "clean": "pnpm run --stream -r clean",
+    "build": "pnpm run --stream -r build",
+    "site": "bash scripts/deploy.sh",
+    "release": "pnpm clean && pnpm build && pnpm site",
     "docs:dev": "pnpm -C docs dev",
-    "docs:build": "pnpm -C docs build",
-    "docs:site": "bash scripts/deploy-docs.sh"
+    "docs:build": "pnpm -C docs build"
   },
   "author": "zhanghaijun",
   "homepage": "https://gitee.com/haijunit",
@@ -35,6 +38,7 @@
     "@types/node": "^20.12.12",
     "@vitejs/plugin-vue": "^5.0.4",
     "esbuild": "^0.21.4",
+    "kolorist": "^1.8.0",
     "minimist": "^1.2.8",
     "sass": "^1.77.2",
     "ts-node": "^10.9.2",

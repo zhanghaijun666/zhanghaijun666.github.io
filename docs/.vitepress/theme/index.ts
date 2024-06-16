@@ -1,13 +1,17 @@
 // https://vitepress.dev/guide/custom-theme
 import type { Theme } from 'vitepress';
+import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import Layout from './src/layout/Layout.vue';
+import Wave from '../components/Wave.vue';
+import NotFound from './src/layout/NotFound.vue';
 import './src/styles/index.css';
 
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import locale from 'element-plus/es/locale/lang/zh-cn';
+
 // 图标并进行全局注册
 import * as ElementPlusIconsVue from '@element-plus/icons-vue';
 
@@ -19,7 +23,13 @@ import 'vitepress-markdown-timeline/dist/theme/index.css';
 
 export default {
   extends: DefaultTheme,
-  Layout: Layout,
+  Layout() {
+    return h(Layout, null, {
+      'not-found': () => h(NotFound),
+      'home-hero-before': () => h(Wave),
+    });
+  },
+  // Layout: Layout,
   enhanceApp({ app, router, siteData }) {
     // 注册ElementPlus
     app.use(ElementPlus, { locale });

@@ -58,9 +58,15 @@ const getSvg = (item: LinkItem) => {
       width: 40px;
       height: 40px;
       border-radius: 4px;
+      transition: transform 0.8s ease;
       img {
         width: 40px;
         height: 40px;
+      }
+      &:hover {
+        transform: rotateZ(300deg);
+        -webkit-transform: rotateZ(300deg);
+        -moz-transform: rotateZ(300deg);
       }
     }
 

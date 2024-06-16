@@ -1,16 +1,35 @@
 <template>
   <!-- https://vitepress.dev/zh/guide/extending-default-theme#layout-slots -->
   <DefaultTheme.Layout>
-    <template #not-found>
-      <NotFound />
-    </template>
+    <template #page-top><slot name="page-top" /></template>
+    <template #page-bottom><slot name="page-bottom" /></template>
+
+    <template #not-found><slot name="not-found" /></template>
+    <template #home-hero-before><slot name="home-hero-before" /></template>
+    <template #home-hero-info><slot name="home-hero-info" /></template>
+    <template #home-hero-image><slot name="home-hero-image" /></template>
+    <template #home-hero-after><slot name="home-hero-after" /></template>
+    <template #home-features-before><slot name="home-features-before" /></template>
+    <template #home-features-after><slot name="home-features-after" /></template>
+
+    <template #doc-footer-before><slot name="doc-footer-before" /></template>
+    <template #doc-before><slot name="doc-before" /></template>
+    <template #doc-after><slot name="doc-after" /></template>
+    <template #doc-top><slot name="doc-top" /></template>
+    <template #doc-bottom><slot name="doc-bottom" /></template>
+
+    <template #aside-top><slot name="aside-top" /></template>
+    <template #aside-bottom><slot name="aside-bottom" /></template>
+    <template #aside-outline-before><slot name="aside-outline-before" /></template>
+    <template #aside-outline-after><slot name="aside-outline-after" /></template>
+    <template #aside-ads-before><slot name="aside-ads-before" /></template>
+    <template #aside-ads-after><slot name="aside-ads-after" /></template>
   </DefaultTheme.Layout>
 </template>
 <script setup lang="ts">
 import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import { nextTick, provide } from 'vue';
-import NotFound from './NotFound.vue';
 
 const { isDark } = useData();
 
