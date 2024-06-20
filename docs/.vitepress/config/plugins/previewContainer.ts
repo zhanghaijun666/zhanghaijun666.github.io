@@ -1,8 +1,9 @@
-import { Options, Renderer, Token } from 'markdown-it';
+import { Options } from 'markdown-it';
 import { dirname, resolve } from 'path';
 import { readFileSync } from 'fs';
+import { Token } from 'markdown-it/index.js';
 
-export const renderContainer = (tokens: Token[], idx: number, options: Options, env: any, self: Renderer) => {
+export const renderContainer = (tokens: Token[], idx: number, options: Options, env: any) => {
   const token = tokens[idx];
   if (token.nesting === 1) {
     const content = tokens[idx + 2].content.trim();

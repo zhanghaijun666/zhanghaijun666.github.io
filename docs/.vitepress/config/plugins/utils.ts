@@ -9,7 +9,7 @@ const scriptSetupCommonRE = /<\s*script\s+(setup|lang='ts'|lang="ts")?\s*(setup|
  * @param componentName
  */
 export const handleComponentName = (componentName: string) => {
-  return componentName.replaceAll(/[_|-]+(\w)/g, ($0, $1) => $1.toUpperCase());
+  return componentName.replaceAll(/[_|-]+(\w)/g, (_$0, $1) => $1.toUpperCase());
 };
 /**
  * 注入 script 脚本

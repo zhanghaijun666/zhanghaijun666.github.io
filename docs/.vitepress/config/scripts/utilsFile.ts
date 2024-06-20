@@ -32,12 +32,12 @@ export const listDirectory = (filePath: string) => {
 export const getFileItem = (fileLink: string): FileItem => {
   const name = basename(fileLink);
   const group: { [key: string]: string } = matchGroup(name);
-  if (!group.order && !group.name) {
+  if (!group['order'] && !group['name']) {
     console.error(`错误的文件名格式: ${fileLink}`);
   }
   return {
-    order: Number(group.order ?? 0),
-    text: group.name ?? name,
+    order: Number(group['order'] ?? 0),
+    text: group['name'] ?? name,
     link: fileLink,
     dirs: relative('', fileLink).split(sep).slice(0, -1),
   };

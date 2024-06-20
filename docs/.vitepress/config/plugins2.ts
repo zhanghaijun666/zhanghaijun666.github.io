@@ -1,12 +1,11 @@
 import path from 'path';
 import fs from 'fs';
-import MarkdownIt from 'markdown-it';
 import mdContainer from 'markdown-it-container';
-import type Token from 'markdown-it/lib/token';
-import type Renderer from 'markdown-it/lib/renderer';
 import { red } from 'kolorist';
-import { projRoot } from '../utils/paths';
+import { projRoot } from '../utils/path';
 import { highlight } from '../utils/highlight';
+import markdownIt from 'markdown-it';
+import { Renderer, Token } from 'markdown-it/index.js';
 
 const localMd = MarkdownIt();
 
@@ -16,7 +15,7 @@ interface ContainerOpts {
   render?(tokens: Token[], index: number, options: any, env: any, self: Renderer): string;
 }
 
-export const mdPlugin = (md: markdownit) => {
+export const mdPlugin = (md: markdownIt) => {
   // markdown-it-container 解析自定义容器 https://github.com/markdown-it/markdown-it-container#readme
   md.use(mdContainer, 'demo', {
     // 匹配markdown是否包含容器

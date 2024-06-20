@@ -12,13 +12,13 @@ const fileList: SidebarItem[] = [];
 for (let file of files) {
   const name = basename(file);
   const group: { [key: string]: string } = matchGroup(name);
-  if (!group.order && !group.name) {
+  if (!group['order'] && !group['name']) {
     console.error(`错误的文件名格式: ${file}`);
   }
   const dirs = relative('', file).split(sep);
   fileList.push({
-    order: Number(group.order ?? 0),
-    text: group.name ?? name,
+    order: Number(group['order'] ?? 0),
+    text: group['name'] ?? name,
     link: dirs.join('/'),
     path: dirs.slice(0, -2).join('/'),
     baseItem: dirs.slice(-2, -1).join('/'),
@@ -34,7 +34,7 @@ for (let level1 of level1s) {
     .map((level2): { items: DefaultTheme.SidebarItem[]; text: string; order: number } => {
       const items = fileList.filter((item) => item.path == level1 && item.baseItem == level2).sort((a, b) => a.order - b.order);
       const group = matchGroup(level2);
-      return { order: Number(group.order || 0), text: group.name || level2, items: items.map((item) => ({ text: item.text, link: item.link })) };
+      return { order: Number(group['order'] || 0), text: group['name'] || level2, items: items.map((item) => ({ text: item.text, link: item.link })) };
     })
     .sort((a, b) => a.order - b.order);
 }

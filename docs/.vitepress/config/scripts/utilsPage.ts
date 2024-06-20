@@ -74,7 +74,7 @@ export const getTags = (dirs: string[], ...items: string[]): string[] => {
   const dirTags: string[] = [];
   if (dirs.length > 0) {
     const group: { [key: string]: string } = matchGroup(dirs[dirs.length - 1]);
-    dirTags.push(group?.name ?? dirs[dirs.length - 1]);
+    dirTags.push(group?.['name'] ?? dirs[dirs.length - 1]);
   }
   return [...new Set([...items, ...dirTags].flat())].filter((v) => !!v);
 };

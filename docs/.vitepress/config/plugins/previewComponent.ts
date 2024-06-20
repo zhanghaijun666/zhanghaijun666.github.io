@@ -1,7 +1,8 @@
-import MarkdownIt, { Token } from 'markdown-it';
+import MarkdownIt from 'markdown-it';
 import { composeComponentName, injectComponentImportScript, isCheckingRelativePath, transformHighlightCode } from './utils';
 import { dirname, resolve } from 'path';
 import { readFileSync } from 'fs';
+import { Token } from 'markdown-it/index.js';
 
 const titleRegex = /title=['"](.*?)['"]/;
 const pathRegex = /path=['"](.*?)['"]/;

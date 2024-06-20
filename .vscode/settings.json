@@ -22,6 +22,8 @@
     "consola",
     "haijunit",
     "ignorecase",
+    "kolorist",
+    "mdit",
     "ntpq",
     "persistedstate",
     "Pinia",
