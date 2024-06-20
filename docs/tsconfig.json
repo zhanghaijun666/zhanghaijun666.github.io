@@ -1,7 +1,11 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../dist/docs"
+    "baseUrl": "./",
+    "outDir": "../dist/docs",
+    "paths": {
+      "@components/*": [".vitepress/components/*"]
+    }
   },
-  "include": [".vitepress/**/*", "**/src/**/*", "./**/*.md"]
+  "include": ["./**/*.md", "**/.vitepress/**/*.ts", "**/.vitepress/**/*.vue"]
 }

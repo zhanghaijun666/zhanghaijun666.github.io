@@ -1,31 +1,61 @@
 /* Visit https://aka.ms/tsconfig to read more about this file */
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "sourceMap": true,
-    "moduleResolution": "Node",
-    "allowJs": false,
+    // types
+    "allowArbitraryExtensions": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    // "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
-    "resolveJsonModule": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    // "verbatimModuleSyntax": true,
+
+    // Modules
+    "baseUrl": "./",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    // "resolveJsonModule": true,
+
+    // Emit
+    "downlevelIteration": false,
+    // "importHelpers": true,
+    "inlineSources": true,
+    "inlineSourceMap": false,
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+
+    // JavaScript
+    "allowJs": false,
+    "checkJs": false,
+
+    // Interop Constraints
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "removeComments": false,
-    "rootDir": ".",
-    "types": ["node"],
-    "lib": ["ESNext", "DOM"],
-    "paths": {
-      "@haijunit/*": ["packages/*"]
-    },
-    "strict": true
+    "forceConsistentCasingInFileNames": true,
+
+    // output formatting
+    "pretty": true,
+
+    // lib
+    "lib": ["DOM", "ESNext"],
+    // minimal node 18 support
+    "target": "ESNext",
+
+    // Compiler Diagnostics
+    "diagnostics": false,
+    "listEmittedFiles": false,
+    "skipLibCheck": true
   },
-  "include": ["**/*.vue", "**/*.ts", "**/*.d.ts"],
-  "exclude": ["**/node_modules", "**/dist"],
   "ts-node": {
     "compilerOptions": {
+      "moduleResolution": "Classic",
       "module": "CommonJS"
     },
     "transpileOnly": true,

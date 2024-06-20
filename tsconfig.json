@@ -2,12 +2,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {
-      "@/docs/*": ["./docs/*"],
-      "@haijunit/*": ["packages/*"]
-    },
     "types": ["vite/client", "vitepress", "element-plus/global"]
   },
-  "include": ["**/*.ts", "**/*.vue", "**/.vitepress/**/*.ts", "**/.vitepress/**/*.vue"],
   "exclude": ["node_modules"]
 }
