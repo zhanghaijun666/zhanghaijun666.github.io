@@ -7,5 +7,6 @@
       "@components/*": [".vitepress/components/*"]
     }
   },
-  "include": ["./**/*.md", "**/.vitepress/**/*.ts", "**/.vitepress/**/*.vue"]
+  "include": ["./**/*.md", "**/.vitepress/**/*.ts", "**/.vitepress/**/*.vue"],
+  "exclude": ["node_modules"]
 }
