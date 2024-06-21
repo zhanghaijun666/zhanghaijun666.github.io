@@ -502,31 +502,31 @@
     },
     {
       "order": 11,
-      "text": "CSS应用",
+      "text": "css应用",
       "items": [
         {
           "text": "CSS框架",
-          "link": "blog/250.前端开发/11.CSS应用/10.CSS框架.md"
+          "link": "blog/250.前端开发/11.css应用/10.CSS框架.md"
         },
         {
           "text": "CSS布局",
-          "link": "blog/250.前端开发/11.CSS应用/11.CSS布局.md"
+          "link": "blog/250.前端开发/11.css应用/11.CSS布局.md"
         },
         {
           "text": "CSS技巧",
-          "link": "blog/250.前端开发/11.CSS应用/20.CSS技巧.md"
+          "link": "blog/250.前端开发/11.css应用/20.CSS技巧.md"
         },
         {
           "text": "CSS命名规范",
-          "link": "blog/250.前端开发/11.CSS应用/30.CSS命名规范.md"
+          "link": "blog/250.前端开发/11.css应用/30.CSS命名规范.md"
         },
         {
           "text": "CSS的BEM规范",
-          "link": "blog/250.前端开发/11.CSS应用/31.CSS的BEM规范.md"
+          "link": "blog/250.前端开发/11.css应用/31.CSS的BEM规范.md"
         },
         {
           "text": "CSS悬浮",
-          "link": "blog/250.前端开发/11.CSS应用/40.CSS悬浮.md"
+          "link": "blog/250.前端开发/11.css应用/40.CSS悬浮.md"
         }
       ]
     },

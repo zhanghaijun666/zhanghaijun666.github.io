@@ -1,4 +1,7 @@
 packages:
-  - packages/*
-  - clients/*
-  - docs/
+  # 存放组件库和其他工具库
+  - 'packages/**'
+  # 文档库
+  - 'docs/'
+  # dist 目录不需要作为工作空间
+  - '!**/dist/**'

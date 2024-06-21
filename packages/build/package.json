@@ -1,0 +1,22 @@
+{
+  "name": "@haijunit/build",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "description": "",
+  "scripts": {
+    "stub": "unbuild --stub",
+    "dev": "pnpm run stub",
+    "build": "unbuild"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup-plugin-copy": "^3.5.0",
+    "unbuild": "^2.0.0",
+    "vite-plugin-dts": "^3.9.1"
+  }
+}

@@ -1,8 +1,12 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "composite": true
+    "baseUrl": "./",
+    "outDir": "../dist/components",
+    "composite": true,
+    "paths": {
+      "@haijunit/*": ["packages/*"]
+    }
   },
-  "include": ["./src"]
+  "include": ["./**/*.ts", "./**/*.vue"]
 }
