@@ -1,5 +1,21 @@
 [
   {
+    "order": 0,
+    "title": "index.md",
+    "date": "2024-06-15 21:41:10",
+    "tags": ["components"],
+    "description": "使用组件库教程",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "色块样式",
+    "date": "2024-06-15 21:41:10",
+    "tags": ["示例UI"],
+    "description": "&lt;script setup lang=\"ts\"\nimport { ref } from 'vue'\nconst colorSelect = ref(\"item1\")\nconst colorCou",
+    "cover": ""
+  },
+  {
     "order": 10,
     "title": "Button 按钮",
     "date": "2024-06-04 14:28:53",
@@ -70,6 +86,30 @@
     "date": "2024-06-12 13:53:49",
     "tags": ["常用工具"],
     "description": "[[toc]]\n 密钥配置\n```bash\n 生产本地用户的ssh key\nssh-keygen\n```\n Git 配置\n```bash {2,4,14}\n 配置用户名\ngit config --gl",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "工作日报",
+    "date": "2024-06-24 11:14:56",
+    "tags": ["文档模板"],
+    "description": "1月1日\n 今日记录\n| 工作事项 | 进展                         | 合作伙伴 | 物料支持 | 备注 |\n| -------- | -------------------",
+    "cover": ""
+  },
+  {
+    "order": "20",
+    "title": "会议纪要",
+    "date": "2024-06-24 11:20:34",
+    "tags": ["文档模板"],
+    "description": "&gt;\n&gt; 会议日期：X月X日\n&gt;\n&gt; 主持人：主持人\n&gt;\n&gt; 参会人：全部参会人\n 会前必读\n&gt; 插入会议所需资料\n 今日议程\n 议题 1：输入要讨论的主题\n&",
+    "cover": ""
+  },
+  {
+    "order": "30",
+    "title": "项目规划",
+    "date": "2024-06-24 11:24:27",
+    "tags": ["文档模板"],
+    "description": "一、项目背景\n介绍项目成立的背景\n 二、项目目标\n- 1、制定具体、细化、可拆解的目标\n- 2、目标二：......\n 三、核心成员与项目群组\n| 核心成员 | 项目角色与负责事项 |\n| -----",
     "cover": ""
   },
   {
@@ -698,34 +738,42 @@
     "cover": ""
   },
   {
-    "order": 10,
-    "title": "CSS技巧",
+    "order": 40,
+    "title": "canvas效果",
     "date": "2021-03-07 20:08:00",
-    "tags": ["CSS", "CSSS", "css应用"],
-    "description": "&lt;!-- more --\n[[toc]]\n 浏览器的兼容性\n- 网络上已经有成熟的css代码库为我们解决浏览器不一致问题，例如normalize.css、minireset和ress，你可以在你",
+    "tags": ["JavaScript", "CSS", "css应用", "HTML"],
+    "description": "&lt;!-- more --\n[[toc]]\n 时钟\n::: normal-demo [vanilla]\n```html\n&lt;html&gt;\n  &lt;div&gt;&lt;canvas i",
+    "cover": ""
+  },
+  {
+    "order": "10",
+    "title": "CSS框架",
+    "date": "2024-06-16 22:09:13",
+    "tags": ["css应用"],
+    "description": "normalize.css\n- 项目地址: &lt;https://necolas.github.io/normalize.css/\n&gt; normalize.css 是一个很小的 CSS 文件，",
     "cover": ""
   },
   {
     "order": 11,
     "title": "CSS布局",
     "date": "2021-03-07 20:08:00",
-    "tags": ["CSS", "CSSS", "css应用"],
-    "description": "&lt;!-- more --\n[[toc]]\n 1. 实现水平居中和垂直居中\n&gt;\n&gt; 源码地址：https://codepen.io/una/pen/YzyYbBx\n```css\n.pa",
+    "tags": ["CSS", "css应用"],
+    "description": "&lt;!-- more --\n[[toc]]\n 1. 实现水平居中和垂直居中\n&gt; 源码地址：https://codepen.io/una/pen/YzyYbBx\n```css\n.parent ",
     "cover": ""
   },
   {
-    "order": 20,
-    "title": "CSS悬浮",
+    "order": 10,
+    "title": "CSS技巧",
     "date": "2021-03-07 20:08:00",
-    "tags": ["CSS", "CSSS", "css应用"],
-    "description": "&lt;!-- more --\n[[toc]]\n 1. 发送效果\n::: normal-demo [vanilla]\n```html\n&lt;html&gt;\n&lt;div id=\"send-btn",
+    "tags": ["CSS", "css应用"],
+    "description": "&lt;!-- more --\n[[toc]]\n 浏览器的兼容性\n- 网络上已经有成熟的 css 代码库为我们解决浏览器不一致问题，例如 normalize.css、minireset 和 ress，",
     "cover": ""
   },
   {
     "order": 30,
     "title": "CSS命名规范",
     "date": "2023-11-22 00:00:00",
-    "tags": ["CSSS", "CSS", "css应用"],
+    "tags": ["CSS", "css应用"],
     "description": "CSS 的命名，采用 BEM 命名规范，可以有效的避免组件间样式的相互污染，减少嵌套层级。具体规则如下：\n BEM 是什么?\nBEM 使用分隔符将类名区隔成三个部分：\n[prefix]-[block]",
     "cover": ""
   },
@@ -733,16 +781,16 @@
     "order": 31,
     "title": "CSS的BEM规范",
     "date": "2021-03-07 20:08:00",
-    "tags": ["CSS", "CSSS", "css应用"],
-    "description": "Css中BEM书写规范\n\n&gt; BEM是Block（块）、Element（元素）、Modifier（修饰符）的简写，是一种组件化的 CSS 命名方法和规范\n&gt;\n&gt; BEM是基于组件的w",
+    "tags": ["CSS", "css应用"],
+    "description": "Css 中 BEM 书写规范\n\n&gt;\n&gt; BEM 是基于组件的 web 开发方法。其思想是将用户界面分隔为独立的块，从而使开发复杂的 UI 界面变得更简单和快，且不需要粘贴复制便可复用现有代",
     "cover": ""
   },
   {
-    "order": 40,
-    "title": "canvas效果",
+    "order": 20,
+    "title": "CSS悬浮",
     "date": "2021-03-07 20:08:00",
-    "tags": ["JavaScript", "CSSS", "CSS", "css应用"],
-    "description": "&lt;!-- more --\n[[toc]]\n 时钟\n::: normal-demo [vanilla]\n```html\n&lt;html&gt;\n&lt;div&gt;&lt;canvas id=",
+    "tags": ["CSS", "css应用"],
+    "description": "&lt;!-- more --\n[[toc]]\n 1. 发送效果\n::: normal-demo [vanilla]\n```html\n&lt;html&gt;\n  &lt;div id=\"send-b",
     "cover": ""
   },
   {
@@ -930,6 +978,14 @@
     "cover": ""
   },
   {
+    "order": "21",
+    "title": "Promise的并发控制",
+    "date": "2024-06-21 18:37:13",
+    "tags": ["数据应用"],
+    "description": "- 普通并发池\n 场景\n\n 普通并发池\n&gt; 主要思路就是，判断当前队列是否满，满则等待，有空闲则补齐。\n&gt;\n&gt; 利用`Promise.race`方法，可以判断一个Promise数组中",
+    "cover": ""
+  },
+  {
     "order": 20,
     "title": "vitepress配置",
     "date": "2024-06-04 14:28:53",
@@ -1011,7 +1067,7 @@
   },
   {
     "order": 81,
-    "title": "20230815",
+    "title": 20230815,
     "date": "2023-06-18 00:00:00",
     "tags": ["Java"],
     "description": "1、Redis 的单机、哨兵、集群的区别和选型？\n 单机模式\n\n- 缺点\n  - 单点故障：如果 Redis 实例出现故障，数据可能会丢失。\n  - 有限的容量：内存容量受到物理服务器的限制。\n  -",

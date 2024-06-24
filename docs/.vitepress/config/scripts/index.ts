@@ -21,4 +21,10 @@ const generateDirPageData = (dirPath: string) => {
   listDirectory(dirPath).forEach((item) => generateDirPageData(item));
 };
 
-['blogs'].forEach((item) => generateDirPageData(item));
+['blog'].forEach((item) => generateDirPageData(item));
+
+// const files = glob.sync('blog/**/page.json');
+// console.log(files.length);
+// files.forEach((item) => {
+//   unlink(item, () => {});
+// });
