@@ -1,6 +1,8 @@
 # --------------------------------------------------------------
 # more gitignore templates see https://github.com/github/gitignore
 # --------------------------------------------------------------
+/docs/blog/**/page.json
+
 **/node_modules/
 **/dist/
 **/cache/
