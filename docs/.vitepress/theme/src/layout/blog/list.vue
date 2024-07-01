@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useData, withBase } from 'vitepress';
+import { useData, withBase } from "vitepress";
 const { theme } = useData();
 
-import PageDate from '../../../../config/data/index';
+import PageDate from "../../../../config/data/index";
 const { page } = PageDate;
 </script>
 
@@ -59,7 +59,7 @@ const { page } = PageDate;
       <template v-for="(item, index) in page" :key="index">
         <div class="card blog-box">
           <div class="title">
-            <text class="topTip">置顶</text>
+            <text class="topTip" v-if="item.top">置顶</text>
             <a class="name" :href="item.link || '/'" target="_blank">{{ item.title }}</a>
             <a :href="item.link || '/'" class="jump" target="_blank">阅读全文 》</a>
           </div>
@@ -67,10 +67,10 @@ const { page } = PageDate;
           <div class="info">
             <div>时间: {{ item.date }}</div>
             <div>分类: 个人博客</div>
-            <div>标签: {{ item.tags.join(' / ') }}</div>
+            <div>标签: {{ item.tags.join(" / ") }}</div>
           </div>
           <div class="content">
-            <span>有两种软件设计的方式：一种是使它足够简单以致于明显没有缺陷，另一种则是使它足够复杂以致于没有明显的缺陷。</span>
+            <span>{{ item.description }}</span>
           </div>
         </div>
       </template>

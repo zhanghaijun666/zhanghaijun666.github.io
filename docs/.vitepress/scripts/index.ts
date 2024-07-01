@@ -1,38 +1,30 @@
 import glob from "fast-glob";
-import matter from "gray-matter";
-import { PAGE_IGNORE, PAGE_SOURCE, docsRoot } from "./path";
-import { readFileSync } from "fs";
-import { basename, relative, sep } from "path";
-import { matchGroup } from "./utils";
-import { FileItem } from ".vitepress/typings/blog";
+import { PAGE_IGNORE } from "./path";
+import { getFileItem, joinPath, listDirectory } from "./utilsFile";
+import { mkdirSync, writeFileSync } from "fs";
 
-console.log(docsRoot);
-
-const files = glob.sync(PAGE_SOURCE, { ignore: PAGE_IGNORE });
-const pageData: FileItem[] = [];
-for (let file of files) {
-  const group: { [key: string]: string } = matchGroup(basename(file));
-  if (!group["name"]) {
-    continue;
+const generateDirPageData = (dirPath: string) => {
+  const files = glob.sync(dirPath + "/**/*.md", { ignore: PAGE_IGNORE });
+  if (files.length === 0) {
+    return;
   }
-  const order = Number(group["order"] || 0);
-  const name = group["name"];
+  console.log("--- 生成目录文章，", dirPath);
+  mkdirSync(dirPath, { recursive: true });
+  writeFileSync(
+    joinPath(dirPath, "page.json"),
+    JSON.stringify(
+      files.map(item => getFileItem(item)).sort((a, b) => a.order - b.order),
+      null,
+      2
+    )
+  );
+  listDirectory(dirPath).forEach(item => generateDirPageData(item));
+};
 
-  const fileContent = readFileSync(file, "utf-8");
-  const dirs: string[] = relative("", file).split(sep).slice(0, -1);
-  const { data: frontmatter = {}, excerpt, content } = matter(fileContent, { excerpt: true });
-  if (frontmatter["layout"]) {
-    continue;
-  }
-  const { tag, tags, categories } = frontmatter;
-  pageData.push({
-    order,
-    title: name,
-    link: file,
-    date: "",
-    author: "",
-    tags: "",
-    categories: "",
-    keywords: ""
-  });
-}
+["blog"].forEach(item => generateDirPageData(item));
+
+// const files = glob.sync('blog/**/page.json');
+// console.log(files.length);
+// files.forEach((item) => {
+//   unlink(item, () => {});
+// });
