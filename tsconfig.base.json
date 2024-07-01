@@ -60,5 +60,6 @@
     },
     "transpileOnly": true,
     "files": true
+    // "require": ["typescript-transform-paths/register"]
   }
 }

@@ -1,0 +1,10 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+**/dist
+**/mock
+**/public
+**/*.svg
+**/*.ejs
+**/*.html
