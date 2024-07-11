@@ -1,11 +1,3 @@
-// 文件或者文件夹命名规则: [排序号].[文件名称].md
-export const REGEX_PAGE_NAME = new RegExp(/^(?<order>\d+)\.(?<name>[^.]*)(\.md)?$/);
-// 文章内图片正则
-export const REGEX_IMAGE = /!\[.*?\]\((.*?)\s*(".*?")?\)/;
-// 页面文件位置
-export const PAGE_SOURCE = [`components/**/*.md`, `blog/**/*.md`];
-export const PAGE_IGNORE = ['.vitepress/**', 'node_modules/**', 'src/**'];
-
 export type FileItem = {
   order: number;
   text: string;
@@ -23,6 +15,7 @@ export type SidebarItem = {
 export type MatterItem = {
   order: number; // 排序
   title: string; // 标题
+  top: boolean;
   date: string; // 创建时间
   author?: string; // 作者
   tags?: string[]; // 标签
@@ -34,4 +27,5 @@ export type MatterItem = {
 export type PageItem = MatterItem & {
   description: string; // 文章摘要
   cover: string; // 文章封面
+  link: string;
 };

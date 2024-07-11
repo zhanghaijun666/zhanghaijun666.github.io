@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue';
-import { useActiveElement } from '@vueuse/core';
+import { onBeforeUnmount, onMounted, ref, watch } from "vue";
+import { useActiveElement } from "@vueuse/core";
 
 const canvas = ref<HTMLCanvasElement | null>(null);
 const rootEl = document.documentElement;
@@ -9,7 +9,7 @@ let cancelAnimate: (() => void) | undefined;
 function animateWave() {
   // 获取画布
   const canvasEl = canvas.value!;
-  const canvasPen = canvasEl.getContext('2d')!; // 设置波浪海域（海浪宽度，高度）
+  const canvasPen = canvasEl.getContext("2d")!; // 设置波浪海域（海浪宽度，高度）
   const canvasWidth = canvasEl.width;
   const canvasHeight = canvasEl.height;
   const lineWidth = 2; // 曲线
@@ -26,7 +26,7 @@ function animateWave() {
   let canceled = false;
   canvasPen.lineWidth = lineWidth;
   const rootStyle = getComputedStyle(rootEl!);
-  const bgColor = rootStyle.getPropertyValue('--vp-c-bg');
+  const bgColor = rootStyle.getPropertyValue("--vp-c-bg");
   // 创建静态的曲线
   function drawWave(offsetX = 0) {
     canvasPen.save(); // 存放贝塞尔曲线的各个点
@@ -42,7 +42,7 @@ function animateWave() {
     canvasPen.lineTo(points[0][0], points[0][1]);
     canvasPen.stroke();
     canvasPen.restore(); // 贝塞尔曲线样式设置
-    canvasPen.strokeStyle = 'transparent';
+    canvasPen.strokeStyle = "transparent";
     canvasPen.fillStyle = bgColor;
     canvasPen.fill();
   }
@@ -74,16 +74,16 @@ function refresh() {
     cancelAnimate = undefined;
   }
   if (isMounted && canvas.value) {
-    canvas.value.setAttribute('width', `${canvas.value.offsetWidth}`);
-    canvas.value.setAttribute('height', `${canvas.value.offsetHeight}`);
+    canvas.value.setAttribute("width", `${canvas.value.offsetWidth}`);
+    canvas.value.setAttribute("height", `${canvas.value.offsetHeight}`);
     cancelAnimate = animateWave();
   }
 }
 const activeElement = useActiveElement();
 
-watch(activeElement, (el) => {
-  if (el?.getAttribute('class')?.includes('VPSwitchAppearance')) {
-    el.addEventListener('click', () => {
+watch(activeElement, el => {
+  if (el?.getAttribute("class")?.includes("VPSwitchAppearance")) {
+    el.addEventListener("click", () => {
       refresh();
     });
   }
@@ -112,10 +112,10 @@ watch(activeElement, (el) => {
   background-image: linear-gradient(to bottom, transparent, var(--vp-c-brand));
 }
 .wave {
-  position: relative;
-  top: -150px;
+  position: absolute;
   right: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 150px;
   background-color: transparent;

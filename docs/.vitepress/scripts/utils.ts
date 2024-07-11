@@ -1,4 +1,4 @@
-import { REGEX_PAGE_NAME } from './typings';
+import { REGEX_PAGE_NAME } from "./path";
 
 /**
  * 格式化日期为指定格式的字符串
@@ -6,18 +6,18 @@ import { REGEX_PAGE_NAME } from './typings';
  * @param format - 指定的格式，默认值为 'yyyy-MM-dd hh:mm:ss'
  * @returns 格式化后的日期字符串
  */
-export function dateFormat(input: Date | string | number, format: string = 'yyyy-MM-dd hh:mm:ss'): string {
+export function dateFormat(input: Date | string | number, format: string = "yyyy-MM-dd hh:mm:ss"): string {
   let date: Date = input instanceof Date ? input : new Date(input);
-  const padZero = (num: number): string => (num < 10 ? '0' + num : num.toString());
+  const padZero = (num: number): string => (num < 10 ? "0" + num : num.toString());
   const formatMap: { [key: string]: string } = {
     yyyy: date.getFullYear().toString(),
     MM: padZero(date.getMonth() + 1),
     dd: padZero(date.getDate()),
     hh: padZero(date.getHours()),
     mm: padZero(date.getMinutes()),
-    ss: padZero(date.getSeconds()),
+    ss: padZero(date.getSeconds())
   };
-  return format.replace(/(yyyy|MM|dd|hh|mm|ss)/g, (match) => formatMap[match]);
+  return format.replace(/(yyyy|MM|dd|hh|mm|ss)/g, match => formatMap[match]);
 }
 
 /**
@@ -63,7 +63,7 @@ export function dateFormatAlias(date: Date | string) {
   if (diff < oneWeek) {
     return `${Math.floor(diff / oneDay)}天前`;
   }
-  return dateFormat(new Date(date), 'yyyy-MM-dd');
+  return dateFormat(new Date(date), "yyyy-MM-dd");
 }
 /**
  * 从字符串中匹配正则表达式的分组并返回
@@ -71,6 +71,6 @@ export function dateFormatAlias(date: Date | string) {
  * @param reg - 正则表达式（默认为 REGEX_PAGE_NAME）
  * @returns 匹配到的分组对象，如果没有匹配到则返回空对象
  */
-export const matchGroup = (str: string, reg: RegExp = REGEX_PAGE_NAME): { [key: string]: string } => (str || '').match(reg)?.groups ?? {};
+export const matchGroup = (str: string, reg: RegExp = REGEX_PAGE_NAME): { [key: string]: string } => (str || "").match(reg)?.groups ?? {};
 // 是否是Base64格式的图片
 export const isBase64ImageURL = (url: string): boolean => /^data:image\/[a-z]+;base64,/.test(url);

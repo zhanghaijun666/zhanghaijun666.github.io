@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      .div1 {
+        font-size: 56px;
+        font-weight: bold;
+        text-align: center;
+        /*字体粗细*/
+        -webkit-text-stroke: 1px #aa55ff;
+        /*描边*/
+        -webkit-text-fill-color: transparent;
+      }
+      .div2 {
+        text-align: center;
+        font-size: 50px;
+        background: -webkit-linear-gradient(top, #ff007f, #aaaaff); /*线性渐变*/
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; /*文字的填充颜色 透明色*/
+      }
+      .div3 {
+        color: #ffffff;
+        font-size: 60px;
+        font-weight: 700;
+        text-shadow: 1px 0px #ff5500, 1px 2px #ff5500, 3px 1px #ffaa00, 2px 3px #ff5500, 4px 2px #ffaa00, 4px 4px #ff5500, 5px 3px #ffaa00, 5px 5px #ff5500, 7px 4px #ffaa00,
+          6px 6px #ff5500, 8px 5px #ffaa00, 7px 7px #ff5500, 9px 6px #ffaa00, 9px 8px #ff5500, 11px 7px #ffaa00;
+      }
+      .div4 {
+        font-size: 50px;
+        font-weight: bold;
+        background-image: url('https://img2.baidu.com/it/u=118187512,3642343065&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=300');
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 1px #ff5500;
+        -webkit-text-fill-color: transparent;
+      }
+      .div5 {
+        padding: 30px 50px;
+        background: #000000;
+        font-size: 32px;
+        color: #989898;
+        text-align: center;
+        writing-mode: vertical-rl;
+        line-height: 55px;
+      }
+      .box {
+        width: 300px;
+        height: 400px;
+        background-color: cadetblue;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .tag {
+        position: absolute;
+        top: 5%;
+        right: -21px;
+        width: 100px;
+        line-height: 20px;
+        text-align: center;
+        font-size: 13px;
+        color: #fff;
+        background-color: #ff0000;
+
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">文字镂空</div>
+    <div class="div2">渐变文字</div>
+    <div class="div3">立体文字</div>
+    <div class="div4">图片嵌入文字</div>
+    <div class="div5">
+      <h4>《念奴娇·赤壁怀古》苏轼</h4>
+      <p>
+        大江东去，浪淘尽，千古风流人物。<br />
+
+        故垒西边，人道是，三国周郎赤壁。<br />
+
+        乱石穿空，惊涛拍岸，卷起千堆雪。<br />
+
+        江山如画，一时多少豪杰。<br />
+
+        遥想公瑾当年，小乔初嫁了，雄姿英发。<br />
+
+        羽扇纶巾，谈笑间，樯橹灰飞烟灭。<br />
+
+        故国神游，多情应笑我，早生华发。<br />
+
+        人生如梦，一尊还酹江月。<br />
+      </p>
+    </div>
+    <div class="box">
+      <div class="tag">斜角标签</div>
+    </div>
+  </body>
+</html>

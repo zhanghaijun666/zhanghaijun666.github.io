@@ -1,0 +1,68 @@
+# 设置换行符为LF
+* text=auto eol=lf
+
+# 设置特殊文件类型
+*.txt text
+*.sh text
+*.lic text
+*.cpp text
+
+# Vue单文件组件
+*.vue text
+
+# JavaScript 和 TypeScript
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+
+# JSON 文件
+*.json text
+
+# CSS 和预处理器文件
+*.css text
+*.scss text
+*.sass text
+*.less text
+
+# HTML 文件
+*.html text
+
+# Markdown 文件
+*.md text
+
+# YAML 文件
+*.yml text
+*.yaml text
+
+# Shell 脚本
+*.sh text eol=lf
+
+# 配置文件
+*.config text
+*.conf text
+*.ini text
+*.env text
+
+# 图像文件 - 二进制处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+
+# Font 文件 - 二进制处理
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# 压缩文件 - 二进制处理
+*.zip binary
+*.gz binary
+*.tar binary
+*.rar binary
+*.7z binary
+
+# PDF 文件 - 二进制处理
+*.pdf binary
