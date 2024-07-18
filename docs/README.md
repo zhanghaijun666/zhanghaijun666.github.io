@@ -14,6 +14,7 @@
 
 - 無名小栈: <https://blog.imsyy.top/>
 - 多主题样式: <https://hexo.io/themes/>
+- 唐志远: <https://fe32.top/>
 
 ## 文档
 
