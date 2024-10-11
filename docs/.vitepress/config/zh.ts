@@ -6,7 +6,7 @@ const pkg = require('vitepress/package.json')
 
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  description: '由 Vite 和 Vue 驱动的静态站点生成器',
+  description: '积累点滴，汇聚成溪。',
 
   themeConfig: {
     nav: nav(),
@@ -19,11 +19,6 @@ export const zh = defineConfig({
     editLink: {
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页面'
-    },
-
-    footer: {
-      message: '基于 MIT 许可发布',
-      copyright: `版权所有 © 2019-${new Date().getFullYear()} haijunit`
     },
 
     docFooter: {

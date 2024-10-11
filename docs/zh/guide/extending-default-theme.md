@@ -303,7 +303,6 @@ Result (**warning!**: flashing colors, sudden movements, bright lights):
 <details>
 <summary>Demo</summary>
 
-![Appearance Toggle Transition Demo](/appearance-toggle-transition.webp)
 
 </details>
 

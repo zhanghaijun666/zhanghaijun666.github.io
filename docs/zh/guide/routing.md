@@ -102,21 +102,21 @@ src/getting-started.md  -->  /getting-started.html
 **输入**
 
 ```md
-[Link to pure.html](/pure.html){target="_self"}
+[Link to clock.html](/html/clock.html){target="_self"}
 ```
 
 **输出**
 
-[Link to pure.html](/pure.html){target="_self"}
+[Link to clock.html](/html/clock.html){target="_self"}
 
 ::: tip 注意
 
-在 Markdown 链接中，`base` 会自动添加到 URL 前面。这意味着，如果想链接到 `base` 之外的页面，则链接中需要类似 `../../pure.html` 的内容（由浏览器相对于当前页面解析）。
+在 Markdown 链接中，`base` 会自动添加到 URL 前面。这意味着，如果想链接到 `base` 之外的页面，则链接中需要类似 `../../html/clock.html` 的内容（由浏览器相对于当前页面解析）。
 
 或者，可以直接使用锚标记语法：
 
 ```md
-<a href="/pure.html" target="_self">Link to pure.html</a>
+<a href="/html/clock.html" target="_self">Link to clock.html</a>
 ```
 
 :::
