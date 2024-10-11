@@ -1,3 +1,14 @@
 node_modules
 dist
 *-lock.*
+docs/.vitepress/cache
+**/logs/
+*.log
+**/.temp
+**/.DS_Store
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
