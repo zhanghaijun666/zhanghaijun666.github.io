@@ -21,8 +21,7 @@ export default {
   Layout: () => {
     return h(Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-footer-before': () => h(BackTop),
-      'layout-bottom': () => h(DataPanel)
+      'doc-footer-before': () => h(BackTop)
     })
   },
   enhanceApp: async ({ app, router, siteData }) => {

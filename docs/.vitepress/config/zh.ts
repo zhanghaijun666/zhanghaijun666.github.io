@@ -31,6 +31,11 @@ export const zh = defineConfig({
       level: [2, 3]
     },
 
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: `Copyright © 2023-${new Date().getFullYear()} 备案号：<a href="/" target="_blank">京****号</a>`
+    },
+
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
@@ -50,6 +55,7 @@ export const zh = defineConfig({
 
 function nav(): DefaultTheme.NavItem[] {
   return [
+    { text: '首页', link: '/' },
     {
       text: '指南',
       link: '/vitepress/guide/what-is-vitepress',
@@ -60,19 +66,7 @@ function nav(): DefaultTheme.NavItem[] {
       link: '/vitepress/reference/site-config',
       activeMatch: '/vitepress/reference/'
     },
-    {
-      text: pkg.version,
-      items: [
-        {
-          text: '更新日志',
-          link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md'
-        },
-        {
-          text: '参与贡献',
-          link: 'https://github.com/vuejs/vitepress/blob/main/.github/contributing.md'
-        }
-      ]
-    }
+    { text: `VitePress ${pkg.version}`, link: 'https://vitepress.dev/zh/', noIcon: true }
   ]
 }
 

@@ -8,6 +8,7 @@ export const shared = defineConfig({
   rewrites: {
     // 'zh/:rest*': ':rest*'
   },
+  // cleanUrls:true, //开启纯净链接
   // sitemap: {
   //   hostname: 'https://vitepress.dev',
   //   transformItems(items) {
@@ -55,7 +56,10 @@ export const shared = defineConfig({
   },
   themeConfig: {
     logo: { src: '/logo.svg', width: 24, height: 24 },
-
+    editLink: {
+      pattern: 'https://gitee.com/haijunit_navi/navi-docs/edit/vitepress/docs/:path',
+      text: '编辑本页'
+    },
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
     search: {
       provider: 'local',

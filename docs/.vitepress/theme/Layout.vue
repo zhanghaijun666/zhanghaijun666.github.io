@@ -40,7 +40,23 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <DefaultTheme.Layout />
+  <!-- https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue -->
+  <DefaultTheme.Layout>
+    <template #page-top>
+      <slot name="page-top" />
+    </template>
+    <template #page-bottom>
+      <slot name="page-bottom" />
+    </template>
+
+    <template #not-found>
+      <slot name="not-found" />
+    </template>
+    <template #doc-footer-before>
+      <slot name="doc-footer-before" />
+    </template>
+
+  </DefaultTheme.Layout>
 </template>
 
 <style>

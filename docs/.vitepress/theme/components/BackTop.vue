@@ -11,7 +11,7 @@
   </Transition>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
 // 是否显示返回顶部
@@ -45,8 +45,7 @@ onMounted(() => window.addEventListener("scroll", onScroll));
 // 移除监听事件
 onBeforeUnmount(() => window.removeEventListener("scroll", onScroll));
 </script>
-
-<style lang="css" scoped>
+<style scoped>
 .vitepress-backTop-main {
   z-index: 999;
   position: fixed;
