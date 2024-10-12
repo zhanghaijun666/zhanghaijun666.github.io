@@ -6,11 +6,9 @@ export const shared = defineConfig({
   title: '学习笔记',
   srcDir: './docs',
   outDir: './dist',
-  srcExclude: ['index.md'],
   rewrites: {
     // 'zh/:rest*': ':rest*'
   },
-  // cleanUrls:true, //开启纯净链接
   // sitemap: {
   //   hostname: 'https://vitepress.dev',
   //   transformItems(items) {

@@ -38,7 +38,7 @@
     "editor.tabCompletion": "on",
     "editor.acceptSuggestionOnEnter": "on"
   },
-  "cSpell.words": ["busuanzi", "consola", "docsearch", "haijun", "haijunit", "kebabcase", "mathjax", "navi", "pathe", "titlecase", "vitepress", "zhang"],
+  "cSpell.words": ["busuanzi", "consola", "docsearch", "haijun", "haijunit", "kebabcase", "mathjax", "navi", "pathe", "titlecase", "vitepress", "webp", "zhang"],
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
