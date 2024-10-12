@@ -1,20 +1,19 @@
-# VitePress搭建个人导航
-
+# 搭建链接墙
 
 ## 简介
 
-VitePress也能做导航，Amazing！[@茂茂大神](https://github.com/maomao1996/mm-notes) 牛批！
+VitePress 也能做导航，Amazing！[@茂茂大神](https://github.com/maomao1996/mm-notes) 牛批！
 
-* 项目：https://github.com/maomao1996/vitepress-nav-template
+- 项目：<https://github.com/maomao1996/vitepress-nav-template>
 
-* DEMO：https://fe-nav.netlify.app/nav/
+- DEMO：<https://fe-nav.netlify.app/nav/>
 
-* 我的演示页：[本次教程演示](./mao.md)
+- 我的演示页：[本次教程演示](./mao.md)
 
 ::: details 其他衍生导航
-* ahua：[仓库](https://github.com/ahua666/StarNavigation) 丨 [DEMO](https://star-navigation.vercel.app/)
-:::
 
+- ahua：[仓库](https://github.com/ahua666/StarNavigation) 丨 [DEMO](https://star-navigation.vercel.app/)
+  :::
 
 ## 新建布局
 
@@ -27,7 +26,7 @@ VitePress也能做导航，Amazing！[@茂茂大神](https://github.com/maomao19
 │  │  └─ config.mts
 │  │  └─ theme
 │  │      └─ index.ts   <-- 我在这里
-│  └─ index.md        
+│  └─ index.md
 └─ package.json
 ```
 
@@ -62,10 +61,10 @@ export default {
   },
 }
 ```
+
 :::
 
-
-:::: details vue如果是报红的状态?
+:::: details vue 如果是报红的状态?
 安装 `vue` 即可，已安装的无视！
 
 ::: tip 说明
@@ -73,6 +72,7 @@ export default {
 :::
 
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D vue
 ```
@@ -88,11 +88,9 @@ npm i -D vue
 ```sh [bun]
 bun add -D vue
 ```
+
 :::
 ::::
-
-
-
 
 ## 新建组件
 
@@ -108,11 +106,11 @@ bun add -D vue
 .
 ├─ docs
 │  ├─ .vitepress
-│  │  └─ theme          
-│  │     └─ utils       
+│  │  └─ theme
+│  │     └─ utils
 │  │         └─ types.ts   <-- 我在这
 │  │  └─ config.mts
-│  └─ index.md       
+│  └─ index.md
 └─ package.json
 ```
 
@@ -144,8 +142,8 @@ export interface NavData {
   items: NavLink[]
 }
 ```
-:::
 
+:::
 
 在 `.vitepress/theme/components` 分别新建 `MNavLink.vue` 和 `MNavLinks.vue` 文件
 
@@ -153,12 +151,12 @@ export interface NavData {
 .
 ├─ docs
 │  ├─ .vitepress
-│  │  └─ theme          
-│  │     └─ components      
+│  │  └─ theme
+│  │     └─ components
 │  │         └─ MNavLink.vue    <-- 我在这
 │  │         └─ MNavLinks.vue   <-- 我在这
 │  │  └─ config.mts
-│  └─ index.md       
+│  └─ index.md
 └─ package.json
 ```
 
@@ -210,11 +208,7 @@ const formatBadge = computed(() => {
         <template v-if="!noIcon">
           <div v-if="svg" class="icon" v-html="svg"></div>
           <div v-else-if="icon && typeof icon === 'string'" class="icon">
-            <img
-              :src="withBase(icon)"
-              :alt="title"
-              onerror="this.parentElement.style.display='none'"
-            />
+            <img :src="withBase(icon)" :alt="title" onerror="this.parentElement.style.display='none'" />
           </div>
         </template>
         <h5 v-if="title" :id="formatTitle" class="title" :class="{ 'no-icon': noIcon }">
@@ -331,7 +325,7 @@ const formatBadge = computed(() => {
 </style>
 ```
 
-``` [MNavLinks.vue]
+```[MNavLinks.vue]
 <script setup lang="ts">
 import { computed } from 'vue'
 import { slugify } from '@mdit-vue/shared'
@@ -387,8 +381,8 @@ const formatTitle = computed(() => {
 }
 </style>
 ```
-:::
 
+:::
 
 这里有报红，我们要安装 `@mdit-vue/shared`
 
@@ -396,8 +390,8 @@ const formatTitle = computed(() => {
 按 `CTRL+C` 退出开发预览模式后安装，安装完成再重新启动
 :::
 
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D @mdit-vue/shared
 ```
@@ -413,6 +407,7 @@ npm i -D @mdit-vue/shared
 ```sh [bun]
 bun add -D @mdit-vue/shared
 ```
+
 :::
 
 最后我们注册一下 `MNavLinks.vue` 组件，后期我们只需要引用它就够了
@@ -432,9 +427,6 @@ export default {
   },
 }
 ```
-
-
-
 
 ## 新建页面
 
@@ -457,14 +449,12 @@ export default {
 
 粘贴下面代码保存
 
-
 ```md{3}
 ---
 layout: doc
 layoutClass: m-nav-layout
 ---
 ```
-
 
 ## 新建样式
 
@@ -477,8 +467,8 @@ layoutClass: m-nav-layout
 │  │  └─ theme
 │  │     └─ style
 │  │        └─ nav.scss
-│  ├─ nav             
-│  │  └─ index.md     
+│  ├─ nav
+│  │  └─ index.md
 │  └─ index.md
 └─ package.json
 ```
@@ -489,45 +479,45 @@ layoutClass: m-nav-layout
 
 ```scss [nav.scss]
 .m-nav-layout {
-    /* 覆盖全局的 vp-layout-max-width（仅当前页面使用） */
-    --vp-layout-max-width: 1660px;
-  
-    /* layout 样式 */
-    .container {
-      max-width: var(--vp-layout-max-width) !important;
-    }
-    .content-container,
-    .content {
-      max-width: 100% !important;
-    }
-  
-    /* aside 样式 */
-    .aside {
-      padding-left: 0;
-      max-width: 224px;
-    }
-  
-    .content .copyright {
+  /* 覆盖全局的 vp-layout-max-width（仅当前页面使用） */
+  --vp-layout-max-width: 1660px;
+
+  /* layout 样式 */
+  .container {
+    max-width: var(--vp-layout-max-width) !important;
+  }
+  .content-container,
+  .content {
+    max-width: 100% !important;
+  }
+
+  /* aside 样式 */
+  .aside {
+    padding-left: 0;
+    max-width: 224px;
+  }
+
+  .content .copyright {
+    display: none;
+  }
+
+  /* tip */
+  .tip {
+    .custom-block-title {
       display: none;
     }
-  
-    /* tip */
-    .tip {
-      .custom-block-title {
-        display: none;
-      }
-      p {
-        margin: 0;
-      }
-    }
-  
-    .vp-doc h2 {
-      margin-top: 24px;
+    p {
+      margin: 0;
     }
   }
-```
-:::
 
+  .vp-doc h2 {
+    margin-top: 24px;
+  }
+}
+```
+
+:::
 
 安装一下 `sass`
 
@@ -535,8 +525,8 @@ layoutClass: m-nav-layout
 按 `CTRL+C` 退出开发预览模式后安装，安装完成再重新启动
 :::
 
-
 ::: code-group
+
 ```sh [pnpm]
 pnpm add -D sass
 ```
@@ -552,9 +542,8 @@ npm i -D sass
 ```sh [bun]
 bun add -D sass
 ```
+
 :::
-
-
 
 然后将样式引入 `index.md` ，并关闭侧边栏
 
@@ -565,20 +554,12 @@ layoutClass: m-nav-layout
 sidebar: false
 ---
 
-<style src="/.vitepress/theme/style/nav.scss"></style>
-
 # 我的导航
 ```
-
-
-
-
-
 
 ## 新建数据库
 
 在 `.vitepress/theme/untils` 目录新建 `data.ts` 文件
-
 
 ```md{6}
 .
@@ -587,14 +568,13 @@ sidebar: false
 │  │  └─ theme
 │  │     └─ untils
 │  │        └─ data.ts  <- 我在这
-│  ├─ nav             
-│  │  └─ index.md     
+│  ├─ nav
+│  │  └─ index.md
 │  └─ index.md
 └─ package.json
 ```
 
 粘贴代码保存，也可参考数据进行修改
-
 
 :::: details 点我查看 data.ts 代码
 ::: code-group
@@ -611,7 +591,7 @@ export const NAV_DATA: NavData[] = [
         title: 'Can I use',
         badge: {
           text: '茂神牛批',
-          type: 'info',
+          type: 'info'
         },
         desc: '前端 API 兼容性查询',
         link: 'https://caniuse.com'
@@ -621,7 +601,7 @@ export const NAV_DATA: NavData[] = [
         title: 'TinyPNG',
         badge: {
           text: '茂神牛批',
-          type: 'tip',
+          type: 'tip'
         },
         desc: '在线图片压缩工具',
         link: 'https://tinypng.com'
@@ -631,7 +611,7 @@ export const NAV_DATA: NavData[] = [
         title: '开发者武器库',
         badge: {
           text: '茂神牛批',
-          type: 'warning',
+          type: 'warning'
         },
         desc: '开发者武器库，做开发者最专业最好用的专业工具箱',
         link: 'https://devtool.tech'
@@ -641,7 +621,7 @@ export const NAV_DATA: NavData[] = [
         title: '在线工具',
         badge: {
           text: '茂神牛批',
-          type: 'danger',
+          type: 'danger'
         },
         desc: '开发人员的工具箱',
         link: 'https://tool.lu'
@@ -651,7 +631,7 @@ export const NAV_DATA: NavData[] = [
         title: 'Json 中文网',
         badge: {
           text: '请给茂茂点点小星星哦',
-          type: 'info',
+          type: 'info'
         },
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn'
@@ -1222,10 +1202,9 @@ export const NAV_DATA: NavData[] = [
   }
 ]
 ```
+
 :::
 ::::
-
-
 
 ## 实现
 
@@ -1240,8 +1219,6 @@ prev: false
 next: false
 ---
 
-<style src="/.vitepress/theme/style/nav.scss"></style>
-
 <script setup>
 import { NAV_DATA } from '/.vitepress/theme/untils/data'
 </script>
@@ -1253,15 +1230,11 @@ import { NAV_DATA } from '/.vitepress/theme/untils/data'
 
 ```
 
-
-
-
 ## 优化
 
 ### 搜索
 
-
-默认自带的本地搜索无法爬取到导航，建议使用 [Algolia](../page.md#algolia)
+默认自带的本地搜索无法爬取到导航
 
 还需要增加页面的 `outline` 配置项
 
@@ -1270,7 +1243,6 @@ import { NAV_DATA } from '/.vitepress/theme/untils/data'
 outline: [2, 3, 4]
 ---
 ```
-
 
 ### 悬停边框
 
@@ -1283,7 +1255,7 @@ outline: [2, 3, 4]
 ```vue{4}
 <style lang="scss" scoped>
   &:hover {
-    box-shadow: var(--vp-shadow-2); 
+    box-shadow: var(--vp-shadow-2);
     border-color: var(--vp-c-brand); //悬停边框色
     text-decoration: initial;
     background-color: var(--vp-c-bg); //悬停背景色
@@ -1291,11 +1263,9 @@ outline: [2, 3, 4]
 </style>
 ```
 
-
-
 ### 下划线
 
-这个在 [VitePress美化](../style#链接下划线) 的时候说了，请参考修改
+这个在的时候说了，请参考修改
 
 ::: warning 注意
 如果你在 `var.css` 中引用了，这里就不用填了
@@ -1304,10 +1274,9 @@ outline: [2, 3, 4]
 ```scss
 /* .vitepress/theme/style/nav.scss */
 .vp-doc a {
-    text-decoration: none;
+  text-decoration: none;
 }
 ```
-
 
 ### 图标穿透
 
@@ -1332,7 +1301,7 @@ outline: [2, 3, 4]
 .medium-zoom-overlay {
   z-index: 0;
 }
-  
+
 .medium-zoom-image {
   z-index: 0 !important;
 }

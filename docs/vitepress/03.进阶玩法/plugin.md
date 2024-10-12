@@ -201,8 +201,6 @@ export default {
 有个小 bug，每次修改完需要刷新才能起效，不过不影响使用
 :::
 
-![](/img_test.jpg)
-
 ## 看板娘
 
 第一次接触的人会比较懵，其实就是在右下角有个二次元的人物，类似电子宠物
@@ -334,18 +332,11 @@ export default {
 
 但是这也不好看啊，那就根据自己需求选择封装吧
 
-::: info 封装演示
-
-- 仅首页显示：[组件使用示例](./components.md#不蒜子)
-
-- 所有页面底部：[插槽使用示例](./layout.md#不蒜子)
-  :::
-
 ## 自动侧边栏
 
-发现一款自动侧边栏，简单好用 [@jooy2/vitepress-sidebar](https://github.com/jooy2/vitepress-sidebar)
+发现一款自动侧边栏，简单好用 [vitepress-sidebar](https://github.com/jooy2/vitepress-sidebar)
 
-安装文档：https://vitepress-sidebar.jooy2.com/guide/getting-started
+安装文档：<https://vitepress-sidebar.jooy2.com/guide/getting-started>
 
 ::: code-group
 
@@ -431,8 +422,6 @@ stackblitz 演示：https://stackblitz.com/edit/vite-y1rga7
 >
 > 注意：插件在读取目录之后，你再修改文件名，需要重启才能生效
 
-![](/sidebar.png)
-
 ## Todo
 
 为什么 Vitepress 没有任务列表，在 [issues#1923](https://github.com/vuejs/vitepress/issues/1923) 和 [issues#413](https://github.com/vuejs/vitepress/issues/413) 里找到了这个问题
@@ -474,7 +463,6 @@ commonjs：简称 CJS，`module.exports` `exports` 导出，`require` 导入
 
 ES module：简称 ESM，`export` 导出，`import` 导入
 
-这个我们在最开始 [Vitepress 前言](./preface.md#官方) 的时候也提到过
 :::
 
 ```ts{2,5-16}
@@ -762,7 +750,6 @@ export default {
     useWaline({
       serverURL: 'https://you_url.com'
     }),
-
   }
 }
 ```
@@ -780,8 +767,6 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 
 点击 `Install` 安装
 
-![](/giscus/giscus-01.png)
-
 选择 `Only select repositories`，再指定一个你想开启讨论的仓库
 
 ::: tip 注意
@@ -789,8 +774,6 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 
 想单独放评论，新建一个也可
 :::
-
-![](/giscus/giscus-02.png)
 
 ::: tip 查看
 完成后可以在个人头像-设置-应用 `Applications` 中看到
@@ -802,23 +785,15 @@ Giscus 是一个基于 GitHub Discussion 的评论系统，启用简便
 
 我们进入要开启讨论的仓库，点设置 - 勾选讨论 `Settings - discussions`
 
-![](/giscus/giscus-03.png)
-
 ### 生成数据
 
-进入官网：https://giscus.app/zh-CN
+进入官网：<https://giscus.app/zh-CN>
 
 输入自己的仓库链接，满足条件会提示可用
 
-![](/giscus/giscus-04.png)
-
 下拉到 Discussion 分类我们按推荐的选 `Announcements` ，懒加载评论也可以勾选下
 
-![](/giscus/giscus-05.png)
-
 下方就自动生成了你的关键数据
-
-![](/giscus/giscus-06.png)
 
 其中 `data-repo` 、 `data-repo-id` 、 `data-category` 和 `data-category-id` 这 4 个是我们的关键数据
 

@@ -128,34 +128,6 @@ export default defineConfig({
 })
 ```
 
-### 链接
-
-分为内部和外部链接，且默认情况下，生成链接带有 `.html`后缀
-
-内部链接引用，输入：
-
-```md
-[点我跳转：Frontmatter 文章中的大纲](./frontmatter.md#大纲)
-```
-
-输出：
-
-[点我跳转：Frontmatter 文章中的大纲](./frontmatter.md#大纲)
-
-外部链接引用，输入：
-
-```md
-- [vuejs.org](https://vuejs.org/)
-
-- [GitHub 上的 VitePress](https://github.com/vuejs/vitepress)
-```
-
-输出：
-
-- [vuejs.org](https://vuejs.org/)
-
-- [GitHub 上的 VitePress](https://github.com/vuejs/vitepress)
-
 ### 视频
 
 视频用 HTML5 自带的 `<video>` 即可
@@ -349,8 +321,6 @@ Hello, VitePress!
 :::
 
 > 为什么和我不一样？
->
-> 我对样式进行了修改，请查看 [样式美化 - 容器颜色](./style.md#容器颜色)
 
 ::: details 不喜欢添加在后面，可以直接在配置中自定义标题
 
@@ -526,7 +496,7 @@ var 的值都改程颜色代码即可
 ````
 
 ::: tip 为什么我的有小圆点
-因为我对 [代码块样式](./style.md#代码块) 进行了美化，可以按需配置
+因为我对进行了美化，可以按需配置
 :::
 
 ### 语法突出
@@ -827,7 +797,7 @@ yarn -v
 输出：
 
 ::: tip 为什么我的有小圆点
-因为我对 [代码组样式](./style.md#代码组) 进行了美化，可以按需配置
+因为我对进行了美化，可以按需配置
 :::
 
 ::: code-group
@@ -994,7 +964,7 @@ const members = [
 要创建团队页面，首先创建一个新的 `md` 文件。 文件名并不重要，但这里我们将其命名为 `team.md`
 :::
 
-在此文件中，设置 [frontmatter](./frontmatter.md#首页) 选项 `layout: page`，然后使用 TeamPage 组件构建页面结构
+在此文件中，设置 frontmatter 选项 `layout: page`，然后使用 TeamPage 组件构建页面结构
 
 输入：
 
@@ -1052,8 +1022,6 @@ const members = [
 
 `<VPMembers>` 的工作方式与在文档页面中使用时相同，它将显示成员列表
 :::
-
-[点我查看：团队成员信息](./team.md)
 
 ### 合作伙伴
 
@@ -1135,10 +1103,6 @@ const partners = [
   </VPTeamPageSection>
 </VPTeamPage>
 ```
-
-输出：
-
-[点我查看：团队成员信息](./team.md)
 
 ### 组件显示成员
 

@@ -4,8 +4,6 @@
 
 Vitepress 基于 Vue3 用到了 `<slot>` 插槽，在 `<Layout/>` 布局组件中预留了一些插槽，可以对页面布局进行自定义修改
 
-由于也是使用组件，请了解过 [组件的使用](./components.md) 了再来看
-
 ::: tip 插槽与组件的区别
 
 - 插槽：有固定的孔位，适用于需要频繁显示的内容，比如：广告
@@ -49,8 +47,6 @@ docs
 │  │   └─ index.ts
 └─ index.md
 ```
-
-使用上，有两种方案，按使用习惯选择 [示例 1](#示例1-layout) 和 [示例 2](#示例2-h函数)
 
 ---
 
@@ -162,7 +158,7 @@ export default {
 
 ### doc
 
-当 [Frontmatter](./frontmatter.md) 配置 `layout: doc` (默认)时插槽及位置
+当配置 `layout: doc` (默认)时插槽及位置
 
 - doc-top
 - doc-bottom
@@ -180,13 +176,11 @@ export default {
 - aside-ads-before
 - aside-ads-after
 
-![](/layout/layout-doc.png)
-
 ---
 
 ### home
 
-当 [Frontmatter](./frontmatter.md) 配置 `layout: home` (默认)时插槽及位置
+当配置 `layout: home` (默认)时插槽及位置
 
 - home-hero-before
 - home-hero-info
@@ -195,18 +189,14 @@ export default {
 - home-features-before
 - home-features-after
 
-![](/layout/layout-home.png)
-
 ---
 
 ### page
 
-当 [Frontmatter](./frontmatter.md) 配置 `layout: page` (默认)时插槽及位置
+当配置 `layout: page` (默认)时插槽及位置
 
 - page-top
 - page-bottom
-
-![](/layout/layout-page.png)
 
 ---
 
@@ -215,8 +205,6 @@ export default {
 在未找到 (404) 页面上
 
 - not-found
-
-![](/layout/layout-404.png)
 
 ---
 
@@ -234,8 +222,6 @@ export default {
 
 - nav-screen-content-before
 - nav-screen-content-after
-
-![](/layout/layout-nav.png)
 
 ## 使用演示
 
@@ -330,15 +316,11 @@ date: 2023-12-19 08:09
 
 查看效果
 
-![](/layout/layout-demo-01.png)
-
 ---
 
 ### Vite 官网赞助（h 函数）
 
 这里我们参考 [Vite 官网](https://vitejs.cn/vite3-cn/) 下的赞助，代码在 [仓库](https://github.com/vitejs/vite) 查找
-
-![](/layout/layout-vite.png)
 
 在 `untils` 目录新建一个 `sponsors.ts` 文件
 
