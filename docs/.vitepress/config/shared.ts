@@ -6,7 +6,7 @@ export const shared = defineConfig({
   title: '学习笔记',
 
   rewrites: {
-    'zh/:rest*': ':rest*'
+    // 'zh/:rest*': ':rest*'
   },
   // sitemap: {
   //   hostname: 'https://vitepress.dev',
@@ -28,7 +28,10 @@ export const shared = defineConfig({
   cleanUrls: true,
   metaChunk: true,
   markdown: {
+    //行号显示
+    lineNumbers: true,
     math: true,
+    // 使用 `!!code` 防止转换
     codeTransformers: [
       {
         postprocess(code) {
@@ -37,10 +40,16 @@ export const shared = defineConfig({
       }
     ],
     config: (md) => {
-      md.use(mermaidPlugin)
+      // 组件插入h1标题下
+      ;(md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+        let htmlResult = slf.renderToken(tokens, idx, options)
+        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`
+        return htmlResult
+      }),
+        md.use(mermaidPlugin)
     },
+    // 图片懒加载
     image: {
-      // 图片懒加载
       lazyLoading: true
     }
   },

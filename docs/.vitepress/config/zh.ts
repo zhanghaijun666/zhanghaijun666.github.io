@@ -11,10 +11,10 @@ export const zh = defineConfig({
   themeConfig: {
     nav: nav(),
 
-    sidebar: {
-      '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
-      '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() }
-    },
+    // sidebar: {
+    //   '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
+    //   '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() }
+    // },
 
     editLink: {
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
@@ -27,14 +27,15 @@ export const zh = defineConfig({
     },
 
     outline: {
-      label: '页面导航'
+      label: '页面导航',
+      level: [2, 3]
     },
 
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'medium'
+        dateStyle: 'short', // 可选值full、long、medium、short
+        timeStyle: 'medium' // 可选值full、long、medium、short
       }
     },
 
@@ -51,13 +52,13 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {
       text: '指南',
-      link: '/zh/guide/what-is-vitepress',
-      activeMatch: '/zh/guide/'
+      link: '/vitepress/guide/what-is-vitepress',
+      activeMatch: '/vitepress/guide/'
     },
     {
       text: '参考',
-      link: '/zh/reference/site-config',
-      activeMatch: '/zh/reference/'
+      link: '/vitepress/reference/site-config',
+      activeMatch: '/vitepress/reference/'
     },
     {
       text: pkg.version,
@@ -117,7 +118,7 @@ function sidebarGuide(): DefaultTheme.SidebarItem[] {
         { text: 'sitemap 生成', link: 'sitemap-generation' }
       ]
     },
-    { text: '配置和 API 参考', base: '/zh/reference/', link: 'site-config' }
+    { text: '配置和 API 参考', base: '/vitepress/reference/', link: 'site-config' }
   ]
 }
 
@@ -132,7 +133,7 @@ function sidebarReference(): DefaultTheme.SidebarItem[] {
         { text: 'CLI', link: 'cli' },
         {
           text: '默认主题',
-          base: '/zh/reference/default-theme-',
+          base: '/vitepress/reference/default-theme-',
           items: [
             { text: '概览', link: 'config' },
             { text: '导航栏', link: 'nav' },
