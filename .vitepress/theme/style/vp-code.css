@@ -1,5 +1,3 @@
-/* .vitepress/theme/style/vp-code.css */
-
 /* 无行号 添加背景阴影 */
 .vp-doc div[class*=language-] {
   position: relative;

@@ -1,24 +1,24 @@
 /* 卡片背景 */
-.linkcard {
+.link-card {
     background-color: var(--vp-c-bg-soft);
     border-radius: 8px;
     padding: 8px 16px 8px 8px;
     transition: color 0.5s, background-color 0.5s;
   }
-  
+
   /* 卡片鼠标悬停 */
-  .linkcard:hover {
+  .link-card:hover {
     background-color: var(--vp-c-yellow-soft);
   }
-  
+
   /* 链接样式 */
-  .linkcard a {
+  .link-card a {
     display: flex;
     align-items: center;
   }
-  
+
   /* 描述链接文字 */
-  .linkcard .description {
+  .link-card .description {
     flex: 1;
     font-weight: 500;
     font-size: 16px;
@@ -27,18 +27,18 @@
     margin: 0 0 0 16px;
     transition: color 0.5s;
   }
-  
+
   /* 描述链接文字2 */
-  .linkcard .description span {
+  .link-card .description span {
     font-size: 14px;
   }
-  
+
   /* logo图片 */
-  .linkcard .logo img {
+  .link-card .logo img {
     width: 80px;
     object-fit: contain;
   }
-  
+
   /* 链接下划线去除 */
   .vp-doc a {
     text-decoration: none;
