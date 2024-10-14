@@ -1,5 +1,6 @@
 ---
 layout: home
+
 title: VitePress
 titleTemplate: 由 Vite 和 Vue 驱动的静态站点生成器
 
@@ -10,16 +11,16 @@ hero:
   actions:
     - theme: brand
       text: 什么是 VitePress?
-      link: /vitepress/guide/what-is-vitepress
+      link: /11_vitepress/guide/what-is-vitepress
     - theme: alt
       text: 快速开始
-      link: /vitepress/guide/getting-started
+      link: /11_vitepress/guide/getting-started
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress
   image:
-    src: /vitepress-logo-large.webp
-    alt: VitePress
+      src: /vitepress.webp
+      alt: VitePress
 
 features:
   - icon: 📝

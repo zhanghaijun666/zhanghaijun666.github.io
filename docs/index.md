@@ -11,16 +11,13 @@ hero:
   actions:
     - theme: brand
       text: 什么是 VitePress?
-      link: /vitepress/guide/what-is-vitepress
-    - theme: alt
-      text: 快速开始
-      link: /vitepress/guide/getting-started
+      link: /11_vitepress/
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress
   image:
-    src: /vitepress-logo-large.webp
-    alt: VitePress
+    src: /logo.png
+    alt: logo
 
 features:
   - icon: 📝

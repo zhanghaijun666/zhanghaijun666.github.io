@@ -15,7 +15,7 @@ export function getArticleData(path: string): ArticleOptions {
 
   const h1 = getArticleTitle(content) || ''
   // 设置 index，无值默认 undefined
-  const index: number | undefined = data.index || getPathIndex(path)
+  const index: number | undefined = data.index
 
   return {
     ...(data as Omit<ArticleOptions, 'h1' | 'index'>),
@@ -35,20 +35,33 @@ export function getArticleTitle(content: string) {
 }
 
 /**
+ * 提取路径最后一项的信息
+ * @param path 文件路径
+ * @returns index：排序字段，title：中文标题，link：一般是英文url
+ */
+export const getPathItem = (path: string): { index: number; title: string; link: string } => {
+  const name = basename(path)
+  const array = (name.match(/^((\d+)_)?([^_]+)(_([^_]+))?/) || []).filter((_, index) => [2, 3, 5].includes(index))
+
+  return {
+    index: Number(array[0] || getPathIndex(path) || 999999),
+    title: array[1],
+    link: array[2] || array[1]
+  }
+}
+
+/**
  * 提取路径中最后一项的数字下标
  * @param path 文件绝对路径
  * @returns 下标
  */
-export function getPathIndex(path: string) {
+export function getPathIndex(path: string): number | undefined {
   const name = basename(path)
 
   // 使用正则表达式匹配文件名中的数字前缀
   const match = name.match(/^(\d+)\./)
-
-  let num
-  if (match) num = Number(match[1])
-
-  return num
+  if (match) return Number(match[1])
+  return undefined
 }
 
 /**

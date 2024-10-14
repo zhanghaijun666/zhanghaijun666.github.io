@@ -11,7 +11,7 @@ import type { DefaultTheme } from 'vitepress'
 import type { ArticleOptions, Cache, Item, Options, UserConfig } from './types'
 
 import { log } from './log'
-import { getArticleData, getPathIndex, useIndexSort, usePrevNextSort, useSortIndexName, useTextFormat } from './utils'
+import { getArticleData, getPathItem, useIndexSort, usePrevNextSort, useSortIndexName, useTextFormat } from './utils'
 
 export default function autoSidebarPlugin(options: Options = {}): Plugin {
   let cwd = './'
@@ -32,10 +32,12 @@ export default function autoSidebarPlugin(options: Options = {}): Plugin {
       const ignoreList = options.ignoreList || userConfig.srcExclude || []
 
       // 读取目录下文件，并统一路由格式
-      const paths = (await glob(pattern, { cwd, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map((path) => normalize(path))
+      const paths = (await glob(pattern, { cwd, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map((path) => normalize(path))
 
       const list = setDataFormat(cwd, paths, { ...defaultOptions, ...options }, cache)
       const sidebar = generateSidebar(list)
+
+      // writeFileSync('cache_sidebar.json', JSON.stringify(sidebar, null))
       ;(config as UserConfig).vitepress.site.themeConfig.sidebar = sidebar
 
       log.success('The Auto Sidebar has been generated successfully!')
@@ -69,7 +71,7 @@ export default function autoSidebarPlugin(options: Options = {}): Plugin {
           } catch {
             log.error('Failed to update sidebar')
           }
-        }, 800)
+        }, 5000)
       )
     }
   }
@@ -86,8 +88,10 @@ export function setItem(cwd: string, list: string[], options: Options, cache: Ca
   // 判断是否为文件
   const isFile = !list.length && Boolean(extname(name))
 
-  let text = name
-  let index: number | undefined = getPathIndex(link)
+  let pathItem = getPathItem(resolve(cwd, link))
+
+  let text = pathItem.title || name
+  let index = pathItem.index
   let fileOptions = {} as ArticleOptions
   // 移除文件后缀
   if (isFile) {
@@ -99,11 +103,14 @@ export function setItem(cwd: string, list: string[], options: Options, cache: Ca
     cache[link] = fileOptions
 
     // 设置显示 title , 优先级：配置 title > 文内 h1 > 文件名
-    text = fileOptions.title || (options.useH1Title ? fileOptions.h1 : name) || name
+    text = (options.useH1Title ? fileOptions.h1 : undefined) || fileOptions.title || text
   } else {
     // 设置 title 映射
-    if (options?.title?.map) text = options.title.map[`${link}/`] || text
-    else text = useTextFormat(text, options?.title?.mode || 'titlecase') // 设置 title 格式化
+    if (options?.title?.map) {
+      text = options.title.map[`${link}/`] || text
+    } else {
+      text = useTextFormat(text, options?.title?.mode || 'titlecase') // 设置 title 格式化
+    }
   }
 
   const children = [setItem(cwd, list, options, cache, link)].filter(Boolean) as Item[]

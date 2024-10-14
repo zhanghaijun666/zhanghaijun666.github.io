@@ -12,9 +12,7 @@ export default defineConfig({
     plugins: [
       // https://github.com/Ares-Chang/vitepress-auto-sidebar-plugin/blob/master/src/index.ts
       AutoSidebarPlugin({
-        pattern: ['vitepress/**/*.md'],
-        ignoreList: ['**/index.md'],
-        sort: (a, b) => a.text.localeCompare(b.text),
+        pattern: ['[0-9]+_*' + '/**/*.md'],
         useH1Title: false
       })
     ]

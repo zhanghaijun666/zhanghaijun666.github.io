@@ -11,14 +11,9 @@ export const zh = defineConfig({
   themeConfig: {
     nav: nav(),
 
-    // sidebar: {
-    //   '/zh/guide/': { base: '/zh/guide/', items: sidebarGuide() },
-    //   '/zh/reference/': { base: '/zh/reference/', items: sidebarReference() }
-    // },
-
     editLink: {
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面'
+      text: '编辑此页面'
     },
 
     docFooter: {
@@ -56,16 +51,6 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: '首页', link: '/' },
-    {
-      text: '指南',
-      link: '/vitepress/guide/what-is-vitepress',
-      activeMatch: '/vitepress/guide/'
-    },
-    {
-      text: '参考',
-      link: '/vitepress/reference/site-config',
-      activeMatch: '/vitepress/reference/'
-    },
     { text: `VitePress ${pkg.version}`, link: 'https://vitepress.dev/zh/', noIcon: true }
   ]
 }

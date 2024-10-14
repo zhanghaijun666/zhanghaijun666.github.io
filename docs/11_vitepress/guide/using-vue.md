@@ -106,7 +106,7 @@ const { page } = useData()
 
 ```md
 <script setup>
-import CustomComponent from '../../components/CustomComponent.vue'
+import CustomComponent from '../components/CustomComponent.vue'
 </script>
 
 # Docs
@@ -229,7 +229,7 @@ VitePress 目前只有使用 teleport 传送到 body 的 SSG 支持。对于其�
 <ModalDemo />
 
 ::: details
-<<< @/components/ModalDemo.vue
+<<< @/11_vitepress/components/ModalDemo.vue
 :::
 
 ```md
@@ -243,8 +243,8 @@ VitePress 目前只有使用 teleport 传送到 body 的 SSG 支持。对于其�
 ```
 
 <script setup>
-import ModalDemo from '../../components/ModalDemo.vue'
-import ComponentInHeader from '../../components/ComponentInHeader.vue'
+import ModalDemo from '../components/ModalDemo.vue'
+import ComponentInHeader from '../components/ComponentInHeader.vue'
 </script>
 
 <style>
