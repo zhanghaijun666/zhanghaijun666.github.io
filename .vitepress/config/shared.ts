@@ -5,7 +5,8 @@ import { mermaidPlugin } from '../plugins/mermaid'
 export const shared = defineConfig({
   title: '学习笔记',
   srcDir: './docs',
-  outDir: './dist',
+  outDir: './dist/docs/',
+  base: '/docs/',
   rewrites: {
     // 'zh/:rest*': ':rest*'
   },
