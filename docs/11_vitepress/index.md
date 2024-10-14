@@ -1,4 +1,6 @@
 ---
+hide: true
+group: true
 layout: home
 
 title: VitePress

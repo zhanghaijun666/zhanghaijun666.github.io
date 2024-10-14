@@ -13,7 +13,7 @@ export default defineConfig({
       // https://github.com/Ares-Chang/vitepress-auto-sidebar-plugin/blob/master/src/index.ts
       AutoSidebarPlugin({
         pattern: ['[0-9]+_*' + '/**/*.md'],
-        useH1Title: false
+        useH1Title: true
       })
     ]
   }

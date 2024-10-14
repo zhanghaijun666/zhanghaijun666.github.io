@@ -82,3 +82,14 @@
 .medium-zoom-image {
   z-index: 9999 !important;
 }
+/**
+ * 滚动条
+ * -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 3px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-green-soft);
+  border-radius: 10px;
+}

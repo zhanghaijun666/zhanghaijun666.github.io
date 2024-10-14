@@ -204,8 +204,9 @@ export function generateSidebar(list: Item[]): DefaultTheme.Sidebar {
 
     // 分组一级目录为空初始化
     if (!acc[key]) acc[key] = []
-    ;(acc[key] as DefaultTheme.SidebarItem[]).push(obj)
-
+    if (items.length > 0) {
+      ;(acc[key] as DefaultTheme.SidebarItem[]).push(obj)
+    }
     return acc
   }, {} as DefaultTheme.SidebarMulti)
 

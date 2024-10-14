@@ -10,18 +10,31 @@ import type { ArticleOptions, Item, TitleMode } from './types'
  */
 export function getArticleData(path: string): ArticleOptions {
   const file = readFileSync(path, 'utf-8')
-
   const { content, data } = matter(file)
 
-  const h1 = getArticleTitle(content) || ''
-  // 设置 index，无值默认 undefined
-  const index: number | undefined = data.index
-
-  return {
-    ...(data as Omit<ArticleOptions, 'h1' | 'index'>),
-    h1,
-    index
-  }
+  // return {
+  //   ...(data as Omit<ArticleOptions, 'h1' | 'index'>),
+  //   h1,
+  //   index
+  // }
+  return Object.entries({
+    index: data.index,
+    hide: data.hide,
+    title: data.title,
+    h1: data.title || getArticleTitle(content) || undefined,
+    group: data.group,
+    groupTitle: data.groupTitle,
+    groupIndex: data.groupIndex,
+    groupAlone: data.groupAlone,
+    collapsed: data.collapsed,
+    sortPrev: data.sortPrev,
+    sortNext: data.sortNext
+  }).reduce((acc, [key, value]) => {
+    if (value !== undefined) {
+      acc[key] = value
+    }
+    return acc
+  }, {})
 }
 
 /**
@@ -31,7 +44,10 @@ export function getArticleData(path: string): ArticleOptions {
  */
 export function getArticleTitle(content: string) {
   const match = content.match(/^#\s*(.+)/m)
-  return match?.[1].trim()
+  return match?.[1]
+    .trim()
+    .replace(/\{.*\}/g, '')
+    .replace(/\<.*\>/g, '')
 }
 
 /**
