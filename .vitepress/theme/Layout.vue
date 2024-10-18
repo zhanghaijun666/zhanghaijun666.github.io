@@ -56,6 +56,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       <slot name="doc-footer-before" />
     </template>
 
+    <template #aside-outline-before>
+      <slot name="aside-outline-before" />
+    </template>
+
   </DefaultTheme.Layout>
 </template>
 

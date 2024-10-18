@@ -13,6 +13,12 @@ import ArticleMetadata from './components/ArticleMetadata.vue' //字数阅读时
 import HomeUnderline from './components/HomeUnderline.vue' //首页文字特效
 import BackTop from './components/BackTop.vue'
 import LinkCard from './components/LinkCard.vue'
+import ShareButton from './components/ShareButton.vue'
+
+import Tags from './blog/Tags.vue'
+import Category from './blog/Category.vue'
+import Archives from './blog/Archives.vue'
+import Page from './blog/Page.vue'
 
 import './style/index.css'
 
@@ -21,7 +27,8 @@ export default {
   Layout: () => {
     return h(Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-footer-before': () => h(BackTop)
+      'doc-footer-before': () => h(BackTop),
+      'aside-outline-before': () => h(ShareButton)
     })
   },
   enhanceApp: async ({ app, router, siteData }) => {
@@ -37,6 +44,11 @@ export default {
         busuanzi.fetch()
       }
     }
+    // 博客界面
+    app.component('Tags', Tags)
+    app.component('Category', Category)
+    app.component('Archives', Archives)
+    app.component('Page', Page)
   },
   setup() {
     const route = useRoute()

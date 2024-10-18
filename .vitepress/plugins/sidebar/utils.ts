@@ -57,7 +57,7 @@ export function getArticleTitle(content: string) {
  */
 export const getPathItem = (path: string): { index: number; title: string; link: string } => {
   const name = basename(path)
-  const array = (name.match(/^((\d+)_)?([^_]+)(_([^_]+))?/) || []).filter((_, index) => [2, 3, 5].includes(index))
+  const array = (name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/) || []).filter((_, index) => [2, 3, 5].includes(index))
 
   return {
     index: Number(array[0] || getPathIndex(path) || 999999),

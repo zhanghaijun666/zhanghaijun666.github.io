@@ -1,6 +1,32 @@
 import { defineConfig } from 'vitepress'
 import { search as zhSearch } from './zh'
 import { mermaidPlugin } from '../plugins/mermaid'
+import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
+import glob from 'fast-glob'
+import { normalize } from 'pathe'
+import { Article, getArticleData } from '../utils/article'
+
+const getArticle = async (): Promise<Article[]> => {
+  const cwd: string = './docs'
+  const pattern: string[] = ['[0-9]+[_|.]*' + '/**/*.md']
+  const ignoreList: string[] = []
+  const paths: string[] = (await glob(pattern, { cwd, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map(path => normalize(path))
+
+  const articleList: Article[] = await Promise.all(paths.map(async path => getArticleData(cwd, path)))
+  // 文章排序
+  articleList.sort((a, b) => {
+    if (a.top !== b.top) {
+      return (b.top ? 1 : 0) - (a.top ? 1 : 0)
+    }
+    if (a.index !== b.index) {
+      return a.index - b.index
+    }
+    return a.title.localeCompare(b.title)
+  })
+  return articleList
+}
+
+const articleList = await getArticle()
 
 export const shared = defineConfig({
   title: '学习笔记',
@@ -33,6 +59,7 @@ export const shared = defineConfig({
   cleanUrls: true,
   metaChunk: true,
   markdown: {
+    theme: { light: 'one-light', dark: 'one-dark-pro' },
     //行号显示
     lineNumbers: true,
     math: true,
@@ -45,25 +72,20 @@ export const shared = defineConfig({
       }
     ],
     config: (md) => {
+      md.use(groupIconMdPlugin)
+      md.use(mermaidPlugin)
       // 组件插入h1标题下
-      ;(md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         let htmlResult = slf.renderToken(tokens, idx, options)
         if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`
         return htmlResult
-      }),
-        md.use(mermaidPlugin)
+      }
     },
     // 图片懒加载
-    image: {
-      lazyLoading: true
-    }
+    image: { lazyLoading: true }
   },
   themeConfig: {
     logo: { src: '/logo.svg', width: 24, height: 24 },
-    editLink: {
-      pattern: 'https://gitee.com/haijunit_navi/navi-docs/edit/vitepress/docs/:path',
-      text: '编辑本页'
-    },
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
     search: {
       provider: 'local',
@@ -72,6 +94,7 @@ export const shared = defineConfig({
           ...zhSearch
         }
       }
-    }
+    },
+    article: articleList
   }
 })

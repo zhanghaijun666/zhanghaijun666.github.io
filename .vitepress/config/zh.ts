@@ -1,5 +1,5 @@
 import { createRequire } from 'module'
-import { defineConfig, type DefaultTheme } from 'vitepress'
+import { type DefaultTheme, defineConfig } from 'vitepress'
 
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
@@ -12,8 +12,8 @@ export const zh = defineConfig({
     nav: nav(),
 
     editLink: {
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: '编辑此页面'
+      pattern: 'https://gitee.com/haijunit_navi/navi-docs/edit/vitepress/docs/:path',
+      text: '编辑本页'
     },
 
     docFooter: {
@@ -28,7 +28,7 @@ export const zh = defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: `Copyright © 2023-${new Date().getFullYear()} 备案号：<a href="/" target="_blank">京****号</a>`
+      copyright: `Copyright © 2023-${ new Date().getFullYear() } 备案号：<a href="/" target="_blank">京****号</a>`
     },
 
     lastUpdated: {
@@ -51,7 +51,10 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: '首页', link: '/' },
-    { text: `VitePress ${pkg.version}`, link: 'https://vitepress.dev/zh/', noIcon: true }
+    { text: '分类', link: '/pages/category' },
+    { text: '归档', link: '/pages/archives' },
+    { text: '标签', link: '/pages/tags' },
+    { text: `VitePress ${ pkg.version }`, link: 'https://vitepress.dev/zh/', noIcon: true }
   ]
 }
 
