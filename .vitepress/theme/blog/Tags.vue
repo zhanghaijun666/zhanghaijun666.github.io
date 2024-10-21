@@ -5,7 +5,7 @@
     </span>
   </div>
   <div class="tag-header">{{ selectTag }}</div>
-  <a v-if="selectTag" :href="withBase(article.link)" v-for="article in articleList" :key="article.link" class="posts">
+  <a v-if="selectTag" :href="withBase(article.link)" v-for="article in articleList" :key="article.link" class="article item">
     <div class="post-container">
       <div class="post-dot"></div>
       <div class="post-title">
@@ -62,6 +62,7 @@ const toggleTag = (tag: string) => {
 </script>
 
 <style lang="scss" scoped>
+@import './style.scss';
 .tags {
   margin-top: 14px;
   display: flex;

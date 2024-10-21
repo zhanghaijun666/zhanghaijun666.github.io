@@ -1,7 +1,7 @@
 <template>
   <div v-for="(item, category) in sortedData" :key="category">
-    <div class="category">{{ item.category }}</div>
-    <a v-for="article in item.articles" :key="article.link" :href="withBase(article.link)" class="posts">
+    <div class="article title">{{ item.category }}</div>
+    <a v-for="article in item.articles" :key="article.link" :href="withBase(article.link)" class="article item">
       <div class="post-container">
         <div class="post-dot"></div>
         <div class="post-title">
@@ -43,10 +43,5 @@ const sortedData = computed<{ category: string, articles: Article[] }[]>(() => {
 </script>
 
 <style lang="scss" scoped>
-.category {
-  padding: 14px 0 8px;
-  font-size: 1.25rem;
-  font-weight: 500;
-  font-family: var(--date-font-family);
-}
+@import './style.scss';
 </style>

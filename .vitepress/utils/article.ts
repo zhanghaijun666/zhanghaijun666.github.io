@@ -1,9 +1,10 @@
 import { readFileSync } from 'node:fs'
 import matter from 'gray-matter'
-import { basename, resolve, sep } from 'pathe'
+import { basename, normalize, resolve, sep } from 'pathe'
+import glob from 'fast-glob'
 
 /** 文章数据 */
-export interface Article {
+export type Article = {
   index: number; // 排序字段
   title: string; // 标题
   link: string; // 链接
@@ -16,6 +17,26 @@ export interface Article {
   }
 
   [key: string]: any; // 其他自定义字段
+}
+
+export const getArticleList = async (): Promise<Article[]> => {
+  const cwd: string = './docs'
+  const pattern: string[] = ['[0-9]+[_|.]*' + '/**/*.md']
+  const ignoreList: string[] = []
+  const paths: string[] = (await glob(pattern, { cwd, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map(path => normalize(path))
+
+  const articleList: Article[] = await Promise.all(paths.map(async path => getArticleData(cwd, path)))
+  // 文章排序
+  articleList.sort((a, b) => {
+    if (a.top !== b.top) {
+      return (b.top ? 1 : 0) - (a.top ? 1 : 0)
+    }
+    if (a.index !== b.index) {
+      return a.index - b.index
+    }
+    return a.title.localeCompare(b.title)
+  })
+  return articleList
 }
 
 /**
@@ -32,7 +53,7 @@ export const getArticleData = (cwd: string, path: string): Article => {
   return {
     index: item.index,
     title: data.title || item.title || getArticleTitle(content),
-    link: path.replace('.md', '').split(sep).join('/'),
+    link: '/' + path.replace(/.md$/, '').split(sep).join('/'),
     top: !!data.top,
     matter: {
       date: data.date,
