@@ -18,11 +18,9 @@
       <i class="fa-solid fa-calendar-week" style="margin-right: 0.25rem; color: var(--vp-c-brand-1)"></i>
       {{ article?.matter?.date ?? '2024-08-08' }}
       <span>
-        <span v-for="(tag, index) in (article?.matter?.tags || [])" :key="index">
+        <span v-for="(tag, index) in article?.matter?.tags || []" :key="index">
           <i v-if="index === 0" class="fa-solid fa-tags" style="margin-right: 0.25rem; color: var(--vp-c-brand-1)"></i>
-          <a :href="withBase(`/pages/tags.html?tag=${tag}`)">
-            {{ tag }}<span v-if="index < article.frontMatter.tags.length - 1">,</span>
-          </a>
+          <a :href="withBase(`/pages/tags.html?tag=${tag}`)"> {{ tag }}<span v-if="index < article.frontMatter.tags.length - 1">,</span> </a>
         </span>
       </span>
     </div>
@@ -32,31 +30,17 @@
     <a class="link" :href="withBase('/index.html')" v-if="pageCurrent > 1">
       <i class="fa-solid fa-angles-left"></i>
     </a>
-    <a
-      class="link"
-      :class="{ active: pageCurrent === 1 }"
-      :href="withBase(pageCurrent > 1 ? `/page_${pageCurrent - 1}.html` : '/index.html')"
-      v-if="pageCurrent > 1"
-    >
+    <a class="link" :class="{ active: pageCurrent === 1 }" :href="withBase(pageCurrent > 1 ? `/page_${pageCurrent - 1}.html` : '/index.html')" v-if="pageCurrent > 1">
       <i class="fa-solid fa-angle-left"></i>
     </a>
 
     <template v-for="i in displayPages" :key="i">
-      <a
-        class="link"
-        :class="{ active: pageCurrent === i }"
-        :href="withBase(i === 1 ? '/index.html' : `/page_${i}.html`)"
-      >
+      <a class="link" :class="{ active: pageCurrent === i }" :href="withBase(i === 1 ? '/index.html' : `/page_${i}.html`)">
         {{ i }}
       </a>
     </template>
 
-    <a
-      class="link"
-      :class="{ active: pageCurrent === pagesNum }"
-      :href="withBase(pageCurrent < pagesNum ? `/page_${pageCurrent + 1}.html` : `/page_${pagesNum}.html`)"
-      v-if="pageCurrent < pagesNum"
-    >
+    <a class="link" :class="{ active: pageCurrent === pagesNum }" :href="withBase(pageCurrent < pagesNum ? `/page_${pageCurrent + 1}.html` : `/page_${pagesNum}.html`)" v-if="pageCurrent < pagesNum">
       <i class="fa-solid fa-angle-right"></i>
     </a>
     <a class="link" :href="withBase(`/page_${pagesNum}.html`)" v-if="pageCurrent < pagesNum">
@@ -103,8 +87,6 @@ const displayPages = computed(() => {
 
   return Array.from({ length: end - start + 1 }, (_, index) => start + index)
 })
-
-
 </script>
 
 <style lang="scss" scoped>
@@ -157,8 +139,9 @@ const displayPages = computed(() => {
   border-radius: 4px;
   color: var(--vp-c-text-1);
   margin: 0 4px;
-  transition: background-color 0.3s,
-  color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 
   &.active {
     color: var(--vp-c-text-1) !important;

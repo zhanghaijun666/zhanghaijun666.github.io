@@ -12,17 +12,17 @@ hero:
   tagline: 将 Markdown 变成优雅的文档，只需几分钟
   actions:
     - theme: brand
-      text: 什么是 VitePress?
-      link: /11_vitepress/guide/what-is-vitepress
-    - theme: alt
       text: 快速开始
-      link: /11_vitepress/guide/getting-started
+      link: /11_vitepress/11_简介/11_VitePress入门
+    - theme: alt
+      text: Markdown写作
+      link: /11_vitepress/11_简介/20.Markdown写作
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress
   image:
-      src: /vitepress.webp
-      alt: VitePress
+    src: /vitepress.webp
+    alt: VitePress
 
 features:
   - icon: 📝

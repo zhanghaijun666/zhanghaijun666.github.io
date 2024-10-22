@@ -28,9 +28,7 @@ const { theme } = useData<{ article: Article[] }>()
 
 const tagList = computed<{ tag: string; count: number }[]>(() => {
   // 获取所有文章中的标签列表，过滤掉空数组和空标签，并展平为一个数组
-  const allTags = (theme.value.article || [])
-    .flatMap(article => article.matter?.tags || [])
-    .filter(tag => tag) // 过滤掉空标签
+  const allTags = (theme.value.article || []).flatMap((article) => article.matter?.tags || []).filter((tag) => tag) // 过滤掉空标签
 
   // 使用 reduce 统计标签的出现次数，并转换为所需格式
   const tagCountMap = allTags.reduce<Record<string, number>>((acc, tag) => {
@@ -45,9 +43,8 @@ const articleList = computed<Article[]>(() => {
   if (!selectTag.value) {
     return []
   }
-  return (theme.value.article || []).filter(article => article.matter?.tags?.includes(selectTag.value))
+  return (theme.value.article || []).filter((article) => article.matter?.tags?.includes(selectTag.value))
 })
-
 
 const selectTag = ref('')
 

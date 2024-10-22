@@ -1,5 +1,5 @@
 <template>
-  <div v-for="(item,index) in archiveList" :key="index">
+  <div v-for="(item, index) in archiveList" :key="index">
     <div class="article title">
       {{ item.archive }}
     </div>
@@ -39,13 +39,13 @@ const archiveList = computed(() => {
   })
   return [
     {
-      'archive': '2024',
-      'articles': articleList
+      archive: '2024',
+      articles: articleList
     }
   ]
 })
 </script>
 
 <style lang="scss" scoped>
-@import "./style.scss";
+@import './style.scss';
 </style>

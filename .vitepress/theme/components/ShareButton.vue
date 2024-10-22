@@ -62,7 +62,7 @@ const copied = ref(false)
  */
 const shareLink = computed(() => {
   const currentPath = router.route.path
-  return `${ window.location.origin }${ currentPath.replace(/^\/[a-z]{2}\//, '/') }`
+  return `${window.location.origin}${currentPath.replace(/^\/[a-z]{2}\//, '/')}`
 })
 
 /**
@@ -113,8 +113,9 @@ const copyLink = async () => {
     justify-content: center;
     width: 100%;
     font-size: 0.875rem;
-    transition: color 0.3s ease,
-    border 0.3s ease;
+    transition:
+      color 0.3s ease,
+      border 0.3s ease;
     z-index: 1;
 
     &::before {

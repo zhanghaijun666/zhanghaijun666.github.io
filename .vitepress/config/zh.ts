@@ -8,6 +8,15 @@ export const zh = defineConfig({
   lang: 'zh-Hans',
   description: '积累点滴，汇聚成溪。',
 
+  markdown: {
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息'
+    }
+  },
   themeConfig: {
     nav: nav(),
 
@@ -51,9 +60,13 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: '首页', link: '/' },
-    { text: '分类', link: '/pages/category' },
-    { text: '归档', link: '/pages/archives' },
-    { text: '标签', link: '/pages/tags' },
+    {
+      text: '指南', items: [
+        { text: '分类', link: '/pages/category' },
+        { text: '归档', link: '/pages/archives' },
+        { text: '标签', link: '/pages/tags' }
+      ]
+    },
     { text: `VitePress ${ pkg.version }`, link: 'https://vitepress.dev/zh/', noIcon: true }
   ]
 }

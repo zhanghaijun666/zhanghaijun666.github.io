@@ -14,7 +14,7 @@ import { log } from './log'
 import { getArticleData, getPathItem, useIndexSort, usePrevNextSort, useSortIndexName, useTextFormat } from './utils'
 
 export default function autoSidebarPlugin(options: Options = {}): Plugin {
-  let cwd = './'
+  let cwd: string = './'
   const cache: Cache = {}
   const defaultOptions: Options = { useH1Title: true }
 
@@ -43,37 +43,37 @@ export default function autoSidebarPlugin(options: Options = {}): Plugin {
       log.success('The Auto Sidebar has been generated successfully!')
 
       return config
-    },
-    configureServer({ watcher, restart }: ViteDevServer) {
-      /**
-       * 监听 md 文件变动
-       * 排除修改操作，进行服务重启
-       * 800ms 防抖处理，防止大量更新频繁触发重启
-       */
-      watcher.add('*.md').on(
-        'all',
-        debounce(async (type, path) => {
-          if (type === 'change') {
-            // 提取文件相对 link
-            const url = resolve(cwd) + sep
-            const link = path.split(url).pop()!
-
-            const obj = cache[link]
-            const data = getArticleData(path)
-
-            // 对比 obj 和 data，文件如果未发生变化，直接返回
-            if (obj && JSON.stringify(obj) === JSON.stringify(data)) return
-          }
-
-          try {
-            await restart()
-            log.info('Update the sidebar...')
-          } catch {
-            log.error('Failed to update sidebar')
-          }
-        }, 5000)
-      )
     }
+    // configureServer({ watcher, restart }: ViteDevServer) {
+    /**
+     * 监听 md 文件变动
+     * 排除修改操作，进行服务重启
+     * 5s 防抖处理，防止大量更新频繁触发重启
+     */
+    // watcher.add('*.md').on(
+    //   'all',
+    //   debounce(async (type, path) => {
+    //     if (type === 'change') {
+    //       // 提取文件相对 link
+    //       const url = resolve(cwd) + sep
+    //       const link = path.split(url).pop()!
+    //
+    //       const obj = cache[link]
+    //       const data = getArticleData(path)
+    //
+    //       // 对比 obj 和 data，文件如果未发生变化，直接返回
+    //       if (obj && JSON.stringify(obj) === JSON.stringify(data)) return
+    //     }
+    //
+    //     try {
+    //       await restart()
+    //       log.info('Update the sidebar...')
+    //     } catch {
+    //       log.error('Failed to update sidebar')
+    //     }
+    //   }, 5000)
+    // )
+    // }
   }
 }
 
@@ -192,24 +192,6 @@ export function setDataFormat(cwd: string, paths: string[], { sort = () => 0, ..
  * 生成侧边栏
  */
 export function generateSidebar(list: Item[]): DefaultTheme.Sidebar {
-  const root = list.reduce((acc, { text, link, children, collapsed, groupAlone }) => {
-    const items = deep(children).filter(Boolean) as DefaultTheme.SidebarItem[]
-    const obj = {
-      text,
-      items,
-      collapsed
-    }
-
-    const key = `/${groupAlone ? link : link.split(sep)[0] || link}/`
-
-    // 分组一级目录为空初始化
-    if (!acc[key]) acc[key] = []
-    if (items.length > 0) {
-      ;(acc[key] as DefaultTheme.SidebarItem[]).push(obj)
-    }
-    return acc
-  }, {} as DefaultTheme.SidebarMulti)
-
   function deep(list: Item[]): (DefaultTheme.SidebarItem | null)[] {
     return list.map(({ text, link, isFile, children, hide, collapsed }): DefaultTheme.SidebarItem | null => {
       if (hide) return null
@@ -228,5 +210,22 @@ export function generateSidebar(list: Item[]): DefaultTheme.Sidebar {
       }
     })
   }
-  return root
+
+  return list.reduce((acc, { text, link, children, collapsed, groupAlone }) => {
+    const items = deep(children).filter(Boolean) as DefaultTheme.SidebarItem[]
+    const obj = {
+      text,
+      items,
+      collapsed
+    }
+
+    const key = `/${groupAlone ? link : link.split(sep)[0] || link}/`
+
+    // 分组一级目录为空初始化
+    if (!acc[key]) acc[key] = []
+    if (items.length > 0) {
+      ;(acc[key] as DefaultTheme.SidebarItem[]).push(obj)
+    }
+    return acc
+  }, {} as DefaultTheme.SidebarMulti)
 }

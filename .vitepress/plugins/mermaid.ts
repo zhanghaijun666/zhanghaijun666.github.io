@@ -10,9 +10,7 @@ export const mermaidPlugin = (md: MarkdownIt): void => {
     const language = token.info.trim()
     if (language.startsWith('mermaid')) {
       // 将代码块渲染成 html，这里替换成我们自己定义的vue组件
-      return `<Mermaid id="mermaid-${idx}" code="${encodeURIComponent(
-        token.content
-      )}"></Mermaid>`
+      return `<Mermaid id="mermaid-${idx}" code="${encodeURIComponent(token.content)}"></Mermaid>`
     }
     // 对不是我们需要的代码块的直接调用原有的函数
     return fence(tokens, idx, options, env, self)

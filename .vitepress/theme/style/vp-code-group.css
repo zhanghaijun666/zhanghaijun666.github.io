@@ -7,7 +7,9 @@
 .vp-code-group .tabs::before {
   background: #fc625d;
   border-radius: 50%;
-  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow:
+    20px 0 #fdbc40,
+    40px 0 #35cd4b;
   content: ' ';
   height: 12px;
   width: 12px;
@@ -24,13 +26,13 @@
 }
 
 /* 在代码组内部与外部容器的边角一致，避免嵌套的阴影叠加 */
-.vp-code-group div[class*="language-"].vp-adaptive-theme.line-numbers-mode {
+.vp-code-group div[class*='language-'].vp-adaptive-theme.line-numbers-mode {
   border-radius: 8px;
   box-shadow: none;
   position: relative;
 }
 
 /* 上移代码块小圆点 遮盖住 */
-.vp-code-group div[class*="language-"].vp-adaptive-theme.line-numbers-mode::before {
+.vp-code-group div[class*='language-'].vp-adaptive-theme.line-numbers-mode::before {
   top: -12px;
 }

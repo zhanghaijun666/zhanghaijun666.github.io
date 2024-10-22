@@ -4,7 +4,6 @@ import { mermaidPlugin } from '../plugins/mermaid'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import { type Article, getArticleList } from '../utils/article'
 
-
 const articles: { article: Article[] } = { article: await getArticleList() }
 const base: string = '/docs'
 
@@ -27,7 +26,7 @@ export const shared: UserConfig<DefaultTheme.Config> = defineConfig({
     ['meta', { name: 'keywords', content: '希望是火，失望是烟，人生就是一边生火一边冒烟' }]
   ],
   lastUpdated: true,
-  cleanUrls: true,
+  cleanUrls: false,
   metaChunk: true,
   markdown: {
     theme: { light: 'one-light', dark: 'one-dark-pro' },

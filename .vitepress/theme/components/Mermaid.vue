@@ -1,13 +1,13 @@
 <template>
   <div v-html="svgRef"></div>
 </template>
-<script setup ts>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import mermaid from "mermaid";
+import mermaid from 'mermaid'
 
 const props = defineProps({
   id: String,
-  code: String,
+  code: String
 })
 
 const render = async (id, code) => {

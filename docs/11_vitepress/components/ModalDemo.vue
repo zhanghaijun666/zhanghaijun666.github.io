@@ -12,9 +12,7 @@ const showModal = ref(false)
         <div class="modal-container">
           <p>Hello from the modal!</p>
           <div class="model-footer">
-            <button class="modal-button" @click="showModal = false">
-              Close
-            </button>
+            <button class="modal-button" @click="showModal = false">Close</button>
           </div>
         </div>
       </div>

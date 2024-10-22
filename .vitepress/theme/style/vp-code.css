@@ -1,5 +1,5 @@
 /* 无行号 添加背景阴影 */
-.vp-doc div[class*=language-] {
+.vp-doc div[class*='language-'] {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -8,8 +8,8 @@
 }
 
 /* 无行号：添加 macOS 风格的小圆点 */
-.vp-doc div[class*=language-]::before {
-  content: "";
+.vp-doc div[class*='language-']::before {
+  content: '';
   display: block;
   position: relative;
   top: 12px;
@@ -18,22 +18,23 @@
   height: 12px;
   background-color: #ff5f56;
   border-radius: 50%;
-  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  box-shadow:
+    20px 0 0 #ffbd2e,
+    40px 0 0 #27c93f;
   z-index: 1;
 }
 
 /* 有行号 添加背景阴影 */
-div[class*="language-"].vp-adaptive-theme.line-numbers-mode {
+div[class*='language-'].vp-adaptive-theme.line-numbers-mode {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px 0 rgb(0 0 0 / 40%);
 }
 
-
 /* 有行号：添加 macOS 风格的小圆点 */
-.vp-doc div[class*="language-"].line-numbers-mode::before {
-  content: "";
+.vp-doc div[class*='language-'].line-numbers-mode::before {
+  content: '';
   display: block;
   position: relative;
   top: 12px;
@@ -42,11 +43,11 @@ div[class*="language-"].vp-adaptive-theme.line-numbers-mode {
   height: 12px;
   background-color: #ff5f56;
   border-radius: 50%;
-  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  box-shadow:
+    20px 0 0 #ffbd2e,
+    40px 0 0 #27c93f;
   z-index: 1;
 }
-
-
 
 /* 下移行号，与代码对齐；隐藏右侧竖线 */
 .vp-doc .line-numbers-wrapper {
@@ -56,7 +57,7 @@ div[class*="language-"].vp-adaptive-theme.line-numbers-mode {
 
 /* 重新建立行号右侧竖线 */
 .vp-doc .line-numbers-wrapper::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 38px;
   right: 0;

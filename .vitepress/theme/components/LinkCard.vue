@@ -10,15 +10,16 @@ const props = withDefaults(defineProps<Props>(), {
   url: '',
   title: '',
   description: '',
-  logo: '',
+  logo: ''
 })
 </script>
-
 
 <template>
   <div class="link-card">
     <a :href="props.url" target="_blank">
-      <p class="description">{{ props.title }}<br><span>{{ props.description }}</span></p>
+      <p class="description">
+        {{ props.title }}<br /><span>{{ props.description }}</span>
+      </p>
       <div class="logo">
         <img alt="logo" width="70px" height="70px" :src="props.logo" />
       </div>
@@ -32,7 +33,9 @@ const props = withDefaults(defineProps<Props>(), {
   background-color: var(--vp-c-bg-soft);
   border-radius: 8px;
   padding: 8px 16px 8px 8px;
-  transition: color 0.5s, background-color 0.5s;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
   margin-top: 15px;
 }
 

@@ -21,10 +21,9 @@ import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
 import { Article } from '../../utils/article'
 
-
 const { theme } = useData<{ article: Article[] }>()
 
-const sortedData = computed<{ category: string, articles: Article[] }[]>(() => {
+const sortedData = computed<{ category: string; articles: Article[] }[]>(() => {
   const articleList = (theme.value.article || []) as Article[]
   articleList.sort((a, b) => {
     if (a.top !== b.top) {
@@ -35,10 +34,12 @@ const sortedData = computed<{ category: string, articles: Article[] }[]>(() => {
     }
     return a.title.localeCompare(b.title)
   })
-  return [{
-    'category': '分类展示',
-    'articles': articleList
-  }]
+  return [
+    {
+      category: '分类展示',
+      articles: articleList
+    }
+  ]
 })
 </script>
 

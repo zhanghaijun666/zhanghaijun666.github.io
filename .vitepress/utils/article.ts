@@ -5,27 +5,27 @@ import glob from 'fast-glob'
 
 /** 文章数据 */
 export type Article = {
-  index: number; // 排序字段
-  title: string; // 标题
-  link: string; // 链接
-  top?: boolean; // 置顶
+  index: number // 排序字段
+  title: string // 标题
+  link: string // 链接
+  top?: boolean // 置顶
   matter?: {
-    date?: string; // 发布日期
-    author?: string; // 作者
-    categories?: string[]; // 分类
-    tags?: string[]; // 标签
+    date?: string // 发布日期
+    author?: string // 作者
+    categories?: string[] // 分类
+    tags?: string[] // 标签
   }
 
-  [key: string]: any; // 其他自定义字段
+  [key: string]: any // 其他自定义字段
 }
 
 export const getArticleList = async (): Promise<Article[]> => {
   const cwd: string = './docs'
   const pattern: string[] = ['[0-9]+[_|.]*' + '/**/*.md']
   const ignoreList: string[] = []
-  const paths: string[] = (await glob(pattern, { cwd, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map(path => normalize(path))
+  const paths: string[] = (await glob(pattern, { cwd, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map((path) => normalize(path))
 
-  const articleList: Article[] = await Promise.all(paths.map(async path => getArticleData(cwd, path)))
+  const articleList: Article[] = await Promise.all(paths.map(async (path) => getArticleData(cwd, path)))
   // 文章排序
   articleList.sort((a, b) => {
     if (a.top !== b.top) {
@@ -53,7 +53,7 @@ export const getArticleData = (cwd: string, path: string): Article => {
   return {
     index: item.index,
     title: data.title || item.title || getArticleTitle(content),
-    link: '/' + path.replace(/.md$/, '').split(sep).join('/'),
+    link: '/' + path.replace(/.md$/, '.html').split(sep).join('/'),
     top: !!data.top,
     matter: {
       date: data.date,
@@ -81,11 +81,7 @@ export function getArticleTitle(content: string) {
  */
 export const getPathItem = (path: string): { index: number; title: string; link: string | undefined } => {
   const name = basename(path)
-  const array = (
-    name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?.md/)
-    || name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/)
-    || []
-  ).filter((_, index) => [2, 3, 5].includes(index))
+  const array = (name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?.md/) || name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/) || []).filter((_, index) => [2, 3, 5].includes(index))
 
   if (array.length === 0) return { index: 999999, title: name, link: undefined }
   return { index: Number(array[0] || 999999), title: array[1], link: array[2] || array[1] }

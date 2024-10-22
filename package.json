@@ -5,10 +5,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev:run": "npx tsx .vitepress/scripts/index.ts",
     "dev": "vitepress dev .",
     "build": "vitepress build .",
-    "preview": "vitepress preview ."
+    "preview": "vitepress preview .",
+    "format:prettier": "pnpm exec prettier docs/**/*.md --write",
+    "dev:run": "npx tsx .vitepress/scripts/index.ts"
   },
   "keywords": [],
   "author": "haijun.zhang",
@@ -24,6 +25,7 @@
     "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0",
     "mermaid": "^11.3.0",
+    "prettier": "3.3.3",
     "sass": "^1.79.5",
     "search-insights": "^2.17.2",
     "tsx": "^4.19.1",

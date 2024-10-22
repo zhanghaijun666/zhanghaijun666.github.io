@@ -1,5 +1,5 @@
 // https://vitepress.dev/guide/custom-theme
-import { h, onMounted, watch, nextTick } from 'vue'
+import { h, nextTick, onMounted, watch } from 'vue'
 import type { Theme } from 'vitepress'
 import { inBrowser, useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom'
