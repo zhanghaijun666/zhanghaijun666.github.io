@@ -21,6 +21,7 @@ import Archives from './blog/Archives.vue'
 import Page from './blog/Page.vue'
 
 import './style/index.css'
+import 'virtual:group-icons.css'
 
 export default {
   extends: DefaultTheme,

@@ -27,3 +27,8 @@
 - <https://vitepress.dev/zh/>
 - <https://vitejs.cn/vitepress/>
 - [Markdown It 插件](https://mdit-plugins.github.io/zh/)
+
+## 知识星球
+
+- 小傅哥 虫洞栈: <https://bugstack.cn/>
+- 设计模式目录: <https://refactoringguru.cn/design-patterns/catalog>

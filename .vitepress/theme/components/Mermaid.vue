@@ -1,16 +1,13 @@
 <template>
-  <div v-html="svgRef"></div>
+  <div v-html="svgRef" style="display: flex;justify-content: center;align-items: center;"></div>
 </template>
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import mermaid from 'mermaid'
 
-const props = defineProps({
-  id: String,
-  code: String
-})
+const props = defineProps({ id: String, code: String })
 
-const render = async (id, code) => {
+const render = async (id: string, code: string) => {
   // mermaid 初始化
   mermaid.initialize({ startOnLoad: false })
   const { svg } = await mermaid.render(id, code)
