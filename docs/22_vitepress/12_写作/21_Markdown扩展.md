@@ -616,22 +616,22 @@ const line4 = 'This is line 4'
 **输入**
 
 ```md
-<<< @/11_vitepress/snippets/snippet.js{2}
+<<< @/22_vitepress/snippets/snippet.js{2}
 ```
 
 **Code file**
 
-<<< @/11_vitepress/snippets/snippet.js
+<<< @/22_vitepress/snippets/snippet.js
 
 **输出**
 
-<<< @/11_vitepress/snippets/snippet.js{2}
+<<< @/22_vitepress/snippets/snippet.js{2}
 
 ::: tip
 `@` 的值对应于源代码根目录，默认情况下是 VitePress 项目根目录，除非配置了 `srcDir`。或者也可以从相对路径导入：
 
 ```md
-<<< @/11_vitepress/snippets/snippet.js
+<<< @/22_vitepress/snippets/snippet.js
 ```
 
 :::
@@ -641,29 +641,29 @@ const line4 = 'This is line 4'
 **输入**
 
 ```md
-<<< @/11_vitepress/snippets/snippet-with-region.js#snippet{1}
+<<< @/22_vitepress/snippets/snippet-with-region.js#snippet{1}
 ```
 
 **Code file**
 
-<<< @/11_vitepress/snippets/snippet-with-region.js
+<<< @/22_vitepress/snippets/snippet-with-region.js
 
 **输出**
 
-<<< @/11_vitepress/snippets/snippet-with-region.js#snippet{1}
+<<< @/22_vitepress/snippets/snippet-with-region.js#snippet{1}
 
 也可以像这样在大括号内(`{}`)指定语言：
 
 ```md
-<<< @/11_vitepress/snippets/snippet.cs{c#}
+<<< @/22_vitepress/snippets/snippet.cs{c#}
 
 <!-- 带行高亮: -->
 
-<<< @/11_vitepress/snippets/snippet.cs{1,2,4-6 c#}
+<<< @/22_vitepress/snippets/snippet.cs{1,2,4-6 c#}
 
 <!-- 带行号: -->
 
-<<< @/11_vitepress/snippets/snippet.cs{1,2,4-6 c#:line-numbers}
+<<< @/22_vitepress/snippets/snippet.cs{1,2,4-6 c#:line-numbers}
 ```
 
 如果无法从文件扩展名推测出源语言，这将会很有帮助
@@ -737,11 +737,11 @@ export default config
 
 <!-- 文件名默认用作标题 -->
 
-<<< @/11_vitepress/snippets/snippet.js
+<<< @/22_vitepress/snippets/snippet.js
 
 <!-- 也可以提供定制的代码组 -->
 
-<<< @/11_vitepress/snippets/snippet-with-region.js#snippet{1,2 ts:line-numbers} [snippet with region]
+<<< @/22_vitepress/snippets/snippet-with-region.js#snippet{1,2 ts:line-numbers} [snippet with region]
 
 :::
 ```
@@ -750,9 +750,9 @@ export default config
 
 ::: code-group
 
-<<< @/11_vitepress/snippets/snippet.js
+<<< @/22_vitepress/snippets/snippet.js
 
-<<< @/11_vitepress/snippets/snippet-with-region.js#snippet{1,2 ts:line-numbers} [snippet with region]
+<<< @/22_vitepress/snippets/snippet-with-region.js#snippet{1,2 ts:line-numbers} [snippet with region]
 
 :::
 

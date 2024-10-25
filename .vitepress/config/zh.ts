@@ -35,10 +35,10 @@ export const zh = defineConfig({
       level: [2, 3]
     },
 
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: `Copyright © 2023-${ new Date().getFullYear() } 备案号：<a href="/" target="_blank">京****号</a>`
-    },
+    // footer: {
+    //   message: 'Released under the MIT License.',
+    //   copyright: `Copyright © 2023-${ new Date().getFullYear() } 备案号：<a href="/" target="_blank">京****号</a>`
+    // },
 
     lastUpdated: {
       text: '最后更新于',
@@ -60,6 +60,8 @@ export const zh = defineConfig({
 function nav(): DefaultTheme.NavItem[] {
   return [
     { text: '首页', link: '/' },
+    { text: '项目搭建', link: '/11_项目管理/21_基础服务/11_基础服务概览' },
+    { text: 'SpringBoot', link: '/31.java/21.SpringBoot/10.系统架构' },
     {
       text: '指南', items: [
         { text: '分类', link: '/pages/category' },

@@ -98,21 +98,23 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
   <footer class="ba">
     <div class="ff">
       <div class="sc" v-for="(section, index) in props.Footer_Data.group || []" :key="index">
-        <div class="st" @click="toggleSection(index)">
-          <i v-if="section.icon" :class="section.icon" :style="section.style"></i>
-          {{ section.title }}
-          <button class="toggle-button">
-            {{ openSectionIndex === index ? '−' : '+' }}
-          </button>
-        </div>
-        <ul v-if="openSectionIndex === index || isLargeScreen">
-          <li v-for="(link, idx) in section.links" :key="idx">
-            <i v-if="link.icon" :class="link.icon" :style="link.style"></i>
-            <a :class="{ 'external-link': !link.internal && !section.internal }" :target="link.internal || section.internal ? '_self' : '_blank'" rel="noopener" :name="link.name" :title="link.name" :href="link.href">
-              {{ link.name }}
-            </a>
-          </li>
-        </ul>
+        <template v-if="section.links.length > 0">
+          <div class="st" @click="toggleSection(index)">
+            <i v-if="section.icon" :class="section.icon" :style="section.style"></i>
+            {{ section.title }}
+            <button class="toggle-button">
+              {{ openSectionIndex === index ? '−' : '+' }}
+            </button>
+          </div>
+          <ul v-if="openSectionIndex === index || isLargeScreen">
+            <li v-for="(link, idx) in section.links" :key="idx">
+              <i v-if="link.icon" :class="link.icon" :style="link.style"></i>
+              <a :class="{ 'external-link': !link.internal && !section.internal }" :target="link.internal || section.internal ? '_self' : '_blank'" rel="noopener" :name="link.name" :title="link.name" :href="link.href">
+                {{ link.name }}
+              </a>
+            </li>
+          </ul>
+        </template>
       </div>
     </div>
 
@@ -133,8 +135,9 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
     </div>
     <div class="flex" v-if="props.Footer_Data.author?.name">
       <span>
-        <i class="far fa-copyright"></i>{{ new Date().getFullYear() }} <a target="_blank" rel="noopener" title="GitHub" :href="props.Footer_Data.author?.link"> {{ props.Footer_Data.author?.name }}</a
-        >. All Rights Reserved.
+        <i class="far fa-copyright"></i>{{ new Date().getFullYear() }}
+        <a target="_blank" rel="noopener" title="GitHub" :href="props.Footer_Data.author?.link"> {{ props.Footer_Data.author?.name }}</a>
+        . All Rights Reserved.
       </span>
     </div>
   </footer>

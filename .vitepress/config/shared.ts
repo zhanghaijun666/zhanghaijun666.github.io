@@ -20,8 +20,8 @@ export const shared: UserConfig<DefaultTheme.Config> = defineConfig({
     ['meta', { name: 'og:site_name', content: 'Ares Chang' }],
     ['meta', { name: 'og:image', content: base + '/logo.png' }],
     ['link', { rel: 'manifest', href: base + '/manifest.json' }],
-    ['meta', { name: 'theme-color', content: '#5f67ee' }],
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;' }],
+    ['meta', { name: 'theme-color', content: '#18794e' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' }],
     ['meta', { name: 'referrer', content: 'never' }],
     ['meta', { name: 'keywords', content: '希望是火，失望是烟，人生就是一边生火一边冒烟' }]
   ],

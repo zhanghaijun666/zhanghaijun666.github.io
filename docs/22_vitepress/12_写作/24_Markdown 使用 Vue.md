@@ -226,7 +226,7 @@ VitePress 目前只有使用 teleport 传送到 body 的 SSG 支持。对于其�
 <ModalDemo />
 
 ::: details
-<<< @/11_vitepress/components/ModalDemo.vue
+<<< @/22_vitepress/components/ModalDemo.vue
 :::
 
 ```md

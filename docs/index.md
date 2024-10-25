@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 什么是 VitePress?
-      link: /11_vitepress/
+      link: /22_vitepress/
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress
@@ -38,4 +38,13 @@ features:
 
 <confetti />
 
-<DataPanel />
+<script setup lang="ts">
+import { useData } from 'vitepress';
+const { site } = useData();
+const url = 'https://gitee.com/haijunit_navi';
+
+
+console.log(` %c ${site.value.title} %c ${url}`, 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+</script>
+
+

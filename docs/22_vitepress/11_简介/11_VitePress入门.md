@@ -107,7 +107,7 @@ yarn vitepress init
 
 将需要回答几个简单的问题：
 
-<<< @/11_vitepress/snippets/init.ansi
+<<< @/22_vitepress/snippets/init.ansi
 
 :::tip Vue 作为 peer dependency
 如果打算使用 Vue 组件或 API 进行自定义，还应该明确地将 `vue` 安装为 dependency。
@@ -173,7 +173,7 @@ $ bun vitepress dev docs
 
 开发服务应该会运行在 `http://localhost:5173` 上。在浏览器中访问 URL 以查看新站点的运行情况吧！
 
-### 命令行接口
+### 3.6 命令行接口
 
 > `vitepress dev`
 

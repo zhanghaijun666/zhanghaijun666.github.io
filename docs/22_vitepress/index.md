@@ -13,10 +13,10 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /11_vitepress/11_简介/11_VitePress入门
+      link: /22_vitepress/11_简介/11_VitePress入门
     - theme: alt
       text: Markdown写作
-      link: /11_vitepress/11_简介/20.Markdown写作
+      link: /22_vitepress/11_简介/20.Markdown写作
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress

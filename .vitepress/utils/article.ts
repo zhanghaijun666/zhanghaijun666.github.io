@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs'
 import matter from 'gray-matter'
 import { basename, normalize, resolve, sep } from 'pathe'
 import glob from 'fast-glob'
+import { dateFormat } from './date'
 
 /** 文章数据 */
 export type Article = {
@@ -9,7 +10,7 @@ export type Article = {
   title: string // 标题
   link: string // 链接
   top?: boolean // 置顶
-  matter?: {
+  matter: {
     date?: string // 发布日期
     author?: string // 作者
     categories?: string[] // 分类
@@ -48,20 +49,21 @@ export const getArticleData = (cwd: string, path: string): Article => {
   const file = readFileSync(resolve(cwd, path), 'utf-8')
   const { content, data } = matter(file)
 
-  const item = getPathItem(path)
+  const pathItem = getPathItem(path)
 
-  return {
-    index: item.index,
-    title: data.title || item.title || getArticleTitle(content),
+  const articleItem: Article = {
+    index: pathItem.index,
+    title: data.title || pathItem.title || getArticleTitle(content),
     link: '/' + path.replace(/.md$/, '.html').split(sep).join('/'),
-    top: !!data.top,
-    matter: {
-      date: data.date,
-      author: data.author,
-      categories: (data.categories || []).map(String),
-      tags: (data.tags || []).map(String)
-    }
+    matter: {}
   }
+  if (data.top) articleItem.top = true
+  if (data.date) articleItem.matter.date = dateFormat(data.date, 'yyyy-MM-dd')
+  if (data.author) articleItem.matter.author = data.author
+  if (data.categories) articleItem.matter.categories = (data.categories || []).map(String)
+  if (data.tags) articleItem.matter.tags = (data.tags || []).map(String)
+
+  return articleItem
 }
 
 /**
@@ -79,10 +81,10 @@ export function getArticleTitle(content: string) {
  * @param path 文件路径
  * @returns index：排序字段，title：中文标题，link：一般是英文url
  */
-export const getPathItem = (path: string): { index: number; title: string; link: string | undefined } => {
+export const getPathItem = (path: string): { index: number; title: string; link?: string } => {
   const name = basename(path)
   const array = (name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?.md/) || name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/) || []).filter((_, index) => [2, 3, 5].includes(index))
 
-  if (array.length === 0) return { index: 999999, title: name, link: undefined }
+  if (array.length === 0) return { index: 999999, title: name }
   return { index: Number(array[0] || 999999), title: array[1], link: array[2] || array[1] }
 }
