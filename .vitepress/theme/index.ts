@@ -20,7 +20,7 @@ import Page from './blog/Page.vue'
 
 import './style/index.css'
 import 'virtual:group-icons.css'
-import { Footer_Data } from '../data'
+import { webLinks } from '../data'
 
 export default {
   extends: DefaultTheme,
@@ -35,7 +35,7 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
       'doc-footer-before': () => h(BackTop),
       'aside-outline-before': () => h(ShareButton),
-      'layout-bottom': () => h(LayoutFooter, { Footer_Data })
+      'layout-bottom': () => h(LayoutFooter, { group: webLinks })
     })
   },
   enhanceApp: async ({ app, router, siteData }) => {
@@ -57,6 +57,9 @@ export default {
       mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
     }
     onMounted(() => initZoom())
-    watch(() => route.path, () => nextTick(() => initZoom()))
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    )
   }
 } satisfies Theme

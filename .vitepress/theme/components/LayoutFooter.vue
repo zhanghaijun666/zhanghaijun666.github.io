@@ -1,45 +1,30 @@
 <script setup lang="ts">
+import { useData } from 'vitepress'
 import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { type Group } from '../../data/link'
 
-// 定义链接类型
-interface Link {
-  icon?: string // 链接图标（可选）
-  style?: string // 链接样式（可选）
-  name: string // 链接名称
-  href: string // 链接地址
-  internal?: boolean // 是否为内部链接（默认 false，可选）
-}
-
-// 定义分组类型
-interface Group {
-  icon?: string // 图标（可选）
-  style?: string // 图标样式（可选）
-  title: string // 分组标题
-  internal?: boolean // 是否为内部链接（默认 false，可选）
-  links: Link[] // 链接数组
-}
-
-// 定义备案类型
-interface Beian {
-  icp?: string // ICP 备案号（可选）
-  police?: string // 公安备案号（可选）
-}
-
-// 定义作者类型
-interface Author {
-  name?: string // 作者姓名（可选）
-  link?: string // 作者链接（可选）
-}
-
-// 定义 Footer_Data 类型
-interface FooterData {
-  group?: Group[] // 分组数组（可选）
-  beian?: Beian // 备案信息（可选）
-  author?: Author // 作者信息（可选）
-}
+const { frontmatter } = useData()
 
 // 使用 defineProps 定义属性
-const props = defineProps<{ Footer_Data: FooterData }>()
+const props = withDefaults(defineProps<{ group?: Group[] }>(), {
+  group: () => [
+    {
+      title: '项目资源',
+      icon: 'fab fa-github',
+      links: [{ name: 'GitHub', href: 'https://github.com' }]
+    },
+    {
+      title: '合作伙伴',
+      icon: 'fas fa-handshake',
+      links: [{ name: 'haijunit', href: 'https://gitee.com/haijunit/' }]
+    },
+    {
+      title: '相关链接',
+      icon: 'fas fa-link',
+      links: [{ name: '科学上网', href: 'https://ikuuu.pw' }]
+    }
+  ]
+})
 
 /**
  * 当前打开的 section 索引，`null` 表示没有 section 被打开。
@@ -95,9 +80,10 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
 </script>
 
 <template>
-  <footer class="ba">
+  <footer class="ba" v-if="frontmatter.footer != 'false'">
+    <!-- 链接展示 -->
     <div class="ff">
-      <div class="sc" v-for="(section, index) in props.Footer_Data.group || []" :key="index">
+      <div class="sc" v-for="(section, index) in props.group || []" :key="index">
         <template v-if="section.links.length > 0">
           <div class="st" @click="toggleSection(index)">
             <i v-if="section.icon" :class="section.icon" :style="section.style"></i>
@@ -117,26 +103,24 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
         </template>
       </div>
     </div>
-
     <!-- 底部信息栏 -->
-    <div class="flex" v-if="props.Footer_Data.beian?.icp || props.Footer_Data.beian?.police">
-      <span v-if="props.Footer_Data.beian?.icp">
+    <div class="flex">
+      <span>
         <i class="fas fa-earth-americas"></i>
         <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="ICP备案">
-          {{ props.Footer_Data.beian.icp }}
+          {{ '鄂ICP备****号' }}
         </a>
       </span>
-      <span v-if="props.Footer_Data.beian?.police">
+      <span>
         <i class="fas fa-shield"></i>
         <a target="_blank" rel="noopener" href="https://beian.mps.gov.cn/" title="公安备案">
-          {{ props.Footer_Data.beian.police }}
+          {{ '粤公网安备****号' }}
         </a>
       </span>
     </div>
-    <div class="flex" v-if="props.Footer_Data.author?.name">
+    <div class="flex">
       <span>
-        <i class="far fa-copyright"></i>{{ new Date().getFullYear() }}
-        <a target="_blank" rel="noopener" title="GitHub" :href="props.Footer_Data.author?.link"> {{ props.Footer_Data.author?.name }}</a>
+        <i class="far fa-copyright"></i>{{ new Date().getFullYear() }} <a target="_blank" rel="noopener" title="GitHub" href="/"> {{ 'haijunit' }}</a>
         . All Rights Reserved.
       </span>
     </div>
