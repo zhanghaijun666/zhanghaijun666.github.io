@@ -14,6 +14,7 @@ export type Link = {
   icon?: string // 链接图标（可选）
   style?: string // 链接样式（可选）
   internal?: boolean // 是否为内部链接（默认 false，可选）
+  description?: string // 分组描述（可选）
 }
 
 export const webLinks: Group[] = [
@@ -51,7 +52,16 @@ export const webLinks: Group[] = [
       {name: '微信开发文档', href: 'https://developers.weixin.qq.com/doc/'},
       {name: 'Linux命令查询', href: 'https://command-not-found.com/'},
       {name: 'KubeSphere', href: 'https://kubesphere.io/zh/'},
-      {name: 'Helm K8S', href: 'https://helm.sh/zh/'}
+      {name: 'Helm K8S', href: 'https://helm.sh/zh/'},
+
+    ]
+  },
+  {
+    title: '后端开发',
+    icon: 'fa fa-code',
+    links: [
+      {name: 'SpringBoot', href: 'https://spring.io/projects/spring-boot'},
+      {name: 'Spring Cloud Alibaba', href: 'https://sca.aliyun.com/'}
     ]
   },
   {
@@ -69,7 +79,10 @@ export const webLinks: Group[] = [
     icon: 'fa fa-link',
     links: [
       {name: '易搜', href: 'https://yiso.fun'},
-      {name: '易搜地址', href: 'https://yiso.eu.org/'}
+      {name: '易搜地址', href: 'https://yiso.eu.org/'},
+      {name: 'LocalSend', href: 'https://localsend.org/download', description: '局域网数据传输工具'},
+      {name: 'Apifox', href: 'https://apifox.com/', description: 'API 设计、开发、测试一体化协作平台'},
+      {name: 'Reqable', href: 'https://reqable.com', description: '代理抓包 + 请求测试一站式解决方案'}
     ]
   }
 ]
