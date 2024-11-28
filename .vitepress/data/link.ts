@@ -61,7 +61,8 @@ export const webLinks: Group[] = [
     icon: 'fa fa-code',
     links: [
       {name: 'SpringBoot', href: 'https://spring.io/projects/spring-boot'},
-      {name: 'Spring Cloud Alibaba', href: 'https://sca.aliyun.com/'}
+      {name: 'Spring Cloud Alibaba', href: 'https://sca.aliyun.com/'},
+      {name: '阿里云云效 Maven', href: 'https://developer.aliyun.com/mvn/guide'}
     ]
   },
   {

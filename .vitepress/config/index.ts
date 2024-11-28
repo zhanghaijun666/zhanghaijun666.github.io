@@ -7,7 +7,7 @@ import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 export default defineConfig({
   ...shared,
   locales: {
-    root: { label: '简体中文', ...zh }
+    root: {label: '简体中文', ...zh}
   },
   vite: {
     plugins: [
@@ -29,6 +29,9 @@ export default defineConfig({
           api: 'modern-compiler'
         }
       }
+    },
+    build: {
+      chunkSizeWarningLimit: 1500
     }
   }
 })
