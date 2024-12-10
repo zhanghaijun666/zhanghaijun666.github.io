@@ -26,7 +26,7 @@ export const webLinks: Group[] = [
       {name: 'Bing', href: 'https://www.bing.com'},
       {name: 'GitHub', href: 'https://github.com'},
       {name: 'Gitee', href: 'https://gitee.com'},
-      {name: '科学上网', href: 'https://ikuuu.pw'}
+      {name: '科学上网', href: 'https://ikuuu.one'}
     ]
   },
   {
