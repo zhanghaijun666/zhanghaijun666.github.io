@@ -62,7 +62,9 @@ export const webLinks: Group[] = [
     links: [
       {name: 'SpringBoot', href: 'https://spring.io/projects/spring-boot'},
       {name: 'Spring Cloud Alibaba', href: 'https://sca.aliyun.com/'},
-      {name: '阿里云云效 Maven', href: 'https://developer.aliyun.com/mvn/guide'}
+      {name: '阿里云云效 Maven', href: 'https://developer.aliyun.com/mvn/guide'},
+      {name: "LLM应用开发框架", href: "https://agentsflex.com/zh/"}
+
     ]
   },
   {
@@ -72,7 +74,10 @@ export const webLinks: Group[] = [
       {name: 'knockoutJS', href: 'https://knockoutjs.com/downloads/index.html'},
       {name: 'ElementPlus', href: 'https://element-plus.org/zh-CN'},
       {name: "UnoCSS", href: "https://unocss.net/"},
-      {name: "Animate", href: "https://www.dowebok.com/demo/2014/98/"}
+      {name: "Animate", href: "https://www.dowebok.com/demo/2014/98/"},
+      {name: "Vue", href: "https://vuejs.org"},
+      {name: "Vite", href: "https://vite.dev"},
+      {name: "Tauri", href: "https://tauri.app"}
     ]
   },
   {
