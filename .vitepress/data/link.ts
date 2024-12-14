@@ -34,10 +34,10 @@ export const webLinks: Group[] = [
     icon: 'fa fa-umbrella',
     links: [
       {name: 'ChatGPT', href: 'https://chatgpt.com/'},
+      {name: 'AI-Coze', href: 'https://www.coze.cn/home'},
       {name: '通义千问', href: 'https://tongyi.aliyun.com/'},
       {name: '文心一言', href: 'https://yiyan.baidu.com/'},
       {name: '豆包', href: 'https://www.doubao.com/'},
-      {name: 'KiMi', href: 'https://kimi.moonshot.cn/'},
       {name: '图灵', href: 'https://www.tuling123.com/'},
       {name: '天工 AI', href: 'https://www.tiangong.cn/'}
     ]
