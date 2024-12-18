@@ -4,34 +4,39 @@
 
 ### 开发工具
 
-| 类别     | 软件名称               | 访问地址                                                                                           |
-|--------|--------------------|------------------------------------------------------------------------------------------------|
-| 代码版本控制 | Git                | https://git-scm.com/downloads                                                                  |
-| 开发工具   | Java SE 8          | https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html                 |
-| 开发工具   | Java SE 17         | https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html                   |
-| 开发工具   | Maven              | https://maven.apache.org/download.cgi                                                          |
-| 开发工具   | nvm (NodeJs)       | https://github.com/coreybutler/nvm-windows/releases                                            |
-| 开发工具   | Visual Studio Code | https://code.visualstudio.com/Download                                                         |
-| 开发工具   | Idea               | https://www.jetbrains.com/zh-cn/idea/download/?section=windows                                 |
-| 浏览器    | chrome             | https://www.google.com/chrome/                                                                 |
-| 开发工具   | MySQL              | https://dev.mysql.com/downloads/mysql/                                                         |
-| 开发工具   | Redis-windows      | https://github.com/tporadowski/redis / https://github.com/redis-windows/redis-windows/releases |
+| 类别     | 软件名称               | 访问地址                                                                                                |
+|--------|--------------------|-----------------------------------------------------------------------------------------------------|
+| 代码版本控制 | Git                | https://git-scm.com/downloads                                                                       |
+| 开发工具   | Java SE 8          | https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html                      |
+| 开发工具   | Java SE 17         | https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html                        |
+| 开发工具   | Maven              | https://maven.apache.org/download.cgi                                                               |
+| 开发工具   | nvm (NodeJs)       | https://nvm.uihtm.com/ https://nodejs.org/zh-cn https://github.com/coreybutler/nvm-windows/releases |
+| 开发工具   | Visual Studio Code | https://code.visualstudio.com/Download                                                              |
+| 开发工具   | Idea               | https://www.jetbrains.com/zh-cn/idea/download/?section=windows                                      |
+| 浏览器    | chrome             | https://www.google.com/chrome/ https://chrome.bjjuxiao.cn/                                          |
+| 开发工具   | MySQL              | https://dev.mysql.com/downloads/mysql/                                                              |
+| 开发工具   | Redis-windows      | https://github.com/tporadowski/redis / https://github.com/redis-windows/redis-windows/releases      |
 
 ### 常用软件
 
-| 类别    | 软件名称              | 访问地址                                                                |
-|-------|-------------------|---------------------------------------------------------------------|
-| 操作系统  | Windows           | https://www.microsoft.com/zh-cn/windows                             |
-| 终端工具  | Windows Terminal  | https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&hl=zh-cn&gl=CN |
-| 效率工具  | uTools            | https://u.tools/download                                            |
-| 搜索文件  | Everything        | https://www.voidtools.com/zh-cn/downloads/                          |
-| 截图神器  | Snipaste          | https://zh.snipaste.com/download.html                               |
-| 科学上网  | Clash for Windows | https://ikuuu.one                                                   |
-| 接口调试  | ApiFox            | https://apifox.com                                                  |
-| 手势软件  | WGestures 2       | https://www.yingdev.com/projects/wgestures2                         |
-| 视频播放  | PotPlayer         | https://potplayer.tv/?lang=zh_CN                                    |
-| 解压缩软件 | BandZip           | https://www.bandisoft.com/bandizip/                                 |
-| 文本编辑  | Notepad++         | https://notepad-plus-plus.org/                                      |
+| 类别    | 软件名称                  | 访问地址                                                                              |
+|-------|-----------------------|-----------------------------------------------------------------------------------|
+| 操作系统  | Windows10             | https://www.microsoft.com/zh-cn/software-download/windows10                       |
+| 操作系统  | Windows11             | https://www.microsoft.com/zh-cn/windows                                           |
+| 终端工具  | Windows Terminal      | https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&hl=zh-cn&gl=CN               |
+| 效率工具  | uTools                | https://u.tools/download                                                          |
+| 搜索文件  | Everything            | https://www.voidtools.com/zh-cn/downloads/                                        |
+| 截图神器  | Snipaste              | https://zh.snipaste.com/download.html                                             |
+| 科学上网  | Clash for Windows     | https://ikuuu.one                                                                 |
+| 接口调试  | ApiFox                | https://apifox.com                                                                |
+| 手势软件  | WGestures 2           | https://www.yingdev.com/projects/wgestures2                                       |
+| 视频播放  | PotPlayer             | https://potplayer.tv/?lang=zh_CN                                                  |
+| 解压缩软件 | BandZip、WinRAR 、7-zip | https://www.bandisoft.com/bandizip https://www.rarlab.com/ https://www.7-zip.org/ |
+| 文本编辑  | Notepad++             | https://notepad-plus-plus.org                                                     |
+| 文本编辑  | Markdown Editor       | https://www.marktext.cc https://typoraio.cn https://editor.mdnice.com             |
+| 素材管理  | Eagle                 | https://eagle.cool/                                                               |
+| 办公软件  | WPS                   | https://platform.wps.cn                                                           |
+| 文件搜索  | Everything            | https://www.voidtools.com/zh-cn/                                                  |
 
 ### 其他软件
 
@@ -61,7 +66,46 @@ yrm use taobao
 npm install -g pnpm --registry https://registry.npmmirror.com
 ```
 
-## 3、Idea配置
+## 3、Maven配置
+
+> `settings.xml`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+
+  <localRepository>C:\\develop\\maven\\maven-local</localRepository>
+
+  <mirrors>
+    <!-- 阿里云镜像 -->
+    <mirror>
+      <id>aliyun-mirror</id>
+      <mirrorOf>central,jcenter,!rdc-releases,!rdc-snapshots</mirrorOf>
+      <name>阿里云公共仓库</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+    <!-- 华为云镜像 -->
+    <mirror>
+      <id>huawei-mirror</id>
+      <mirrorOf>central</mirrorOf>
+      <name>huawei nexus</name>
+      <url>https://mirrors.huaweicloud.com/repository/maven</url>
+    </mirror>
+    <!-- 仓库官方-->
+    <mirror>
+      <id>nexus</id>
+      <name>internal nexus repository</name>
+      <mirrorOf>central</mirrorOf>
+      <url>http://repo.maven.apache.org/maven2</url>
+    </mirror>
+  </mirrors>
+</settings>
+```
+
+## 4、Idea配置
 
 配置JDK、Maven
 

@@ -88,7 +88,8 @@ export const webLinks: Group[] = [
       {name: '易搜地址', href: 'https://yiso.eu.org/'},
       {name: 'LocalSend', href: 'https://localsend.org/download', description: '局域网数据传输工具'},
       {name: 'Apifox', href: 'https://apifox.com/', description: 'API 设计、开发、测试一体化协作平台'},
-      {name: 'Reqable', href: 'https://reqable.com', description: '代理抓包 + 请求测试一站式解决方案'}
+      {name: 'Reqable', href: 'https://reqable.com', description: '代理抓包 + 请求测试一站式解决方案'},
+      {name: "在线工具", href: "https://d1tools.com"}
     ]
   }
 ]
