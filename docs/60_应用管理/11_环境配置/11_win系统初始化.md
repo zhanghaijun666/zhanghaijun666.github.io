@@ -107,11 +107,13 @@ npm install -g pnpm --registry https://registry.npmmirror.com
 
 ## 4、Idea配置
 
-配置JDK、Maven
+1、配置`JDK`、`Maven`
 
-插件安装：`Lombok`、`MyBatisX`、`Mermaid`、`SonarQube fro IDE`、`Key Promoter X`、`Maven Helper`、`Bookmark`、`Rainbow Brackets`
+2、配置编码：`settings`->`Editor`->`File Encodings` 调整为 `UTF-8`
 
-idea配置注释模板：`settings`->`Editor`->`File and Code Templates`->`files`->`class`
+3、插件安装：`Lombok`、`MyBatisX`、`Mermaid`、`SonarQube fro IDE`、`Key Promoter X`、`Maven Helper`、`Bookmark`、`Rainbow Brackets`
+
+4、idea配置注释模板：`settings`->`Editor`->`File and Code Templates`->`files`->`class`
 
 ::: code-group
 
