@@ -1,6 +1,8 @@
 # Linux系统初始化
 
-## 1、网络配置
+## 1、网络链接
+
+### 1.1、网络配置
 
 ::: code-group
 
@@ -60,6 +62,29 @@ sudo timedatectl set-ntptrue
 ```
 
 :::
+
+### 1.2、WIFI链接
+
+```shell
+## 1: 检查网络接口
+nmcli device status
+
+## 2: 启用 Wi-Fi 网卡
+nmcli radio wifi on
+## 验证 Wi-Fi 是否已启用：
+nmcli radio
+
+## 3: 扫描可用的 Wi-Fi 网络
+nmcli device wifi list
+
+## 4: 连接到 Wi-Fi 网络
+nmcli device wifi connect 'xxxxxx' password 'xxxxx'
+
+## 5: 验证连接状态
+nmcli connection show
+## 查看当前连接的详细信息：
+nmcli device show wlp3s0
+```
 
 ## 2、更新软件源
 
