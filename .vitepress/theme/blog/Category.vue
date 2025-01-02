@@ -44,5 +44,5 @@ const sortedData = computed<{ category: string; articles: Article[] }[]>(() => {
 </script>
 
 <style lang="scss" scoped>
-@import './style.scss';
+@use './style.scss';
 </style>

@@ -59,7 +59,7 @@ const toggleTag = (tag: string) => {
 </script>
 
 <style lang="scss" scoped>
-@import './style.scss';
+@use './style.scss';
 .tags {
   margin-top: 14px;
   display: flex;

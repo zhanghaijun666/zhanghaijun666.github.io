@@ -14,7 +14,7 @@ hero:
       link: /22_vitepress/
     - theme: alt
       text: 项目搭建
-      link: /11_项目管理/21_项目搭建/21_用户管理
+      link: /11_项目管理/21_项目搭建/21_用户访问控制
   image:
     src: /logo.png
     alt: logo
