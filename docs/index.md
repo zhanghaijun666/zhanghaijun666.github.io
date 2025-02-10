@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 什么是 VitePress?
-      link: /22_vitepress/
+      link: /41_前端开发/22_vitepress
     - theme: alt
       text: 项目搭建
-      link: /11_项目管理/21_项目搭建/21_用户访问控制
+      link: /101_项目管理/21_项目搭建/21_用户访问控制.md
   image:
     src: /logo.png
     alt: logo
@@ -31,7 +31,6 @@ features:
   - icon: 🛠
     title: 智慧农业【SA】
     details: 面向智慧农业（SA）的解决方案，涵盖了从数据采集到数据应用的所有业务领域。
-
 ---
 
 <script setup lang="ts">

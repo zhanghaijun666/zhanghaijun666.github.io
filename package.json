@@ -8,7 +8,7 @@
     "dev": "vitepress dev .",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
-    "format:prettier": "pnpm exec prettier docs/**/*.md --write",
+    "lint:prettier": "pnpm exec prettier docs/**/*.md --write",
     "dev:run": "npx tsx .vitepress/scripts/index.ts"
   },
   "keywords": [],
