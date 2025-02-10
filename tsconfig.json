@@ -15,8 +15,10 @@
     ],
     "outDir": "dist"
   },
-  "include": [
-    ".vitepress/**/*.ts"
+  "include1": [
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.d.ts",
+    "scripts/**/*.ts"
   ],
   "exclude": [
     "node_modules",

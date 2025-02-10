@@ -13,6 +13,6 @@ export const mermaidPlugin = (md: MarkdownIt): void => {
       return `<Mermaid id="mermaid-${idx}" code="${encodeURIComponent(token.content)}"></Mermaid>`
     }
     // 对不是我们需要的代码块的直接调用原有的函数
-    return fence(tokens, idx, options, env, self)
+    return fence ? fence(tokens, idx, options, env, self) : "";
   }
 }

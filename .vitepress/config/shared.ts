@@ -2,7 +2,7 @@ import { DefaultTheme, defineConfig, UserConfig } from 'vitepress'
 import { search as zhSearch } from './zh'
 import { mermaidPlugin } from '../plugins/mermaid'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
-import { type Article, getArticleList } from '../utils/article'
+import { type Article, getArticleList } from '../../scripts/utils/article'
 
 const articles: { article: Article[] } = { article: await getArticleList() }
 const base: string = '/docs'

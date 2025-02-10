@@ -1,4 +1,4 @@
-import { getArticleList } from '../utils/article'
+import { getArticleList } from './utils/article'
 
 export const formatMatter = async () => {
   const articleList = await getArticleList()

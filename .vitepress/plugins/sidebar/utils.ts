@@ -29,7 +29,7 @@ export function getArticleData(path: string): ArticleOptions {
     collapsed: data.collapsed,
     sortPrev: data.sortPrev,
     sortNext: data.sortNext
-  }).reduce((acc, [key, value]) => {
+  }).reduce((acc: {}, [key, value]) => {
     if (value !== undefined) {
       acc[key] = value
     }
@@ -43,11 +43,11 @@ export function getArticleData(path: string): ArticleOptions {
  * @returns 文章标题
  */
 export function getArticleTitle(content: string) {
-  const match = content.match(/^#\s*(.+)/m)
+  const match = RegExp(/^#\s*(.+)/m).exec(content)
   return match?.[1]
     .trim()
-    .replace(/\{.*\}/g, '')
-    .replace(/\<.*\>/g, '')
+    .replace(/\{.*}/g, '')
+    .replace(/<.*>/g, '')
 }
 
 /**
@@ -57,10 +57,10 @@ export function getArticleTitle(content: string) {
  */
 export const getPathItem = (path: string): { index: number; title: string; link: string } => {
   const name = basename(path)
-  const array = (name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/) || []).filter((_, index) => [2, 3, 5].includes(index))
+  const array = (RegExp(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/).exec(name) || []).filter((_, index) => [2, 3, 5].includes(index))
 
   return {
-    index: Number(array[0] || getPathIndex(path) || 999999),
+    index: Number((array[0] || getPathIndex(path)) ?? 999999),
     title: array[1],
     link: array[2] || array[1]
   }
@@ -75,7 +75,7 @@ export function getPathIndex(path: string): number | undefined {
   const name = basename(path)
 
   // 使用正则表达式匹配文件名中的数字前缀
-  const match = name.match(/^(\d+)\./)
+  const match = RegExp(/^(\d+)\./).exec(name)
   if (match) return Number(match[1])
   return undefined
 }
