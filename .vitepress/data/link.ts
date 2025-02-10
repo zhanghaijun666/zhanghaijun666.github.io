@@ -93,3 +93,32 @@ export const webLinks: Group[] = [
     ]
   }
 ]
+
+
+export const links: Group[] = [
+  {
+    title: 'Logo设计',
+    icon: 'fa fa-link',
+    links: [
+      {name: 'Logo设计', href: 'https://icon.kitchen/'},
+    ]
+  }, {
+    title: "icon资源",
+    icon: "fa fa-image",
+    links: [
+      {name: "iconfont", href: "https://www.iconfont.cn/"},
+      {name: "remixicon", href: "https://remixicon.com/"},
+      {name: "iconpark", href: "https://iconpark.oceanengine.com/official"},
+      {name: "fontawesome", href: "https://fontawesome.com/"},
+      {name: "mdi", href: "https://materialdesignicons.com/"}
+    ]
+  }, {
+    title: "插画资源",
+    icon: "fa fa-image",
+    links: [
+      {name: "undraw", href: "https://undraw.co/illustrations"},
+      {name: "storyset", href: "https://storyset.com/"},
+      {name: "openpeeps", href: "https://www.openpeeps.com/"}
+    ]
+  }
+]
