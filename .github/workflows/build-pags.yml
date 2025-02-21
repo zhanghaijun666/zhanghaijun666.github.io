@@ -1,0 +1,71 @@
+# GitHub Actions 工作流，用于自动构建并部署文档到 GitHub Pages
+# 该工作流在 'docs' 分支有推送时或手动触发时执行。
+
+name: build-pages
+
+on:
+  push:
+    branches:
+      - docs
+
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: '选择分支'
+        required: true
+        default: 'docs'
+
+# 权限设置
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: 安装 pnpm
+        run: npm install -g pnpm
+
+      - name: 安装依赖
+        run: pnpm install
+
+      - name: 构建文档
+        run: pnpm build
+
+      - name: 检查构建结果
+        run: |
+          branch_name=${GITHUB_REF#refs/heads/}
+          if [ ! -d "dist/${branch_name}" ]; then
+            echo "Error: dist/${branch_name} directory does not exist"
+            exit 1
+          fi
+
+      - name: 部署到 GitHub Pages
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'zhanghaijun_java@163.com'
+          git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
+          branch_name=${GITHUB_REF#refs/heads/}
+          rsync -av --delete dist/docs/ gh-pages/${branch_name}/
+          cd gh-pages
+          git add ${branch_name}
+          git commit -m "Update docs for branch ${branch_name} [bot]"
+          git push origin gh-pages

@@ -1,0 +1,29 @@
+# EditorConfig 用于在 IDE 中检查代码的基本 Code Style
+# @see: https://editorconfig.org/
+
+[*]
+end_of_line = lf
+indent_size = 4
+indent_style = space
+max_line_length = 256
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+indent_size = 2
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*{js,ts,vue,d.ts,css,cass,less,html}]
+indent_size = 2
+tab_width = 2
+
+[*.{yml,yaml,json}]
+indent_size = 2
+
+[*.{bat, cmd}]
+end_of_line = crlf
+
+[Makefile]
+indent_style = tab

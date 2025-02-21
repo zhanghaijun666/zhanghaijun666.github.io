@@ -1,0 +1,15 @@
+**/node_modules
+**/dist
+*-lock.*
+**/.vitepress/cache/
+**/logs/
+*.log
+**/.temp
+**/.DS_Store
+
+### IntelliJ IDEA ###
+.idea/
+!.idea/icon.png
+*.iws
+*.iml
+*.ipr
