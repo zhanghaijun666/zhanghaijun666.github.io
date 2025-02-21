@@ -35,14 +35,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+
       - name: 设置 Node.js 环境
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'pnpm'
 
-      - name: 安装 pnpm
-        run: npm install -g pnpm
+      - name: 确认 pnpm 是否可执行
+        run: pnpm --version
 
       - name: 安装依赖
         run: pnpm install
