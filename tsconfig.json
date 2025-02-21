@@ -15,7 +15,7 @@
     ],
     "outDir": "dist"
   },
-  "include1": [
+  "include": [
     ".vitepress/**/*.ts",
     ".vitepress/**/*.d.ts",
     "scripts/**/*.ts"
