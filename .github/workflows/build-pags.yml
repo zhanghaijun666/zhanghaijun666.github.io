@@ -30,11 +30,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set branch name
+        id: vars
+        run: echo "branch_name=${{ github.event.inputs.branch || github.ref_name }}" >> $GITHUB_ENV
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: ${{ github.event.inputs.branch || github.ref }}
+          ref: ${{ env.branch_name }}
 
       - name: list file
         run: ls -l
@@ -57,13 +61,14 @@ jobs:
         run: pnpm install
 
       - name: 构建文档
-        run: pnpm build
+        run: |
+          pnpm build
+          ls -l dist/
 
       - name: 检查构建结果
         run: |
-          branch_name=${GITHUB_REF#refs/heads/}
-          if [ ! -d "dist/${branch_name}" ]; then
-            echo "Error: dist/${branch_name} directory does not exist"
+          if [ ! -d "dist/${{ env.branch_name }}" ]; then
+            echo "Error: dist/${{ env.branch_name }} directory does not exist"
             exit 1
           fi
 
@@ -72,9 +77,8 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'zhanghaijun_java@163.com'
           git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
-          branch_name=${GITHUB_REF#refs/heads/}
-          rsync -av --delete dist/docs/ gh-pages/${branch_name}/
+          rsync -av --delete dist/docs/ gh-pages/${{ env.branch_name }}/
           cd gh-pages
-          git add ${branch_name}
-          git commit -m "Update docs for branch ${branch_name} [bot]"
+          git add ${{ env.branch_name }}
+          git commit -m "Update docs for branch ${{ env.branch_name }} [bot]"
           git push origin gh-pages
