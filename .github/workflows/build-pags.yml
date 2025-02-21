@@ -17,7 +17,7 @@ on:
 
 # 权限设置
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -74,7 +74,7 @@ jobs:
 
       - name: 部署到 GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAGE_TOKEN }}
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
