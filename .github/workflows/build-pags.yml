@@ -35,6 +35,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: list file
+        run: ls -l
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
 
