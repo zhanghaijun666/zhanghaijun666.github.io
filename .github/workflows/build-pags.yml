@@ -41,6 +41,8 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
+        with:
+          version: 8.14.0
 
       - name: 设置 Node.js 环境
         uses: actions/setup-node@v3
