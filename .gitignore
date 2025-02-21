@@ -1,6 +1,5 @@
 **/node_modules
 **/dist
-*-lock.*
 **/.vitepress/cache/
 **/logs/
 *.log
