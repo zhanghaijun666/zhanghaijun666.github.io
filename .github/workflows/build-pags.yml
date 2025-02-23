@@ -84,7 +84,7 @@ jobs:
         run: |
           echo "Deploying to GitHub Pages..."
           echo "PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}"
-          echo "GITHUB_TOKEN: ${{ GITHUB_TOKEN }}"
+          echo "GITHUB_TOKEN: ${GITHUB_TOKEN}"
           echo "GITHUB_REPOSITORY: ${{ github.repository }}"
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
