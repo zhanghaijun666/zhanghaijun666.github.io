@@ -7,6 +7,9 @@ on:
   push:
     branches:
       - docs
+    pull_request:
+      branches:
+        - docs
 
   workflow_dispatch:
     inputs:
@@ -14,6 +17,9 @@ on:
         description: '选择分支'
         required: true
         default: 'docs'
+
+env:
+  TZ: Asia/Shanghai
 
 # 权限设置
 permissions:
@@ -76,11 +82,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAGE_TOKEN }}
         run: |
+          echo "Deploying to GitHub Pages..."
+          echo "PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}"
+          echo "GITHUB_TOKEN: ${{ GITHUB_TOKEN }}"
+          echo "GITHUB_REPOSITORY: ${{ github.repository }}"
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git clone --branch gh-pages https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} gh-pages
-          rsync -av --delete dist/docs/ gh-pages/${{ env.branch_name }}/
+          rsync -av --delete dist/${{ env.branch_name }}/ gh-pages/${{ env.branch_name }}/
           cd gh-pages
           git add ${{ env.branch_name }}
-          git commit -m "Update docs for branch ${{ env.branch_name }} [bot]"
+          git commit -m "Update ${{ env.branch_name }} for branch ${{ env.branch_name }} to GitHub Pages [bot]"
           git push origin gh-pages
