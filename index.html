@@ -1,14 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 设置 0 秒后自动重定向到 docs/index.html -->
-    <meta http-equiv="refresh" content="0; url=docs/index.html">
-</head>
-<body>
-    <!-- 备用提示，万一重定向失败 -->
-    <p>If you are not redirected, <a href="docs/index.html">click here</a>.</p>
-</body>
+    <meta http-equiv="refresh" content="0; url=docs/index.html" />
+    <title>墨尘随笔 - 探索数字与文字之美</title>
+    <style>
+      /* 自定义颜色 */
+      :root {
+        --primary: #6366f1; /* 深蓝紫色 */
+        --secondary: #a5b4fc; /* 浅蓝紫色 */
+        --paper: #f3f4f6; /* 纸质白 */
+        --slate-900: #0f172a;
+        --slate-800: #1e293b;
+        --slate-700: #334155;
+        --gray-300: #d1d5db;
+        --gray-400: #9ca3af;
+      }
+
+      body {
+        background: linear-gradient(
+          45deg,
+          var(--slate-900) 0%,
+          var(--slate-800) 100%
+        );
+        color: #e2e8f0;
+        min-height: 100vh;
+        font-family: 'Noto Serif SC', serif;
+        margin: 0;
+      }
+
+      .hero-pattern {
+        background-image: radial-gradient(
+          circle at center,
+          rgba(99, 102, 241, 0.1) 0%,
+          transparent 60%
+        );
+      }
+
+      /* 头部导航栏样式 */
+      header {
+        position: fixed;
+        width: 100%;
+        background-color: rgba(15, 23, 42, 0.8);
+        backdrop-filter: blur(10px);
+        z-index: 50;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav .logo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--primary);
+      }
+
+      nav .nav-links {
+        display: flex;
+        gap: 24px;
+      }
+
+      nav .nav-links a {
+        color: var(--gray-300);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      nav .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* 主内容区样式 */
+      .hero-section {
+        background: url('background.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-content {
+        max-width: 48rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 24px;
+      }
+
+      .hero-content p {
+        font-size: 20px;
+        color: var(--secondary);
+        margin-bottom: 32px;
+      }
+
+      .hero-content .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .hero-content .button-group a {
+        padding: 12px 24px;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .hero-content .button-group .primary-button {
+        background-color: var(--primary);
+        color: var(--paper);
+      }
+
+      .hero-content .button-group .primary-button:hover {
+        background-color: rgba(99, 102, 241, 0.9);
+      }
+
+      .hero-content .button-group .secondary-button {
+        border: 1px solid var(--secondary);
+        color: var(--secondary);
+      }
+
+      .hero-content .button-group .secondary-button:hover {
+        background-color: rgba(165, 180, 252, 0.1);
+      }
+
+      /* 近期文章区样式 */
+      .recent-articles {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 24px;
+      }
+
+      .recent-articles h2 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+      }
+
+      .post-card {
+        background-color: var(--slate-800);
+        border-radius: 20px;
+        padding: 24px;
+        transition: all 0.3s ease;
+      }
+
+      .post-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .post-card .post-image {
+        height: 192px;
+        background-color: var(--slate-700);
+        border-radius: 12px;
+        margin-bottom: 16px;
+      }
+
+      .post-card time {
+        font-size: 14px;
+        color: var(--secondary);
+      }
+
+      .post-card h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 12px 0;
+      }
+
+      .post-card p {
+        color: var(--gray-400);
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* 创作领域区样式 */
+      .creation-fields {
+        background-color: var(--slate-800);
+        padding: 80px 0;
+      }
+
+      .creation-fields .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        text-align: center;
+      }
+
+      .creation-fields h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 32px;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+
+      .field-card {
+        background-color: var(--slate-700);
+        border-radius: 20px;
+        padding: 24px;
+      }
+
+      .field-card h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+
+      .field-card p {
+        color: var(--gray-400);
+      }
+
+      /* 页脚样式 */
+      footer {
+        background-color: var(--slate-900);
+        padding: 48px 0;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        text-align: center;
+      }
+
+      .footer-grid h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+
+      .footer-grid h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+
+      .footer-grid p {
+        font-size: 14px;
+        color: var(--gray-400);
+      }
+
+      .footer-grid .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .footer-grid .social-links a {
+        color: var(--secondary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-grid .social-links a:hover {
+        color: var(--primary);
+      }
+
+      .footer-bottom {
+        margin-top: 48px;
+        padding-top: 32px;
+        border-top: 1px solid var(--slate-700);
+        text-align: center;
+        font-size: 14px;
+        color: var(--gray-400);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="logo.png" alt="Logo" width="32" height="32" />
+          <span>墨尘随笔</span>
+        </div>
+        <div class="nav-links">
+          <a href="docs/index.html">墨尘随笔 V2.0</a>
+          <a href="blog/index.html">墨尘随笔 V1.0</a>
+          <a href="docs/121_关于本站/11_关于我/11.关于作者.html">关于我</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section hero-pattern">
+        <div class="hero-content">
+          <h1>数字与文字的交响诗</h1>
+          <p>—— 在代码与笔墨间寻找诗意</p>
+          <div class="button-group">
+            <a href="docs/index.html" class="primary-button">快速开始</a>
+            <a href="website/index.html" class="secondary-button">官网模板</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="recent-articles">
+        <h2>近期文章</h2>
+        <div class="article-grid">
+          <article class="post-card">
+            <div class="post-image"></div>
+            <time>2024-03-15</time>
+            <h3>TypeScript 类型体操的艺术</h3>
+            <p>
+              探索如何通过类型编程创造安全优雅的解决方案，从基础类型操作到高级模式匹配...
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="creation-fields">
+        <div class="container">
+          <h2>创作领域</h2>
+          <div class="field-grid">
+            <div class="field-card">
+              <h3>技术漫谈</h3>
+              <p>前端架构、TypeScript、可视化开发</p>
+            </div>
+            <div class="field-card">
+              <h3>文学随笔</h3>
+              <p>现代诗、散文、书评影评</p>
+            </div>
+            <div class="field-card">
+              <h3>数字人文</h3>
+              <p>科技与人文的交叉探索</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div>
+            <h3>墨尘随笔</h3>
+            <p>以代码为笔，以思想为墨</p>
+          </div>
+          <div>
+            <h4>联系</h4>
+            <a
+              href="mailto:zhanghaijun_java@163.com"
+              target="_blank"
+              aria-label="Email"
+              data-balloon-pos="up"
+              >zhanghaijun_java@163.com</a
+            >
+          </div>
+          <div>
+            <h4>社交</h4>
+            <div class="social-links">
+              <a href="https://github.com/zhanghaijun666" target="_blank"
+                >GitHub</a
+              >
+              <a href="https://gitee.com/haijunit" target="_blank">Gitee</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 墨尘随笔 · 保留所有权利</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
