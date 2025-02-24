@@ -1,5 +1,6 @@
-@import './var.css';
 @import './blur.css';
+@import './custom-block.css';
+@import './var.css';
 @import './marker.css';
 @import './vp-code-group.css';
 @import './vp-code.css';

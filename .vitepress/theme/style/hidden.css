@@ -1,7 +1,7 @@
 :root {
   /* 文档页Logo出文字下横条 */
   .VPNavBar.has-sidebar .title {
-    width: 0px;
+    width: 0;
   }
 
   /* 页脚横条隐藏 */

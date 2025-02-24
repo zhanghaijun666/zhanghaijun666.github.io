@@ -31,6 +31,7 @@
     --vp-home-hero-image-filter: blur(68px);
   }
 }
+
 @media (min-width: 1440px) {
   .VPContent.has-sidebar {
     padding-right: unset !important;
@@ -131,8 +132,20 @@
   h1,
   h2,
   h3 {
+    background: -webkit-linear-gradient(10deg, #bd34fe 5%, #e43498 15%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 0 0 0.5rem 0;
     border: none;
     border-bottom: 1px solid var(--vp-c-divider);
+  }
+
+  blockquote {
+    border-radius: 10px;
+    padding: 18px 20px 20px 15px;
+    position: relative;
+    background-color: var(--vp-c-gray-soft);
+    border-left: 6px solid var(--vp-c-green-2);
   }
 }

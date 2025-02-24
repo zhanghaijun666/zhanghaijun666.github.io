@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 什么是 VitePress?
-      link: /41_前端开发/22_vitepress
+      link: ./41_前端开发/22_vitepress
     - theme: alt
       text: 项目搭建
-      link: /101_项目管理/21_项目搭建/21_用户访问控制.md
+      link: ./101_项目管理/21_项目搭建/21_用户访问控制.md
   image:
     src: /logo.png
     alt: logo

@@ -12,11 +12,6 @@ export function getArticleData(path: string): ArticleOptions {
   const file = readFileSync(path, 'utf-8')
   const { content, data } = matter(file)
 
-  // return {
-  //   ...(data as Omit<ArticleOptions, 'h1' | 'index'>),
-  //   h1,
-  //   index
-  // }
   return Object.entries({
     index: data.index,
     hide: data.hide,

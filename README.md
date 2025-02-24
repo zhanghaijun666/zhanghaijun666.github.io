@@ -22,6 +22,10 @@
 - <https://vitejs.cn/vitepress/>
 - [Markdown It 插件](https://mdit-plugins.github.io/zh/)
 
+## 优秀的站点
+
+- 站点美化|导航 <https://vitepress.yiov.top>
+
 ## 笔记目录
 
 ```text

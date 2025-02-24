@@ -2,25 +2,11 @@
 
 ## windows上安装
 
-1. 安装或启用 WSL2
-   ```shell
-   # 升级到最新版本（wsl2）
-   wsl --update
-   # 查看所有可用的发行版
-   wsl --list --online
-   # 安装 Ubuntu-22.04 系统
-   wsl --install -d Ubuntu-22.04
-   # 显示当前安装了哪些系统
-   wsl -l -v
-   # 设置wsl默认版本为wsl2
-   wsl --set-default-version 2
-   # 设置Ubuntu-22.04为 wsl2
-   wsl.exe --set-version Ubuntu-22.04 2
-   # 登录到Ubuntu环境
-   wsl -d Ubuntu-22.04
-   # 关闭Ubuntu-22.04
-   wsl --shutdown Ubuntu-22.04
-   ```
+1. 安装 Ubuntu
+   在 Windows 上运行 Ubuntu，您可以使用 WSL（Windows Subsystem for Linux）或类似工具。例如，使用 Microsoft Store 中的 Ubuntu 应用：
+   - 在开始菜单中搜索“Ubuntu”，然后选择它以启动并设置您的用户帐户和密码。
+   - 您可能需要启用 WSL 功能，这可以通过打开 PowerShell 或命令提示符并以管理员身份运行以下命令来完成：`wsl --install`。
+
 2. 安装 Redis
    在 Windows 上运行 Ubuntu 后，您可以按照 在 Ubuntu/Debian 上安装中详述的步骤从官方packages.redis.ioAPT 存储库安装 Redis 的最新稳定版本。将存储库添加到apt索引，更新它，然后安装：
 

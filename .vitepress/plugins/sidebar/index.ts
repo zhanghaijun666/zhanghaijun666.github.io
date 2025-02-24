@@ -27,14 +27,14 @@ export default function autoSidebarPlugin(options: Options = {}): Plugin {
         vitepress: { userConfig }
       } = config as UserConfig
 
-      cwd = options.srcDir || userConfig.srcDir || './'
+      cwd = (options.srcDir ?? userConfig.srcDir) || './'
       const pattern = options.pattern || '**.md'
       const ignoreList = options.ignoreList || userConfig.srcExclude || []
 
       // 读取目录下文件，并统一路由格式
       const paths = (await glob(pattern, { cwd, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map((path) => normalize(path))
 
-      const list = setDataFormat(cwd, paths, { ...defaultOptions, ...options }, cache)
+      const list: Item[] = setDataFormat(cwd, paths, { ...defaultOptions, ...options }, cache)
       const sidebar = generateSidebar(list)
 
       // writeFileSync('cache_sidebar.json', JSON.stringify(sidebar, null))
