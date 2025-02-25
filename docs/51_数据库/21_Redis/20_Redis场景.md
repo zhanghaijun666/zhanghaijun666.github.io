@@ -98,6 +98,8 @@ bitcount sign:bitmap:20250101
 -- 查看连续3天签到的人数
 BITOP AND sign:bitmap:20250101-20250103 sign:bitmap:20250101 sign:bitmap:20250102  sign:bitmap:20250103
 bitcount sign:bitmap:20250101-20250103
+-- 查看某人是否连续3天签到
+getbit sign:bitmap:20250101-20250103 101
 
 ```
 
