@@ -20,6 +20,7 @@ import Page from './blog/Page.vue'
 
 import './style/index.css'
 import 'virtual:group-icons.css'
+import "virtual:uno.css";
 import { webLinks } from '../data'
 
 export default {

@@ -3,6 +3,7 @@ import { shared } from './shared'
 import { zh } from './zh'
 import AutoSidebarPlugin from '../plugins/sidebar'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
   ...shared,
@@ -11,6 +12,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      UnoCSS({configFile: './uno.config.ts',}),
       // https://github.com/Ares-Chang/vitepress-auto-sidebar-plugin/blob/master/src/index.ts
       AutoSidebarPlugin({
         pattern: ['[0-9]+[_|.]*' + '/**/*.md'],
