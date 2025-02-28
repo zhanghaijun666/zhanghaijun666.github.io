@@ -63,11 +63,16 @@ GEOADD location:school 116.3230 40.0036 "清华大学"
 GEOADD location:school 116.3582 39.9614 "北京邮电大学"
 GEOADD location:school 116.3428 39.9522 "北京交通大学"
 
--- 查询当前位置附近1公里内的所有地点
-GEORADIUS location:school 116.3974 39.9088 15 km WITHDIST
+-- 查询北京大学和清华大学的坐标位置
+GEOPOS location:school "北京大学" "清华大学"
 -- 查询北京大学到清华大学的距离
 GEODIST location:school "北京大学" "清华大学" m
-
+-- 查询当前位置附近20公里内的所有地点
+GEORADIUS location:school 116.397400 39.908800 20 km WITHDIST
+GEORADIUS location:school 116.471220 39.907671 20 km WITHCOORD WITHDIST COUNT 100
+-- 删除某一个地点
+GEOPOS location:school "北京邮电大学"
+zrem location:school "北京邮电大学"
 ```
 
 ## 5、签到
