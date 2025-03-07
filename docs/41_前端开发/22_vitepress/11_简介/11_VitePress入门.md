@@ -292,7 +292,7 @@ git push -u origin master
 
 此时你的目录应该是这样的，这里少加了.gitignore，记得手动加上
 
-:::detail .gitignore
+::: details .gitignore
 
 ```text
 node_modules

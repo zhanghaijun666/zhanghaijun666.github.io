@@ -1,8 +1,8 @@
-@import './blur.css';
-@import './custom-block.css';
-@import './var.css';
-@import './marker.css';
-@import './vp-code-group.css';
-@import './vp-code.css';
-@import './link.css';
+@import "./variable.css";
+@import './vp/nav.css';
+@import "./vp/global.css";
+@import './vp/doc.css';
+@import "./vp/code.css";
+@import "./vp/block.css";
+
 @import '@fortawesome/fontawesome-free/css/all.min.css';

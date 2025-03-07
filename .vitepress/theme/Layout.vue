@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import MouseClick from './components/mouse/click.vue'
 
 const { isDark } = useData()
 
@@ -34,6 +35,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 <template>
   <!-- https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue -->
   <DefaultTheme.Layout>
+
+    <template #layout-top>
+      <mouse-click/>
+    </template>
     <!--导航-->
     <template #nav-bar-title-before><slot name="nav-bar-title-before" /></template>
     <template #nav-bar-title-after><slot name="nav-bar-title-after" /></template>

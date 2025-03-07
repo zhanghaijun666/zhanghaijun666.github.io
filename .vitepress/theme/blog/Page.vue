@@ -52,7 +52,6 @@
 <script lang="ts" setup>
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { Article } from '../../utils/article'
 
 const { theme } = useData<{ article: Article[] }>()
 

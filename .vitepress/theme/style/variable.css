@@ -1,0 +1,17 @@
+/* 全局变量：明亮主题 */
+:root {
+  /* 全局 */
+  --navi-global-bg: var(--vp-c-bg, #111827);
+  --navi-global-color: var(--vp-c-text-1);
+  --navi-primary: var(--vp-c-bg);
+  /** 卡片 */
+  --navi-card-text-1: var(--vp-c-text-1);
+  --navi-card-text-2: var(--vp-c-text-2);
+  --navi-card-text-3: var(--vp-c-text-3);
+  --navi-card-shadow: 0 10px 30px 0 rgb(0 0 0 / 15%);
+}
+
+/* 暗黑主题 */
+html.dark {
+
+}

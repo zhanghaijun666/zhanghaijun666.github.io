@@ -72,7 +72,7 @@ export const getArticleData = (cwd: string, path: string): Article => {
  * @returns 文章标题
  */
 export function getArticleTitle(content: string) {
-  const match = content.match(/^#\s*(.+)/m)
+  const match = RegExp(/^#\s*(.+)/m).exec(content)
   return match?.[1].trim().replace(/\{.*}/g, '').replace(/<.*>/g, '')
 }
 
@@ -83,7 +83,7 @@ export function getArticleTitle(content: string) {
  */
 export const getPathItem = (path: string): { index: number; title: string; link?: string } => {
   const name = basename(path)
-  const array = (name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?.md/) || name.match(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/) || []).filter((_, index) => [2, 3, 5].includes(index))
+  const array = (RegExp(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?.md/).exec(name) || RegExp(/^((\d+)[_|.])?([^_|.]+)([_|.]([^_|.]+))?/).exec(name) || []).filter((_, index) => [2, 3, 5].includes(index))
 
   if (array.length === 0) return { index: 999999, title: name }
   return { index: Number(array[0] || 999999), title: array[1], link: array[2] || array[1] }
