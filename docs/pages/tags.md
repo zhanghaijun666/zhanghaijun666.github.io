@@ -7,4 +7,4 @@ lastUpdated: false
 editLink: false
 ---
 
-<Tags/>
+<BlogTag/>

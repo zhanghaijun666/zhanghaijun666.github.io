@@ -37,8 +37,10 @@ const props = withDefaults(defineProps<Props>(), {})
 </script>
 <style scoped lang="scss">
 .article-item{
-  .tag{
-
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
   }
 }
 </style>

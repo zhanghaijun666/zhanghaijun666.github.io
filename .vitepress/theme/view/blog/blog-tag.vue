@@ -22,7 +22,6 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
-import { Article } from '../../utils/article'
 
 const { theme } = useData<{ article: Article[] }>()
 
@@ -59,7 +58,7 @@ const toggleTag = (tag: string) => {
 </script>
 
 <style lang="scss" scoped>
-@use './style.scss';
+@use 'index';
 .tags {
   margin-top: 14px;
   display: flex;

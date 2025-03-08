@@ -13,15 +13,14 @@ import LinkCard from './components/LinkCard.vue'
 import ShareButton from './components/ShareButton.vue'
 import LayoutFooter from './components/LayoutFooter.vue'
 
-import Tags from './blog/Tags.vue'
-import Category from './blog/Category.vue'
-import Archives from './blog/Archives.vue'
-import Page from './blog/Page.vue'
-import Blog from './blog/index.vue'
+import Blog from './view/blog/blog.vue'
+import BlogArchive from './view/blog/blog-archive.vue'
+import BlogCategory from './view/blog/blog-category.vue'
+import BlogTag from './view/blog/blog-tag.vue'
 
 import './style/index.css'
 import 'virtual:group-icons.css'
-import "virtual:uno.css";
+import 'virtual:uno.css'
 import { webLinks } from '../data'
 
 export default {
@@ -48,11 +47,10 @@ export default {
     app.component('HomeUnderline', HomeUnderline)
     app.component('LinkCard', LinkCard)
     // 博客界面
-    app.component('Tags', Tags)
-    app.component('Category', Category)
-    app.component('Archives', Archives)
-    app.component('Page', Page)
     app.component('Blog', Blog)
+    app.component('BlogArchive', BlogArchive)
+    app.component('BlogCategory', BlogCategory)
+    app.component('BlogTag', BlogTag)
   },
   setup() {
     const route = useRoute()

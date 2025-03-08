@@ -1,33 +1,33 @@
+import presetWind from '@unocss/preset-wind3'
 import {
   defineConfig,
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
   presetWebFonts,
   transformerDirectives,
-  transformerVariantGroup,
+  transformerVariantGroup
 } from 'unocss'
 
 export default defineConfig({
   content: {
     pipeline: {
-      exclude: ['node_modules', 'dist', '.git', '.vscode', 'public', 'build', 'config'],
-    },
+      exclude: ['node_modules', 'dist', '.git', '.vscode', 'public', 'build', 'config']
+    }
   },
   presets: [
-    presetUno(),
+    presetWind(),
     presetAttributify(),
     presetIcons({ scale: 1.2 }),
     presetTypography(),
     // presetWebFonts({ fonts: { sans: 'DM Sans', serif: 'DM Serif Display', mono: 'DM Mono' } }),
-    presetWebFonts(),
+    presetWebFonts()
   ],
   transformers: [
     /** 实现在 style 中写原子化 css https://unocss.nodejs.cn/transformers/directives */
     transformerDirectives(),
     /** 实现在 style 中写原子化 css https://unocss.nodejs.cn/transformers/variant-group */
-    transformerVariantGroup(),
+    transformerVariantGroup()
   ],
   safelist: 'prose prose-sm m-auto text-left'.split(' '),
   theme: {
@@ -51,12 +51,12 @@ export default defineConfig({
   },
   /** 自定义规则 https://unocss.nodejs.cn/config/rules */
   rules: [
-    [/wh-(.+)$/, ([, d]) => ({ width: `${d}`, height: `${d}` })],
-    [/mtb-(.+)$/, ([, d]) => ({ margin: `${d} 0` })],
-    [/mlr-(.+)$/, ([, d]) => ({ margin: `0 ${d}` })],
-    [/ptb-(.+)$/, ([, d]) => ({ padding: `${d} 0` })],
-    [/plr-(.+)$/, ([, d]) => ({ padding: `0 ${d}` })],
-    ['bg-repeat-none', { 'background-repeat': 'no-repeat' }],
+    [/wh-(.+)$/, ([, d]) => ({ width: `${ d }`, height: `${ d }` })],
+    [/mtb-(.+)$/, ([, d]) => ({ margin: `${ d } 0` })],
+    [/mlr-(.+)$/, ([, d]) => ({ margin: `0 ${ d }` })],
+    [/ptb-(.+)$/, ([, d]) => ({ padding: `${ d } 0` })],
+    [/plr-(.+)$/, ([, d]) => ({ padding: `0 ${ d }` })],
+    ['bg-repeat-none', { 'background-repeat': 'no-repeat' }]
   ],
   /**
    * 快捷键命名标准
@@ -72,6 +72,6 @@ export default defineConfig({
     'flex-y-center': 'flex flex-col justify-center items-center',
     'flex-x-start': 'flex justify-start items-center',
     'flex-x-between': 'flex justify-between items-center',
-    'flex-x-end': 'flex justify-end items-center',
-  },
+    'flex-x-end': 'flex justify-end items-center'
+  }
 })
