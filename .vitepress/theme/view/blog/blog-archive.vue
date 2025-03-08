@@ -1,4 +1,6 @@
 <template>
+  <article-time />
+  <hr />
   <div v-for="(item, index) in archiveList" :key="index">
     <div class="article title">
       {{ item.archive }}
@@ -19,8 +21,9 @@
 </template>
 
 <script lang="ts" setup>
-import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
+import { useData, withBase } from 'vitepress'
+import ArticleTime from '../../components/article/article-time.vue'
 
 const { theme } = useData<{ article: Article[] }>()
 
