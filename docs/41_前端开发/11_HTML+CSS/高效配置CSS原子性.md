@@ -1,3 +1,22 @@
+# 高效配置CSS的原子性
+
+首先，让我们为 原子化 CSS (Atomic CSS) 给出适当的定义：
+John Polacek 在 文章 Let’s Define Exactly What Atomic CSS is 中写道：
+Atomic CSS is the approach to CSS architecture that favors small, single-purpose classes with names based on visual function.
+译文：
+原子化 CSS 是一种 CSS 的架构方式，它倾向于小巧且用途单一的 class，并且会以视觉效果进行命名。
+
+> 最热门的两大CSS原子类库：Tailwind CSS和 UnoCSS。
+
+## UnoCSS配置
+
+> UnoCSS 完成支持了 Tailwind CSS 的所有功能，并且提供了更多的自定义选项。
+
+```shell
+pnpm install -D @iconify/utils
+```
+
+```ts [uno.config.ts]
 /*
  * UnoCSS 配置
  * @see https://unocss.net
@@ -71,3 +90,4 @@ export default defineConfig({
     [/^wh-(\d+)(\w*)$/, ([, value, unit]) => ({ width: `${ value }${ unit || 'px' }`, height: `${ value }${ unit || 'px' }` })]
   ]
 })
+```
