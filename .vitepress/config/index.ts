@@ -3,7 +3,7 @@ import AutoSidebarPlugin from '../plugins/sidebar'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import UnoCSS from 'unocss/vite'
 import { mermaidPlugin } from '../plugins/mermaid'
-import { navList } from '../data'
+import { navList } from '../assets/data'
 import locales from './lang'
 
 const base: string = '/docs'

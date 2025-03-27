@@ -9,7 +9,7 @@
     "build": "vitepress build .",
     "preview": "vitepress preview .",
     "lint:prettier": "pnpm exec prettier docs/**/*.md --write",
-    "tsc:index": "npx tsx scripts/index.ts"
+    "tsc:index": "npx tsx .vitepress/scripts/index.ts"
   },
   "keywords": [],
   "author": "haijun.zhang",
