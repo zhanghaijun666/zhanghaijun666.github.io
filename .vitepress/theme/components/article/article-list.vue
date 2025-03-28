@@ -64,7 +64,7 @@ const totalPages = computed(() => Math.ceil(articles.length / pageSize.value))
 const articleList = computed(() => {
   const start = (currentPage.value - 1) * pageSize.value
   const end = start + pageSize.value
-  return articles.value.slice(start, end)
+  return articles.slice(start, end)
 })
 const changePage = (page) => {
   if (page >= 1 && page <= totalPages.value) {

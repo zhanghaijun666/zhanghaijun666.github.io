@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 什么是 VitePress?
-      link: ./41_前端开发/22_vitepress
+      link: ./45_vitepress
     - theme: alt
       text: 项目搭建
       link: ./101_项目管理/21_项目搭建/21_用户访问控制.md
@@ -38,6 +38,5 @@ import { useData } from 'vitepress';
 const { site } = useData();
 const url = 'https://gitee.com/haijunit_navi';
 
-
-console.log(` %c ${site.value.title} %c ${url}`, 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
+console.log(` %c ${site.value.title} %c ${url}`, 'color: #030307; background: #fadfa3; padding:5px 0;', 'background: #030307; padding:5px 0;')
 </script>

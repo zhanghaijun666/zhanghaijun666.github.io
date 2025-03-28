@@ -11,7 +11,7 @@ const NAME_REGEX: RegExp = RegExp(/^((\d+)[_|.])?([^_|.]+)(.md)?/)
  */
 export const getArticleList = async (dir: string = './docs') => {
   const pattern: string[] = ['[0-9]+[_|.]*' + '/**/*.md']
-  const ignoreList: string[] = ["**/page/**"]
+  const ignoreList: string[] = ['**/page/**']
   const paths: string[] = (await glob(pattern, { cwd: dir, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', '**/index.md', ...ignoreList] })).map((path) => normalize(path))
   // 文章详情处理
   const articleList: ArticleData[] = await Promise.all(paths.map(async (path) => getArticle(dir, path)))
@@ -36,11 +36,18 @@ const getArticle = async (dir: string, path: string): Promise<ArticleData> => {
   const { data } = matter(file)
 
   const array: string[] = (NAME_REGEX.exec(basename(path)) ?? []).filter((_, index) => [2, 3].includes(index))
+  // const maer = {
+  //   title: data.title || getArticleTitle(file),
+  //   description: data.description,
+  //   author: data.author,
+  //   tags: (data.tags ?? []).map(String),
+  //   categories: (data.categories ?? []).map(String)
+  // }
   return {
-    index: array[0] ? Number(array[0]) : undefined,
+    index: array[0] ? Number(array[0]) : data.index,
     title: array[1],
     link: '/' + path.replace(/.md$/, '.html').split(sep).join('/'),
-    top: !!data.top
+    top: !!data.top,
   }
 }
 

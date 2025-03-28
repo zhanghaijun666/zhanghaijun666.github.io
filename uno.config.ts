@@ -50,7 +50,13 @@ export default defineConfig({
   theme: {
     colors: {
       primary: '#5468ff'
-    }
+    },
+    darkMode: 'class',
+    boxShadow: {
+      button: '0 2px #0000000b',
+      card: '0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d',
+      'card-hover': '0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d',
+    },
   },
   /**
    * 快捷键命名规则

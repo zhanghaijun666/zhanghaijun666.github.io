@@ -13,7 +13,7 @@ import LinkCard from './components/LinkCard.vue'
 import ShareButton from './components/ShareButton.vue'
 import LayoutFooter from './components/LayoutFooter.vue'
 
-import Blog from './view/blog/blog.vue'
+import Blog from './components/blog/index.vue'
 import BlogArchive from './view/blog/blog-archive.vue'
 import BlogCategory from './view/blog/blog-category.vue'
 import BlogTag from './view/blog/blog-tag.vue'

@@ -28,7 +28,7 @@ const readTime = computed(() => {
 })
 
 function analyze() {
-  Window.document.querySelectorAll('.meta-des').forEach((v) => v.remove())
+  document.querySelectorAll('.meta-des').forEach((v) => v.remove())
   const docDomContainer = window.document.querySelector('#VPContent')
   const image = docDomContainer?.querySelectorAll<HTMLImageElement>('.content-container .main img')
   imageCount.value = image?.length || 0

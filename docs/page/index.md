@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: page
 title: 归档
 description: Archive
 aside: false

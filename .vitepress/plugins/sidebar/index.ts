@@ -1,12 +1,13 @@
 /*
-自动生成侧边栏
-https://github.com/Ares-Chang/vitepress-auto-sidebar-plugin/blob/master/src/index.ts
-*/
+ * 自动生成侧边栏
+ * @see 参考实现 https://github.com/Ares-Chang/vitepress-auto-sidebar-plugin/blob/master/src/index.ts
+ * @see 配置文档 https://vitepress-auto-sidebar-plugin.netlify.app/guide/config/files.html
+ * @see frontmatter 配置 https://vitepress.dev/zh/reference/frontmatter-config
+ */
 import { extname, join, normalize, resolve, sep } from 'pathe'
 import glob from 'fast-glob'
-import { debounce } from 'perfect-debounce'
 
-import type { Plugin, ViteDevServer } from 'vite'
+import type { Plugin } from 'vite'
 import type { DefaultTheme } from 'vitepress'
 import type { ArticleOptions, Cache, Item, Options, UserConfig } from './types'
 
@@ -27,7 +28,7 @@ export default function autoSidebarPlugin(options: Options = {}): Plugin {
         vitepress: { userConfig }
       } = config as UserConfig
 
-      cwd = (options.srcDir ?? userConfig.srcDir) || './'
+      cwd = (options.srcDir ?? userConfig.srcDir) ?? './'
       const pattern = options.pattern || '**.md'
       const ignoreList = options.ignoreList || userConfig.srcExclude || []
 
@@ -35,9 +36,9 @@ export default function autoSidebarPlugin(options: Options = {}): Plugin {
       const paths = (await glob(pattern, { cwd, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', 'index.md', ...ignoreList] })).map((path) => normalize(path))
 
       const list: Item[] = setDataFormat(cwd, paths, { ...defaultOptions, ...options }, cache)
-      const sidebar = generateSidebar(list)
+      const sidebar: DefaultTheme.Sidebar = generateSidebar(list)
 
-      // writeFileSync('cache_sidebar.json', JSON.stringify(sidebar, null))
+        // writeFileSync('cache_sidebar.json', JSON.stringify(sidebar, null))
       ;(config as UserConfig).vitepress.site.themeConfig.sidebar = sidebar
 
       log.success('The Auto Sidebar has been generated successfully!')
@@ -107,7 +108,7 @@ export function setItem(cwd: string, list: string[], options: Options, cache: Ca
   } else {
     // 设置 title 映射
     if (options?.title?.map) {
-      text = options.title.map[`${link}/`] || text
+      text = options.title.map[`${ link }/`] || text
     } else {
       text = useTextFormat(text, options?.title?.mode || 'titlecase') // 设置 title 格式化
     }
@@ -199,7 +200,7 @@ export function generateSidebar(list: Item[]): DefaultTheme.Sidebar {
       if (isFile) {
         return {
           text,
-          link: `/${link}`
+          link: `/${ link }`
         }
       } else {
         return {
@@ -219,7 +220,7 @@ export function generateSidebar(list: Item[]): DefaultTheme.Sidebar {
       collapsed
     }
 
-    const key = `/${groupAlone ? link : link.split(sep)[0] || link}/`
+    const key: string = `/${ groupAlone ? link : link.split(sep)[0] || link }/`
 
     // 分组一级目录为空初始化
     if (!acc[key]) acc[key] = []

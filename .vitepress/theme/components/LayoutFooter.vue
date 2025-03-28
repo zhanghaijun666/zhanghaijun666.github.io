@@ -80,7 +80,7 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
 </script>
 
 <template>
-  <footer class="ba" v-if="frontmatter.footer != 'false'">
+  <footer class="ba bg-gray-800 text-gray-300 w-full" v-if="frontmatter.footer != 'false'">
     <!-- 链接展示 -->
     <div class="ff">
       <div class="sc" v-for="(section, index) in props.group || []" :key="index">
@@ -104,33 +104,29 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
       </div>
     </div>
     <!-- 底部信息栏 -->
-    <div class="flex">
-      <span>
+    <div class=":uno: m-4 pt-4 border-t border-gray-700 text-center sm:(flex-x-center gap-1rem) xm:(flex-y-center gap-2)">
+      <div>
         <i class="fas fa-earth-americas"></i>
         <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="ICP备案">
           {{ '鄂ICP备****号' }}
         </a>
-      </span>
-      <span>
+      </div>
+      <div>
         <i class="fas fa-shield"></i>
         <a target="_blank" rel="noopener" href="https://beian.mps.gov.cn/" title="公安备案">
           {{ '粤公网安备****号' }}
         </a>
-      </span>
-    </div>
-    <div class="flex">
-      <span>
+      </div>
+      <div>
         <i class="far fa-copyright"></i>{{ new Date().getFullYear() }} <a target="_blank" rel="noopener" title="GitHub" href="/"> {{ 'haijunit' }}</a>
         . All Rights Reserved.
-      </span>
+      </div>
     </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
 footer {
-  width: 100%;
-
   a {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
@@ -138,17 +134,13 @@ footer {
       -webkit-text-decoration: underline solid;
       text-decoration: underline solid;
       text-underline-offset: 4px;
-      color: var(--vp-c-brand-1);
+      color: white;
     }
   }
 
   .has-sidebar ~ & {
     display: none;
   }
-}
-
-span {
-  margin-left: 1rem;
 }
 
 li {
@@ -178,7 +170,6 @@ i {
 }
 
 .ba {
-  background: var(--vp-c-bg-alt);
   font-size: 0.75rem;
   text-align: center;
   margin: 0 auto;
@@ -188,11 +179,6 @@ i {
   display: flex;
   justify-content: center;
   margin: 1.25rem;
-}
-
-.flex {
-  display: inline-block;
-  margin-bottom: 1.25rem;
 }
 
 .sc {

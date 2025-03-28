@@ -7,9 +7,9 @@ export const navList: DefaultTheme.NavItem[] = [
   { text: 'SpringBoot', link: '/31_后端Java/21_Spring全家桶/10.系统架构' },
   {
     text: '指南', items: [
-      { text: '分类', link: '/pages/category' },
-      { text: '归档', link: '/pages/archives' },
-      { text: '标签', link: '/pages/tags' }
+      { text: '分类', link: '/page/category' },
+      { text: '归档', link: '/page/archives' },
+      { text: '标签', link: '/page/tags' }
     ]
   },
   { text: `VitePress`, link: 'https://vitepress.dev/zh/', noIcon: true }
