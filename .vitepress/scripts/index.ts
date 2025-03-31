@@ -4,9 +4,10 @@ import { dirname, resolve } from 'pathe'
 import { fileURLToPath } from 'url'
 
 getArticleList().then(res => {
-
   // 目标文件路径
-  const filePath = resolve(fileURLToPath(import.meta.url), '../../assets/data/articles.json')
+  const __filename = fileURLToPath(import.meta.url)
+  const __dirname = dirname(__filename)
+  const filePath = resolve(__dirname, '../../assets/data/articles.json')
   // 确保目标目录存在，不存在则创建
   const dirPath = dirname(filePath)
   if (!existsSync(dirPath)) {

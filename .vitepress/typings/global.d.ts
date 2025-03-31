@@ -1,33 +1,6 @@
 export namespace Layout {
 
   /**
-   * 博文属性
-   * -------------------------------------------- */
-  type Article = {
-    /** 文章标题 */
-    title: string;
-    /** 文章链接 */
-    link: string;
-    /** 文章索引（用于排序） */
-    index?: number;
-    /** 文章的元数据 */
-    matter: {
-      /** 文章发布日期 */
-      date: string;
-      /** 文章的作者 */
-      author?: string;
-      /** 文章标签 */
-      tags?: string[];
-      /** 文章摘要 */
-      excerpt?: string;
-      /** 文章的封面图片 */
-      coverImage?: string;
-      /** 文章的阅读时长，单位分钟 */
-      readingTime?: number;
-    };
-  };
-
-  /**
    * 链接属性
    * -------------------------------------------- */
   type Link = {

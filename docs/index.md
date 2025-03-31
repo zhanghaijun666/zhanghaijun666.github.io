@@ -10,8 +10,8 @@ hero:
   tagline: 保持对新知的渴望和学习的热情，不断拓宽自己的知识领域。记录学习过程中遇到的挑战和突破，以便持续优化自己的思维方式、工作方法和生活习惯，实现更高效的自我提升。
   actions:
     - theme: brand
-      text: 什么是 VitePress?
-      link: ./45_vitepress
+      text: 快速访问
+      link: ./page/index.md
     - theme: alt
       text: 项目搭建
       link: ./101_项目管理/21_项目搭建/21_用户访问控制.md

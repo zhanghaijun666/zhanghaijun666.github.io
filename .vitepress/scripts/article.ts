@@ -2,6 +2,7 @@ import glob from 'fast-glob'
 import { basename, normalize, resolve, sep } from 'pathe'
 import { readFileSync } from 'node:fs'
 import matter from 'gray-matter'
+import { Blog } from '../typings/blog'
 
 // 文件夹或者文件按的命名规则
 const NAME_REGEX: RegExp = RegExp(/^((\d+)[_|.])?([^_|.]+)(.md)?/)
@@ -14,7 +15,7 @@ export const getArticleList = async (dir: string = './docs') => {
   const ignoreList: string[] = ['**/page/**']
   const paths: string[] = (await glob(pattern, { cwd: dir, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', '**/index.md', ...ignoreList] })).map((path) => normalize(path))
   // 文章详情处理
-  const articleList: ArticleData[] = await Promise.all(paths.map(async (path) => getArticle(dir, path)))
+  const articleList: Blog.ArticleData[] = await Promise.all(paths.map(async (path) => getArticle(dir, path)))
   // 文章排序
   articleList.sort((a, b) => {
     if (!a.index || !b.index) {
@@ -31,23 +32,19 @@ export const getArticleList = async (dir: string = './docs') => {
 /**
  * 获取文章详情
  */
-const getArticle = async (dir: string, path: string): Promise<ArticleData> => {
+const getArticle = async (dir: string, path: string): Promise<Blog.ArticleData> => {
   const file: string = readFileSync(resolve(dir, path), 'utf-8')
   const { data } = matter(file)
-
   const array: string[] = (NAME_REGEX.exec(basename(path)) ?? []).filter((_, index) => [2, 3].includes(index))
-  // const maer = {
-  //   title: data.title || getArticleTitle(file),
-  //   description: data.description,
-  //   author: data.author,
-  //   tags: (data.tags ?? []).map(String),
-  //   categories: (data.categories ?? []).map(String)
-  // }
   return {
     index: array[0] ? Number(array[0]) : data.index,
     title: array[1],
     link: '/' + path.replace(/.md$/, '.html').split(sep).join('/'),
-    top: !!data.top,
+    summary: data.summary,
+    cover: data.cover,
+    categories: (data.categories ?? []).map(String),
+    tags: (data.tags ?? []).map(String),
+    top: !!data.top
   }
 }
 
