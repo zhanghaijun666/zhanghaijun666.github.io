@@ -18,18 +18,17 @@
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   /* 行自动填充，平均三等分 */
   grid-template-columns: repeat(3, 1fr);
+  /* 行自动填充，固定220px，1fr */
+  grid-template-columns: 220px 1fr;
 }
 ```
 
-<div class="grid gap-20px" style=" grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));grid-auto-rows: 50px;">
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
-<div class="bg-primary"></div>
+<div class="grid gap-20px" style=" grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));grid-auto-rows: 50px;">
+  <div class="bg-primary"></div>
+  <div class="bg-primary"></div>
+  <div class="bg-primary"></div>
+  <div class="bg-primary"></div>
+  <div class="bg-primary"></div>
+  <div class="bg-primary"></div>
+  <div class="bg-primary"></div>
 </div>

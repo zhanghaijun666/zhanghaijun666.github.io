@@ -1,13 +1,18 @@
 import { defineConfig } from 'vitepress'
-import AutoSidebarPlugin from '../plugins/sidebar'
-import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import autoSidebarPlugin from './plugins/sidebar'
+import blogPlugin from './plugins/blog'
+import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import UnoCSS from 'unocss/vite'
-import { mermaidPlugin } from '../plugins/mermaid'
 import { navList } from '../assets/data'
 import locales from './lang'
+import markdownConfig from './plugins/markdown'
+import { getArticleList } from '../scripts/article'
+import { Blog } from '../typings/blog'
 
 const base: string = '/docs'
 const { zh } = locales
+
+const articles: Blog.ArticleData = await getArticleList()
 
 export default defineConfig({
   title: '学习笔记',
@@ -35,31 +40,20 @@ export default defineConfig({
   },
   markdown: {
     theme: { light: 'one-light', dark: 'one-dark-pro' },
-    //行号显示
+    toc: { level: [2, 3] },
+    image: { lazyLoading: true },
     lineNumbers: true,
     math: true,
-    // 使用 `!!code` 防止转换
+    config: (md) => markdownConfig(md),
     codeTransformers: [
       {
-        postprocess(code) {
-          return code.replace(/\[!!code/g, '[!code')
-        }
+        // 使用 `!!code` 防止转换
+        postprocess: (code) => code.replace(/\[!!code/g, '[!code')
       }
-    ],
-    config: (md) => {
-      md.use(groupIconMdPlugin)
-      md.use(mermaidPlugin)
-      // 组件插入h1标题下
-      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
-        let htmlResult = slf.renderToken(tokens, idx, options)
-        if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`
-        return htmlResult
-      }
-    },
-    // 图片懒加载
-    image: { lazyLoading: true }
+    ]
   },
   themeConfig: {
+    articles,
     nav: navList,
     logo: { src: '/logo.svg', width: 24, height: 24 },
     socialLinks: [{ icon: 'github', link: 'https://gitee.com/haijunit_navi/navi-docs' }],
@@ -91,11 +85,8 @@ export default defineConfig({
   vite: {
     plugins: [
       UnoCSS(),
-      // https://github.com/Ares-Chang/vitepress-auto-sidebar-plugin/blob/master/src/index.ts
-      AutoSidebarPlugin({
-        pattern: ['[0-9]+[_|.]*' + '/**/*.md'],
-        useH1Title: false
-      }),
+      // 自定义，自动生成侧边栏
+      autoSidebarPlugin({ pattern: ['[0-9]+[_|.]*' + '/**/*.md'], useH1Title: false }),
       groupIconVitePlugin({
         customIcon: {
           '.mdx': 'vscode-icons:file-type-light-mdx',

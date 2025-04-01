@@ -53,7 +53,7 @@
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
 
-const { theme } = useData<{ article: Article[] }>()
+const { theme } = useData<{ articles: Article[] }>()
 
 const props = defineProps({
   pageCurrent: { type: Number, default: 1 },

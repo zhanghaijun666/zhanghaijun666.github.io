@@ -34,7 +34,8 @@
         </div>
         <!-- 文章列表 -->
         <div class="space-y-6">
-          <article-item v-for="(item,index) in articleList" :key="index" :article="item" />
+          <article-item v-for="(item,index) in articleList123" :key="index" :article="item" />
+          <pagination :total="100" />
         </div>
       </div>
       <!-- 侧边栏 -->
@@ -128,6 +129,42 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import ArticleItem from './article-item.vue'
+import Pagination from './pagination.vue'
+import { useData } from 'vitepress'
+import { Blog } from '../../../typings/blog'
+
+const { theme } = useData<{ articles: Blog.ArticleData[] }>()
+const props = defineProps({
+  pageCurrent: { type: Number, default: 1 },
+  pagesSize: { type: Number, default: 1 }
+})
+
+const articleList = computed(() => {
+  const articleList: Blog.ArticleData = (theme.value.articles || [])
+  articleList.sort((a, b) => {
+    if (a.top !== b.top) {
+      return (b.top ? 1 : 0) - (a.top ? 1 : 0)
+    }
+    if (a.index !== b.index) {
+      return a.index - b.index
+    }
+    return a.title.localeCompare(b.title)
+  })
+  return articleList
+})
+
+const displayPages = computed(() => {
+  const maxPagesToShow = 60
+  const half = Math.floor(maxPagesToShow / 2)
+  let start = Math.max(1, props.pageCurrent - half)
+  let end = Math.min(props.pagesSize, start + maxPagesToShow - 1)
+  if (end - start < maxPagesToShow - 1) {
+    start = Math.max(1, end - maxPagesToShow + 1)
+  }
+  return Array.from({ length: end - start + 1 }, (_, index) => start + index)
+})
+
+console.log(displayPages.value)
 
 const heroImage = 'https://ai-public.mastergo.com/ai/img_res/3f11c790b57ee2fa5d666da865d228cc.jpg'
 const authorImage = 'https://ai-public.mastergo.com/ai/img_res/5692efa8dbc681fb582c0f3a917e3a92.jpg'
@@ -135,7 +172,8 @@ const avatarUrl = 'https://ai-public.mastergo.com/ai/img_res/66c9982ad29ac16e404
 const profileUrl = 'https://ai-public.mastergo.com/ai/img_res/16b3d054c471df7cfa8e9c157f73ed66.jpg'
 const authorAvatar = 'https://ai-public.mastergo.com/ai/img_res/82a29597261f9f59004f2c6b7a1806a3.jpg'
 
-const articles = [
+const articles: Blog.ArticleData[] = [
+  ...theme.value.articles.slice(0, 1),
   {
     title: '深入理解 Vue3 响应式系统的设计与实现',
     summary: '本文深入探讨了 Vue3 响应式系统的核心原理，从源码层面分析其设计思路和实现细节，并提供了实际应用案例。',
@@ -180,7 +218,7 @@ const articles = [
   }
 ]
 
-const articleList = computed(() => {
+const articleList123 = computed(() => {
   if (currentTag.value) {
     return articles.filter(item => item.tags.includes(currentTag.value))
   } else {
@@ -213,7 +251,7 @@ const tags = computed(() => {
   }, [])
 })
 
-const hotArticles = computed(() => articleList.value.slice(0, 3))
+const hotArticles = computed(() => articleList123.value.slice(0, 3))
 </script>
 
 <style scoped lang="scss"></style>

@@ -3,6 +3,7 @@ import { basename, normalize, resolve, sep } from 'pathe'
 import { readFileSync } from 'node:fs'
 import matter from 'gray-matter'
 import { Blog } from '../typings/blog'
+import { withBase } from 'vitepress'
 
 // 文件夹或者文件按的命名规则
 const NAME_REGEX: RegExp = RegExp(/^((\d+)[_|.])?([^_|.]+)(.md)?/)
@@ -10,7 +11,7 @@ const NAME_REGEX: RegExp = RegExp(/^((\d+)[_|.])?([^_|.]+)(.md)?/)
 /**
  * 获取文章列表
  */
-export const getArticleList = async (dir: string = './docs') => {
+export const getArticleList = async (dir: string = './docs'): Promise<Blog.ArticleData[]> => {
   const pattern: string[] = ['[0-9]+[_|.]*' + '/**/*.md']
   const ignoreList: string[] = ['**/page/**']
   const paths: string[] = (await glob(pattern, { cwd: dir, onlyFiles: false, ignore: ['**/node_modules/**', '**/dist/**', '**/index.md', ...ignoreList] })).map((path) => normalize(path))
@@ -39,7 +40,7 @@ const getArticle = async (dir: string, path: string): Promise<Blog.ArticleData> 
   return {
     index: array[0] ? Number(array[0]) : data.index,
     title: array[1],
-    link: '/' + path.replace(/.md$/, '.html').split(sep).join('/'),
+    link: withBase('/' + path.replace(/.md$/, '.html').split(sep).join('/')),
     summary: data.summary,
     cover: data.cover,
     categories: (data.categories ?? []).map(String),
