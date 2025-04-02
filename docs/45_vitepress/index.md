@@ -17,6 +17,9 @@ hero:
     - theme: alt
       text: Markdown写作
       link: ./12_写作/20.Markdown写作
+    - theme: brand
+      text: 官网文档
+      link: https://vitepress.dev/zh/
     - theme: alt
       text: GitHub
       link: https://github.com/vuejs/vitepress

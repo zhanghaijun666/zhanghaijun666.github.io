@@ -1,18 +1,24 @@
 import { defineConfig } from 'vitepress'
 import autoSidebarPlugin from './plugins/sidebar'
-import blogPlugin from './plugins/blog'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import UnoCSS from 'unocss/vite'
-import { navList } from '../assets/data'
+import { navList } from './nav'
 import locales from './lang'
 import markdownConfig from './plugins/markdown'
 import { getArticleList } from '../scripts/article'
 import { Blog } from '../typings/blog'
+import path from 'path'
 
 const base: string = '/docs'
 const { zh } = locales
 
-const articles: Blog.ArticleData = await getArticleList()
+const articles: Blog.ArticleData[] = await getArticleList()
+
+declare module 'vitepress' {
+  interface ThemeConfig {
+    articles?: Blog.ArticleData[]
+  }
+}
 
 export default defineConfig({
   title: '学习笔记',
@@ -94,6 +100,12 @@ export default defineConfig({
         }
       })
     ],
+    resolve: {
+      alias: {
+        // eslint-disable-next-line no-undef
+        "@": path.resolve(__dirname, "../theme"),
+      },
+    },
     css: {
       preprocessorOptions: {
         scss: {

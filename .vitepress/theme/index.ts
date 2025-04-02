@@ -13,7 +13,7 @@ import Link from './components/Link/index.vue'
 import ShareButton from './components/ShareButton.vue'
 import LayoutFooter from './components/LayoutFooter.vue'
 
-import BlogArchive from './view/blog2/blog-archive.vue'
+import BlogArchive from './view/blog/archive.vue'
 import BlogCategory from './view/blog2/blog-category.vue'
 import BlogTag from './view/blog2/blog-tag.vue'
 import Blog from './view/blog/index.vue'
@@ -54,11 +54,11 @@ export default {
     app.component('BlogCategory', BlogCategory)
     app.component('BlogTag', BlogTag)
 
-    watch(
-      () => router.route.data.relativePath,
-      () => updateHomePageStyle(location.pathname === '/'),
-      { immediate: true }
-    )
+    // watch(
+    //   () => router.route.data.relativePath,
+    //   () => updateHomePageStyle(location.pathname === '/'),
+    //   { immediate: true }
+    // )
   },
   setup() {
     const route = useRoute()

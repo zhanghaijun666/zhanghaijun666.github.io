@@ -1,13 +1,4 @@
 <template>
-  <!-- 年份切换 -->
-  <div class="sticky top-0 bg-gray-50 py-4 z-10">
-    <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-      <button class="px-6 py-2 bg-primary text-white rounded-full whitespace-nowrap">2023 年</button>
-      <button class="px-6 py-2 bg-white text-gray-500 hover:text-primary rounded-full whitespace-nowrap shadow-sm">2022 年</button>
-      <button class="px-6 py-2 bg-white text-gray-500 hover:text-primary rounded-full whitespace-nowrap shadow-sm">2021 年</button>
-      <button class="px-6 py-2 bg-white text-gray-500 hover:text-primary rounded-full whitespace-nowrap shadow-sm">2020 年</button>
-    </div>
-  </div>
   <div class="article-time">
     <!-- 年份 -->
     <div class="flex items-center mb-8">

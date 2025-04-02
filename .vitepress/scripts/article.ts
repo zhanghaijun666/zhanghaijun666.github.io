@@ -3,7 +3,6 @@ import { basename, normalize, resolve, sep } from 'pathe'
 import { readFileSync } from 'node:fs'
 import matter from 'gray-matter'
 import { Blog } from '../typings/blog'
-import { withBase } from 'vitepress'
 
 // 文件夹或者文件按的命名规则
 const NAME_REGEX: RegExp = RegExp(/^((\d+)[_|.])?([^_|.]+)(.md)?/)
@@ -40,7 +39,7 @@ const getArticle = async (dir: string, path: string): Promise<Blog.ArticleData> 
   return {
     index: array[0] ? Number(array[0]) : data.index,
     title: array[1],
-    link: withBase('/' + path.replace(/.md$/, '.html').split(sep).join('/')),
+    link: '/' + path.replace(/.md$/, '.html').split(sep).join('/'),
     summary: data.summary,
     cover: data.cover,
     categories: (data.categories ?? []).map(String),
