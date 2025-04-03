@@ -10,6 +10,12 @@ export const NAV_DATA: NavData[] = [
     title: '常用工具',
     items: [
       {
+        icon: 'https://vueuse.org/favicon.svg',
+        title: 'VueUse',
+        desc: 'Vue Composition API 的常用工具集',
+        link: 'https://vueuse.nodejs.cn/'
+      },
+      {
         icon: 'https://caniuse.com/img/favicon-128.png',
         title: 'Can I use',
         desc: '前端 API 兼容性查询',
@@ -34,7 +40,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://tool.lu'
       },
       {
-        icon: '/icons/json-cn.ico',
+        icon: '/assets/icons/json-cn.ico',
         title: 'Json 中文网',
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn'
@@ -45,9 +51,52 @@ export const NAV_DATA: NavData[] = [
     title: 'AI 导航',
     items: [
       {
-        icon: '/icons/chatgpt.png',
-        title: 'ChatGPT（最强）',
-        link: 'https://chat.openai.com/chat'
+        icon: '/assets/icons/chatgpt.png',
+        title: 'ChatGPT（综合最强）',
+        link: 'https://chat.openai.com/chat',
+        desc: 'ChatGPT 是一个基于 GPT-3.5 架构的大型语言模型，它可以回答各种问题、提供建议和生成文本。'
+      },
+      {
+        title: 'DeepSeek',
+        icon: 'https://www.deepseek.com/favicon.ico',
+        link: 'https://www.deepseek.com',
+        desc: 'DeepSeek 是一个基于 GPT 的搜索引擎，旨在为用户提供高质量的搜索结果。'
+      },
+      {
+        title: 'Qwen',
+        icon: '/assets/icons/qwen.png',
+        link: 'https://qwen.baidu.com',
+        desc: 'Qwen是阿里巴巴集团Qwen团队研发的大语言模型和大型多模态模型系列'
+      },
+      {
+        title: '豆包',
+        icon: 'https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/samantha/logo-icon-white-bg.png',
+        link: 'https://www.doubao.cn/',
+        desc: '豆包是一个基于 GPT 的搜索引擎，旨在为用户提供高质量的搜索结果。'
+      },
+      {
+        title: 'Coze',
+        icon: 'https://lf-coze-web-cdn.coze.cn/obj/coze-web-cn/obric/coze/favicon.1970.png',
+        link: 'https://www.coze.cn',
+        desc: '海量AI智能体免费用，已接入DeepSeek满血版'
+      },
+      {
+        title: 'SiliconCloud 硅谷流动',
+        icon: 'https://cloud.siliconflow.cn/favicon.ico',
+        link: 'https://cloud.siliconflow.cn/models',
+        desc: '硅谷流动是一个基于 GPT 的搜索引擎，旨在为用户提供高质量的搜索结果。'
+      },
+      {
+        title: '国家超算平台',
+        icon: 'https://www.scnet.cn/favicon.ico',
+        link: 'https://www.scnet.cn/ui/chatbot/',
+        desc: '国家超算平台是一个基于 GPT 的搜索引擎，旨在为用户提供高质量的搜索结果。'
+      },
+      {
+        title: '概览 · 魔搭社区',
+        icon: 'https://avatars.githubusercontent.com/u/109945100?s=200&v=4',
+        link: 'https://www.modelscope.cn/my/overview',
+        desc: '魔搭社区是一个基于 GPT 的搜索引擎，旨在为用户提供高质量的搜索结果。'
       },
       {
         icon: 'https://www.notion.so/images/logo-ios.png',
@@ -67,31 +116,23 @@ export const NAV_DATA: NavData[] = [
     ]
   },
   {
-    title: '茂茂的站点导航',
+    title: '本站推荐',
     items: [
-      {
-        icon: '/logo.png',
-        title: '前端日常笔记',
-        desc: '日常笔记记录（零零散散啥都记系列）',
-        link: 'https://github.com/maomao1996/daily-notes'
-      },
-      {
-        icon: '/logo.png',
-        title: '前端思维导图',
-        desc: '用思维导图的方式总结个人所学知识',
-        link: 'https://mindmap.fe-mm.com'
-      },
       {
         icon: 'https://qwerty.fe-mm.com/apple-touch-icon.png',
         title: 'Qwerty Learner',
         desc: '为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件',
         link: 'https://qwerty.fe-mm.com'
-      },
-      {
-        icon: '/logo.png',
-        title: 'mmPlayer',
-        desc: 'mmPlayer 在线音乐播放器',
-        link: 'https://netease-music.fe-mm.com'
+      }, {
+        title: 'AdsPower指纹浏览器',
+        icon: 'https://www.adspower.net/favicon.ico',
+        link: 'https://www.adspower.net',
+        desc: '指纹浏览器，助力跨境电商营销'
+      }, {
+        title: '实时可视化数据结构与算法',
+        icon: 'https://staying.fun/_next/static/media/favicon.869a7e1e.ico',
+        link: 'https://staying.fun/zh',
+        desc: '把您的代码转变成生动流畅的可视化动画，为数据结构与算法注入生命力'
       }
     ]
   },
@@ -254,7 +295,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         // icon: 'https://simpleicons.org/icons/jquery.svg',
-        icon: '/icons/jquery.svg',
+        icon: '/assets/icons/jquery.svg',
         title: 'jQuery API 中文文档',
         desc: '一个兼容多浏览器的 JavaScript 框架',
         link: 'https://jquery.cuishifeng.cn'
@@ -294,7 +335,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://developers.weixin.qq.com/miniprogram/dev/framework/'
       },
       {
-        icon: '/icons/taro.svg',
+        icon: '/assets/icons/taro.svg',
         title: 'Taro',
         desc: '多端统一开发解决方案',
         link: 'https://taro.jd.com'
@@ -317,7 +358,7 @@ export const NAV_DATA: NavData[] = [
     title: 'Node 相关',
     items: [
       {
-        icon: '/icons/nodejs.svg',
+        icon: '/assets/icons/nodejs.svg',
         title: 'Node.js',
         desc: 'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境',
         link: 'https://nodejs.org/zh-cn'
@@ -329,7 +370,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://expressjs.com'
       },
       {
-        icon: '/icons/koa.svg',
+        icon: '/assets/icons/koa.svg',
         title: 'Koa',
         desc: '基于 Node.js 平台的下一代 web 开发框架',
         link: 'https://koajs.com'
@@ -505,7 +546,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.runoob.com'
       },
       {
-        icon: '/icons/es6.svg',
+        icon: '/assets/icons/es6.svg',
         title: 'ES6 入门教程',
         desc: '阮一峰的网络日志',
         link: 'http://es6.ruanyifeng.com'
@@ -550,7 +591,7 @@ export const NAV_DATA: NavData[] = [
       {
         title: '博客园',
         // icon: 'https://common.cnblogs.com/favicon.ico',
-        icon: '/icons/cnblogs.svg',
+        icon: '/assets/icons/cnblogs.svg',
         desc: '博客园是一个面向开发者的知识分享社区',
         link: 'https://www.cnblogs.com'
       },
@@ -568,37 +609,37 @@ export const NAV_DATA: NavData[] = [
       {
         icon: 'https://momoyu.cc/icon-192.png',
         title: '摸摸鱼热榜',
-        // desc: '聚合每日热门、搞笑、有趣、适合摸鱼的资讯',
+        desc: '聚合每日热门、搞笑、有趣、适合摸鱼的资讯',
         link: 'https://momoyu.cc'
       },
       {
         icon: 'https://v.qq.com/favicon.ico',
         title: '腾讯视频',
-        // desc: '中国领先的在线视频媒体平台，海量高清视频在线观看',
+        desc: '中国领先的在线视频媒体平台，海量高清视频在线观看',
         link: 'https://v.qq.com'
       },
       {
         icon: 'https://static.hdslb.com/mobile/img/512.png',
         title: '哔哩哔哩',
-        // desc: '',
+        desc: '',
         link: 'https://www.bilibili.com'
       },
       {
         icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
         title: 'YouTube',
-        // desc: '',
+        desc: '',
         link: 'https://www.youtube.com'
       },
       {
-        icon: '/icons/twitter.svg',
+        icon: '/assets/icons/twitter.svg',
         title: 'Twitter',
-        // desc: '',
+        desc: '',
         link: 'https://twitter.com'
       },
       {
-        icon: '/icons/pixiv.png',
+        icon: '/assets/icons/pixiv.png',
         title: 'Pixiv',
-        // desc: '',
+        desc: '',
         link: 'https://www.pixiv.net'
       }
     ]
