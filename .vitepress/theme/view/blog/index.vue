@@ -63,16 +63,16 @@
               </div>
               <div class="w-full grid grid-cols-3 gap-2 text-center">
                 <div class="p-2">
-                  <div class="text-xl font-bold text-gray-800">126</div>
-                  <div class="text-sm text-gray-600">文章</div>
+                  <div class="text-xl font-bold text-gray-800 dark:text-gray-200">126</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">文章</div>
                 </div>
                 <div class="p-2">
-                  <div class="text-xl font-bold text-gray-800">23k</div>
-                  <div class="text-sm text-gray-600">访问</div>
+                  <div class="text-xl font-bold text-gray-800 dark:text-gray-200">23k</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">访问</div>
                 </div>
                 <div class="p-2">
-                  <div class="text-xl font-bold text-gray-800">891</div>
-                  <div class="text-sm text-gray-600">评论</div>
+                  <div class="text-xl font-bold text-gray-800 dark:text-gray-200">891</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-400">评论</div>
                 </div>
               </div>
             </div>
@@ -101,18 +101,18 @@
           </div>
         </div>
         <!-- 热门文章 -->
-        <div class="bg-white rounded-lg p-6 shadow-sm">
+        <div class="rounded-lg p-6 shadow-sm">
           <h3 class="text-lg font-bold mb-4">热门文章</h3>
           <div class="space-y-4">
             <a class="flex gap-3 hover:text-primary" v-for="(article,index) in hotArticles" :key="index" :href="withBase(article.link)" target="_blank">
               <div class=" w-1/3 aspect-5/3 rounded-lg overflow-hidden">
-                <img :src="article.cover ?? CoverImage" :alt="article.title1" class="w-full h-full object-cover" />
+                <img :src="article.cover ?? CoverImage" :alt="article.title1" class="w-full h-full rounded-2 object-cover" />
               </div>
               <div class="flex-1">
                 <h4 class="text-sm font-bold mb-1 hover:text-blue-500 cursor-pointer line-clamp-2">
                   {{ article.title }}
                 </h4>
-                <div class="flex items-center text-xs text-gray-500">
+                <div class="flex items-center text-xs text-gray-500 dark:text-gray-400">
                   <span><i class="far fa-eye mr-1"></i>{{ '2.3k' }}</span>
                 </div>
               </div>
@@ -130,14 +130,14 @@ import { computed, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import ArticleItem from './article-item.vue'
 import Pagination from './article-pagination.vue'
-import { Blog } from '../../../typings/blog'
+import { Blog } from '@/typings'
 import CoverImage from '@/assets/cover/default.jpg'
 import HeroImage from '@/assets/avatar/hero.jpg'
 import AuthorImage from '@/assets/avatar/author.jpg'
 import ProfileImage from '@/assets/avatar/profile.jpg'
 
-const { theme } = useData<{ articles: Blog.ArticleData[] }>()
-const articles: Blog.ArticleData[] = theme.value.articles
+const { theme } = useData<{ articles: Blog.Article[] }>()
+const articles: Blog.Article[] = theme.value.articles
 const page = ref<number>(1)
 const size = ref<number>(5)
 const currentTag = ref<string | undefined>(undefined)

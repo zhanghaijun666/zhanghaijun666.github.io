@@ -6,17 +6,17 @@ import { navList } from './nav'
 import locales from './lang'
 import markdownConfig from './plugins/markdown'
 import { getArticleList } from '../scripts/article'
-import { Blog } from '../typings/blog'
+import { Blog } from '../theme/typings'
 import path from 'path'
 
 const base: string = '/docs'
 const { zh } = locales
 
-const articles: Blog.ArticleData[] = await getArticleList()
+const articles: Blog.Article[] = await getArticleList()
 
 declare module 'vitepress' {
   interface ThemeConfig {
-    articles?: Blog.ArticleData[]
+    articles?: Blog.Article[]
   }
 }
 
@@ -103,9 +103,9 @@ export default defineConfig({
     resolve: {
       alias: {
         // eslint-disable-next-line no-undef
-        "@": path.resolve(__dirname, "../theme"),
-        "~": path.resolve(__dirname, ".."),
-      },
+        '@': path.resolve(__dirname, '../theme'),
+        '~': path.resolve(__dirname, '..')
+      }
     },
     css: {
       preprocessorOptions: {

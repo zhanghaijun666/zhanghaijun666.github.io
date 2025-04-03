@@ -1,6 +1,6 @@
 <template>
   <!-- 年份切换 -->
-  <div class="sticky top-0 bg-gray-50 py-4 z-10">
+  <div class="py-4 z-10">
     <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
       <button v-for="item in yearList" :key="item.year" :class="{
         'px-6 py-2 rounded-full whitespace-nowrap shadow-sm':true,
@@ -19,7 +19,9 @@
           <div class="h-[1px] bg-gray-200 flex-1 mx-4"></div>
           <span class="text-gray-500 text-sm">共 {{ item.items.length }} 篇文章</span>
         </div>
-        <article-item v-for="(item,index) in item.items" :key="index" :article="item" />
+        <div class="space-y-3">
+          <article-item v-for="(item,index) in item.items" :key="index" :article="item" />
+        </div>
       </div>
     </template>
   </div>
@@ -30,17 +32,17 @@
 import { computed, type ComputedRef, onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
 import ArticleTime from '../../components/article/article-time.vue'
-import { Blog } from '../../../typings/blog'
+import { Blog } from '@/typings'
 import ArticleItem from './article-item.vue'
 
-const { theme } = useData<{ articles: Blog.ArticleData[] }>()
+const { theme } = useData<{ articles: Blog.Article[] }>()
 const year = ref<number>(new Date().getFullYear())
 const yearList: { text: string, year: number }[] = [
   { text: '全部', year: 0 },
   ...Array.from({ length: 3 }).map((_, index) => ({ text: `${ new Date().getFullYear() - index } 年`, year: new Date().getFullYear() - index }))
 ]
 
-const archive: ComputedRef<{ year: number, items: Blog.ArticleData[] }[]> = computed<{ year: number, items: Blog.ArticleData[] }[]>(() => {
+const archive: ComputedRef<{ year: number, items: Blog.Article[] }[]> = computed<{ year: number, items: Blog.Article[] }[]>(() => {
   return [
     { year: 2025, items: (theme.value.articles || []).slice(0, 3) }
   ]

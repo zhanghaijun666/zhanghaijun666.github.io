@@ -8,8 +8,8 @@
         @click="()=>changePage(page-1)"
         :class="{
               '!rounded-button whitespace-nowrap px-4 py-2 border': true,
-              'bg-gray-100 text-gray-400 cursor-not-allowed': page === 1,
-              'hover:bg-gray-100 text-gray-700': page > 1
+              'text-gray-100 dark:text-gray-600 text-gray-400 cursor-not-allowed': page === 1,
+              'hover:text-primary text-gray-700 dark:text-gray-200': page > 1
             }"
       >
         <i class="fas fa-chevron-left mr-1"></i>上一页
@@ -21,7 +21,7 @@
         <button v-for="item in pages" :key="item" @click="()=>changePage(item)" :class="{
               '!rounded-button whitespace-nowrap w-10 h-10 flex items-center justify-center': true,
               'bg-blue-500 text-white': page === item,
-              'border hover:bg-gray-100': page !== item
+              'border hover:text-primary': page !== item
             }">{{ item }}
         </button>
       </template>
@@ -31,8 +31,8 @@
         @click="()=>changePage(page+1)"
         :class="{
               '!rounded-button whitespace-nowrap px-4 py-2 border': true,
-              'bg-gray-100 text-gray-400 cursor-not-allowed': page === totalPages,
-              'hover:bg-gray-100 text-gray-700': page < totalPages
+              'text-gray-100 dark:text-gray-600 text-gray-400 cursor-not-allowed': page === totalPages,
+              'hover:text-primary text-gray-700 dark:text-gray-200': page < totalPages
             }"
       >
         下一页<i class="fas fa-chevron-right ml-1"></i>
