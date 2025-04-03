@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!!article" class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow duration-200">
+  <div v-if="!!article" class="bg-white rounded-lg shadow-sm  hover:shadow-md transition-shadow duration-200">
     <div class="flex gap-6">
       <img :src="article.cover ?? CoverImage" :alt="article.title" class="w-48 h-32 rounded-lg object-cover">
       <div class="flex-1">

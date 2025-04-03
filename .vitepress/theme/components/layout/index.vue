@@ -2,7 +2,7 @@
 import { useData, inBrowser } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
-import MouseClick from './components/mouse/click.vue'
+import MouseClick from '../mouse/click.vue'
 
 const { isDark } = useData()
 

@@ -3,25 +3,25 @@ import { h, nextTick, onMounted, watch } from 'vue'
 import { EnhanceAppContext, Theme, useData, useRoute } from 'vitepress'
 import mediumZoom from 'medium-zoom'
 import DefaultTheme from 'vitepress/theme'
-import Layout from './Layout.vue'
 import Mermaid from './components/Mermaid.vue'
 import Confetti from './components/Confetti.vue' // 五彩纸屑
 import ArticleMetadata from './components/ArticleMetadata.vue' //字数阅读时间
 import HomeUnderline from './components/HomeUnderline.vue' //首页文字特效
-import BackTop from './components/BackTop.vue'
+import Layout from './components/layout/index.vue'
+import LayoutFooter from './components/layout/LayoutFooter.vue'
+import LayoutBackTop from './components/layout/LayoutBackTop.vue'
 import Link from './components/Link/index.vue'
 import ShareButton from './components/ShareButton.vue'
-import LayoutFooter from './components/LayoutFooter.vue'
 
+import Blog from './view/blog/index.vue'
 import BlogArchive from './view/blog/archive.vue'
 import BlogCategory from './view/blog2/blog-category.vue'
 import BlogTag from './view/blog2/blog-tag.vue'
-import Blog from './view/blog/index.vue'
 
 import './style/index.css'
 import 'virtual:group-icons.css'
 import 'virtual:uno.css'
-import { webLinks } from '../assets/data'
+import { webLinks } from './assets/data/link'
 
 let homePageStyle: HTMLStyleElement | undefined
 
@@ -36,7 +36,7 @@ export default {
     }
     return h(Layout, props, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      'doc-footer-before': () => h(BackTop),
+      'doc-footer-before': () => h(LayoutBackTop),
       'aside-outline-before': () => h(ShareButton),
       'layout-bottom': () => h(LayoutFooter, { group: webLinks })
     })

@@ -57,9 +57,9 @@ const total = ref<number>(props.total)
 // 计算总页数
 const totalPages = computed(() => Math.max(1, Math.ceil(total.value / size.value)))
 
-function changePage(pageNumber: number) {
+function changePage(pageNumber: number = 1) {
   page.value = pageNumber
-  emit('change', page, size.value)
+  emit('change', pageNumber, size.value)
 }
 
 watch(() => props.total, (val) => {

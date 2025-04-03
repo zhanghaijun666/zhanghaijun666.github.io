@@ -34,7 +34,7 @@
         <!-- 文章列表 -->
         <div class="space-y-6">
           <article-item v-for="(item,index) in articlePage" :key="index" :article="item" />
-          <pagination :total="articleList.length" :page="page" :size="size" :change="paginationChange" />
+          <pagination :total="articleList.length" :page="page" :size="size" @change="paginationChange" />
         </div>
       </div>
       <!-- 侧边栏 -->
@@ -137,10 +137,6 @@ import AuthorImage from '@/assets/avatar/author.jpg'
 import ProfileImage from '@/assets/avatar/profile.jpg'
 
 const { theme } = useData<{ articles: Blog.ArticleData[] }>()
-const props = defineProps({
-  pageCurrent: { type: Number, default: 1 },
-  pagesSize: { type: Number, default: 1 }
-})
 const articles: Blog.ArticleData[] = theme.value.articles
 const page = ref<number>(1)
 const size = ref<number>(5)
@@ -165,8 +161,6 @@ const categories = computed(() => {
     return acc
   }, [])
 })
-
-
 const tags = computed(() => {
   return articles.flatMap((item) => item.tags).filter(item => !!item).reduce((acc, cur) => {
     if (!acc.find(item => item.name === cur)) {
@@ -178,7 +172,7 @@ const tags = computed(() => {
     return acc
   }, [])
 })
-const hotArticles = computed(() => articleList.value.slice(0, 3))
+const hotArticles = computed(() => articles.slice(0, 3))
 </script>
 
 <style scoped lang="scss"></style>

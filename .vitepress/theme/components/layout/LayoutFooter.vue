@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { type Group } from '../../data/link'
+import { type Group } from '../../assets/data/link'
 
-const { frontmatter } = useData()
+const { theme, frontmatter } = useData()
 
 // 使用 defineProps 定义属性
 const props = withDefaults(defineProps<{ group?: Group[] }>(), {
@@ -80,7 +80,7 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
 </script>
 
 <template>
-  <footer class="ba bg-gray-800 text-gray-300 w-full" v-if="frontmatter.footer != 'false'">
+  <footer class="ba bg-gray-800 text-gray-300 w-full" v-if="theme.footer !== false && frontmatter.footer !== false">
     <!-- 链接展示 -->
     <div class="ff">
       <div class="sc" v-for="(section, index) in props.group || []" :key="index">
@@ -118,7 +118,7 @@ const isLargeScreen = computed(() => windowWidth.value > 768)
         </a>
       </div>
       <div>
-        <i class="far fa-copyright"></i>{{ new Date().getFullYear() }} <a target="_blank" rel="noopener" title="GitHub" href="/"> {{ 'haijunit' }}</a>
+        <i class="far fa-copyright"></i>{{ new Date().getFullYear() }} <a target="_blank" rel="noopener" title="GitHub" :href="withBase('/')"> {{ 'haijunit' }}</a>
         . All Rights Reserved.
       </div>
     </div>
