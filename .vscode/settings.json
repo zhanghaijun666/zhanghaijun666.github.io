@@ -4,7 +4,7 @@
   },
   "prettier.enable": true,
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -38,7 +38,26 @@
     "editor.tabCompletion": "on",
     "editor.acceptSuggestionOnEnter": "on"
   },
-  "cSpell.words": ["bilibili", "busuanzi", "consola", "docsearch", "Gitee", "haijun", "haijunit", "kebabcase", "mathjax", "navi", "pathe", "titlecase", "vitepress", "webp", "zhang"],
+  "cSpell.words": [
+    "unocss",
+    "Attributify",
+    "bilibili",
+    "busuanzi",
+    "consola",
+    "docsearch",
+    "Gitee",
+    "haijun",
+    "haijunit",
+    "iconify",
+    "kebabcase",
+    "mathjax",
+    "navi",
+    "pathe",
+    "titlecase",
+    "vitepress",
+    "webp",
+    "zhang"
+  ],
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,

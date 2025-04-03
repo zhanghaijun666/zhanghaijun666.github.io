@@ -3,10 +3,10 @@
   <div class="py-4 z-10">
     <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
       <button v-for="item in yearList" :key="item.year" :class="{
-        'px-6 py-2 rounded-full whitespace-nowrap shadow-sm':true,
+        'px-6 py-2 rounded-full whitespace-nowrap shadow-sm': true,
         'bg-primary text-white': item.year === year,
         'bg-white text-gray-500  hover:text-primary': item.year !== year
-      }" @click="()=>year=(year === item.year ? 0:item.year)">{{ item.text }}
+      }" @click="() => year = (year === item.year ? 0 : item.year)">{{ item.text }}
       </button>
     </div>
   </div>
@@ -14,13 +14,24 @@
     <template v-for="item in articleList" :key="item.year">
       <div>
         <!-- 年份 -->
-        <div class="flex items-center mb-8">
+        <div class="flex items-center">
           <div class="text-3xl font-bold text-primary">{{ item.year + '年' }}</div>
           <div class="h-[1px] bg-gray-200 flex-1 mx-4"></div>
           <span class="text-gray-500 text-sm">共 {{ item.items.length }} 篇文章</span>
         </div>
-        <div class="space-y-3">
-          <article-item v-for="(item,index) in item.items" :key="index" :article="item" />
+        <div class="relative space-y-3 pt-6">
+          <!-- 垂直时间轴 -->
+          <div class="absolute top-0 left-80px w-4px h-full bg-[#79D46B] rounded-full"></div>
+          <template v-for="(item, index) in item.items" :key="index">
+            <!-- 时间轴节点 -->
+            <div class="relative grid grid-cols-[80px_1fr] gap-24px">
+              <div class="absolute left-68px w-24px h-24px bg-primary rounded-full flex-x-center">
+                <span class="text-white text-xs">{{ index + 1 }}</span>
+              </div>
+              <div class="text-lg font-bold" style="text-align: right;">{{ '03.02' }}</div>
+              <article-item :article="item" />
+            </div>
+          </template>
         </div>
       </div>
     </template>
@@ -39,7 +50,7 @@ const { theme } = useData<{ articles: Blog.Article[] }>()
 const year = ref<number>(new Date().getFullYear())
 const yearList: { text: string, year: number }[] = [
   { text: '全部', year: 0 },
-  ...Array.from({ length: 3 }).map((_, index) => ({ text: `${ new Date().getFullYear() - index } 年`, year: new Date().getFullYear() - index }))
+  ...Array.from({ length: 3 }).map((_, index) => ({ text: `${new Date().getFullYear() - index} 年`, year: new Date().getFullYear() - index }))
 ]
 
 const archive: ComputedRef<{ year: number, items: Blog.Article[] }[]> = computed<{ year: number, items: Blog.Article[] }[]>(() => {
@@ -62,5 +73,4 @@ onMounted(() => {
   }
 })
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
