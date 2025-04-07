@@ -130,7 +130,7 @@ import { computed, ref } from 'vue'
 import { useData, withBase } from 'vitepress'
 import ArticleItem from './article-item.vue'
 import Pagination from './article-pagination.vue'
-import { Blog } from '@/typings'
+import { Blog } from '../../typings'
 import CoverImage from '@/assets/cover/default.jpg'
 import HeroImage from '@/assets/avatar/hero.jpg'
 import AuthorImage from '@/assets/avatar/author.jpg'
@@ -174,6 +174,3 @@ const tags = computed(() => {
 })
 const hotArticles = computed(() => articles.slice(0, 3))
 </script>
-
-<style scoped lang="scss"></style>
-

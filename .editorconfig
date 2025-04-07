@@ -10,6 +10,10 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
+[*.java]
+ij_java_class_count_to_use_import_on_demand = 100
+ij_java_names_count_to_use_import_on_demand = 100
+
 [*.md]
 indent_size = 2
 max_line_length = off
@@ -22,7 +26,7 @@ tab_width = 2
 [*.{yml,yaml,json}]
 indent_size = 2
 
-[*.{bat, cmd}]
+[*.{bat,cmd}]
 end_of_line = crlf
 
 [Makefile]

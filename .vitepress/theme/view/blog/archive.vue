@@ -11,24 +11,27 @@
     </div>
   </div>
   <div>
-    <template v-for="item in articleList" :key="item.year">
+    <template v-for="article in articleList" :key="article.year">
       <div>
         <!-- 年份 -->
         <div class="flex items-center">
-          <div class="text-3xl font-bold text-primary">{{ item.year + '年' }}</div>
+          <div class="text-3xl font-bold text-primary">{{ article.year + '年' }}</div>
           <div class="h-[1px] bg-gray-200 flex-1 mx-4"></div>
-          <span class="text-gray-500 text-sm">共 {{ item.items.length }} 篇文章</span>
+          <span class="text-gray-500 text-sm">共 {{ article.items.length }} 篇文章</span>
         </div>
         <div class="relative space-y-3 pt-6">
           <!-- 垂直时间轴 -->
-          <div class="absolute top-0 left-80px w-4px h-full bg-[#79D46B] rounded-full"></div>
-          <template v-for="(item, index) in item.items" :key="index">
+          <div class="absolute top-0 left-95px w-4px h-full bg-[#79D46B] rounded-full"></div>
+          <template v-for="(item, index) in article.items" :key="index">
             <!-- 时间轴节点 -->
-            <div class="relative grid grid-cols-[80px_1fr] gap-24px">
-              <div class="absolute left-68px w-24px h-24px bg-primary rounded-full flex-x-center">
+            <div class="relative grid grid-cols-[80px_1fr] gap-30px">
+              <div class="absolute left-83px w-24px h-24px bg-[#79D46B] rounded-full flex-x-center">
                 <span class="text-white text-xs">{{ index + 1 }}</span>
               </div>
-              <div class="text-lg font-bold" style="text-align: right;">{{ '03.02' }}</div>
+              <div class="text-lg font-bold" style="text-align: right;">
+                <div class="text-lg font-medium">02.22</div>
+                <div class="text-sm text-gray-400">2025</div>
+              </div>
               <article-item :article="item" />
             </div>
           </template>
@@ -36,14 +39,12 @@
       </div>
     </template>
   </div>
-  <article-time />
 </template>
 
 <script lang="ts" setup>
 import { computed, type ComputedRef, onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
-import ArticleTime from '../../components/article/article-time.vue'
-import { Blog } from '@/typings'
+import { Blog } from '../../typings'
 import ArticleItem from './article-item.vue'
 
 const { theme } = useData<{ articles: Blog.Article[] }>()
