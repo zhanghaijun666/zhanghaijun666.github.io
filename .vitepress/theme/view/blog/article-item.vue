@@ -14,6 +14,9 @@
             </template>
           </div>
           <div class="flex items-center text-gray-500 text-sm">
+            <!-- <span class="flex items-center gap-1"><i class="fas fa-eye"></i> 阅读量: 100</span> -->
+            <!-- <span class="flex items-center gap-1"><i class="fas fa-thumbs-up"></i> 点赞量: 50</span> -->
+            <!-- <span class="flex items-center gap-1"><i class="fas fa-bookmark"></i> 收藏: 30</span> -->
             <span class="flex items-center gap-1"><i class="fas fa-calendar-alt"></i>2023-12-25</span>
           </div>
         </div>

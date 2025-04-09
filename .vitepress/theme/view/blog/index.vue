@@ -4,9 +4,9 @@
     <div class=":uno: pb-12 bg-gradient-to-r from-indigo-50 to-purple-50">
       <div class="max-w-7xl mx-auto px-4 flex items-center">
         <div class="w-1/2 pr-12">
-          <h1 class="text-4xl font-bold mb-6">你好，我是张明远</h1>
+          <h1 class="text-4xl font-bold mb-6">欢迎阅读我的博客</h1>
           <p class="text-lg leading-relaxed mb-8">
-            资深全栈工程师，拥有 8 年开发经验。专注于 Web 开发、云原生架构与人工智能应用。热爱技术分享，已在个人博客发表超过 200 篇技术文章。
+            你好，我是Hardy，一名热爱技术的全栈工程师。专注于前端开发、云原生架构与人工智能应用。在过去的 8 年里，我积累了丰富的技术经验，并热衷于分享我的知识。
           </p>
           <a class=":uno: !rounded-2 bg-indigo-600 text-white px-8 py-3 hover:bg-indigo-700 transition-colors whitespace-nowrap" :href="withBase('/')">
             了解更多
